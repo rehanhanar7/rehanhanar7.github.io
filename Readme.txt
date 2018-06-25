@@ -1,9 +1,9 @@
 Website About Rehan Hanar
 
-Link : rehanhanar7.github.io
+Link : http://rehanhanar7.github.io
 
         or
 
-Link : rehanhanar.com
+Link : http://rehanhanar.com
 
 Template Credits : https://bootstrapmade.com/regna-bootstrap-onepage-template/
