@@ -1064,6 +1064,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 768px) {
   #dg-container{
-    display: none;
+    display: none !important;
+  }
+  .hideClass{
+    display: none !important;
   }
 }
