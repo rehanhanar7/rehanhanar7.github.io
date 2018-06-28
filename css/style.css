@@ -1061,3 +1061,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 	background-position: top right;
 	margin-left: 10px;
 }
+
+@media (max-width: 768px) {
+  #dg-container{
+    display: none;
+  }
+}
