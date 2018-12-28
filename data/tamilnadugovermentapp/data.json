@@ -1,322 +1,365 @@
 [
-    {
-      "DepartmentName": "Adi Dravidar and Tribal Welfare ",
-      "Role": "Do Services and Operations regarding Adi Dravidar and Tribal Welfare ",
-      "DepartmentID": "1",
-      "DepartmentLink": "http://www.tn.gov.in/department/1",
-      "Email": "adisec@tn.gov.in",
-      "Phone": "25671848"
-    },
-    {
-      "DepartmentName": "Agriculture ",
-      "Role": "Do Services and Operations regarding Agriculture ",
-      "DepartmentID": "2",
-      "DepartmentLink": "http://www.tn.gov.in/department/2",
-      "Email": "agrisec@tn.gov.in",
-      "Phone": "25674482"
-    },
-    {
-      "DepartmentName": "Animal Husbandry Dairying and Fisheries ",
-      "Role": "Do Services and Operations regarding Animal Husbandry Dairying and Fisheries ",
-      "DepartmentID": "3",
-      "DepartmentLink": "http://www.tn.gov.in/department/3",
-      "Email": "ahsec@tn.gov.in",
-      "Phone": "25672937"
-    },
-    {
-      "DepartmentName": "BC MBC & Minorities Welfare ",
-      "Role": "Do Services and Operations regarding BC MBC & Minorities Welfare ",
-      "DepartmentID": "4",
-      "DepartmentLink": "http://www.tn.gov.in/department/4",
-      "Email": "bcsec@tn.gov.in",
-      "Phone": "25670848"
-    },
-    {
-      "DepartmentName": "Commercial Taxes and Registration ",
-      "Role": "Do Services and Operations regarding Commercial Taxes and Registration ",
-      "DepartmentID": "6",
-      "DepartmentLink": "http://www.tn.gov.in/department/6",
-      "Email": "ctsec@tn.gov.in",
-      "Phone": "25672757"
-    },
-    {
-      "DepartmentName": "Co-operation Food and Consumer Protection ",
-      "Role": "Do Services and Operations regarding Co-operation Food and Consumer Protection ",
-      "DepartmentID": "5",
-      "DepartmentLink": "http://www.tn.gov.in/department/5",
-      "Email": "coopsec@tn.gov.in",
-      "Phone": "25672224"
-    },
-    {
-      "DepartmentName": "Energy ",
-      "Role": "Do Services and Operations regarding Energy ",
-      "DepartmentID": "7",
-      "DepartmentLink": "http://www.tn.gov.in/department/7",
-      "Email": "enersec@tn.gov.in",
-      "Phone": "25671496"
-    },
-    {
-      "DepartmentName": "Environment and Forests ",
-      "Role": "Do Services and Operations regarding Environment and Forests ",
-      "DepartmentID": "8",
-      "DepartmentLink": "http://www.tn.gov.in/department/8",
-      "Email": "forsec@tn.gov.in",
-      "Phone": "25671511"
-    },
-    {
-      "DepartmentName": "Finance ",
-      "Role": "Do Services and Operations regarding Finance ",
-      "DepartmentID": "9",
-      "DepartmentLink": "http://www.tn.gov.in/department/9",
-      "Email": "finsec@tn.gov.in",
-      "Phone": "25671173"
-    },
-    {
-      "DepartmentName": "Handlooms Handicrafts Textiles and Khadi ",
-      "Role": "Do Services and Operations regarding Handlooms Handicrafts Textiles and Khadi ",
-      "DepartmentID": "10",
-      "DepartmentLink": "http://www.tn.gov.in/department/10",
-      "Email": "htksec@tn.gov.in",
-      "Phone": "25671623"
-    },
-    {
-      "DepartmentName": "Health and Family Welfare ",
-      "Role": "Do Services and Operations regarding Health and Family Welfare ",
-      "DepartmentID": "11",
-      "DepartmentLink": "http://www.tn.gov.in/department/11",
-      "Email": "hfsec@tn.gov.in",
-      "Phone": "25671875"
-    },
-    {
-      "DepartmentName": "Higher Education ",
-      "Role": "Do Services and Operations regarding Higher Education ",
-      "DepartmentID": "12",
-      "DepartmentLink": "http://www.tn.gov.in/department/12",
-      "Email": "hrsec@tn.gov.in",
-      "Phone": "25670499"
-    },
-    {
-      "DepartmentName": "Highways and Minor Ports ",
-      "Role": "Do Services and Operations regarding Highways and Minor Ports ",
-      "DepartmentID": "13",
-      "DepartmentLink": "http://www.tn.gov.in/department/13",
-      "Email": "hwaysec@tn.gov.in",
-      "Phone": "25670959"
-    },
-    {
-      "DepartmentName": "Home Prohibition and Excise ",
-      "Role": "Do Services and Operations regarding Home Prohibition and Excise ",
-      "DepartmentID": "14",
-      "DepartmentLink": "http://www.tn.gov.in/department/14",
-      "Email": "homesec@tn.gov.in",
-      "Phone": "25671113;25670077"
-    },
-    {
-      "DepartmentName": "Housing and Urban Development ",
-      "Role": "Do Services and Operations regarding Housing and Urban Development ",
-      "DepartmentID": "15",
-      "DepartmentLink": "http://www.tn.gov.in/department/15",
-      "Email": "hud@tn.gov.in",
-      "Phone": "25670516"
-    },
-    {
-      "DepartmentName": "Industries ",
-      "Role": "Do Services and Operations regarding Industries ",
-      "DepartmentID": "16",
-      "DepartmentLink": "http://www.tn.gov.in/department/16",
-      "Email": "indsec@tn.gov.in",
-      "Phone": "25671383"
-    },
-    {
-      "DepartmentName": "Information Technology ",
-      "Role": "Do Services and Operations regarding Information Technology ",
-      "DepartmentID": "17",
-      "DepartmentLink": "http://www.tn.gov.in/department/17",
-      "Email": "secyit.tn@nic.in",
-      "Phone": "25670783"
-    },
-    {
-      "DepartmentName": "Labour and Employment ",
-      "Role": "Do Services and Operations regarding Labour and Employment ",
-      "DepartmentID": "18",
-      "DepartmentLink": "http://www.tn.gov.in/department/18",
-      "Email": "labsec@tn.gov.in",
-      "Phone": "25670472"
-    },
-    {
-      "DepartmentName": "Law ",
-      "Role": "Do Services and Operations regarding Law ",
-      "DepartmentID": "19",
-      "DepartmentLink": "http://www.tn.gov.in/department/19",
-      "Email": "lawsec@tn.gov.in",
-      "Phone": "25672920"
-    },
-    {
-      "DepartmentName": "Legislative Assembly ",
-      "Role": "Do Services and Operations regarding Legislative Assembly ",
-      "DepartmentID": "20",
-      "DepartmentLink": "http://www.tn.gov.in/department/20",
-      "Email": "assembly@tn.gov.in;assemblysecretary@tn.gov.in",
-      "Phone": "25672611"
-    },
-    {
-      "DepartmentName": "Micro Small and Medium Enterprises ",
-      "Role": "Do Services and Operations regarding Micro Small and Medium Enterprises ",
-      "DepartmentID": "29",
-      "DepartmentLink": "http://www.tn.gov.in/department/29",
-      "Email": "sindsec@tn.gov.in",
-      "Phone": "25671476"
-    },
-    {
-      "DepartmentName": "Miscellaneous Officers Secretariat",
-      "Role": "Do Services and Operations regarding Miscellaneous Officers Secretariat",
-      "DepartmentID": "40",
-      "DepartmentLink": "http://www.tn.gov.in/department/40",
-      "Email": "NA",
-      "Phone": "24615287"
-    },
-    {
-      "DepartmentName": "Municipal Administration and Water Supply ",
-      "Role": "Do Services and Operations regarding Municipal Administration and Water Supply ",
-      "DepartmentID": "21",
-      "DepartmentLink": "http://www.tn.gov.in/department/21",
-      "Email": "mawssec@tn.gov.in",
-      "Phone": "25670491"
-    },
-    {
-      "DepartmentName": "Other States Goverment",
-      "Role": "Do Services and Operations regarding Other States Goverment",
-      "DepartmentID": "37",
-      "DepartmentLink": "http://www.tn.gov.in/department/37",
-      "Email": "NA",
-      "Phone": "NA"
-    },
-    {
-      "DepartmentName": "Personnel and Administrative Reforms ",
-      "Role": "Do Services and Operations regarding Personnel and Administrative Reforms ",
-      "DepartmentID": "22",
-      "DepartmentLink": "http://www.tn.gov.in/department/22",
-      "Email": "parsec@tn.gov.in",
-      "Phone": "25672740"
-    },
-    {
-      "DepartmentName": "Planning Development and Special Initiatives ",
-      "Role": "Do Services and Operations regarding Planning Development and Special Initiatives ",
-      "DepartmentID": "23",
-      "DepartmentLink": "http://www.tn.gov.in/department/23",
-      "Email": "plansec@tn.gov.in;ps.pdsid@tn.gov.in",
-      "Phone": "25670997"
-    },
-    {
-      "DepartmentName": "Public ",
-      "Role": "Do Services and Operations regarding Public ",
-      "DepartmentID": "24",
-      "DepartmentLink": "http://www.tn.gov.in/department/24",
-      "Email": "NA",
-      "Phone": "NA"
-    },
-    {
-      "DepartmentName": "Public (Elections) ",
-      "Role": "Do Services and Operations regarding Public (Elections) ",
-      "DepartmentID": "38",
-      "DepartmentLink": "http://www.tn.gov.in/department/38",
-      "Email": "ceo@tn.gov.in",
-      "Phone": "25670390"
-    },
-    {
-      "DepartmentName": "Public Works ",
-      "Role": "Do Services and Operations regarding Public Works ",
-      "DepartmentID": "42",
-      "DepartmentLink": "http://www.tn.gov.in/department/42",
-      "Email": "pwdsec@tn.gov.in",
-      "Phone": "25671622"
-    },
-    {
-      "DepartmentName": "Revenue and Disaster Management ",
-      "Role": "Do Services and Operations regarding Revenue and Disaster Management ",
-      "DepartmentID": "26",
-      "DepartmentLink": "http://www.tn.gov.in/department/26",
-      "Email": "revsec@tn.gov.in",
-      "Phone": "25671556"
-    },
-    {
-      "DepartmentName": "Rural Development and Panchayat Raj ",
-      "Role": "Do Services and Operations regarding Rural Development and Panchayat Raj ",
-      "DepartmentID": "27",
-      "DepartmentLink": "http://www.tn.gov.in/department/27",
-      "Email": "ruralsec@tn.gov.in",
-      "Phone": "25670769"
-    },
-    {
-      "DepartmentName": "School Education ",
-      "Role": "Do Services and Operations regarding School Education ",
-      "DepartmentID": "28",
-      "DepartmentLink": "http://www.tn.gov.in/department/28",
-      "Email": "schsec@tn.gov.in",
-      "Phone": "25672790"
-    },
-    {
-      "DepartmentName": "Social Reforms ",
-      "Role": "Do Services and Operations regarding Social Reforms ",
-      "DepartmentID": "39",
-      "DepartmentLink": "http://www.tn.gov.in/department/39",
-      "Email": "sreforms@tn.gov.in",
-      "Phone": "25670190"
-    },
-    {
-      "DepartmentName": "Social Welfare and Nutritious Meal Programme ",
-      "Role": "Do Services and Operations regarding Social Welfare and Nutritious Meal Programme ",
-      "DepartmentID": "30",
-      "DepartmentLink": "http://www.tn.gov.in/department/30",
-      "Email": "NA",
-      "Phone": "25671545"
-    },
-    {
-      "DepartmentName": "Special Programme Implementation",
-      "Role": "Do Services and Operations regarding Special Programme Implementation",
-      "DepartmentID": "41",
-      "DepartmentLink": "http://www.tn.gov.in/department/41",
-      "Email": "spidept@tn.gov.in",
-      "Phone": "25670997"
-    },
-    {
-      "DepartmentName": "Tamil Dev. and Information ",
-      "Role": "Do Services and Operations regarding Tamil Dev. and Information ",
-      "DepartmentID": "31",
-      "DepartmentLink": "http://www.tn.gov.in/department/31",
-      "Email": "tdinfosec@tn.gov.in",
-      "Phone": "25672887"
-    },
-    {
-      "DepartmentName": "Tourism Culture and Religious Endowments ",
-      "Role": "Do Services and Operations regarding Tourism Culture and Religious Endowments ",
-      "DepartmentID": "32",
-      "DepartmentLink": "http://www.tn.gov.in/department/32",
-      "Email": "toursec@tn.gov.in",
-      "Phone": "25670820"
-    },
-    {
-      "DepartmentName": "Transport ",
-      "Role": "Do Services and Operations regarding Transport ",
-      "DepartmentID": "33",
-      "DepartmentLink": "http://www.tn.gov.in/department/33",
-      "Email": "transec@tn.gov.in",
-      "Phone": "25671475"
-    },
-    {
-      "DepartmentName": "Welfare of Differently Abled Persons",
-      "Role": "Do Services and Operations regarding Welfare of Differently Abled Persons",
-      "DepartmentID": "35",
-      "DepartmentLink": "http://www.tn.gov.in/department/35",
-      "Email": "NA",
-      "Phone": "25676303"
-    },
-    {
-      "DepartmentName": "Youth Welfare and Sports Development ",
-      "Role": "Do Services and Operations regarding Youth Welfare and Sports Development ",
-      "DepartmentID": "34",
-      "DepartmentLink": "http://www.tn.gov.in/department/34",
-      "Email": "ywssec@tn.gov.in",
-      "Phone": "25671233"
-    }
-  ]
+	{
+		"DepartmentName": "Adi Dravidar and Tribal Welfare ",
+		"Role": "Do Services and Operations regarding Adi Dravidar and Tribal Welfare ",
+		"DepartmentID": "1",
+		"DepartmentLink": "http://www.tn.gov.in/department/1",
+		"Email": "adisec@tn.gov.in",
+		"Phone": "25671848",
+		"Minister": "Tmt.V.M.Rajalakshmi"
+	},
+	{
+		"DepartmentName": "Agriculture ",
+		"Role": "Do Services and Operations regarding Agriculture ",
+		"DepartmentID": "2",
+		"DepartmentLink": "http://www.tn.gov.in/department/2",
+		"Email": "agrisec@tn.gov.in",
+		"Phone": "25674482",
+		"Minister": "Thiru R. Doraikkannu"
+	},
+	{
+		"DepartmentName": "Animal Husbandry Dairying and Fisheries ",
+		"Role": "Do Services and Operations regarding Animal Husbandry Dairying and Fisheries ",
+		"DepartmentID": "3",
+		"DepartmentLink": "http://www.tn.gov.in/department/3",
+		"Email": "ahsec@tn.gov.in",
+		"Phone": "25672937",
+		"Minister": "Thiru D. Jayakumar;Thiru Udumalai K Radhakrishnan;Thiru K.T.Rajenthra Bhalaji"
+	},
+	{
+		"DepartmentName": "BC MBC & Minorities Welfare ",
+		"Role": "Do Services and Operations regarding BC MBC & Minorities Welfare ",
+		"DepartmentID": "4",
+		"DepartmentLink": "http://www.tn.gov.in/department/4",
+		"Email": "bcsec@tn.gov.in",
+		"Phone": "25670848",
+		"Minister": "Tmt S.Valarmathi;Dr Nilofer kafeel"
+	},
+	{
+		"DepartmentName": "Commercial Taxes and Registration ",
+		"Role": "Do Services and Operations regarding Commercial Taxes and Registration ",
+		"DepartmentID": "6",
+		"DepartmentLink": "http://www.tn.gov.in/department/6",
+		"Email": "ctsec@tn.gov.in",
+		"Phone": "25672757",
+		"Minister": "Thiru K.C. Veeramani"
+	},
+	{
+		"DepartmentName": "Co-operation Food and Consumer Protection ",
+		"Role": "Do Services and Operations regarding Co-operation Food and Consumer Protection ",
+		"DepartmentID": "5",
+		"DepartmentLink": "http://www.tn.gov.in/department/5",
+		"Email": "coopsec@tn.gov.in",
+		"Phone": "25672224",
+		"Minister": "Thiru Sellur K. Raju;"
+	},
+	{
+		"DepartmentName": "Thiru R.Kamaraj"
+	},
+	{
+		"DepartmentName": "Energy ",
+		"Role": "Do Services and Operations regarding Energy ",
+		"DepartmentID": "7",
+		"DepartmentLink": "http://www.tn.gov.in/department/7",
+		"Email": "enersec@tn.gov.in",
+		"Phone": "25671496",
+		"Minister": "Thiru P.Thangamani"
+	},
+	{
+		"DepartmentName": "Environment and Forests ",
+		"Role": "Do Services and Operations regarding Environment and Forests ",
+		"DepartmentID": "8",
+		"DepartmentLink": "http://www.tn.gov.in/department/8",
+		"Email": "forsec@tn.gov.in",
+		"Phone": "25671511",
+		"Minister": "Thiru Dindigul C. Sreenivasan;Thiru.K.C.Karuppannan"
+	},
+	{
+		"DepartmentName": "Finance ",
+		"Role": "Do Services and Operations regarding Finance ",
+		"DepartmentID": "9",
+		"DepartmentLink": "http://www.tn.gov.in/department/9",
+		"Email": "finsec@tn.gov.in",
+		"Phone": "25671173",
+		"Minister": "Thiru O.Panneerselvam"
+	},
+	{
+		"DepartmentName": "Handlooms Handicrafts Textiles and Khadi ",
+		"Role": "Do Services and Operations regarding Handlooms Handicrafts Textiles and Khadi ",
+		"DepartmentID": "10",
+		"DepartmentLink": "http://www.tn.gov.in/department/10",
+		"Email": "htksec@tn.gov.in",
+		"Phone": "25671623",
+		"Minister": "Thiru O.S.Manian;Thiru G. Baskaran"
+	},
+	{
+		"DepartmentName": "Health and Family Welfare ",
+		"Role": "Do Services and Operations regarding Health and Family Welfare ",
+		"DepartmentID": "11",
+		"DepartmentLink": "http://www.tn.gov.in/department/11",
+		"Email": "hfsec@tn.gov.in",
+		"Phone": "25671875",
+		"Minister": "Dr.C.Vijaya Baskar"
+	},
+	{
+		"DepartmentName": "Higher Education ",
+		"Role": "Do Services and Operations regarding Higher Education ",
+		"DepartmentID": "12",
+		"DepartmentLink": "http://www.tn.gov.in/department/12",
+		"Email": "hrsec@tn.gov.in",
+		"Phone": "25670499",
+		"Minister": "Thiru K.P. Anbalagan"
+	},
+	{
+		"DepartmentName": "Highways and Minor Ports ",
+		"Role": "Do Services and Operations regarding Highways and Minor Ports ",
+		"DepartmentID": "13",
+		"DepartmentLink": "http://www.tn.gov.in/department/13",
+		"Email": "hwaysec@tn.gov.in",
+		"Phone": "25670959",
+		"Minister": "Thiru Edappadi K. Palaniswami"
+	},
+	{
+		"DepartmentName": "Home Prohibition and Excise ",
+		"Role": "Do Services and Operations regarding Home Prohibition and Excise ",
+		"DepartmentID": "14",
+		"DepartmentLink": "http://www.tn.gov.in/department/14",
+		"Email": "homesec@tn.gov.in",
+		"Phone": "25671113;25670077",
+		"Minister": "Thiru Edappadi K. Palaniswami;Thiru P.Thangamani"
+	},
+	{
+		"DepartmentName": "Housing and Urban Development ",
+		"Role": "Do Services and Operations regarding Housing and Urban Development ",
+		"DepartmentID": "15",
+		"DepartmentLink": "http://www.tn.gov.in/department/15",
+		"Email": "hud@tn.gov.in",
+		"Phone": "25670516",
+		"Minister": "Thiru O.Panneerselvam"
+	},
+	{
+		"DepartmentName": "Industries ",
+		"Role": "Do Services and Operations regarding Industries ",
+		"DepartmentID": "16",
+		"DepartmentLink": "http://www.tn.gov.in/department/16",
+		"Email": "indsec@tn.gov.in",
+		"Phone": "25671383",
+		"Minister": "Thiru C.Ve. Shanmugam;Thiru M.C. Sampath"
+	},
+	{
+		"DepartmentName": "Information Technology ",
+		"Role": "Do Services and Operations regarding Information Technology ",
+		"DepartmentID": "17",
+		"DepartmentLink": "http://www.tn.gov.in/department/17",
+		"Email": "secyit.tn@nic.in",
+		"Phone": "25670783",
+		"Minister": "Dr. M.Manikandan"
+	},
+	{
+		"DepartmentName": "Labour and Employment ",
+		"Role": "Do Services and Operations regarding Labour and Employment ",
+		"DepartmentID": "18",
+		"DepartmentLink": "http://www.tn.gov.in/department/18",
+		"Email": "labsec@tn.gov.in",
+		"Phone": "25670472",
+		"Minister": "Dr Nilofer kafeel"
+	},
+	{
+		"DepartmentName": "Law ",
+		"Role": "Do Services and Operations regarding Law ",
+		"DepartmentID": "19",
+		"DepartmentLink": "http://www.tn.gov.in/department/19",
+		"Email": "lawsec@tn.gov.in",
+		"Phone": "25672920",
+		"Minister": "Thiru C.Ve. Shanmugam"
+	},
+	{
+		"DepartmentName": "Legislative Assembly ",
+		"Role": "Do Services and Operations regarding Legislative Assembly ",
+		"DepartmentID": "20",
+		"DepartmentLink": "http://www.tn.gov.in/department/20",
+		"Email": "assembly@tn.gov.in;assemblysecretary@tn.gov.in",
+		"Phone": "25672611",
+		"Minister": "Thiru O.Panneerselvam"
+	},
+	{
+		"DepartmentName": "Micro Small and Medium Enterprises ",
+		"Role": "Do Services and Operations regarding Micro Small and Medium Enterprises ",
+		"DepartmentID": "29",
+		"DepartmentLink": "http://www.tn.gov.in/department/29",
+		"Email": "sindsec@tn.gov.in",
+		"Phone": "25671476",
+		"Minister": "Thiru P.Benjamin"
+	},
+	{
+		"DepartmentName": "Miscellaneous Officers Secretariat",
+		"Role": "Do Services and Operations regarding Miscellaneous Officers Secretariat",
+		"DepartmentID": "40",
+		"DepartmentLink": "http://www.tn.gov.in/department/40",
+		"Email": "NA",
+		"Phone": "24615287",
+		"Minister": "K Srinivasa Raghavan"
+	},
+	{
+		"DepartmentName": "Municipal Administration and Water Supply ",
+		"Role": "Do Services and Operations regarding Municipal Administration and Water Supply ",
+		"DepartmentID": "21",
+		"DepartmentLink": "http://www.tn.gov.in/department/21",
+		"Email": "mawssec@tn.gov.in",
+		"Phone": "25670491",
+		"Minister": "Thiru S.P. Velumani"
+	},
+	{
+		"DepartmentName": "Other States Goverment",
+		"Role": "Do Services and Operations regarding Other States Goverment",
+		"DepartmentID": "37",
+		"DepartmentLink": "http://www.tn.gov.in/department/37",
+		"Email": "NA",
+		"Phone": "NA",
+		"Minister": "NA"
+	},
+	{
+		"DepartmentName": "Personnel and Administrative Reforms ",
+		"Role": "Do Services and Operations regarding Personnel and Administrative Reforms ",
+		"DepartmentID": "22",
+		"DepartmentLink": "http://www.tn.gov.in/department/22",
+		"Email": "parsec@tn.gov.in",
+		"Phone": "25672740",
+		"Minister": "Thiru D. Jayakumar"
+	},
+	{
+		"DepartmentName": "Planning Development and Special Initiatives ",
+		"Role": "Do Services and Operations regarding Planning Development and Special Initiatives ",
+		"DepartmentID": "23",
+		"DepartmentLink": "http://www.tn.gov.in/department/23",
+		"Email": "plansec@tn.gov.in;ps.pdsid@tn.gov.in",
+		"Phone": "25670997",
+		"Minister": "Thiru O.Panneerselvam"
+	},
+	{
+		"DepartmentName": "Public ",
+		"Role": "Do Services and Operations regarding Public ",
+		"DepartmentID": "24",
+		"DepartmentLink": "http://www.tn.gov.in/department/24",
+		"Email": "NA",
+		"Phone": "NA",
+		"Minister": "Thiru Edappadi K. Palaniswami"
+	},
+	{
+		"DepartmentName": "Public (Elections) ",
+		"Role": "Do Services and Operations regarding Public (Elections) ",
+		"DepartmentID": "38",
+		"DepartmentLink": "http://www.tn.gov.in/department/38",
+		"Email": "ceo@tn.gov.in",
+		"Phone": "25670390",
+		"Minister": "Thiru O.Panneerselvam"
+	},
+	{
+		"DepartmentName": "Public Works ",
+		"Role": "Do Services and Operations regarding Public Works ",
+		"DepartmentID": "42",
+		"DepartmentLink": "http://www.tn.gov.in/department/42",
+		"Email": "pwdsec@tn.gov.in",
+		"Phone": "25671622",
+		"Minister": "Thiru Edappadi K. Palaniswami"
+	},
+	{
+		"DepartmentName": "Revenue and Disaster Management ",
+		"Role": "Do Services and Operations regarding Revenue and Disaster Management ",
+		"DepartmentID": "26",
+		"DepartmentLink": "http://www.tn.gov.in/department/26",
+		"Email": "revsec@tn.gov.in",
+		"Phone": "25671556",
+		"Minister": "Thiru R.B. Udhayakumar"
+	},
+	{
+		"DepartmentName": "Rural Development and Panchayat Raj ",
+		"Role": "Do Services and Operations regarding Rural Development and Panchayat Raj ",
+		"DepartmentID": "27",
+		"DepartmentLink": "http://www.tn.gov.in/department/27",
+		"Email": "ruralsec@tn.gov.in",
+		"Phone": "25670769",
+		"Minister": "Thiru S.P. Velumani"
+	},
+	{
+		"DepartmentName": "School Education ",
+		"Role": "Do Services and Operations regarding School Education ",
+		"DepartmentID": "28",
+		"DepartmentLink": "http://www.tn.gov.in/department/28",
+		"Email": "schsec@tn.gov.in",
+		"Phone": "25672790",
+		"Minister": "Thiru Sengottaiyan K.A"
+	},
+	{
+		"DepartmentName": "Social Reforms ",
+		"Role": "Do Services and Operations regarding Social Reforms ",
+		"DepartmentID": "39",
+		"DepartmentLink": "http://www.tn.gov.in/department/39",
+		"Email": "sreforms@tn.gov.in",
+		"Phone": "25670190",
+		"Minister": "Dr. V. Saroja"
+	},
+	{
+		"DepartmentName": "Social Welfare and Nutritious Meal Programme ",
+		"Role": "Do Services and Operations regarding Social Welfare and Nutritious Meal Programme ",
+		"DepartmentID": "30",
+		"DepartmentLink": "http://www.tn.gov.in/department/30",
+		"Email": "NA",
+		"Phone": "25671545",
+		"Minister": "Dr. V. Saroja"
+	},
+	{
+		"DepartmentName": "Special Programme Implementation",
+		"Role": "Do Services and Operations regarding Special Programme Implementation",
+		"DepartmentID": "41",
+		"DepartmentLink": "http://www.tn.gov.in/department/41",
+		"Email": "spidept@tn.gov.in",
+		"Phone": "25670997",
+		"Minister": "Thiru S.P. Velumani"
+	},
+	{
+		"DepartmentName": "Tamil Dev. and Information ",
+		"Role": "Do Services and Operations regarding Tamil Dev. and Information ",
+		"DepartmentID": "31",
+		"DepartmentLink": "http://www.tn.gov.in/department/31",
+		"Email": "tdinfosec@tn.gov.in",
+		"Phone": "25672887",
+		"Minister": "Thiru Kadambur Raju;Thiru K. Pandiarajan"
+	},
+	{
+		"DepartmentName": "Tourism Culture and Religious Endowments ",
+		"Role": "Do Services and Operations regarding Tourism Culture and Religious Endowments ",
+		"DepartmentID": "32",
+		"DepartmentLink": "http://www.tn.gov.in/department/32",
+		"Email": "toursec@tn.gov.in",
+		"Phone": "25670820",
+		"Minister": "Thiru.Vellamandi N.Natarajan;Thiru Sevvoor S.Ramachandran"
+	},
+	{
+		"DepartmentName": "Transport ",
+		"Role": "Do Services and Operations regarding Transport ",
+		"DepartmentID": "33",
+		"DepartmentLink": "http://www.tn.gov.in/department/33",
+		"Email": "transec@tn.gov.in",
+		"Phone": "25671475",
+		"Minister": "Thiru M.R.Vijayabhaskar"
+	},
+	{
+		"DepartmentName": "Welfare of Differently Abled Persons",
+		"Role": "Do Services and Operations regarding Welfare of Differently Abled Persons",
+		"DepartmentID": "35",
+		"DepartmentLink": "http://www.tn.gov.in/department/35",
+		"Email": "NA",
+		"Phone": "25676303",
+		"Minister": "Dr. V. Saroja"
+	},
+	{
+		"DepartmentName": "Youth Welfare and Sports Development ",
+		"Role": "Do Services and Operations regarding Youth Welfare and Sports Development ",
+		"DepartmentID": "34",
+		"DepartmentLink": "http://www.tn.gov.in/department/34",
+		"Email": "ywssec@tn.gov.in",
+		"Phone": "25671233",
+		"Minister": "Thiru P. Balakrishna Reddy"
+	}
+]
