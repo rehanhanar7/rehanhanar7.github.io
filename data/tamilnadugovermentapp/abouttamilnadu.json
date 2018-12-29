@@ -1,0 +1,84 @@
+{
+    "items": [
+        {
+            "name": "Tamilnadu Goverment",
+            "children": [
+                {
+                    "name": "Governer",
+                    "information": "HonorableThiru Banwarilal Purohit,Governor of Tamil Nadu is the Constitutional Head of the state.",
+                    "email":""
+                },
+                {
+                    "name": "Chief Minister",
+                    "information": "Hon'ble Chief Minister of Tamil Nadu Thiru Edappadi K. Palaniswami is the Head of the elected Government and heads the Council of Ministers.",
+                    "email":"cmcell@tn.gov.in"
+                }
+            ]
+        },
+        {
+            "name": "Pizza",
+            "children": [
+                {
+                    "name": "Traditional",
+                    "children": [
+                        {
+                            "name": "Pizza Salami",
+                            "information": "Pork chop jowl capicola porchetta, kielbasa prosciutto boudin bacon pork pig."
+                        },
+                        {
+                            "name": "Pizza Prosciutto",
+                            "information": "Pork chop pastrami landjaeger chuck brisket"
+                        }
+                    ]
+                },
+                {
+                    "name": "Gourmet",
+                    "children": [
+                        {
+                            "name": "Pizza Bombay",
+                            "information": "Pastrami ham hock ball tip, tongue ribeye chuck ham beef bresaola leberkas."                            
+                        },
+                        {
+                            "name": "Pizza Crazy Dog",
+                            "information": "Andouille spare ribs meatloaf swine ground round pork loin, brisket chuck bacon tongue."
+                        },
+                        {
+                            "name": "Pizza Italia",
+                            "information": "Ribeye ham t-bone, tail ground round biltong picanha sausage rump corned beef."
+                        },
+                        {
+                            "name": "Pizza Tuna",
+                            "information": "Pork chop pastrami landjaeger chuck brisket"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bestseller",
+                    "children": [
+                        {
+                            "name": "Pizza Academy",
+                            "information": "Frankfurter tail capicola cupim shankle salami, beef ribs beef boudin porchetta ball tip leberkas turkey tenderloin."
+                        },
+                        {
+                            "name": "Pizza Ionic",
+                            "information": "Shank chuck tail, kevin shankle ham hock pork loin pork hamburger beef ribs."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Drinks",
+            "children": [
+                {
+                    "name": "Special Academy Pizza",
+                    "information": " Landjaeger fatback shank frankfurter, tongue shoulder ham strip steak pancetta pork short loin corned beef short ribs biltong cow"
+                },
+                {
+                    "name": "Pizza Ionic",
+                    "information": "Pork chop pastrami landjaeger chuck brisket"
+                }
+            ]
+        }
+    ]
+}
