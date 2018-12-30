@@ -6,7 +6,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/1",
 		"Email": "adisec@tn.gov.in",
 		"Phone": "25671848",
-		"Minister": "Tmt.V.M.Rajalakshmi"
+		"Minister": "Tmt.V.M.Rajalakshmi",
+		"PrincipalSecretarytoGovernment": "Thiru Otem Dai",
+		"DeputySecretarytoGovernment": "Tmt S. Senthamarai",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Agriculture ",
@@ -15,7 +23,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/2",
 		"Email": "agrisec@tn.gov.in",
 		"Phone": "25674482",
-		"Minister": "Thiru R. Doraikkannu"
+		"Minister": "Thiru R. Doraikkannu",
+		"PrincipalSecretarytoGovernment": "Thiru Gagandeep Singh Bedi",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "Dr M Karunakaran",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Animal Husbandry Dairying and Fisheries ",
@@ -24,7 +40,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/3",
 		"Email": "ahsec@tn.gov.in",
 		"Phone": "25672937",
-		"Minister": "Thiru D. Jayakumar;Thiru Udumalai K Radhakrishnan;Thiru K.T.Rajenthra Bhalaji"
+		"Minister": "Thiru D. Jayakumar;Thiru Udumalai K Radhakrishnan;Thiru K.T.Rajenthra Bhalaji",
+		"PrincipalSecretarytoGovernment": "Dr K.Gopal",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "BC MBC & Minorities Welfare ",
@@ -33,7 +57,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/4",
 		"Email": "bcsec@tn.gov.in",
 		"Phone": "25670848",
-		"Minister": "Tmt S.Valarmathi;Dr Nilofer kafeel"
+		"Minister": "Tmt S.Valarmathi;Dr Nilofer kafeel",
+		"PrincipalSecretarytoGovernment": "Thiru A. Karthik ",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Commercial Taxes and Registration ",
@@ -42,7 +74,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/6",
 		"Email": "ctsec@tn.gov.in",
 		"Phone": "25672757",
-		"Minister": "Thiru K.C. Veeramani"
+		"Minister": "Thiru K.C. Veeramani",
+		"PrincipalSecretarytoGovernment": "Thiru Ka. Balachandran",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Co-operation Food and Consumer Protection ",
@@ -51,7 +91,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/5",
 		"Email": "coopsec@tn.gov.in",
 		"Phone": "25672224",
-		"Minister": "Thiru Sellur K. Raju;Thiru R.Kamaraj"
+		"Minister": "Thiru Sellur K. Raju;Thiru R.Kamaraj",
+		"PrincipalSecretarytoGovernment": "Thiru Dayanand Kataria",
+		"DeputySecretarytoGovernment": "Tmt S. Valarmathi",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Energy ",
@@ -60,7 +108,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/7",
 		"Email": "enersec@tn.gov.in",
 		"Phone": "25671496",
-		"Minister": "Thiru P.Thangamani"
+		"Minister": "Thiru P.Thangamani",
+		"PrincipalSecretarytoGovernment": "Thiru Md. Nasimuddin",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Environment and Forests ",
@@ -69,7 +125,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/8",
 		"Email": "forsec@tn.gov.in",
 		"Phone": "25671511",
-		"Minister": "Thiru Dindigul C. Sreenivasan;Thiru.K.C.Karuppannan"
+		"Minister": "Thiru Dindigul C. Sreenivasan;Thiru.K.C.Karuppannan",
+		"PrincipalSecretarytoGovernment": "Thiru Shambhu Kallolikar",
+		"DeputySecretarytoGovernment": "Dr V.Jaya Chandra Bhanu Reddy",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Finance ",
@@ -78,7 +142,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/9",
 		"Email": "finsec@tn.gov.in",
 		"Phone": "25671173",
-		"Minister": "Thiru O.Panneerselvam"
+		"Minister": "Thiru O.Panneerselvam",
+		"PrincipalSecretarytoGovernment": "Thiru M.A. Siddique(Expenditure)",
+		"DeputySecretarytoGovernment": "Thiru M.Arvind(Budget);Thiru H. Krishnan Unni;Thiru L.Muthupandi;Thiru M. Ganapathy;Thiru T. Kalaiselvan;Thiru R.D.S Sridharan;Thiru M. Raja",
+		"AdditionalSecretarytoGovernment": "Dr R. Anandakumar;Tmt Pooja Kulkarni;Thiru S. Seenivasagam;Tmt A. Sugunasundari",
+		"JointSecretarytoGovernment": "Thiru K.Muthu;Thiru D.Sridhar;Thiru B. Thiagarajan;Thiru K. Piraisoodum Perumal",
+		"AdditionalChiefSecretarytoGovernment": "Thiru K Shanmugam",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Handlooms Handicrafts Textiles and Khadi ",
@@ -87,7 +159,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/10",
 		"Email": "htksec@tn.gov.in",
 		"Phone": "25671623",
-		"Minister": "Thiru O.S.Manian;Thiru G. Baskaran"
+		"Minister": "Thiru O.S.Manian;Thiru G. Baskaran",
+		"PrincipalSecretarytoGovernment": "Thiru Kumar Jayant",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Health and Family Welfare ",
@@ -96,7 +176,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/11",
 		"Email": "hfsec@tn.gov.in",
 		"Phone": "25671875",
-		"Minister": "Dr.C.Vijaya Baskar"
+		"Minister": "Dr.C.Vijaya Baskar",
+		"PrincipalSecretarytoGovernment": "Dr J Radhakrishnan",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "Thiru S. Nagarajan",
+		"JointSecretarytoGovernment": "Thiru Kiran Gurrala",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Higher Education ",
@@ -105,7 +193,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/12",
 		"Email": "hrsec@tn.gov.in",
 		"Phone": "25670499",
-		"Minister": "Thiru K.P. Anbalagan"
+		"Minister": "Thiru K.P. Anbalagan",
+		"PrincipalSecretarytoGovernment": "Thiru Mangat Ram Sharma",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "Tmt R. Lily",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Highways and Minor Ports ",
@@ -114,7 +210,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/13",
 		"Email": "hwaysec@tn.gov.in",
 		"Phone": "25670959",
-		"Minister": "Thiru Edappadi K. Palaniswami"
+		"Minister": "Thiru Edappadi K. Palaniswami",
+		"PrincipalSecretarytoGovernment": "",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "Thiru Rajeev Ranjan",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Home Prohibition and Excise ",
@@ -123,7 +227,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/14",
 		"Email": "homesec@tn.gov.in",
 		"Phone": "25671113;25670077",
-		"Minister": "Thiru Edappadi K. Palaniswami;Thiru P.Thangamani"
+		"Minister": "Thiru Edappadi K. Palaniswami;Thiru P.Thangamani",
+		"PrincipalSecretarytoGovernment": "",
+		"DeputySecretarytoGovernment": "Thiru B.Murugesh",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "Dr Niranjan Mardi",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Housing and Urban Development ",
@@ -132,7 +244,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/15",
 		"Email": "hud@tn.gov.in",
 		"Phone": "25670516",
-		"Minister": "Thiru O.Panneerselvam"
+		"Minister": "Thiru O.Panneerselvam",
+		"PrincipalSecretarytoGovernment": "Thiru S.Krishnan",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Industries ",
@@ -141,7 +261,12 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/16",
 		"Email": "indsec@tn.gov.in",
 		"Phone": "25671383",
-		"Minister": "Thiru C.Ve. Shanmugam;Thiru M.C. Sampath"
+		"Minister": "Thiru C.Ve. Shanmugam;Thiru M.C. Sampath",
+		"PrincipalSecretarytoGovernment": "",
+		"DeputySecretarytoGovernment": "Thiru K. Balasubramaniam ",
+		"AdditionalSecretarytoGovernment": "Thiru V. Arun Roy",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "Thiru K. Gnanadesikan"
 	},
 	{
 		"DepartmentName": "Information Technology ",
@@ -150,7 +275,12 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/17",
 		"Email": "secyit.tn@nic.in",
 		"Phone": "25670783",
-		"Minister": "Dr. M.Manikandan"
+		"Minister": "Dr. M.Manikandan",
+		"PrincipalSecretarytoGovernment": "Dr Santosh Babu",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Labour and Employment ",
@@ -159,7 +289,12 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/18",
 		"Email": "labsec@tn.gov.in",
 		"Phone": "25670472",
-		"Minister": "Dr Nilofer kafeel"
+		"Minister": "Dr Nilofer kafeel",
+		"PrincipalSecretarytoGovernment": "Thiru Sunil Paliwal",
+		"DeputySecretarytoGovernment": "Tmt S. Amirthajothi ",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "Thiru M.Karunanidhi",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Law ",
@@ -168,7 +303,12 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/19",
 		"Email": "lawsec@tn.gov.in",
 		"Phone": "25672920",
-		"Minister": "Thiru C.Ve. Shanmugam"
+		"Minister": "Thiru C.Ve. Shanmugam",
+		"PrincipalSecretarytoGovernment": "Thiru S.S.Poovalingam",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Legislative Assembly ",
@@ -177,7 +317,12 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/20",
 		"Email": "assembly@tn.gov.in;assemblysecretary@tn.gov.in",
 		"Phone": "25672611",
-		"Minister": "Thiru O.Panneerselvam"
+		"Minister": "Thiru O.Panneerselvam",
+		"PrincipalSecretarytoGovernment": "Thiru K.Srinivasan",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "Tmt L.S Vasanthi Malar;Thiru D. Ganesan(Editor of Debates)",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Micro Small and Medium Enterprises ",
@@ -186,16 +331,26 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/29",
 		"Email": "sindsec@tn.gov.in",
 		"Phone": "25671476",
-		"Minister": "Thiru P.Benjamin"
+		"Minister": "Thiru P.Benjamin",
+		"PrincipalSecretarytoGovernment": "Thiru Dharmendra Pratap Yadav",
+		"DeputySecretarytoGovernment": "Thiru A. Thangappa(Establishment);Thiru G.Shivaji(Schemes)",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Miscellaneous Officers Secretariat",
 		"Role": "Do Services and Operations regarding Miscellaneous Officers Secretariat",
 		"DepartmentID": "40",
 		"DepartmentLink": "http://www.tn.gov.in/department/40",
-		"Email": "NA",
+		"Email": "",
 		"Phone": "24615287",
-		"Minister": "K Srinivasa Raghavan"
+		"Minister": "K Srinivasa Raghavan",
+		"PrincipalSecretarytoGovernment": "",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Municipal Administration and Water Supply ",
@@ -204,16 +359,26 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/21",
 		"Email": "mawssec@tn.gov.in",
 		"Phone": "25670491",
-		"Minister": "Thiru S.P. Velumani"
+		"Minister": "Thiru S.P. Velumani",
+		"PrincipalSecretarytoGovernment": "Thiru Harmander Singh",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "Smt G. Laxmi Priya",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Other States Goverment",
 		"Role": "Do Services and Operations regarding Other States Goverment",
 		"DepartmentID": "37",
 		"DepartmentLink": "http://www.tn.gov.in/department/37",
-		"Email": "NA",
-		"Phone": "NA",
-		"Minister": "NA"
+		"Email": "",
+		"Phone": "",
+		"Minister": "",
+		"PrincipalSecretarytoGovernment": "",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Personnel and Administrative Reforms ",
@@ -222,7 +387,12 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/22",
 		"Email": "parsec@tn.gov.in",
 		"Phone": "25672740",
-		"Minister": "Thiru D. Jayakumar"
+		"Minister": "Thiru D. Jayakumar",
+		"PrincipalSecretarytoGovernment": "Dr S. Swarna",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "Thiru Mohan Pyare",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Planning Development and Special Initiatives ",
@@ -231,16 +401,26 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/23",
 		"Email": "plansec@tn.gov.in;ps.pdsid@tn.gov.in",
 		"Phone": "25670997",
-		"Minister": "Thiru O.Panneerselvam"
+		"Minister": "Thiru O.Panneerselvam",
+		"PrincipalSecretarytoGovernment": "Thiru Ashish Vachhani",
+		"DeputySecretarytoGovernment": "Tmt M.D.Sumathy;Tmt B.Geetha",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "Thiru K.Manickam",
+		"AdditionalChiefSecretarytoGovernment": "Dr T.V Somanathan"
 	},
 	{
 		"DepartmentName": "Public ",
 		"Role": "Do Services and Operations regarding Public ",
 		"DepartmentID": "24",
 		"DepartmentLink": "http://www.tn.gov.in/department/24",
-		"Email": "NA",
-		"Phone": "NA",
-		"Minister": "Thiru Edappadi K. Palaniswami"
+		"Email": "",
+		"Phone": "",
+		"Minister": "Thiru Edappadi K. Palaniswami",
+		"PrincipalSecretarytoGovernment": "Dr P.SenthilKumar",
+		"DeputySecretarytoGovernment": "Thiru D. Mohan",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Public (Elections) ",
@@ -249,7 +429,12 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/38",
 		"Email": "ceo@tn.gov.in",
 		"Phone": "25670390",
-		"Minister": "Thiru O.Panneerselvam"
+		"Minister": "Thiru O.Panneerselvam",
+		"PrincipalSecretarytoGovernment": "Thiru Satyabrata Sahoo",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Public Works ",
@@ -258,7 +443,12 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/42",
 		"Email": "pwdsec@tn.gov.in",
 		"Phone": "25671622",
-		"Minister": "Thiru Edappadi K. Palaniswami"
+		"Minister": "Thiru Edappadi K. Palaniswami",
+		"PrincipalSecretarytoGovernment": "Thiru S.K. Prabakar",
+		"DeputySecretarytoGovernment": "Thiru C.Subramanian",
+		"AdditionalSecretarytoGovernment": "Thiru M.Balaji",
+		"JointSecretarytoGovernment": "Thiru K. Eshwantha Rao",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Revenue and Disaster Management ",
@@ -267,7 +457,12 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/26",
 		"Email": "revsec@tn.gov.in",
 		"Phone": "25671556",
-		"Minister": "Thiru R.B. Udhayakumar"
+		"Minister": "Thiru R.B. Udhayakumar",
+		"PrincipalSecretarytoGovernment": "Dr Atulya Misra",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "Tmt G.Latha;Thiru A.S.Sourienarayanan",
+		"AdditionalChiefSecretarytoGovernment": ""
 	},
 	{
 		"DepartmentName": "Rural Development and Panchayat Raj ",
@@ -276,7 +471,12 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/27",
 		"Email": "ruralsec@tn.gov.in",
 		"Phone": "25670769",
-		"Minister": "Thiru S.P. Velumani"
+		"Minister": "Thiru S.P. Velumani",
+		"PrincipalSecretarytoGovernment": "",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "Smt Pinky Jowel",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "Thiru Hans Raj Verma"
 	},
 	{
 		"DepartmentName": "School Education ",
@@ -285,7 +485,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/28",
 		"Email": "schsec@tn.gov.in",
 		"Phone": "25672790",
-		"Minister": "Thiru Sengottaiyan K.A"
+		"Minister": "Thiru Sengottaiyan K.A",
+		"PrincipalSecretarytoGovernment": "Thiru Pradeep Yadav",
+		"DeputySecretarytoGovernment": "Thiru S. Selvaraju(EE);Thiru S.Vedarathinam(SE)",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "Thiru E. Saravanavelraj",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Social Reforms ",
@@ -294,16 +502,32 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/39",
 		"Email": "sreforms@tn.gov.in",
 		"Phone": "25670190",
-		"Minister": "Dr. V. Saroja"
+		"Minister": "Dr. V. Saroja",
+		"PrincipalSecretarytoGovernment": "",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Social Welfare and Nutritious Meal Programme ",
 		"Role": "Do Services and Operations regarding Social Welfare and Nutritious Meal Programme ",
 		"DepartmentID": "30",
 		"DepartmentLink": "http://www.tn.gov.in/department/30",
-		"Email": "NA",
+		"Email": "",
 		"Phone": "25671545",
-		"Minister": "Dr. V. Saroja"
+		"Minister": "Dr. V. Saroja",
+		"PrincipalSecretarytoGovernment": "Dr K. Manivasan",
+		"DeputySecretarytoGovernment": "Tmt K.Petchiammal",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Special Programme Implementation",
@@ -312,7 +536,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/41",
 		"Email": "spidept@tn.gov.in",
 		"Phone": "25670997",
-		"Minister": "Thiru S.P. Velumani"
+		"Minister": "Thiru S.P. Velumani",
+		"PrincipalSecretarytoGovernment": "Thiru Hans Raj Verma",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "Dr K. Radhakrishnan",
+		"AdditionalDirector": "Dr B. Viswanathan",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Tamil Dev. and Information ",
@@ -321,7 +553,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/31",
 		"Email": "tdinfosec@tn.gov.in",
 		"Phone": "25672887",
-		"Minister": "Thiru Kadambur Raju;Thiru K. Pandiarajan"
+		"Minister": "Thiru Kadambur Raju;Thiru K. Pandiarajan",
+		"PrincipalSecretarytoGovernment": "Thiru R.Venkatesan",
+		"DeputySecretarytoGovernment": "Thiru S. Natarajan",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "Dr P.Shankar",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Tourism Culture and Religious Endowments ",
@@ -330,7 +570,15 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/32",
 		"Email": "toursec@tn.gov.in",
 		"Phone": "25670820",
-		"Minister": "Thiru.Vellamandi N.Natarajan;Thiru Sevvoor S.Ramachandran"
+		"Minister": "Thiru.Vellamandi N.Natarajan;Thiru Sevvoor S.Ramachandran",
+		"PrincipalSecretarytoGovernment": "Thiru Apurva Varma",
+		"DeputySecretarytoGovernment": "Tmt S. Premasheela",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Transport ",
@@ -339,16 +587,32 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/33",
 		"Email": "transec@tn.gov.in",
 		"Phone": "25671475",
-		"Minister": "Thiru M.R.Vijayabhaskar"
+		"Minister": "Thiru M.R.Vijayabhaskar",
+		"PrincipalSecretarytoGovernment": "",
+		"DeputySecretarytoGovernment": "Thiru P. Prabhakar",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	},
 	{
 		"DepartmentName": "Welfare of Differently Abled Persons",
 		"Role": "Do Services and Operations regarding Welfare of Differently Abled Persons",
 		"DepartmentID": "35",
 		"DepartmentLink": "http://www.tn.gov.in/department/35",
-		"Email": "NA",
+		"Email": "",
 		"Phone": "25676303",
-		"Minister": "Dr. V. Saroja"
+		"Minister": "Dr. V. Saroja",
+		"PrincipalSecretarytoGovernment": "Thiru C. Vijayaraj Kumar",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": "Tmt B. Maheswari"
 	},
 	{
 		"DepartmentName": "Youth Welfare and Sports Development ",
@@ -357,6 +621,14 @@
 		"DepartmentLink": "http://www.tn.gov.in/department/34",
 		"Email": "ywssec@tn.gov.in",
 		"Phone": "25671233",
-		"Minister": "Thiru P. Balakrishna Reddy"
+		"Minister": "Thiru P. Balakrishna Reddy",
+		"PrincipalSecretarytoGovernment": "Thiru Dheeraj Kumar",
+		"DeputySecretarytoGovernment": "",
+		"AdditionalSecretarytoGovernment": "",
+		"JointSecretarytoGovernment": "",
+		"AdditionalChiefSecretarytoGovernment": "",
+		"Director": "",
+		"AdditionalDirector": "",
+		"Commissioner": ""
 	}
 ]

@@ -6,12 +6,20 @@
                 {
                     "name": "Governer",
                     "information": "HonorableThiru Banwarilal Purohit,Governor of Tamil Nadu is the Constitutional Head of the state.",
-                    "email":""
+                    "email":"",
+                    "phone":"25671555"
                 },
                 {
                     "name": "Chief Minister",
                     "information": "Hon'ble Chief Minister of Tamil Nadu Thiru Edappadi K. Palaniswami is the Head of the elected Government and heads the Council of Ministers.",
-                    "email":"cmcell@tn.gov.in"
+                    "email":"cmcell@tn.gov.in",
+                    "phone":"25671555"
+                },
+                {
+                    "name": "Chief Secretary to Government",
+                    "information": "Dr (Tmt) Girija Vaidyanathan",
+                    "email":"",
+                    "phone":"25671555"
                 }
             ]
         },
