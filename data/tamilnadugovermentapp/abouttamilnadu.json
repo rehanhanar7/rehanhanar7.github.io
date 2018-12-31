@@ -49,8 +49,8 @@
                     "information":"Chennai"
                 },
                 {
-                    "name": "Capital",
-                    "information":"Chennai"
+                    "name": "Language",
+                    "information":"Tamil"
                 }
             ]
         },
@@ -59,55 +59,73 @@
             "children": [
                 {
                     "name": "District Statistics",
-                    "information": "32"
+                    "information": "32",
+                    "link":"http://www.tn.gov.in/district_view"
                 },
                 {
                     "name": "Revenue Divisions",
-                    "information": "82"
+                    "information": "82",
+                    "link":"http://www.tn.gov.in/government/revenue_division"
                 },
                 {
                     "name": "Taluks",
-                    "information": "82"
+                    "information": "82",
+                    "link":"http://www.tn.gov.in/government/taluk"
                 },
                 {
                     "name": "Revenue Divisions",
-                    "information": "285"
+                    "information": "285",
+                    "link":""
                 },
                 {
                     "name": "Firkas",
-                    "information": "1,349"
+                    "information": "1,349",
+                    "link":""
                 },
                 {
                     "name": "Revenue Villages",
-                    "information": "17,680"
+                    "information": "17,680",
+                    "link":""
                 },
                 {
                     "name": "Municipal Corporations",
-                    "information": "10"
+                    "information": "10",
+                    "link":""
                 },
                 {
                     "name": "Municipalities",
-                    "information": "125"
+                    "information": "125",
+                    "link":""
                 },
                 {
                     "name": "Panchayat Unions (Blocks)",
-                    "information": "385"
+                    "information": "385",
+                    "link":"http://www.tn.gov.in/government/block"
                 },
                 {
                     "name": "Town Panchayats",
-                    "information": "561"
+                    "information": "561",
+                    "link":""
                 },
                 {
                     "name": "Village Panchayats",
-                    "information": "12,618"
+                    "information": "12,618",
+                    "link":"http://www.tngis.tn.gov.in/"
                 },
                 {
                     "name":"Lok Sabha Constituencies",
-                    "information":"39"
+                    "information":"39",
+                    "link":"http://www.tn.gov.in/government/loksaba"
                 },
                 {
-                    "name":"Assembly Constituencies",
-                    "information":"234"
+                    "name":"Rajyasaba",
+                    "information":"18",
+                    "link":"http://www.tn.gov.in/government/rajyasaba"
+                },
+                {
+                    "name":"MLAs",
+                    "information":"234",
+                    "link":"http://www.assembly.tn.gov.in/15thassembly/members/001_050.html"
                 }
                 
             ]
