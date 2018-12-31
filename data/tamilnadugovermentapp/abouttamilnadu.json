@@ -55,7 +55,7 @@
             ]
         },
         {
-            "name": "Administrative units of state",
+            "name": "Administrative Units of State",
             "children": [
                 {
                     "name": "District Statistics",
@@ -126,8 +126,33 @@
                     "name":"MLAs",
                     "information":"234",
                     "link":"http://www.assembly.tn.gov.in/15thassembly/members/001_050.html"
+                },
+                {
+                    "name":"Ministers",
+                    "information":"Tap on link icon to view the list",
+                    "link":"http://www.tn.gov.in/ministerslist"
+                },
+                {
+                    "name":"District Collectors",
+                    "information":"Tap on link icon to view the list",
+                    "link":"http://www.tn.gov.in/collectors"
+                },
+                {
+                    "name":"Secretaries of Department",
+                    "information":"Tap on link icon to view the list",
+                    "link":"http://www.tn.gov.in/section"
                 }
                 
+            ]
+        },
+        {
+            "name":"",
+            "children":[
+                {
+                    "name":"",
+                    "information":"",
+                    "link":""
+                }
             ]
         }
     ]

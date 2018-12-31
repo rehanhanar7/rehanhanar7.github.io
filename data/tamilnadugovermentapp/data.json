@@ -15,7 +15,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/1",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/1",
+		"Forms": "http://www.tn.gov.in/forms/deptname/1",
+		"Documents": "http://www.tn.gov.in/documents/dept/1"
 	},
 	{
 		"DepartmentName": "Agriculture ",
@@ -33,7 +37,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/2",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/2",
+		"Forms": "http://www.tn.gov.in/forms/deptname/2",
+		"Documents": "http://www.tn.gov.in/documents/dept/2"
 	},
 	{
 		"DepartmentName": "Animal Husbandry Dairying and Fisheries ",
@@ -51,7 +59,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": ""
 	},
 	{
 		"DepartmentName": "BC MBC & Minorities Welfare ",
@@ -69,7 +81,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.bcmbcmw.tn.gov.in/"
+		"website": "http://www.bcmbcmw.tn.gov.in/",
+		"Services": "http://www.tn.gov.in/service/dept/4",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/4",
+		"Forms": "http://www.tn.gov.in/forms/deptname/4",
+		"Documents": "http://www.tn.gov.in/documents/dept/4"
 	},
 	{
 		"DepartmentName": "Commercial Taxes and Registration ",
@@ -87,7 +103,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.tnvat.gov.in"
+		"website": "http://www.tnvat.gov.in",
+		"Services": "http://www.tn.gov.in/service/dept/6",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/6",
+		"Documents": "http://www.tn.gov.in/documents/dept/6"
 	},
 	{
 		"DepartmentName": "Co-operation Food and Consumer Protection ",
@@ -105,7 +125,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.consumer.tn.gov.in"
+		"website": "http://www.consumer.tn.gov.in",
+		"Services": "http://www.tn.gov.in/service/dept/5",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/5",
+		"Forms": "http://www.tn.gov.in/forms/deptname/5",
+		"Documents": "http://www.tn.gov.in/documents/dept/5"
 	},
 	{
 		"DepartmentName": "Energy ",
@@ -123,7 +147,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.tneb.in"
+		"website": "http://www.tneb.in",
+		"Services": "http://www.tn.gov.in/service/dept/7",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/7",
+		"Documents": "http://www.tn.gov.in/documents/dept/7"
 	},
 	{
 		"DepartmentName": "Environment and Forests ",
@@ -141,7 +169,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.environment.tn.nic.in"
+		"website": "http://www.environment.tn.nic.in",
+		"Services": "http://www.tn.gov.in/service/dept/8",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/8",
+		"Documents": "http://www.tn.gov.in/documents/dept/8"
 	},
 	{
 		"DepartmentName": "Finance ",
@@ -159,7 +191,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.tn.gov.in/karuvoolam"
+		"website": "http://www.tn.gov.in/karuvoolam",
+		"Services": "http://www.tn.gov.in/service/dept/9",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/9",
+		"Forms": "http://www.tn.gov.in/forms/deptname/9",
+		"Documents": "http://www.tn.gov.in/documents/dept/9"
 	},
 	{
 		"DepartmentName": "Handlooms Handicrafts Textiles and Khadi ",
@@ -177,7 +213,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/scheme/department_wise/10",
+		"Documents": ""
 	},
 	{
 		"DepartmentName": "Health and Family Welfare ",
@@ -195,7 +235,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.tnhealth.org"
+		"website": "http://www.tnhealth.org",
+		"Services": "http://www.tn.gov.in/service/dept/11",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/11"
 	},
 	{
 		"DepartmentName": "Higher Education ",
@@ -213,7 +257,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/12",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/12"
 	},
 	{
 		"DepartmentName": "Highways and Minor Ports ",
@@ -231,7 +279,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/13"
 	},
 	{
 		"DepartmentName": "Home Prohibition and Excise ",
@@ -249,7 +301,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/14",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/14",
+		"Documents": "http://www.tn.gov.in/documents/dept/14"
 	},
 	{
 		"DepartmentName": "Housing and Urban Development ",
@@ -267,7 +323,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/15",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/15",
+		"Documents": "http://www.tn.gov.in/documents/dept/15"
 	},
 	{
 		"DepartmentName": "Industries ",
@@ -285,7 +345,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/16",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/16"
 	},
 	{
 		"DepartmentName": "Information Technology ",
@@ -303,7 +367,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.elcot.in"
+		"website": "http://www.elcot.in",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/17",
+		"Documents": "http://www.tn.gov.in/documents/dept/17"
 	},
 	{
 		"DepartmentName": "Labour and Employment ",
@@ -321,7 +389,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/18",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/18"
 	},
 	{
 		"DepartmentName": "Law ",
@@ -339,7 +411,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/19",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/19"
 	},
 	{
 		"DepartmentName": "Legislative Assembly ",
@@ -357,7 +433,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.assembly.tn.gov.in"
+		"website": "http://www.assembly.tn.gov.in",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/20"
 	},
 	{
 		"DepartmentName": "Micro Small and Medium Enterprises ",
@@ -375,7 +455,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.indcom.tn.gov.in"
+		"website": "http://www.indcom.tn.gov.in",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/29",
+		"Documents": "http://www.tn.gov.in/documents/dept/29"
 	},
 	{
 		"DepartmentName": "Miscellaneous Officers Secretariat",
@@ -393,7 +477,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": ""
 	},
 	{
 		"DepartmentName": "Municipal Administration and Water Supply ",
@@ -411,7 +499,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/21",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/21",
+		"Documents": "http://www.tn.gov.in/documents/dept/21"
 	},
 	{
 		"DepartmentName": "Other States Goverment",
@@ -429,7 +521,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": ""
 	},
 	{
 		"DepartmentName": "Personnel and Administrative Reforms ",
@@ -447,7 +543,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/22",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/22",
+		"Documents": "http://www.tn.gov.in/documents/dept/22"
 	},
 	{
 		"DepartmentName": "Planning Development and Special Initiatives ",
@@ -465,7 +565,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/23"
 	},
 	{
 		"DepartmentName": "Public ",
@@ -483,7 +587,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/24",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/24",
+		"Forms": "http://www.tn.gov.in/forms/deptname/24",
+		"Documents": "http://www.tn.gov.in/documents/dept/24"
 	},
 	{
 		"DepartmentName": "Public (Elections) ",
@@ -501,7 +609,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.elections.tn.gov.in"
+		"website": "http://www.elections.tn.gov.in",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/38",
+		"Documents": ""
 	},
 	{
 		"DepartmentName": "Public Works ",
@@ -519,7 +631,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/42",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/42"
 	},
 	{
 		"DepartmentName": "Revenue and Disaster Management ",
@@ -537,7 +653,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/26",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/26",
+		"Forms": "http://www.tn.gov.in/forms/deptname/26",
+		"Documents": "http://www.tn.gov.in/documents/dept/26"
 	},
 	{
 		"DepartmentName": "Rural Development and Panchayat Raj ",
@@ -555,7 +675,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.tnrd.gov.in"
+		"website": "http://www.tnrd.gov.in",
+		"Services": "",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/27",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/27"
 	},
 	{
 		"DepartmentName": "School Education ",
@@ -573,7 +697,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.tn.gov.in/schooleducation"
+		"website": "http://www.tn.gov.in/schooleducation",
+		"Services": "http://www.tn.gov.in/service/dept/28",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/28",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/28"
 	},
 	{
 		"DepartmentName": "Social Reforms ",
@@ -591,7 +719,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": ""
 	},
 	{
 		"DepartmentName": "Social Welfare and Nutritious Meal Programme ",
@@ -609,7 +741,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/30",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/30",
+		"Forms": "http://www.tn.gov.in/forms/deptname/30",
+		"Documents": "http://www.tn.gov.in/documents/dept/30"
 	},
 	{
 		"DepartmentName": "Special Programme Implementation",
@@ -627,7 +763,11 @@
 		"Director": "Dr K. Radhakrishnan",
 		"AdditionalDirector": "Dr B. Viswanathan",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/41"
 	},
 	{
 		"DepartmentName": "Tamil Dev. and Information ",
@@ -645,7 +785,11 @@
 		"Director": "Dr P.Shankar",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/31",
+		"Forms": "http://www.tn.gov.in/forms/deptname/31",
+		"Documents": "http://www.tn.gov.in/documents/dept/31"
 	},
 	{
 		"DepartmentName": "Tourism Culture and Religious Endowments ",
@@ -663,7 +807,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": ""
+		"website": "",
+		"Services": "http://www.tn.gov.in/service/dept/32",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/32",
+		"Forms": "",
+		"Documents": "http://www.tn.gov.in/documents/dept/32"
 	},
 	{
 		"DepartmentName": "Transport ",
@@ -681,7 +829,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "http://www.tn.gov.in/transport"
+		"website": "http://www.tn.gov.in/transport",
+		"Services": "http://www.tn.gov.in/service/dept/33",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/33",
+		"Documents": "http://www.tn.gov.in/documents/dept/33"
 	},
 	{
 		"DepartmentName": "Welfare of Differently Abled Persons",
@@ -699,7 +851,11 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "Tmt B. Maheswari",
-		"website": ""
+		"website": "",
+		"Services": "",
+		"Schemes": "",
+		"Forms": "http://www.tn.gov.in/forms/deptname/35",
+		"Documents": "http://www.tn.gov.in/documents/dept/35"
 	},
 	{
 		"DepartmentName": "Youth Welfare and Sports Development ",
@@ -717,6 +873,10 @@
 		"Director": "",
 		"AdditionalDirector": "",
 		"Commissioner": "",
-		"website": "https://www.sdat.tn.gov.in/"
+		"website": "https://www.sdat.tn.gov.in/",
+		"Services": "",
+		"Schemes": "http://www.tn.gov.in/scheme/department_wise/34",
+		"Forms": "http://www.tn.gov.in/forms/deptname/34",
+		"Documents": "http://www.tn.gov.in/documents/dept/34"
 	}
 ]
