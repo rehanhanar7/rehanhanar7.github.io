@@ -2,6 +2,7 @@
     "items": [
         {
             "name": "Goverment",
+            "istable":false,
             "children": [
                 {
                     "name": "Governer",
@@ -35,6 +36,7 @@
         },
         {
             "name": "Census",
+            "istable": true,
             "children": [
                 {
                     "name": "Population",
@@ -56,6 +58,7 @@
         },
         {
             "name": "Administrative Units of State",
+            "istable": true,
             "children": [
                 {
                     "name": "District Statistics",
@@ -147,6 +150,7 @@
         },
         {
             "name":"History",
+            "istable": false,
             "children":[
                 {
                     "name":"Indus valley",
@@ -188,6 +192,7 @@
             ]
         },{
             "name":"Religions Populations as of 2011",
+            "istable": true,
             "children":[
                 {
                     "name":"Hinduism",
@@ -228,6 +233,7 @@
         },
         {
             "name":"Festivals in Tamilnadu",
+            "istable":false,
             "children":[
                 {
                     "name":"Hindu",
@@ -322,6 +328,7 @@
         },
         {
             "name":"Infrastructure",
+            "istable":false,
             "children":[
                 {
                     "name":"Transport",
