@@ -146,12 +146,177 @@
             ]
         },
         {
-            "name":"",
+            "name":"History",
             "children":[
                 {
-                    "name":"",
-                    "information":"",
+                    "name":"Indus valley",
+                    "information":"Between 3500 and 1900 BCE",
+                    "link":"https://en.wikipedia.org/wiki/Indus_script"
+                },{
+                    "name":"Sangam period",
+                    "information":"Between 300 BCE – 3rd Century",
+                    "link":"https://en.wikipedia.org/wiki/Sangam_period"
+                },{
+                    "name":"Bhakti Movement",
+                    "information":"Between 4th–10th Centuries",
+                    "link":"https://en.wikipedia.org/wiki/Bhakti_Movement"
+                },{
+                    "name":"Medieval period",
+                    "information":"Between 600–1300",
+                    "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
+                },{
+                    "name":"Chola Empire",
+                    "information":"Between 300-1279",
+                    "link":"https://en.wikipedia.org/wiki/Chola_dynasty"
+                },{
+                    "name":"Vijayanagar and Nayak period",
+                    "information":"Between 1336–1646",
+                    "link":"https://en.wikipedia.org/wiki/Vijayanagara_Empire"
+                },{
+                    "name":"Power struggles of the 18th century",
+                    "information":"Between 1688–1802",
+                    "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
+                },{
+                    "name":"British rule",
+                    "information":"1801–1947",
+                    "link":"https://en.wikipedia.org/wiki/Madras_Presidency"
+                },{
+                    "name":"India",
+                    "information":"1947–present",
+                    "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
+                }
+            ]
+        },{
+            "name":"Religions Populations as of 2011",
+            "children":[
+                {
+                    "name":"Hinduism",
+                    "information":"87.58%",
                     "link":""
+                },
+                {
+                    "name":"Christianity",
+                    "information":"6.12%",
+                    "link":""
+                },
+                {
+                    "name":"Islam",
+                    "information":"5.86%",
+                    "link":""
+                },
+                {
+                    "name":"Jainism",
+                    "information":"0.12%",
+                    "link":""
+                },
+                {
+                    "name":"Sikhism",
+                    "information":"0.02%",
+                    "link":""
+                },
+                {
+                    "name":"Buddhism",
+                    "information":"0.01%",
+                    "link":""
+                },
+                {
+                    "name":"Other or not religious",
+                    "information":"0.3%",
+                    "link":""
+                }
+            ]
+        },
+        {
+            "name":"Festivals in Tamilnadu",
+            "children":[
+                {
+                    "name":"Hindu",
+                    "children":[
+                        {
+                            "name":"Pongal",
+                            "information":"Pongal, also called as Tamizhar Thirunaal (festival of Tamils) or Makara Sankranti elsewhere in India, a four-day harvest festival is one of the most widely celebrated festivals throughout Tamil Nadu",
+                            "link":"https://en.wikipedia.org/wiki/Thai_Pongal"
+                        },
+                        {
+                            "name":"Tamil New Year",
+                            "information":"The first month in the Tamil calendar is Chittirai and the first day of this month in mid-April is celebrated as Tamil New Year",
+                            "link":""
+                        },
+                        {
+                            "name":"Aadi Perukku",
+                            "information":"Aadi Perukku is celebrated on the 18th day of the Tamil month Aadi, which celebrates the rising of the water level in the river Kaveri",
+                            "link":""
+                        },
+                        {
+                            "name":"Deepavali",
+                            "information":"Deepavali is celebrated for Death of Narakasura",
+                            "link":"https://en.wikipedia.org/wiki/Diwali"
+                        },
+                        {
+                            "name":"Saraswathi Poojai (Dasara)",
+                            "information":"For more info tap here",
+                            "link":"https://en.wikipedia.org/wiki/Navratri"
+                        },
+                        {
+                            "name":"Ayudha Poojai",
+                            "information":"",
+                            "link":""
+                        },
+                        {
+                            "name":"Vinayaka Chathurthi",
+                            "information":"",
+                            "link":"https://en.wikipedia.org/wiki/Vinayaka_Chathurthi"
+                        },
+                        {
+                            "name":"Krishna Jayanthi",
+                            "information":"",
+                            "link":""
+                        }
+                    ]
+                },
+                {
+                    "name":"Muslims",
+                    "children":[
+                        {
+                            "name":"Eid ul-Fitr",
+                            "information":"",
+                            "link":"https://en.wikipedia.org/wiki/Eid_ul-Fitr"
+                        },
+                        {
+                            "name":"Bakrid",
+                            "information":"",
+                            "link":"https://en.wikipedia.org/wiki/Bakrid"
+                        },
+                        {
+                            "name":"Milad un Nabi",
+                            "information":"",
+                            "link":"https://en.wikipedia.org/wiki/Milad_un_Nabi"
+                        },
+                        {
+                            "name":"Muharram",
+                            "information":"",
+                            "link":"https://en.wikipedia.org/wiki/Aashurah"
+                        }
+                    ]
+                },{
+                    "name":"Christians",
+                    "children":[
+                        {
+                            "name":"Christmas",
+                            "information":"",
+                            "link":"https://en.wikipedia.org/wiki/Christmas"
+                        },
+                        {
+                            "name":"Good Friday",
+                            "information":"",
+                            "link":"https://en.wikipedia.org/wiki/Good_Friday"
+                        },
+                        {
+                            "name":"Easter",
+                            "information":"",
+                            "link":"https://en.wikipedia.org/wiki/Easter"
+                        }
+                    ]
                 }
             ]
         }
