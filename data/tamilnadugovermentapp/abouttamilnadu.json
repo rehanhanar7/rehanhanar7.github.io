@@ -150,35 +150,35 @@
         },
         {
             "name":"History",
-            "istable": false,
+            "istable": true,
             "children":[
                 {
                     "name":"Indus valley",
-                    "information":"Between 3500 and 1900 BCE",
+                    "information":"3500 and 1900 BCE",
                     "link":"https://en.wikipedia.org/wiki/Indus_script"
                 },{
                     "name":"Sangam period",
-                    "information":"Between 300 BCE – 3rd Century",
+                    "information":"300 BCE – 3rd Century",
                     "link":"https://en.wikipedia.org/wiki/Sangam_period"
                 },{
                     "name":"Bhakti Movement",
-                    "information":"Between 4th–10th Centuries",
+                    "information":"4th–10th Centuries",
                     "link":"https://en.wikipedia.org/wiki/Bhakti_Movement"
                 },{
                     "name":"Medieval period",
-                    "information":"Between 600–1300",
+                    "information":"600–1300",
                     "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
                 },{
                     "name":"Chola Empire",
-                    "information":"Between 300-1279",
+                    "information":"300-1279",
                     "link":"https://en.wikipedia.org/wiki/Chola_dynasty"
                 },{
                     "name":"Vijayanagar and Nayak period",
-                    "information":"Between 1336–1646",
+                    "information":"1336–1646",
                     "link":"https://en.wikipedia.org/wiki/Vijayanagara_Empire"
                 },{
                     "name":"Power struggles of the 18th century",
-                    "information":"Between 1688–1802",
+                    "information":"1688–1802",
                     "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
                 },{
                     "name":"British rule",
