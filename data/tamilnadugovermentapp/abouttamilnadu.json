@@ -3,7 +3,7 @@
         {
             "name": "Goverment",
             "istable":false,
-            "open":true,
+            "open":false,
             "children": [
                 {
                     "name": "Governer",
@@ -243,6 +243,7 @@
             "children":[
                 {
                     "name":"Hindu",
+                    "open":false,
                     "children":[
                         {
                             "name":"Pongal",
@@ -288,6 +289,7 @@
                 },
                 {
                     "name":"Muslims",
+                    "open":false,
                     "children":[
                         {
                             "name":"Eid ul-Fitr",
@@ -312,6 +314,7 @@
                     ]
                 },{
                     "name":"Christians",
+                    "open":false,
                     "children":[
                         {
                             "name":"Christmas",
@@ -339,6 +342,7 @@
             "children":[
                 {
                     "name":"Transport",
+                    "open":false,
                     "children":[
                         {
                             "name":"Road",
@@ -364,6 +368,7 @@
                 },
                 {
                     "name":"Energy & Power Plants",
+                    "open":false,
                     "children":[
                         {
                             "name":"Wind Energy",
