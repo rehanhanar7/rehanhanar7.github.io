@@ -61,7 +61,7 @@
             "istable": true,
             "children": [
                 {
-                    "name": "District Statistics",
+                    "name": "Districts",
                     "information": "32",
                     "link":"http://www.tn.gov.in/district_view"
                 },
@@ -132,17 +132,17 @@
                 },
                 {
                     "name":"Ministers",
-                    "information":"Tap on link icon to view the list",
+                    "information":"33",
                     "link":"http://www.tn.gov.in/ministerslist"
                 },
                 {
                     "name":"District Collectors",
-                    "information":"Tap on link icon to view the list",
+                    "information":"32",
                     "link":"http://www.tn.gov.in/collectors"
                 },
                 {
                     "name":"Secretaries of Department",
-                    "information":"Tap on link icon to view the list",
+                    "information":"36",
                     "link":"http://www.tn.gov.in/section"
                 }
                 
