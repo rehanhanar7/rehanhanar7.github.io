@@ -1,0 +1,20 @@
+[
+    {
+        "appname":"Words to Pages Converter",
+        "apppackagename":"com.rehanhanar.wordstopagesconverterandroid",
+        "appiconurl":"https://lh3.googleusercontent.com/BqCT3XFKaT8y5Zm-oNJxWUTa1nX7gx7i9Y-qcOAljp13pwrz6jLv-JDSuEYR--aVw42D=s180-rw",
+        "appdescription":"Know the number of pages required for the number of characters of the book which you are going to create"
+    },
+    {
+        "appname":"Manapparai Info",
+        "apppackagename":"com.rehanhanar.manapparaiinfo",
+        "appiconurl":"https://lh3.googleusercontent.com/KLrW35qDB5dcQu0iyzmVqzUWr9qpJWK-KqicKQwTYLN2XaoE283ViIw2vNh08XB_q6U=s180-rw",
+        "appdescription":"End to End Information phone number, address, location, bus timings of Manapparai Town"
+    },
+    {
+        "appname":"Tamilnadu Goverment App",
+        "apppackagename":"com.rehanhanar.tamilnadugoverment",
+        "appiconurl":"https://lh3.googleusercontent.com/KLrW35qDB5dcQu0iyzmVqzUWr9qpJWK-KqicKQwTYLN2XaoE283ViIw2vNh08XB_q6U=s180-rw",
+        "appdescription":"Gives complete information about Tamilnadu Goverment"
+    }
+]
