@@ -616,8 +616,8 @@
 		"Documents": ""
 	},
 	{
-		"DepartmentName": "Public Works ",
-		"Role": "Public Works Department is one of the oldest Service Departments of the Government serving for the past 153 years in the construction and maintenance of Government Buildings;Many buildings and monuments stand as testimony to our engineering skill;The Buildings Organisation provides structural safety to all public buildings adopting latest technology ;The Department is taking all efforts for better service delivery with long term vision;This department has long term vision for quality service for safe and purposeful public buildings adopting best evolved practices and advanced modern technologies; All the Monuments and Heritage buildings under the control of Government are being protected by PWD by keeping their Architectural Aesthetic Historic archeological and prominent symbolic values;The Public Works Department Buildings Organization constructs and maintains buildings of various Government Departments like School Education Health and Family Welfare Revenue Agriculture Animal Husbandry Dairying and Fisheries Tourism and Social Welfare Department;it provides quality services for Safe Government buildings at reasonable cost utilizing modern technologies and experience ",
+		"DepartmentName": "Public Works",
+		"Role": "Public Works Department has two wings the Water Resources Department and the Buildings Organisation.;Public Works Department is one of the oldest Service Departments of the Government, serving for the past 153 years in the construction and maintenance of Government Buildings.;The Buildings Organisation provides structural safety to all public buildings adopting latest technology and following specifications of Indian Standard Code.;All the Monuments and Heritage buildings under the control of Government are being protected by PWD by keeping their Architectural$ Aesthetic$ Historic$ archeological and prominent symbolic values.;The Public Works Department Buildings Organization constructs and maintains buildings of various Government Departments like School Education$ Health and Family Welfare$ Home (Judicial$ Transport$ Prison$ Fire and Rescue)$ Revenue$ Agriculture$ Animal Husbandry$ Dairying and Fisheries$ Tourism and Art Culture Department$ Labour and Employment and Social Welfare Department.;The Water Sources Department is working very hard to realise maximum irrigation efficiency.;They understand the necessity for intra-linking of rivers for diversion of flood water and enhancing the storage capacity of water bodies to provide adequate water for irrigation$ drinking and other purposes have been well taken.",
 		"DepartmentID": "42",
 		"DepartmentLink": "http://www.tn.gov.in/department/42",
 		"Email": "pwdsec@tn.gov.in",
@@ -639,7 +639,7 @@
 	},
 	{
 		"DepartmentName": "Revenue and Disaster Management ",
-		"Role": "This department takes responsibilities for  Providing efficient delivery of services of various Government schemes to the people of Tamil Nadu; objectives and functioning under the Department Commissionerate of Revenue Administration Disaster Management and Mitigation;Commissionerate of Land Administration; Commissionerate of Land Reforms; Commissionerate of Survey and Settlement; Directorate of Urban Land Ceiling and Land Tax;Providing relief and implementing rehabilitation measures for those affected by Natural Calamities;and ensuring proper maintenance of land records for the State;Implementation of Land Reforms ;providing land to the needy and eligible persons",
+		"Role": "The main objective of the Revenue Department is Providing efficient delivery of services of various Government schemes to the people of Tamil Nadu.;Providing relief and implementing rehabilitation measures for those affected by Natural Calamities.;Functioning as the custodian of Government lands and ensuring proper maintenance of land records for the State.;Implementation of Land Reforms and providing land to the needy and eligible persons.;Sub-divisions of this department are Commissionerate of Revenue Administration, Disaster Management and Mitigation$  Commissionerate of Land Administration$ Commissionerate of Land Reforms$ Commissionerate of Survey and Settlement$ Directorate of Urban Land Ceiling and Land Tax.",
 		"DepartmentID": "26",
 		"DepartmentLink": "http://www.tn.gov.in/department/26",
 		"Email": "revsec@tn.gov.in",
@@ -661,7 +661,7 @@
 	},
 	{
 		"DepartmentName": "Rural Development and Panchayat Raj ",
-		"Role": "The Department of Rural Development and Panchayat Raj is responsible for the implementation of various rural development and welfare schemes and facilitates Panchayat Raj Institutions;to discharge their duties and functions effectively to achieve the objectives of Local Self Governance;Government have improved the living standards and set the benchmark for the quality of rural lives;This Government is committed to provide all the basic amenities in the rural areas at the habitation level promote sanitation;reduce poverty;conserve the natural resources;minimize the urban-rural divide and ensure improvement in the quality of life of the rural people of Tamil Nadu",
+		"Role": "The Department is concerned with the Economic Growth$ Social Justice and Improvement in the living standards of the rural people$ by deploying an efficient delivery mechanism to provide adequate quality services and essential minimum needs.;The primary objective of the Government is the provision of basic infrastructure facilities and social services in the rural areas and assistance to the individual families and Self Help Groups$ living below the poverty line.;One of the objectives is to Elimination of poverty and delivery of high quality services.;This Department is responsible for the implementation of various rural development and welfare schemes and facilitates Panchayat Raj Institutions to discharge their duties and functions effectively so as to achieve the objectives of Local Self Governance.;This Government is committed to provide all the basic amenities in the rural areas at the habitation level$ promote sanitation$ reduce poverty$ conserve the natural resources$ minimize the urban-rural divide and ensure improvement in the quality of life of the rural people of Tamil Nadu.",
 		"DepartmentID": "27",
 		"DepartmentLink": "http://www.tn.gov.in/department/27",
 		"Email": "ruralsec@tn.gov.in",
@@ -683,7 +683,7 @@
 	},
 	{
 		"DepartmentName": "School Education ",
-		"Role": "This department must provide the means and opportunities to enhance the childs creative expression and the capacity for aesthetic appreciation;the society transmits its accumulated knowledge skills and values from one generation to another; Education gives knowledge about the world around us;It makes children capable of interpreting things in the right perspective;  provide universal access equity quality at primary upper primary secondary and higher secondary level;  provide basic infrastructure coupled with safety and security for the well being of the children; provide quality education as far as possible in the childs own mother tongue;provide abundant opportunities for the child to express itself without any fear;To make examinations more flexible and integrated in classroom life;implementing continuous and comprehensive evaluation in phases; remove the anxiety and stress caused by terminal examinations",
+		"Role": "The Main Objectives of this department are follows$ To provide universal access$ equity$ quality at primary$ upper primary$ secondary and higher secondary level.;To strive for all round development of the child.;To evolve curriculum and evaluation procedures in conformity with the values enshrined in the Constitution.;To build the childs knowledge$ potential talent and develop the childs physical and mental abilities to the fullest extent.;To provide required infrastructure to ensure the comfort of each and every child in school.;To provide a conducive learning environment through learning activities$ discovery and exploration in a child friendly and child centred manner.;To provide quality education as far as possible in the childs own mother tongue.;To provide abundant opportunities for the child to express itself without any fear.;To make examinations more flexible and integrated in classroom life by implementing continuous and comprehensive evaluation in phases$ to remove the anxiety and stress caused by terminal examinations.;To know about school fees determination committee click on the website link given below.",
 		"DepartmentID": "28",
 		"DepartmentLink": "http://www.tn.gov.in/department/28",
 		"Email": "schsec@tn.gov.in",
@@ -727,7 +727,7 @@
 	},
 	{
 		"DepartmentName": "Social Welfare and Nutritious Meal Programme ",
-		"Role": "This department takes responsibilities by the Government of Tamil Nadu under the able guidance of the Honble Chief Minister of Tamil Nadu;the welfare of the poor the down-trodden Women Children Senior Citizens and trans-genders;Their health nutrition education protection and development have been improved through various Social Welfare Schemes; also provided with innumerable opportunities and facilities to live a dignified life; both men and women are forced to take up employment;to innumerable opportunities and financial assistance schemes have been provided to women for increasing their literacy levels by pursuing higher education and securing good employment opportunities",
+		"Role": "This Department of the Government of Tamil Nadu under the able guidance of the Honble Chief Minister of Tamil Nadu had always ensured the welfare of the poor$ the down-trodden$ Women$ Children$ Senior Citizens and trans-genders by taking care of their health$ nutrition$ education$ protection and development have been improved through various Social Welfare Schemes.;The Department implements the welfare schemes through the Directorates of Social Welfare$ Integrated Child Development Services scheme and the Directorate of Social Defence.;This Department also implements Social Security Pension Schemes through Revenue Department as nodal agency.;This Department apart from extending many services to women and children$ also extends its helping hand to Transgenders.;To know more information schemes provided by this department click on the website link given below.",
 		"DepartmentID": "30",
 		"DepartmentLink": "http://www.tn.gov.in/department/30",
 		"Email": "",
@@ -749,7 +749,7 @@
 	},
 	{
 		"DepartmentName": "Special Programme Implementation",
-		"Role": "The department created exclusively for monitoring and coordinating the implementation of various flagship programmes schemes of the Government;This department will closely work with other line departments; achieving sustainable development and balanced growth of every important sector such as Agriculture Energy Water Education Health Rural Development Industry and Infrastructure; this department will also provide necessary feedback to the Government on the qualitative and quantitative aspects of the schemes; organizing frequent inspections by the officers of this department; The 5 department will also coordinate with other departments and advise them based on the feedback; and evolving appropriate policy and guidelines in order to achieve the desired results of various schemes and programmes;The department will function as a Monitoring Body of the Government for effective implementation of various special programme schemes",
+		"Role": "The department is created exclusively for monitoring and coordinating the implementation of various flagship programmes schemes of the Government.;This department will closely work with other line departments for achieving sustainable development and balanced growth of every important sector such as Agriculture$ Energy$ Water$ Education$ Health$ Rural Development$ Industry and Infrastructure.;This department will function for effective and speedy implementation and monitoring of the special schemes to ensure that the benefits reach the targeted population.;The functions and activities of the department are as follows$ To monitor implementation of various special programmes schemes of the Government in coordination with the concerned line departments.;To carry out field inspections$ conduct review meetings and have consultations at District level on regular basis.;The department will also provide necessary feedback to the Government on the qualitative and quantitative aspects of the schemes by organizing frequent inspections by the officers of this department and also suggest corrective course of action wherever necessary.;The department will function as a Monitoring Body of the Government for effective implementation of various special programme schemes.",
 		"DepartmentID": "41",
 		"DepartmentLink": "http://www.tn.gov.in/department/41",
 		"Email": "spidept@tn.gov.in",
@@ -771,7 +771,7 @@
 	},
 	{
 		"DepartmentName": "Tamil Dev. and Information ",
-		"Role": "This department takes responsibilities in the Official Language of our Government;Tamil language acclaimed by world scholars;The activities of the Government relating to Tamil are excellently carried out by the Directorate of Tamil Development;International Institute of Tamil Studies;Tamil University;Directorate of Tamil Etymological Dictionary Project;Ariviyal Tamil Mandram and Translation wing of the Secretariat",
+		"Role": "Tamil language$ acclaimed by world scholars in such a way$ is the Official Language of our Government.;The activities of the Government relating to Tamil are excellently carried out by the Directorate of Tamil Development$ International Institute of Tamil Studies$ Tamil University$ Directorate of Tamil Etymological Dictionary Project$ Ariviyal Tamil Mandram and Translation wing of the Secretariat.",
 		"DepartmentID": "31",
 		"DepartmentLink": "http://www.tn.gov.in/department/31",
 		"Email": "tdinfosec@tn.gov.in",
@@ -793,7 +793,7 @@
 	},
 	{
 		"DepartmentName": "Tourism Culture and Religious Endowments ",
-		"Role": "This department is seen as an engine of development catalyst to economic prosperity of a country;Tourism refreshes the mind brings happiness relaxation enjoyment and gives new experience to the tourists; it ensures an all round growth through economic multiplier effect ; it percolates to various stake-holding sectors like the airlines railways surface transport cruises hotels telecommunication",
+		"Role": "Tourism is seen as an engine of development$ catalyst to economic prosperity of a country.;Tourism refreshes the mind$ brings happiness$ relaxation$ enjoyment and gives new experience etc. to the tourists.;Tourism ensures an all round growth through economic multiplier effect which percolates to various stake-holding sectors like the airlines$ railways$ surface transport$ cruises$ hotels$ telecommunication etc.",
 		"DepartmentID": "32",
 		"DepartmentLink": "http://www.tn.gov.in/department/32",
 		"Email": "toursec@tn.gov.in",
@@ -815,7 +815,7 @@
 	},
 	{
 		"DepartmentName": "Transport ",
-		"Role": "This department plays a vital role in the overall development of a State; State Transport Undertakings a vital role in this task by providing an economic and efficient system through a variety of services Town Mofussil Ghat and Express services as well as Inter-State services to neighbouring States of Andhra Pradesh Karnataka Kerala and Puducherry; the every habitation in the State is connected by bus services",
+		"Role": "Public Transport System plays a vital role in the overall development of a State.;In our State$ the State Transport Undertakings play a vital role in this task by providing an economic and efficient system through a variety of services viz.;Town$ Mofussil$ Ghat and Express services as well as Inter-State services to neighbouring States of Andhra Pradesh$ Karnataka$ Kerala and Puducherry.;Almost every habitation in the State is connected by bus services.",
 		"DepartmentID": "33",
 		"DepartmentLink": "http://www.tn.gov.in/department/33",
 		"Email": "transec@tn.gov.in",
@@ -837,7 +837,7 @@
 	},
 	{
 		"DepartmentName": "Welfare of Differently Abled Persons",
-		"Role": "This department  implementing welfare schemes for all sections of socially disadvantaged groups; A comprehensive State Policy for the Welfare of the Differently Abled Persons was released first time by this Government during 1994; and eliminate the social view attached to the description of persons based on their disability namely physically handicapped blind deaf it was announced by the Government ;the Welfare of the differently abled persons a separate administrative department was formed at the Secretariat ;Providing Special Education; Development of professionals for rehabilitation; Provision for assistive devices; Education and economic empowerment including self-employment;Formation of barrier free environment Social security",
+		"Role": "The Government of Tamil Nadu through various policies and initiatives have extended full support to the Differently Abled Persons in their pursuit of full and equal involvement in every aspect of society.;The thrust areas of Government are as follows : Prevention of disabilities$ Early detection and intervention$ Rehabilitation measures$ Providing Special Education$ Development of professionals for rehabilitation$ Provision for assistive devices$ Education and economic empowerment including self-employment and Formation of barrier free environment Social security.",
 		"DepartmentID": "35",
 		"DepartmentLink": "http://www.tn.gov.in/department/35",
 		"Email": "",
@@ -859,7 +859,7 @@
 	},
 	{
 		"DepartmentName": "Youth Welfare and Sports Development ",
-		"Role": "This department takes responsibilities to facilitate the welfare and all round development of the youth; department of Youth Welfare and Sports Development has been given a big thrust by the Government of Tamil Nadu; Youth are the pillar of strength of any nation; The mission of the department is to make Tamil Nadu a leading state in the sports arena by creating high quality infrastructure;promoting a sports culture; harnessing talent at the grass root level; Sports Development Authority of Tamil Nadu as the apex body for sports development in Tamil Nadu; implementing all the policy decisions on sports activities of the Government;Tamil Nadu has a cadet strength of 98790 under National Cadet Corps which is one of the highest in the country",
+		"Role": "This department takes responsibilities to facilitate the welfare and all round development of the youth; The department of Youth Welfare and Sports Development has been given a big thrust by the Government of Tamil Nadu;Youth are the pillar of strength of any nation;The mission of the department is to make Tamil Nadu a leading state in the sports arena by creating high quality infrastructure$ promoting a sports culture and harnessing talent at the grass root level.;Sports Development Authority of Tamil Nadu$ as the apex body for sports development in Tamil Nadu$ implementing all the policy decisions on sports activities of the Government.;Tamil Nadu has a cadet strength of 98790 under National Cadet Corps which is one of the highest in the country.",
 		"DepartmentID": "34",
 		"DepartmentLink": "http://www.tn.gov.in/department/34",
 		"Email": "ywssec@tn.gov.in",
