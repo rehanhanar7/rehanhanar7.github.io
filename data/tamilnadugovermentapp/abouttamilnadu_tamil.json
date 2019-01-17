@@ -6,29 +6,29 @@
             "open":false,
             "children": [
                 {
-                    "name": "Governer",
-                    "information": "Honorable Governor of Tamil Nadu Thiru Banwarilal Purohit, who is the Constitutional Head of the state.",
+                    "name": "ஆளுநர்",
+                    "information": "திரு பன்வாரிலால் புரோகித், மாண்புமிகு ஆளுநர், தமிழ்நாடு",
                     "email":"",
                     "phone":"",
                     "website":""
                 },
                 {
-                    "name": "Chief Minister",
-                    "information": "Honorable Chief Minister of Tamil Nadu Thiru Edappadi K. Palaniswami, who is the Head of the elected Government and heads the Council of Ministers.",
+                    "name": "முதலமைச்சர்",
+                    "information": "திரு எடப்பாடி கே . பழனிசாமி, மாண்புமிகு முதலமைச்சர்",
                     "email":"cmcell@tn.gov.in",
                     "phone":"25671555",
                     "website":"http://cmcell.tn.gov.in/"
                 },
                 {
-                    "name":"Chief Justice",
-                    "information":"Honorable Justice Thirumathi Vijaya Kamlesh Tahilramani, who is the Chief Justice of Madras High Court",
+                    "name":"தலைமை நீதிபதி",
+                    "information":"மரியாதைக்குரிய நீதிபதி திருமதி விஜய கமலேஷ் தில்லிமணி",
                     "email":"",
                     "phone":"",
                     "website":""
                 },
                 {
-                    "name": "Chief Secretary",
-                    "information": "Dr Thirumathi Girija Vaidyanathan, who is the chief Secretary to the Goverment",
+                    "name": "தலைமைச் செயலர்",
+                    "information": "டாக்டர் திருமதி கிரிஜா வைத்தியநாதன்",
                     "email":"",
                     "phone":"",
                     "website":""
@@ -36,115 +36,110 @@
             ]
         },
         {
-            "name": "Census",
+            "name": "கணக்கெடுப்பு",
             "istable": true,
             "open":false,
             "children": [
                 {
-                    "name": "Population",
+                    "name": "மக்கள் தொகை",
                     "information":"7,21,47,030"
                 },
                 {
-                    "name": "Area",
+                    "name": "பகுதி",
                     "information":"1,30,058 sq.km"
                 },
                 {
-                    "name": "Capital",
-                    "information":"Chennai"
+                    "name": "தலைநகரம்",
+                    "information":"சென்னை"
                 },
                 {
-                    "name": "Language",
-                    "information":"Tamil"
+                    "name": "மொழி",
+                    "information":"தமிழ்"
                 }
             ]
         },
         {
-            "name": "Administrative Units of State",
+            "name": "மாநில நிர்வாக பிரிவுகள்",
             "istable": true,
             "open":false,
             "children": [
                 {
-                    "name": "Districts",
+                    "name": "மாவட்டங்கள்",
                     "information": "32",
                     "link":"http://www.tn.gov.in/district_view"
                 },
                 {
-                    "name": "Revenue Divisions",
-                    "information": "82",
+                    "name": "வருவாய் பிரிவுகள்",
+                    "information": "85",
                     "link":"http://www.tn.gov.in/government/revenue_division"
                 },
                 {
-                    "name": "Taluks",
-                    "information": "82",
+                    "name": "வட்டங்கள்",
+                    "information": "290",
                     "link":"http://www.tn.gov.in/government/taluk"
                 },
                 {
-                    "name": "Revenue Divisions",
-                    "information": "285",
-                    "link":""
-                },
-                {
-                    "name": "Firkas",
+                    "name": "வருவாய் தடுப்பு",
                     "information": "1,349",
                     "link":""
                 },
                 {
-                    "name": "Revenue Villages",
+                    "name": "வருவாய் கிராமங்கள்",
                     "information": "17,680",
                     "link":""
                 },
                 {
-                    "name": "Municipal Corporations",
+                    "name": "நகராட்சி நிறுவனங்கள்",
                     "information": "10",
                     "link":""
                 },
                 {
-                    "name": "Municipalities",
+                    "name": "நகராட்சிகள்",
                     "information": "125",
                     "link":""
                 },
                 {
-                    "name": "Panchayat Unions (Blocks)",
+                    "name": "பஞ்சாயத்து சங்கங்கள்",
                     "information": "385",
                     "link":"http://www.tn.gov.in/government/block"
                 },
                 {
-                    "name": "Town Panchayats",
+                    "name": "டவுன் பஞ்சாயத்துகள்",
                     "information": "561",
                     "link":""
                 },
                 {
-                    "name": "Village Panchayats",
+                    "name": "கிராம பஞ்சாயத்துகள்",
                     "information": "12,618",
                     "link":"http://www.tngis.tn.gov.in/"
                 },
                 {
-                    "name":"Lok Sabha Constituencies",
+                    "name":"மக்களவை தொகுதிகள்",
                     "information":"39",
                     "link":"http://www.tn.gov.in/government/loksaba"
                 },
                 {
-                    "name":"Rajyasaba",
+                    "name":"ராஜ்ய சபா",
                     "information":"18",
                     "link":"http://www.tn.gov.in/government/rajyasaba"
                 },
                 {
-                    "name":"MLAs",
+                    "name":"எம்எல்ஏக்கள்",
                     "information":"234",
                     "link":"http://www.assembly.tn.gov.in/15thassembly/members/001_050.html"
                 },
                 {
-                    "name":"Ministers",
+                    "name":"அமைச்சர்கள்",
                     "information":"33",
                     "link":"http://www.tn.gov.in/ministerslist"
                 },
                 {
-                    "name":"District Collectors",
+                    "name":"மாவட்ட கலெக்டர்கள்",
                     "information":"32",
                     "link":"http://www.tn.gov.in/collectors"
                 },
                 {
-                    "name":"Secretaries of Department",
+                    "name":"திணைக்களத்தின் செயலாளர்கள்",
                     "information":"36",
                     "link":"http://www.tn.gov.in/section"
                 }
@@ -152,45 +147,45 @@
             ]
         },
         {
-            "name":"History",
+            "name":"வரலாறு",
             "istable": true,
             "open":false,
             "children":[
                 {
-                    "name":"Indus valley",
+                    "name":"சிந்து சமவெளி",
                     "information":"3500 and 1900 BCE",
                     "link":"https://en.wikipedia.org/wiki/Indus_script"
                 },{
-                    "name":"Sangam period",
-                    "information":"300 BCE – 3rd Century",
+                    "name":"சங்கம் காலம்",
+                    "information":"300 BCE – 3rd நூற்றாண்டு",
                     "link":"https://en.wikipedia.org/wiki/Sangam_period"
                 },{
-                    "name":"Bhakti Movement",
-                    "information":"4th–10th Centuries",
+                    "name":"பக்தி இயக்கம்",
+                    "information":"4th–10th நூற்றாண்டு",
                     "link":"https://en.wikipedia.org/wiki/Bhakti_Movement"
                 },{
-                    "name":"Medieval period",
+                    "name":"இடைக்கால காலம்",
                     "information":"600–1300",
                     "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
                 },{
-                    "name":"Chola Empire",
+                    "name":"சோழ சாம்ராஜ்யம்",
                     "information":"300-1279",
                     "link":"https://en.wikipedia.org/wiki/Chola_dynasty"
                 },{
-                    "name":"Vijayanagar and Nayak period",
+                    "name":"விஜயநகர் மற்றும் நாயக்கர் காலம்",
                     "information":"1336–1646",
                     "link":"https://en.wikipedia.org/wiki/Vijayanagara_Empire"
                 },{
-                    "name":"Power struggles of the 18th century",
+                    "name":"18 ஆம் நூற்றாண்டின் பவர் போராட்டங்கள்",
                     "information":"1688–1802",
                     "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
                 },{
-                    "name":"British rule",
+                    "name":"பிரிட்டிஷ் ஆட்சி",
                     "information":"1801–1947",
                     "link":"https://en.wikipedia.org/wiki/Madras_Presidency"
                 },{
-                    "name":"India",
-                    "information":"1947–present",
+                    "name":"இந்தியா",
+                    "information":"1947–தற்போது",
                     "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
                 }
             ]
