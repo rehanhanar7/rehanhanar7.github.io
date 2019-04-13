@@ -1,0 +1,101 @@
+[
+    {
+        "prayer_name":"Fajir",
+        "prayer_time":"Before Sunrise and After Thajath",
+        "rakath_number":"2",
+        "when_to_pray":"Everyday",
+        "benefits":[
+            "early morning awake",
+            "self control",
+            "face brightness"
+        ],
+        "specific_prayer_rules":[
+            {
+                "gender":"male",
+                "rules":[
+                    "should be prayed before sun rise",
+                    "should do proper wudu"
+                ]
+            },
+            {
+                "gender":"female",
+                "rules":[
+                    "should be prayed before sun rise",
+                    "should do proper wudu",
+                    "Not needed during periods timing"
+                ]
+            }
+        ],
+        "other_prayers":[
+            {
+                "sub_prayer_name":"mun sunnath",
+                "sub_rakath_number":"2",
+                "sub_prayer_rules":[
+                    "Should pray before farl",
+                    "Should pray 5 minutes before farl"
+                ],
+                "sub_prayer_benefits":[
+                    "early morning awake",
+                    "self control",
+                    "face brightness"
+                ]
+            }
+        ]
+    },
+    {
+        "prayer_name":"Jumma",
+        "prayer_time":"After Sun Goes from Middle Sky and Before the Sun Reaches 45% of the Sun set",
+        "rakath_number":"2",
+        "benefits":[
+            "pray togather with muslim brothers",
+            "self control",
+            "face brightness"
+        ],
+        "specific_prayer_rules":[
+            {
+                "gender":"male",
+                "rules":[
+                    "Reach Mosque and pray",
+                    "If you miss prayer in mosque, you have to pray 4 Rakath @ home or mosque"
+                ]
+            },
+            {
+                "gender":"female",
+                "rules":[
+                    "early morning awake",
+                    "self control",
+                    "face brightness"
+                ]
+            }
+        ],
+        "other_prayers":[
+            {
+                "sub_prayer_name":"mun sunnath",
+                "sub_rakath_number":"2",
+                "sub_prayer_benefits":[
+                    "early morning awake",
+                    "self control",
+                    "face brightness"
+                ]
+            },
+            {
+                "sub_prayer_name":"pin sunnath",
+                "sub_rakath_number":"2",
+                "sub_prayer_benefits":[
+                    "early morning awake",
+                    "self control",
+                    "face brightness"
+                ]
+            },
+            {
+                "sub_prayer_name":"nafil",
+                "sub_rakath_number":"2",
+                "sub_prayer_benefits":[
+                    "early morning awake",
+                    "self control",
+                    "face brightness"
+                ]
+            }
+        ]
+    }
+]
