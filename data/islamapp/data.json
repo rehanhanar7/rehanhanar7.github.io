@@ -8,6 +8,23 @@
 			"early morning awake",
 			"self control",
 			"face brightness"
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": [
+					"should be prayed before sun rise",
+					"should do proper wudu"
+				]
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"should be prayed before sun rise",
+					"should do proper wudu",
+					"Not needed during periods timing"
+				]
+			}
 		]
 	}
 ]
