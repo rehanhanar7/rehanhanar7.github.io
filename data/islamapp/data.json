@@ -1,6 +1,6 @@
 [
 	{
-		"serial_no":1,
+		"serial_no": 1,
 		"prayer_name": "Fajir",
 		"prayer_time": "Before Sunrise and After Thajath",
 		"rakath_number": "2",
@@ -27,20 +27,20 @@
 				]
 			}
 		],
-		"other_prayers":[
-            {
-                "sub_prayer_name":"mun sunnath",
-                "sub_rakath_number":"2",
-                "sub_prayer_rules":[
-                    "Should pray before farl",
-                    "Should pray 5 minutes before farl"
-                ],
-                "sub_prayer_benefits":[
-                    "early morning awake",
-                    "self control",
-                    "face brightness"
-                ]
-            }
-        ]
+		"other_prayers": [
+			{
+				"sub_prayer_name": "mun sunnath",
+				"sub_rakath_number": "2",
+				"sub_prayer_rules": [
+					"Should pray before farl",
+					"Should pray 5 minutes before farl"
+				],
+				"sub_prayer_benefits": [
+					"early morning awake",
+					"self control",
+					"face brightness"
+				]
+			}
+		]
 	}
 ]
