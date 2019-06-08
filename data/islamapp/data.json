@@ -51,15 +51,15 @@
 		"when_to_pray": "Every Friday",
 		"benefits": [
 			"pray togather with muslim brothers",
-            "self control",
-            "face brightness"
+			"self control",
+			"face brightness"
 		],
 		"specific_prayer_rules": [
 			{
 				"gender": "male",
 				"rules": [
 					"Reach Mosque and pray",
-                    "If you miss prayer in mosque, you have to pray 4 Rakath @ home or mosque"
+					"If you miss prayer in mosque, you have to pray 4 Rakath @ home or mosque"
 				]
 			},
 			{
