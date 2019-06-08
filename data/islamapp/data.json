@@ -3,6 +3,11 @@
         "prayer_name":"Fajir",
         "prayer_time":"Before Sunrise and After Thajath",
         "rakath_number":"2",
-        "when_to_pray":"Everyday"
+		"when_to_pray":"Everyday",
+		"benefits":[
+            "early morning awake",
+            "self control",
+            "face brightness"
+        ]
     }
 ]
