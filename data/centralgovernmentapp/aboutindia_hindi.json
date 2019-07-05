@@ -1,0 +1,194 @@
+{
+    "items": [
+        {
+            "name": "அரசாங்கம்",
+            "istable":false,
+            "open":false,
+            "children": [
+                {
+                    "name": "ஆளுநர்",
+                    "information": "திரு பன்வாரிலால் புரோகித், மாண்புமிகு ஆளுநர், தமிழ்நாடு",
+                    "email":"",
+                    "phone":"",
+                    "website":""
+                },
+                {
+                    "name": "முதலமைச்சர்",
+                    "information": "திரு எடப்பாடி கே . பழனிசாமி, மாண்புமிகு முதலமைச்சர்",
+                    "email":"cmcell@tn.gov.in",
+                    "phone":"25671555",
+                    "website":"http://cmcell.tn.gov.in/"
+                },
+                {
+                    "name":"தலைமை நீதிபதி",
+                    "information":"மரியாதைக்குரிய நீதிபதி திருமதி விஜய கமலேஷ் தில்லிமணி",
+                    "email":"",
+                    "phone":"",
+                    "website":""
+                },
+                {
+                    "name": "தலைமைச் செயலர்",
+                    "information": "டாக்டர் திருமதி கிரிஜா வைத்தியநாதன்",
+                    "email":"",
+                    "phone":"",
+                    "website":""
+                }
+            ]
+        },
+        {
+            "name": "கணக்கெடுப்பு",
+            "istable": true,
+            "open":false,
+            "children": [
+                {
+                    "name": "மக்கள் தொகை",
+                    "information":"7,21,47,030"
+                },
+                {
+                    "name": "பகுதி",
+                    "information":"1,30,058 sq.km"
+                },
+                {
+                    "name": "தலைநகரம்",
+                    "information":"சென்னை"
+                },
+                {
+                    "name": "மொழி",
+                    "information":"தமிழ்"
+                }
+            ]
+        },
+        {
+            "name": "மாநில நிர்வாக பிரிவுகள்",
+            "istable": true,
+            "open":false,
+            "children": [
+                {
+                    "name": "மாவட்டங்கள்",
+                    "information": "32",
+                    "link":"http://www.tn.gov.in/district_view"
+                },
+                {
+                    "name": "வருவாய் பிரிவுகள்",
+                    "information": "85",
+                    "link":"http://www.tn.gov.in/government/revenue_division"
+                },
+                {
+                    "name": "வட்டங்கள்",
+                    "information": "290",
+                    "link":"http://www.tn.gov.in/government/taluk"
+                },
+                {
+                    "name": "வருவாய் தடுப்பு",
+                    "information": "1,349",
+                    "link":""
+                },
+                {
+                    "name": "வருவாய் கிராமங்கள்",
+                    "information": "17,680",
+                    "link":""
+                },
+                {
+                    "name": "நகராட்சி நிறுவனங்கள்",
+                    "information": "10",
+                    "link":""
+                },
+                {
+                    "name": "நகராட்சிகள்",
+                    "information": "125",
+                    "link":""
+                },
+                {
+                    "name": "பஞ்சாயத்து சங்கங்கள்",
+                    "information": "385",
+                    "link":"http://www.tn.gov.in/government/block"
+                },
+                {
+                    "name": "டவுன் பஞ்சாயத்துகள்",
+                    "information": "561",
+                    "link":""
+                },
+                {
+                    "name": "கிராம பஞ்சாயத்துகள்",
+                    "information": "12,618",
+                    "link":"http://www.tngis.tn.gov.in/"
+                },
+                {
+                    "name":"மக்களவை தொகுதிகள்",
+                    "information":"39",
+                    "link":"http://www.tn.gov.in/government/loksaba"
+                },
+                {
+                    "name":"ராஜ்ய சபா",
+                    "information":"18",
+                    "link":"http://www.tn.gov.in/government/rajyasaba"
+                },
+                {
+                    "name":"எம்எல்ஏக்கள்",
+                    "information":"234",
+                    "link":"http://www.assembly.tn.gov.in/15thassembly/members/001_050.html"
+                },
+                {
+                    "name":"அமைச்சர்கள்",
+                    "information":"33",
+                    "link":"http://www.tn.gov.in/ministerslist"
+                },
+                {
+                    "name":"மாவட்ட கலெக்டர்கள்",
+                    "information":"32",
+                    "link":"http://www.tn.gov.in/collectors"
+                },
+                {
+                    "name":"திணைக்களத்தின் செயலாளர்கள்",
+                    "information":"36",
+                    "link":"http://www.tn.gov.in/section"
+                }
+                
+            ]
+        },
+        {
+            "name":"வரலாறு",
+            "istable": true,
+            "open":false,
+            "children":[
+                {
+                    "name":"சிந்து சமவெளி",
+                    "information":"3500 and 1900 BCE",
+                    "link":"https://en.wikipedia.org/wiki/Indus_script"
+                },{
+                    "name":"சங்கம் காலம்",
+                    "information":"300 BCE – 3rd நூற்றாண்டு",
+                    "link":"https://en.wikipedia.org/wiki/Sangam_period"
+                },{
+                    "name":"பக்தி இயக்கம்",
+                    "information":"4th–10th நூற்றாண்டு",
+                    "link":"https://en.wikipedia.org/wiki/Bhakti_Movement"
+                },{
+                    "name":"இடைக்கால காலம்",
+                    "information":"600–1300",
+                    "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
+                },{
+                    "name":"சோழ சாம்ராஜ்யம்",
+                    "information":"300-1279",
+                    "link":"https://en.wikipedia.org/wiki/Chola_dynasty"
+                },{
+                    "name":"விஜயநகர் மற்றும் நாயக்கர் காலம்",
+                    "information":"1336–1646",
+                    "link":"https://en.wikipedia.org/wiki/Vijayanagara_Empire"
+                },{
+                    "name":"18 ஆம் நூற்றாண்டின் பவர் போராட்டங்கள்",
+                    "information":"1688–1802",
+                    "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
+                },{
+                    "name":"பிரிட்டிஷ் ஆட்சி",
+                    "information":"1801–1947",
+                    "link":"https://en.wikipedia.org/wiki/Madras_Presidency"
+                },{
+                    "name":"இந்தியா",
+                    "information":"1947–தற்போது",
+                    "link":"https://en.wikipedia.org/wiki/Tamil_Nadu"
+                }
+            ]
+        }
+    ]
+}
