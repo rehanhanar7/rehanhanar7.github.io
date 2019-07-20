@@ -1,0 +1,66 @@
+[
+    {
+        "_id": 50001,
+        "devotion_name": "Aanjieyar Koyil"
+    },
+    {
+        "_id": 50002,
+        "devotion_name": "Agastheswarar Munnishwera Koyil"
+    },
+    {
+        "_id": 50003,
+        "devotion_name": "Ayyar Koyil"
+    },
+    {
+        "_id": 50004,
+        "devotion_name": "Eswaran Temple"
+    },
+    {
+        "_id": 50005,
+        "devotion_name": "Holy Church"
+    },
+    {
+        "_id": 50006,
+        "devotion_name": "Jumma Periya Pallivaasal(Jumma Masjid)"
+    },
+    {
+        "_id": 50007,
+        "devotion_name": "Kabasthaan Palli (Mosque)"
+    },
+    {
+        "_id": 50008,
+        "devotion_name": "Kaliyamman Koyil"
+    },
+    {
+        "_id": 50009,
+        "devotion_name": "Maha Muni Koyil"
+    },
+    {
+        "_id": 50010,
+        "devotion_name": "Mariyamman koyil"
+    },
+    {
+        "_id": 50011,
+        "devotion_name": "Masthan Street Pallivasal(Mosque)"
+    },
+    {
+        "_id": 50012,
+        "devotion_name": "Nallandavar Koyil"
+    },
+    {
+        "_id": 50013,
+        "devotion_name": "Portuguese Church"
+    },
+    {
+        "_id": 50014,
+        "devotion_name": "Sai Bhabha Koyil"
+    },
+    {
+        "_id": 50015,
+        "devotion_name": "Shivan Koyil"
+    },
+    {
+        "_id": 50016,
+        "devotion_name": "Sri Varadaraja Perumal Koyil"
+    }
+]

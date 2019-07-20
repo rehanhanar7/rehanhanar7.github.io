@@ -1,0 +1,102 @@
+[
+    {
+        "_id": 70001,
+        "hospital_name": "AG Hospital"
+    },
+    {
+        "_id": 70002,
+        "hospital_name": "Anbu Clinic"
+    },
+    {
+        "_id": 70003,
+        "hospital_name": "Annai Clinic"
+    },
+    {
+        "_id": 70004,
+        "hospital_name": "Balaji Nursing home"
+    },
+    {
+        "_id": 70005,
+        "hospital_name": "Chithra Clinic"
+    },
+    {
+        "_id": 70006,
+        "hospital_name": "Dayal Narasimam"
+    },
+    {
+        "_id": 70007,
+        "hospital_name": "G.K.M Hospital"
+    },
+    {
+        "_id": 70008,
+        "hospital_name": "Government Hospital"
+    },
+    {
+        "_id": 70009,
+        "hospital_name": "Guru Dev Medical Centre"
+    },
+    {
+        "_id": 70010,
+        "hospital_name": "Jayalakshmi Clinic"
+    },
+    {
+        "_id": 70011,
+        "hospital_name": "Jeyaram Hospital"
+    },
+    {
+        "_id": 70012,
+        "hospital_name": "K.R.Ortho Clinic"
+    },
+    {
+        "_id": 70013,
+        "hospital_name": "Kavi Hospital"
+    },
+    {
+        "_id": 70014,
+        "hospital_name": "Manohar Hospital"
+    },
+    {
+        "_id": 70015,
+        "hospital_name": "MMK Hospital"
+    },
+    {
+        "_id": 70016,
+        "hospital_name": "Mohan Das Hospital"
+    },
+    {
+        "_id": 70017,
+        "hospital_name": "Noor Ayurvedhic Hospital"
+    },
+    {
+        "_id": 70018,
+        "hospital_name": "Ratna Das Hospital"
+    },
+    {
+        "_id": 70019,
+        "hospital_name": "Ratna Physiotherapy"
+    },
+    {
+        "_id": 70020,
+        "hospital_name": "Sindhuja Hospital"
+    },
+    {
+        "_id": 70021,
+        "hospital_name": "SRM Hospital"
+    },
+    {
+        "_id": 70022,
+        "hospital_name": "Sugam Clinic"
+    },
+    {
+        "_id": 70023,
+        "hospital_name": "Sumithra Clinic"
+    },
+    {
+        "_id": 70024,
+        "hospital_name": "Thangam Hospital"
+    },
+    {
+        "_id": 70025,
+        "hospital_name": "Udhayam Hospital"
+    }
+]

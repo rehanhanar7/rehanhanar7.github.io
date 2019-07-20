@@ -1,0 +1,30 @@
+[
+    {
+        "_id": 30001,
+        "college_name": "Aadhavan College of Arts & Science"
+    },
+    {
+        "_id": 30002,
+        "college_name": "Jeevan College of Education"
+    },
+    {
+        "_id": 30003,
+        "college_name": "Jeevan Teacher Training Institute"
+    },
+    {
+        "_id": 30004,
+        "college_name": "KARTHIKEYA POLYTECHNIC COLLEGE"
+    },
+    {
+        "_id": 30005,
+        "college_name": "Kurinji College of Engineering and Technology"
+    },
+    {
+        "_id": 30006,
+        "college_name": "St.John's I.T.I"
+    },
+    {
+        "_id": 30007,
+        "college_name": "Surya Nursing College"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "_id": 160001,
+        "train_name": "Madurai - Villupuram Passenger"
+    },
+    {
+        "_id": 160002,
+        "train_name": "Dindigul -Tiruchirappalli Passenger"
+    },
+    {
+        "_id": 160003,
+        "train_name": "Tirunelveli - Mayiladuturai Passenger"
+    },
+    {
+        "_id": 160004,
+        "train_name": "Guruvayur Chennai Express"
+    },
+    {
+        "_id": 160005,
+        "train_name": "Pandian Express"
+    },
+    {
+        "_id": 160006,
+        "train_name": "Mayiladuturai - Tirunelveli Passenger"
+    },
+    {
+        "_id": 160007,
+        "train_name": "Chennai Egmore Guruvayur Express"
+    },
+    {
+        "_id": 160008,
+        "train_name": "Tiruchirappalli Dindigul Passenger"
+    },
+    {
+        "_id": 160009,
+        "train_name": "Villupuram - Madurai Passenger"
+    },
+    {
+        "_id": 160010,
+        "train_name": "Pandian Express"
+    }
+]

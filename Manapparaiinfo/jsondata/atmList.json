@@ -1,0 +1,78 @@
+[
+    {
+        "_id": 10001,
+        "atm_name": "Axis Bank ATM"
+    },
+    {
+        "_id": 10002,
+        "atm_name": "Bank of India ATM (BOI)"
+    },
+    {
+        "_id": 10003,
+        "atm_name": "Canara Bank ATM"
+    },
+    {
+        "_id": 10004,
+        "atm_name": "City Union Bank ATM 1"
+    },
+    {
+        "_id": 10005,
+        "atm_name": "City Union Bank ATM 2"
+    },
+    {
+        "_id": 10006,
+        "atm_name": "India 1 Bank ATM"
+    },
+    {
+        "_id": 10007,
+        "atm_name": "Indian Bank ATM 1"
+    },
+    {
+        "_id": 10008,
+        "atm_name": "Indian Bank ATM 2"
+    },
+    {
+        "_id": 10009,
+        "atm_name": "Indian Overseas Bank ATM"
+    },
+    {
+        "_id": 10010,
+        "atm_name": "Karur Vysya Bank ATM 1"
+    },
+    {
+        "_id": 10011,
+        "atm_name": "Karur Vysya Bank ATM 2"
+    },
+    {
+        "_id": 10012,
+        "atm_name": "Karur Vysya Bank ATM 3"
+    },
+    {
+        "_id": 10013,
+        "atm_name": "State Bank ATM 1"
+    },
+    {
+        "_id": 10014,
+        "atm_name": "State Bank ATM 2"
+    },
+    {
+        "_id": 10015,
+        "atm_name": "State Bank ATM 3"
+    },
+    {
+        "_id": 10016,
+        "atm_name": "State Bank ATM 4"
+    },
+    {
+        "_id": 10017,
+        "atm_name": "State Bank of India ATM"
+    },
+    {
+        "_id": 10018,
+        "atm_name": "TMB Bank ATM 1"
+    },
+    {
+        "_id": 10019,
+        "atm_name": "TMB Bank ATM 2"
+    }
+]

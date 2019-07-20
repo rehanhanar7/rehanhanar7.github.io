@@ -1,0 +1,30 @@
+[
+    {
+        "_id": 20001,
+        "bank_name": "State Bank of India"
+    },
+    {
+        "_id": 20002,
+        "bank_name": "AXIS BANK"
+    },
+    {
+        "_id": 20003,
+        "bank_name": "City Union Bank"
+    },
+    {
+        "_id": 20004,
+        "bank_name": "Indian Bank"
+    },
+    {
+        "_id": 20005,
+        "bank_name": "Indian Overseas Bank"
+    },
+    {
+        "_id": 20006,
+        "bank_name": "Karur Vysia Bank"
+    },
+    {
+        "_id": 20007,
+        "bank_name": "Tamilnad Mecantile Bank ltd"
+    }
+]

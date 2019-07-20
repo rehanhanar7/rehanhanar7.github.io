@@ -1,0 +1,114 @@
+[
+    {
+        "_id": 70001,
+        "goffice_name": "AEO Office Kathupatti"
+    },
+    {
+        "_id": 70002,
+        "goffice_name": "Agriculture Office"
+    },
+    {
+        "_id": 70003,
+        "goffice_name": "Animal Husbandary / Veternary Despensary"
+    },
+    {
+        "_id": 70004,
+        "goffice_name": "Assitant Engineer TWAD Board"
+    },
+    {
+        "_id": 70005,
+        "goffice_name": "BSNL Office"
+    },
+    {
+        "_id": 70006,
+        "goffice_name": "Central Milk Production Society"
+    },
+    {
+        "_id": 70007,
+        "goffice_name": "Commercial Tax Office"
+    },
+    {
+        "_id": 70008,
+        "goffice_name": "Deputy Superintent of Police"
+    },
+    {
+        "_id": 70009,
+        "goffice_name": "Fire and Rescue Operations Department"
+    },
+    {
+        "_id": 70010,
+        "goffice_name": "Forest Department"
+    },
+    {
+        "_id": 70011,
+        "goffice_name": "Government Hospital"
+    },
+    {
+        "_id": 70012,
+        "goffice_name": "Life Insurance Corporation f India"
+    },
+    {
+        "_id": 70013,
+        "goffice_name": "Manapparai Model Police Station"
+    },
+    {
+        "_id": 70014,
+        "goffice_name": "Municipal Administrate"
+    },
+    {
+        "_id": 70015,
+        "goffice_name": "Panchayat Union"
+    },
+    {
+        "_id": 70016,
+        "goffice_name": "Post Office"
+    },
+    {
+        "_id": 70017,
+        "goffice_name": "Public Works Department (Construction)"
+    },
+    {
+        "_id": 70018,
+        "goffice_name": "Public Works Department (Highway)"
+    },
+    {
+        "_id": 70019,
+        "goffice_name": "Public Works Department (Irrigation)"
+    },
+    {
+        "_id": 70020,
+        "goffice_name": "Sidha Medince Dept, Government Hospital"
+    },
+    {
+        "_id": 70021,
+        "goffice_name": "Sub Regional Transport Office"
+    },
+    {
+        "_id": 70022,
+        "goffice_name": "Sub Registrar Office"
+    },
+    {
+        "_id": 70023,
+        "goffice_name": "Taluk Supply Office"
+    },
+    {
+        "_id": 70024,
+        "goffice_name": "Tamilnadu Electricity Board (TNEB)"
+    },
+    {
+        "_id": 70025,
+        "goffice_name": "Tamilnadu State Transport Corporation (TNSTC)"
+    },
+    {
+        "_id": 70026,
+        "goffice_name": "Thahsildar cum Taluk Executive Magistrate"
+    },
+    {
+        "_id": 70027,
+        "goffice_name": "The Judicial Magistrate (Civil)"
+    },
+    {
+        "_id": 70028,
+        "goffice_name": "The Judicial Magistrate (Crime)"
+    }
+]

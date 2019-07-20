@@ -1,0 +1,54 @@
+[
+    {
+        "_id": 130001,
+        "school_name": "Govt. Hr. Sec. School"
+    },
+    {
+        "_id": 130002,
+        "school_name": "Cauvery International School"
+    },
+    {
+        "_id": 130003,
+        "school_name": "Lakshmi Matric. Hr. Sec. School"
+    },
+    {
+        "_id": 130004,
+        "school_name": "Little Flower Girls Hr. Sec. School"
+    },
+    {
+        "_id": 130005,
+        "school_name": "Montfort Matriculation Higher Secondary School"
+    },
+    {
+        "_id": 130006,
+        "school_name": "Municipal Middle School"
+    },
+    {
+        "_id": 130007,
+        "school_name": "Sowma Public School"
+    },
+    {
+        "_id": 130008,
+        "school_name": "St. Andrew's Hr. Sec. School"
+    },
+    {
+        "_id": 130009,
+        "school_name": "St. Antony's Hr. Sec. School"
+    },
+    {
+        "_id": 130010,
+        "school_name": "Thiagesar Alai Hr. Sec. School"
+    },
+    {
+        "_id": 130011,
+        "school_name": "Vidiyal Matriculation Hr. Sec. School"
+    },
+    {
+        "_id": 130012,
+        "school_name": "Vinmathee Hr.Sec. School"
+    },
+    {
+        "_id": 130013,
+        "school_name": "Sri Guru Higher Sec School"
+    }
+]

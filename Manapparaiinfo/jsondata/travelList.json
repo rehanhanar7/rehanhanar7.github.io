@@ -1,0 +1,94 @@
+[
+    {
+        "_id": 170001,
+        "destination_name": "Trichy"
+    },
+    {
+        "_id": 170002,
+        "destination_name": "Dindigul"
+    },
+    {
+        "_id": 170003,
+        "destination_name": "Pazhani"
+    },
+    {
+        "_id": 170004,
+        "destination_name": "Piranmazhai"
+    },
+    {
+        "_id": 170005,
+        "destination_name": "Singamani"
+    },
+    {
+        "_id": 170006,
+        "destination_name": "Thuvarankuruchi"
+    },
+    {
+        "_id": 170007,
+        "destination_name": "Madurai"
+    },
+    {
+        "_id": 170008,
+        "destination_name": "Pudukkottai"
+    },
+    {
+        "_id": 170009,
+        "destination_name": "Palakkurichy"
+    },
+    {
+        "_id": 170010,
+        "destination_name": "Chennai"
+    },
+    {
+        "_id": 170011,
+        "destination_name": "Kulithalai"
+    },
+    {
+        "_id": 170012,
+        "destination_name": "Thuraiyur"
+    },
+    {
+        "_id": 170013,
+        "destination_name": "Karur"
+    },
+    {
+        "_id": 170014,
+        "destination_name": "Erode"
+    },
+    {
+        "_id": 170015,
+        "destination_name": "Kodaikanal"
+    },
+    {
+        "_id": 170016,
+        "destination_name": "Theni"
+    },
+    {
+        "_id": 170017,
+        "destination_name": "Kambam"
+    },
+    {
+        "_id": 170018,
+        "destination_name": "Poodi"
+    },
+    {
+        "_id": 170019,
+        "destination_name": "Kumuli"
+    },
+    {
+        "_id": 170020,
+        "destination_name": "Dhevaram"
+    },
+    {
+        "_id": 170021,
+        "destination_name": "Ponnamaravathy"
+    },
+    {
+        "_id": 170022,
+        "destination_name": "Pollachi"
+    },
+    {
+        "_id": 170023,
+        "destination_name": "Salem"
+    }
+]
