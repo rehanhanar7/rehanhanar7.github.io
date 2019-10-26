@@ -448,8 +448,28 @@
         "Type": "Online",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "TNSTC Online payment",
+                "url": "http://www.tnstc.in/TNSTCOnline/"
+            },
+            {
+                "name": "Cable TV Payment",
+                "url": "https://www.tactv.in/"
+            },
+            {
+                "name": "TNEB View Bill",
+                "url": "https://www.tnebnet.org/awp/account?execution=e1s1"
+            },
+            {
+                "name": "TNEB Online Payment",
+                "url": "https://www.tnebnet.org/awp/login"
+            },
+            {
+                "name": "Paytm Payment",
+                "url": "https://paytm.com/electricity-bill-payment/tamil-nadu"
+            },
+            {
+                "name": "Cable TV Paytm Payment",
+                "url": "https://paytm.com/cabletv"
             }
         ]
     },
@@ -459,8 +479,36 @@
         "Type": "Online",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "School Exam Result",
+                "url": "https://results.gov.in/nicresults/index.aspx"
+            },
+            {
+                "name": "Other Exam Result",
+                "url": "http://kseeb.kar.nic.in/other_exam_results.asp"
+            },
+            {
+                "name": "TNPSC Result",
+                "url": "http://www.tnpsc.gov.in/results.html"
+            },
+            {
+                "name": "TNOU Result",
+                "url": "http://www.tnou.ac.in/result/"
+            },
+            {
+                "name":"School Exam Results 2",
+                "url":"http://tnresults.nic.in"
+            },
+            {
+                "name":"Other Exam Results 2",
+                "url":"http://tnouexamresult.in"
+            },
+            {
+                "name":"TNPSC Results 2",
+                "url":"http://dge.tn.nic.in"
+            },
+            {
+                "name":"TNOU Results 2",
+                "url":"http://www.tnpsc.gov.in/results.html"
             }
         ]
     },
@@ -470,8 +518,24 @@
         "Type": "Online",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "NS",
+                "url": "http://www.textbookcorp.tn.gov.in/textbook1.php"
+            },
+            {
+                "name": "HS",
+                "url": "http://www.tndigitallibrary.ac.in/#/home"
+            },
+            {
+                "name": "TN Rare Books",
+                "url": "http://www.textbookcorp.tn.gov.in/old_rarebooks.php"
+            },
+            {
+                "name": "TN Rare Books Tamil",
+                "url": "https://textbookcorp.tn.gov.in/old_rarebooks_tam.php"
+            },
+            {
+                "name": "TN Library",
+                "url": "https://textbookcorp.tn.gov.in/textbook1.php"
             }
         ]
     },
@@ -481,8 +545,20 @@
         "Type": "Links",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "Dinamalar",
+                "url": "https://m.dinamalar.com"
+            },
+            {
+                "name": "BBC Tamil",
+                "url": "https://www.bbc.com/tamil"
+            },
+            {
+                "name": "Tamil One India",
+                "url": "https://tamil.oneindia.com"
+            },
+            {
+                "name": "Daily Thanthi",
+                "url": "https://www.dailythanthi.com/News/India"
             }
         ]
     },
@@ -492,8 +568,60 @@
         "Type": "Online",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "Quick Guide",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/online/QuickGuide"
+            },
+            {
+                "name": "New User Register",
+                "url": "https://portal1.passportindia.gov.in/AppOnlineProject/user/RegistrationBaseAction"
+            },
+            {
+                "name": "Existing User Login",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/user/userLogin"
+            },
+            {
+                "name": "Track Application Status",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/statusTracker/trackStatusInpNew"
+            },
+            {
+                "name": "Check Appointment Status",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/online/apptAvailStatus"
+            },
+            {
+                "name": "Tatkal Appointment Time",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/online/appointment"
+            },
+            {
+                "name": "List of Document for New Passport",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/docAdvisor/attachmentAdvFresh"
+            },
+            {
+                "name": "List of Document for Reissue Passport",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/docAdvisor/reissuePassport"
+            },
+            {
+                "name": "Apply Online Fee Input",
+                "url": "https://portal1.passportindia.gov.in/AppOnlineProject/fee/feeInput"
+            },
+            {
+                "name": "Locate Police Station for verification",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/online/LocatePoliceStation"
+            },
+            {
+                "name": "Locate Passseva Kendra",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/locatePSK/locatePFCInp"
+            },
+            {
+                "name": "Locate Common Services Center",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/online/rpo"
+            },
+            {
+                "name": "Ma Dad Registration View",
+                "url": "http://madad.gov.in/AppConsular/welcomeLink"
+            },
+            {
+                "name": "Passport",
+                "url": "https://portal2.passportindia.gov.in/AppOnlineProject/online/callCenter"
             }
         ]
     },
@@ -503,8 +631,44 @@
         "Type": "Online",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "Register your Establishment with Employees PF with Organization",
+                "url": "https://services.india.gov.in/service/detail/register-your-establishment-with-employees-provident-fund-organisation"
+            },
+            {
+                "name": "KYC Updation",
+                "url": "https://iwu.epfindia.gov.in/eKYC/LinkUanAadhaar.How+To+Update+Aadhaar+KYC+EPFO-UAN+Unified+Portal+Pen+Bank+Detail+Aadhaar"
+            },
+            {
+                "name": "Umang",
+                "url": "https://web.umang.gov.in/web/#/"
+            },
+            {
+                "name": "ECR Returns payment",
+                "url": "https://www.epfindia.gov.in/site_en/Online_ECR.php"
+            },
+            {
+                "name": "Online Claims for Employers",
+                "url": "https://www.epfindia.gov.in/site_en/OTCP_ForEmployers.php"
+            },
+            {
+                "name": "E passbook",
+                "url": "https://www.epfindia.gov.in/site_en/epassbook.php"
+            },
+            {
+                "name": "Shram suvidha",
+                "url": "https://return.shramsuvidha.gov.in/"
+            },
+            {
+                "name": "Pensioners Portal",
+                "url": "https://pensionersportal.gov.in/"
+            },
+            {
+                "name": "International Workers Portal",
+                "url": "https://www.epfindia.gov.in/site_en/International_workers.php"
+            },
+            {
+                "name": "E-KYC Portal",
+                "url": "https://iwu.epfindia.gov.in/eKYC/"
             }
         ]
     },
@@ -514,8 +678,64 @@
         "Type": "Links",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "Indian Post",
+                "url": "https://www.indiapost.gov.in/_layouts/15/dop.portal.tracking/trackconsignment.aspx"
+            },
+            {
+                "name": "Fedex",
+                "url": "https://www.fedex.com/en-in/shipping.html"
+            },
+            {
+                "name": "First Flight",
+                "url": "https://www.firstflight.net/"
+            },
+            {
+                "name": "DTDC Courier",
+                "url": "http://www.dtdc.in/"
+            },
+            {
+                "name": "Aramex",
+                "url": "https://www.aramex.com/"
+            },
+            {
+                "name": "Go Javas",
+                "url": "http://gojavas.com/"
+            },
+            {
+                "name": "DHL Express",
+                "url": "https://www.logistics.dhl/in-en/home.html"
+            },
+            {
+                "name": "E-Com Express",
+                "url": "https://ecomexpress.in/"
+            },
+            {
+                "name": "Blue Dart",
+                "url": "https://www.bluedart.com/"
+            },
+            {
+                "name": "Gati Limited",
+                "url": "https://www.tpcindia.com/"
+            },
+            {
+                "name": "Delhivery",
+                "url": "https://www.delhivery.com/"
+            },
+            {
+                "name": "TNT Express",
+                "url": "https://www.tnt.com/express/en_in/site/home.html?gclid=EAIaIQobChMIi_vLqrOn4wIVTyUrCh0NwQxoEAAYASAAEgLO9_D_BwE"
+            },
+            {
+                "name": "Over Nite Express",
+                "url": "https://www.overnitenet.com/"
+            },
+            {
+                "name": "Palande Courier",
+                "url": "http://www.palandecourier.com/"
+            },
+            {
+                "name": "United Parcel",
+                "url": "https://www.ups.com/us/en/global.page"
             }
         ]
     },
@@ -525,8 +745,184 @@
         "Type": "Online",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "jan_dhan_yojna",
+                "url": "https://www.pmindia.gov.in/en/major_initiatives/pradhan-mantri-jan-dhan-yojana/"
+            },
+            {
+                "name": "sukanya_samridhi_yojna",
+                "url": "https://pradhanmantri-yogana.in/sukanya-samriddhi-yojana/"
+            },
+            {
+                "name": "mudra_yojana_cardview",
+                "url": "https://www.mudra.org.in/"
+            },
+            {
+                "name": "jeevanjoyti_bimayojna",
+                "url": "https://www.icicibank.com/Personal-Banking/insurance/pradhan-mantri-bima-yojana.page"
+            },
+            {
+                "name": "suraksha_bimayojna",
+                "url": "http://vikaspedia.in/social-welfare/social-security/pradhan-mantri-suraksha-bima-yojana"
+            },
+            {
+                "name": "atal_pensionyojna",
+                "url": "https://www.npscra.nsdl.co.in/scheme-details.php"
+            },
+            {
+                "name": "sansand_Adharsgam",
+                "url": "https://www.india.gov.in/spotlight/saansad-adarsh-gram-yojana"
+            },
+            {
+                "name": "gram_sinchai",
+                "url": "https://pmfby.gov.in/"
+            },
+            {
+                "name": "makein_india",
+                "url": "https://www.pmindia.gov.in/en/major_initiatives/make-in-india/"
+            },
+            {
+                "name": "swach_bhartabhiyan",
+                "url": "https://pradhanmantri-yogana.in/swachh-bharat-abhiyan/"
+            },
+            {
+                "name": "kishanviksa_patra",
+                "url": "http://vikaspedia.in/agriculture/policies-and-schemes/crops-related/krishi-unnati-yojana/paramparagat-krishi-vikas-yojana"
+            },
+            {
+                "name": "soli_helth_scheme",
+                "url": "https://soilhealth.dac.gov.in/"
+            },
+            {
+                "name": "skill_india",
+                "url": "https://skillindia.gov.in/"
+            },
+            {
+                "name": "btibachao_betipadhao",
+                "url": "https://wcd.nic.in/bbbp-schemes"
+            },
+            {
+                "name": "mission_indradhanush",
+                "url": "https://www.nhp.gov.in/mission-indradhanush1_pg"
+            },
+            {
+                "name": "deendayal_upadhata_gramjoyti",
+                "url": "https://powermin.nic.in/en/content/deendayal-upadhyaya-gram-jyoti-yojana-ddugjy"
+            },
+            {
+                "name": "deendayal_upadhaya_grameen_kushalya",
+                "url": "http://ddugky.gov.in/"
+            },
+            {
+                "name": "pandit_deendayal",
+                "url": "http://vikaspedia.in/social-welfare/unorganised-sector-1/schemes-unorganised-sector/pandit-deendayal-upadhyay-shramev-jayate-karyakram"
+            },
+            {
+                "name": "atalmission_rejuvenation",
+                "url": "http://amrut.gov.in/content/"
+            },
+            {
+                "name": "swadesh_darshan",
+                "url": "http://swadeshdarshan.gov.in/"
+            },
+            {
+                "name": "national_heritage_city",
+                "url": "https://www.hridayindia.in/"
+            },
+            {
+                "name": "udaan_scheme",
+                "url": "https://www.msde.gov.in/udaan.html"
+            },
+            {
+                "name": "national_bal_swachh",
+                "url": "https://currentaffairs.gktoday.in/government-launches-national-bal-swachhta-mission-11201415748.html"
+            },
+            {
+                "name": "onerank_onepeson",
+                "url": "http://pcdapension.nic.in/pcdapension/OROP/orop.html"
+            },
+            {
+                "name": "smartcity_misson",
+                "url": "http://smartcities.gov.in/content/"
+            },
+            {
+                "name": "glod_monetisation",
+                "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=10084&Mode=0"
+            },
+            {
+                "name": "starupindia_standupindia",
+                "url": "https://www.startupindia.gov.in/"
+            },
+            {
+                "name": "digital_locker",
+                "url": "https://digilocker.gov.in/"
+            },
+            {
+                "name": "integrated_power_devlopmnet",
+                "url": "http://www.ipds.gov.in/"
+            },
+            {
+                "name": "sayamparsad_mission",
+                "url": "http://www.arthapedia.in/index.php?title=Shyama_Prasad_Mukherji_Rurban_Mission_(SPMRM)"
+            },
+            {
+                "name": "sagarmala_project",
+                "url": "https://currentaffairs.gktoday.in/tags/sagarmala-project"
+            },
+            {
+                "name": "parkshapath",
+                "url": "https://www.mapsofindia.com/my-india/government/national-led-programme"
+            },
+            {
+                "name": "ujval_discom",
+                "url": "https://www.uday.gov.in/home.php"
+            },
+            {
+                "name": "vikal_scheme",
+                "url": "http://contents.irctc.co.in/en/vikalpTerms.html"
+            },
+            {
+                "name": "national_sports",
+                "url": "https://www.nationalsportstalenthunt.com/iFileSAI/adminIndexPage"
+            },
+            {
+                "name": "digital_india",
+                "url": "https://www.pmindia.gov.in/en/major_initiatives/make-in-india/"
+            },
+            {
+                "name": "rashtiry_gokul",
+                "url": "https://panchayat.gov.in/rgsa"
+            },
+            {
+                "name": "pahal_direct_benefits",
+                "url": "http://petroleum.nic.in/dbt/whatisdbtl.html"
+            },
+            {
+                "name": "national_institution",
+                "url": "https://niti.gov.in/"
+            },
+            {
+                "name": "kahnji_khestrakayan_yojna_india",
+                "url": "https://www.gktoday.in/gk/pradhan-mantri-khanij-kshetra-kalyan-yojana/"
+            },
+            {
+                "name": "ujjvala_yojna",
+                "url": "http://www.pmujjwalayojana.com/"
+            },
+            {
+                "name": "rashtriya_gramabhiyan",
+                "url": "https://panchayat.gov.in/rgsa"
+            },
+            {
+                "name": "jan_surkhsa",
+                "url": "http://www.jansuraksha.gov.in/"
+            },
+            {
+                "name": "standup_india",
+                "url": "https://www.standupmitra.in/"
+            },
+            {
+                "name": "vaya_vandana_yojna",
+                "url": "http://vikaspedia.in/social-welfare/senior-citizens-welfare/pradhan-mantri-vaya-vandana-yojana"
             }
         ]
     },
