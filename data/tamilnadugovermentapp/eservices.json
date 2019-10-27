@@ -932,8 +932,100 @@
         "Type": "Proof",
         "Services": [
             {
+                "name": "Indane Book Cylinder",
+                "url": "https://indane.co.in/book_cylinder.php"
+            },
+            {
+                "name": "Indane Connection Status Check",
+                "url": "https://indane.co.in/check_connection_status.php"
+            },
+            {
+                "name": "Indane New Connection",
+                "url": "https://indane.co.in/new_connection.php"
+            },
+            {
+                "name": "Indane Online Facility",
+                "url": "https://services.india.gov.in/service/detail/indane-online-facility-for-double-bottle-lpg-connection-booking"
+            },
+            {
+                "name": "Indane Change Distributor",
+                "url": "https://indane.co.in/change_distributor_info.php"
+            },
+            {
+                "name": "Indane Rate Distributor",
+                "url": "https://indane.co.in/rate_distributor_info.php"
+            },
+            {
+                "name": "Indane Surrender Info",
+                "url": "https://indane.co.in/surrender_info.php"
+            },
+            {
+                "name": "Indane Prefer Time Delivery",
+                "url": "https://indane.co.in/transparency/prefer-time-delivery.php"
+            },
+            {
+                "name": "Indane 5KG FTL Cylinders",
+                "url": "https://indane.co.in/5Kg-FTL-cylinders.php"
+            },
+            {
+                "name": "Indane Customer Care",
+                "url": "https://indane.co.in/customer-care.php"
+            },
+            {
                 "name": "",
-                "url": ""
+                "url": "https://myhpgas.in/myHPGas/HPGas/BookRefill.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://myhpgas.in/myHPGas/HPGas/TrackComplaints.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://www.myhpgas.in/myHPGas/HPGas/OptPortability.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://myhpgas.in/myHPGas/NewConsumerRegistration.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://www.myhpgas.in/myHPGas/NewConsumerRegistration.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://myhpgas.in/myHPGas/HPGas/KYCNeeded.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://myhpgas.in/myHPGas/HPGas/LocateDistributor.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://www.hindustanpetroleum.com/LPGHome"
+            },
+            {
+                "name": "",
+                "url": "https://myhpgas.in/myHPGas/HPGas/OptOutSubsidy.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://myhpgas.in/myHPGas/HPGas/Buy5KG.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://myhpgas.in/myHPGas/HPGas/FindYourLPGID.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://myhpgas.in/myHPGas/HPGas/JoinPAHAL.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://myhpgas.in/myHPGas/HPGas/SurrenderConnection.aspx"
+            },
+            {
+                "name": "",
+                "url": "https://myhpgas.in/myHPGas/HPGas/RateDistributor.aspx"
             }
         ]
     },
@@ -955,15 +1047,202 @@
         "Services": [
             {
                 "name": "Train",
-                "url": ""
+                "url": "",
+                "urls":[
+                    {
+                        "name":"Search Train",
+                        "url":"https://etrain.info/in"
+                    },
+                    {
+                        "name":"Book Train Ticket (Goibibo)",
+                        "url":"https://www.goibibo.com/trains/?&utm_source=google&utm_medium=cpc&utm_campaign=Train_Generic_Exact&campaign=Train_Generic_Exact&gclid=EAIaIQobChMIg4yN4cep4wIVlSQrCh34XwncEAAYASABEgJCQfD_BwE"
+                    },
+                    {
+                        "name":"Seat Availablity",
+                        "url":"http://www.indianrail.gov.in/enquiry/SEAT/SeatAvailability.html?locale=en"
+                    },
+                    {
+                        "name":"Seat Booking",
+                        "url":"https://www.irctc.co.in/nget/train-search"
+                    },
+                    {
+                        "name":"Fare Enquiry",
+                        "url":"http://www.indianrail.gov.in/enquiry/FARE/FareEnquiry.html?locale=en"
+                    },
+                    {
+                        "name":"PNR Status",
+                        "url":"http://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en"
+                    },
+                    {
+                        "name":"Cancel Ticket",
+                        "url":"http://contents.irctc.co.in/en/eticketCancel.html"
+                    },
+                    {
+                        "name":"Cancel Counter",
+                        "url":"https://www.operations.irctc.co.in/ctcan/SystemTktCanLogin.jsf"
+                    },
+                    {
+                        "name":"Live Station Status",
+                        "url":"https://runningstatus.in/livetrains"
+                    },
+                    {
+                        "name":"Find Train Average Delay",
+                        "url":"https://enquiry.indianrail.gov.in/xyzabc/e_trainAvgDelay.jsp"
+                    },
+                    {
+                        "name":"Train Between Stations",
+                        "url":"https://www.railyatri.in/trains-between-stations"
+                    },
+                    {
+                        "name":"Train Schedule",
+                        "url":"https://www.railyatri.in/time-table"
+                    },
+                    {
+                        "name":"Train Cancellation Charges",
+                        "url":"https://erail.in/railway-ticket-cancellation-charges"
+                    },
+                    {
+                        "name":"Partially Cancelled Train",
+                        "url":"https://enquiry.indianrail.gov.in/xyzabc/PartCancelledTrains?scrnSize=&langFile=props.hi-in"
+                    },
+                    {
+                        "name":"Trains Rescheduled",
+                        "url":"https://enquiry.indianrail.gov.in/xyzabc/RescheduledTrains?scrnSize=&langFile=props.hi-in&t=1562734353266"
+                    },
+                    {
+                        "name":"Track your Train",
+                        "url":"https://enquiry.indianrail.gov.in/xyzabc/e_trainsOnMap.jsp"
+                    },
+                    {
+                        "name":"Special Train Enquiry",
+                        "url":"https://enquiry.indianrail.gov.in/ntes/specialTrains.jsp"
+                    },
+                    {
+                        "name":"Train SMS Service",
+                        "url":"https://erail.in/info/information-sms/703"
+                    }
+                    
+                ]
             },
             {
                 "name": "Bus",
-                "url": ""
+                "url": "",
+                "urls":[
+                    {
+                        "name":"Red bus Ticket",
+                        "url":"https://www.redbus.in/"
+                    },
+                    {
+                        "name":"Make my Trip",
+                        "url":"https://www.makemytrip.com/bus-tickets/"
+                    },
+                    {
+                        "name":"Paytm Bus Ticket",
+                        "url":"https://paytm.com/bus-tickets"
+                    },
+                    {
+                        "name":"Red Bus Ticket",
+                        "url":"https://www.abhibus.com/"
+                    },
+                    {
+                        "name":"Goibibo Bus",
+                        "url":"https://www.goibibo.com/bus/#home"
+                    },
+                    {
+                        "name":"Yatra Bus",
+                        "url":"https://www.yatra.com/"
+                    },
+                    {
+                        "name":"Bus Papa",
+                        "url":"https://www.buspapa.com/"
+                    },
+                    {
+                        "name":"E Travel Smart Bus",
+                        "url":"https://www.etravelsmart.com/bus/"
+                    },
+                    {
+                        "name":"Bus India",
+                        "url":"https://busindia.com/"
+                    },
+                    {
+                        "name":"Yatra Genie",
+                        "url":"https://www.yatra.com/bus-operators-india/yatragenie"
+                    },
+                    {
+                        "name":"Bus Bol",
+                        "url":"https://www.checkmybus.com/bol"
+                    },
+                    {
+                        "name":"Bobe Bus",
+                        "url":"https://bobe.in/"
+                    },
+                    {
+                        "name":"Ixigo Bus",
+                        "url":"https://www.ixigo.com/buses"
+                    }
+                ]
             },
             {
                 "name": "Flight",
-                "url": ""
+                "url": "",
+                "urls":[
+                    {
+                        "name":"Air India",
+                        "url":"http://www.airindia.com/"
+                    },
+                    {
+                        "name":"Happy Easy Go",
+                        "url":"https://www.happyeasygo.com/flight/"
+                    },
+                    {
+                        "name":"Make my Trip Status",
+                        "url":"https://www.makemytrip.com/flights/flight-status.htm"
+                    },
+                    {
+                        "name":"Happy Easy Go Cheap Flight Ticket",
+                        "url":"https://www.happyeasygo.com/cheap-flights-booking-app/"
+                    },
+                    {
+                        "name":"Make my Trip Flight Schedule",
+                        "url":"https://www.makemytrip.com/flights/flight-schedule.htm"
+                    },
+                    {
+                        "name":"Know before you Fly",
+                        "url":"http://knowbeforeyoufly.org/"
+                    },
+                    {
+                        "name":"Air India Information",
+                        "url":"http://www.airindia.in/airport-lounges.htm"
+                    },
+                    {
+                        "name":"Air India Preferred Scheme",
+                        "url":"http://www.airindia.in/preferred-seat-scheme.htm"
+                    },
+                    {
+                        "name":"Air India Network View",
+                        "url":"http://www.airindia.in/network.htm"
+                    },
+                    {
+                        "name":"Air India Route Map",
+                        "url":"http://www.airindia.in/RouteMap/RouteMap.aspx"
+                    },
+                    {
+                        "name":"Air India Flight Tracking",
+                        "url":"http://www.airindia.in/FlightTracking.htm"
+                    },
+                    {
+                        "name":"Air India World Tracer",
+                        "url":"http://www.airindia.in/WorldTracerBaggageTracingSystem.htm"
+                    },
+                    {
+                        "name":"Air India Customer Support",
+                        "url":"http://www.airindia.in/customer-support.htm"
+                    },
+                    {
+                        "name":"Airport Authority of India",
+                        "url":"https://www.aai.aero/"
+                    }
+                ]
             }
         ]
     },
