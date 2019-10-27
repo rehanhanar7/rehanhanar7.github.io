@@ -1252,8 +1252,44 @@
         "Type": "Proof",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "Axis Bank",
+                "url": "https://www.axisbank.com/"
+            },
+            {
+                "name": "Bank of Baroda",
+                "url": "https://www.bobibanking.com/"
+            },
+            {
+                "name": "Canara Bank",
+                "url": "https://www.canarabank.in/"
+            },
+            {
+                "name": "HDFC Bank",
+                "url": "https://www.hdfcbank.com/"
+            },
+            {
+                "name": "ICICI Bank",
+                "url": "https://www.icicibank.com/"
+            },
+            {
+                "name": "Indusland Bank",
+                "url": "https://www.indusind.com/"
+            },
+            {
+                "name": "Kotak Bank",
+                "url": "https://www.kotak.com/"
+            },
+            {
+                "name": "PNB Bank",
+                "url": "https://www.pnbindia.in/"
+            },
+            {
+                "name": "SBI Bank",
+                "url": "https://retail.onlinesbi.com/retail/login.htm"
+            },
+            {
+                "name": "Yes Bank",
+                "url": "https://www.yesbank.in/digital-banking/online-banking/netbanking-services"
             }
         ]
     },
@@ -1263,8 +1299,32 @@
         "Type": "Proof",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "UAE",
+                "url": "https://www.ttsuaevisas.com/en-in/track-visa-document/"
+            },
+            {
+                "name": "UK",
+                "url": "https://www.gov.uk/check-uk-visa/"
+            },
+            {
+                "name": "USA",
+                "url": "https://en.usavisaprograms.com/"
+            },
+            {
+                "name": "Singapore",
+                "url": "https://eservices.ica.gov.sg/esvclandingpage/save"
+            },
+            {
+                "name": "Germany",
+                "url": "https://www.germany-visa.org/application-process/"
+            },
+            {
+                "name": "Canada",
+                "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-status.html"
+            },
+            {
+                "name": "Australia",
+                "url": "https://immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online"
             }
         ]
     },
@@ -1274,8 +1334,44 @@
         "Type": "Proof",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "Naukri",
+                "url": "https://my.naukri.com/"
+            },
+            {
+                "name": "Monster India",
+                "url": "https://www.monsterindia.com/"
+            },
+            {
+                "name": "Shine",
+                "url": "https://www.shine.com/"
+            },
+            {
+                "name": "Indeed",
+                "url": "https://www.indeed.co.in/"
+            },
+            {
+                "name": "Times Jobs",
+                "url": "https://www.timesjobs.com/"
+            },
+            {
+                "name": "Careers Ma",
+                "url": "https://www.careesma.in/"
+            },
+            {
+                "name": "Freshers World",
+                "url": "https://www.freshersworld.com/"
+            },
+            {
+                "name": "Job Rapido",
+                "url": "https://in.jobrapido.com/"
+            },
+            {
+                "name": "Sarkari Naukri Blog",
+                "url": "https://www.sarkarinaukriblog.com/"
+            },
+            {
+                "name": "Career Builder",
+                "url": "https://www.careerbuilder.co.in/"
             }
         ]
     },
@@ -1285,8 +1381,132 @@
         "Type": "Proof",
         "Services": [
             {
-                "name": "",
-                "url": ""
+                "name": "Air India",
+                "url": "http://www.airindia.com/"
+            },
+            {
+                "name": "Airport Authority of India",
+                "url": "https://www.aai.aero/"
+            },
+            {
+                "name": "Chemicals",
+                "url": "https://chemicals.nic.in/"
+            },
+            {
+                "name": "Civil Aviation",
+                "url": "http://www.civilaviation.gov.in/"
+            },
+            {
+                "name": "Commerce",
+                "url": "https://commerce.gov.in/"
+            },
+            {
+                "name": "Coal",
+                "url": "https://www.coal.nic.in/"
+            },
+            {
+                "name": "School",
+                "url": "https://mhrd.gov.in/school-education/"
+            },
+            {
+                "name": "Forests and Environments",
+                "url": "http://moef.gov.in/"
+            },
+            {
+                "name": "External Affairs",
+                "url": "https://www.mea.gov.in/"
+            },
+            {
+                "name": "General Foriegn Trade",
+                "url": "https://dgft.gov.in/"
+            },
+            {
+                "name": "Heavy Industries",
+                "url": "https://dhi.nic.in/"
+            },
+            {
+                "name": "Industrial Policy",
+                "url": "https://dipp.gov.in/"
+            },
+            {
+                "name": "Information Broadcasting",
+                "url": "https://www.mib.gov.in/"
+            },
+            {
+                "name": "Information Technology",
+                "url": "https://meity.gov.in/"
+            },
+            {
+                "name": "Labor",
+                "url": "https://labour.gov.in/"
+            },
+            {
+                "name": "Mines",
+                "url": "https://www.mines.gov.in/"
+            },
+            {
+                "name": "Non Conventional Energy",
+                "url": "http://www.moef.nic.in/divisions/ic/wssd/doc2/ch3.html"
+            },
+            {
+                "name": "Official Controller",
+                "url": "http://www.ipindia.nic.in/"
+            },
+            {
+                "name": "Petroleum",
+                "url": "http://petroleum.nic.in/"
+            },
+            {
+                "name": "Power",
+                "url": "https://powermin.nic.in/"
+            },
+            {
+                "name": "Reserve Bank of India",
+                "url": "https://www.rbi.org.in/"
+            },
+            {
+                "name": "Road Transport",
+                "url": "http://morth.nic.in/"
+            },
+            {
+                "name": "Cargo Shipping",
+                "url": "http://www.dgshipping.gov.in/"
+            },
+            {
+                "name": "Small Scale Industries",
+                "url": "https://msme.gov.in/"
+            },
+            {
+                "name": "Statistics Program",
+                "url": "http://www.mospi.gov.in/"
+            },
+            {
+                "name": "Tele communication",
+                "url": "http://dot.gov.in/"
+            },
+            {
+                "name": "Textile",
+                "url": "http://texmin.nic.in"
+            },
+            {
+                "name": "Tourism",
+                "url": "http://tourism.gov.in/"
+            },
+            {
+                "name": "Urban Development",
+                "url": "https://services.india.gov.in/service/ministry_services?cmd_id=2478&ln=en"
+            },
+            {
+                "name": "Water Resource",
+                "url": "http://mowr.gov.in/"
+            },
+            {
+                "name": "Tamilnadu Government",
+                "url": "http://www.tn.gov.in/"
+            },
+            {
+                "name": "Indian Government",
+                "url": "https://www.india.gov.in"
             }
         ]
     },
