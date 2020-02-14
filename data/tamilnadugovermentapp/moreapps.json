@@ -1,6 +1,7 @@
 {
     "newversion":"1.0.6",
     "version_no":10006,
+    "news_api_url": "https://newsapi.org/v2/everything?q=tamilnadu%20government&apiKey=74d35d11194c40cb8423579f8a686908",
     "moreapps":[
         {
             "appname": "Words to Pages Converter",
