@@ -28,7 +28,7 @@
                 },
                 {
                     "name": "தலைமைச் செயலர்",
-                    "information": "டாக்டர் திருமதி கிரிஜா வைத்தியநாதன்",
+                    "information": "K சண்முகம்",
                     "email":"",
                     "phone":"",
                     "website":""
@@ -65,37 +65,37 @@
             "children": [
                 {
                     "name": "மாவட்டங்கள்",
-                    "information": "32",
+                    "information": "37",
                     "link":"http://www.tn.gov.in/district_view"
                 },
                 {
                     "name": "வருவாய் பிரிவுகள்",
-                    "information": "85",
+                    "information": "87",
                     "link":"http://www.tn.gov.in/government/revenue_division"
                 },
                 {
                     "name": "வட்டங்கள்",
-                    "information": "290",
+                    "information": "301",
                     "link":"http://www.tn.gov.in/government/taluk"
                 },
                 {
                     "name": "வருவாய் தடுப்பு",
-                    "information": "1,349",
+                    "information": "1,189",
                     "link":""
                 },
                 {
                     "name": "வருவாய் கிராமங்கள்",
-                    "information": "17,680",
+                    "information": "16,682",
                     "link":""
                 },
                 {
                     "name": "நகராட்சி நிறுவனங்கள்",
-                    "information": "10",
+                    "information": "15",
                     "link":""
                 },
                 {
                     "name": "நகராட்சிகள்",
-                    "information": "125",
+                    "information": "121",
                     "link":""
                 },
                 {
@@ -105,7 +105,7 @@
                 },
                 {
                     "name": "டவுன் பஞ்சாயத்துகள்",
-                    "information": "561",
+                    "information": "528",
                     "link":""
                 },
                 {
@@ -125,7 +125,7 @@
                 },
                 {
                     "name":"எம்எல்ஏக்கள்",
-                    "information":"234",
+                    "information":"235",
                     "link":"http://www.assembly.tn.gov.in/15thassembly/members/001_050.html"
                 },
                 {

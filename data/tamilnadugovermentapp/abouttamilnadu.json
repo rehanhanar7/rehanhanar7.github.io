@@ -28,7 +28,7 @@
                 },
                 {
                     "name": "Chief Secretary",
-                    "information": "Dr Thirumathi Girija Vaidyanathan, who is the chief Secretary to the Goverment",
+                    "information": "K. Shanmugam, IAS, who is the Chief Secretary to the Goverment",
                     "email":"",
                     "phone":"",
                     "website":""
@@ -65,42 +65,37 @@
             "children": [
                 {
                     "name": "Districts",
-                    "information": "32",
+                    "information": "37",
                     "link":"http://www.tn.gov.in/district_view"
                 },
                 {
                     "name": "Revenue Divisions",
-                    "information": "82",
+                    "information": "87",
                     "link":"http://www.tn.gov.in/government/revenue_division"
                 },
                 {
                     "name": "Taluks",
-                    "information": "82",
+                    "information": "301",
                     "link":"http://www.tn.gov.in/government/taluk"
                 },
                 {
-                    "name": "Revenue Divisions",
-                    "information": "285",
-                    "link":""
-                },
-                {
                     "name": "Firkas",
-                    "information": "1,349",
+                    "information": "1,189",
                     "link":""
                 },
                 {
                     "name": "Revenue Villages",
-                    "information": "17,680",
+                    "information": "16,682",
                     "link":""
                 },
                 {
                     "name": "Municipal Corporations",
-                    "information": "10",
+                    "information": "15",
                     "link":""
                 },
                 {
                     "name": "Municipalities",
-                    "information": "125",
+                    "information": "121",
                     "link":""
                 },
                 {
@@ -110,7 +105,7 @@
                 },
                 {
                     "name": "Town Panchayats",
-                    "information": "561",
+                    "information": "528",
                     "link":""
                 },
                 {
@@ -130,7 +125,7 @@
                 },
                 {
                     "name":"MLAs",
-                    "information":"234",
+                    "information":"235",
                     "link":"http://www.assembly.tn.gov.in/15thassembly/members/001_050.html"
                 },
                 {
