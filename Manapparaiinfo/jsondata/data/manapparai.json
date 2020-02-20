@@ -1,0 +1,2025 @@
+[
+    {
+        "_id": 1,
+        "address": "Near Bus Stand, Dindugal Road, Manapparai.",
+        "name": "Axis Bank ATM",
+        "map_loc": "Axis+Bank+Ltd/@10.6062911,78.4183073,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 2,
+        "address": "Near Renganatha Hospital, Madurai Road, Manapparai.",
+        "name": "Bank of India ATM (BOI)",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.603427,78.417037,218m",
+        "category":"ATM"
+    },
+    {
+        "_id": 3,
+        "address": "Opposite to Post Office, Dindigul Road, Manapparai",
+        "name": "Canara Bank ATM",
+        "map_loc": "Canara+Bank/@10.6051697,78.4156227,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 4,
+        "address": "Near Bus Stand, Dindugal Road, Manapparai.",
+        "name": "City Union Bank ATM 1",
+        "map_loc": "City+Union+Bank/@10.6061438,78.4181631,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 5,
+        "address": "Opposite to Mahalakhsmi Thirumana Mahal, Manaparai to Pudukottai Road, Manapparai",
+        "name": "City Union Bank ATM 2",
+        "map_loc": "10�36'23.1\"N+78�25'39.5\"E/@10.6064324,78.4270697,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 6,
+        "address": "Opposite to Montfort English Play School, Trcihy Road, Manapparai",
+        "name": "India 1 Bank ATM",
+        "map_loc": "10�36'51.0\"N+78�25'40.8\"E/@10.6141704,78.4274266,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 7,
+        "address": "Near Bus Stand, Dindugal Road, Manapparai.",
+        "name": "Indian Bank ATM 1",
+        "map_loc": "Indian+Bank+and+ATM/@10.6063742,78.4184915,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 8,
+        "address": "Near Kumarappa, Kovilpatti Road, Manapparai",
+        "name": "Indian Bank ATM 2",
+        "map_loc": "10�36'28.2\"N+78�25'25.2\"E/@10.6078314,78.4230933,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 9,
+        "address": "Near Bus Stand, Dindugal Road, Manapparai.",
+        "name": "Indian Overseas Bank ATM",
+        "map_loc": "Indian+Overseas+Bank+ATM/@10.6062134,78.4180654,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 10,
+        "address": "Near Indian Oil Petrol Bunk, Madurai Road, Manapparai",
+        "name": "Karur Vysya Bank ATM 1",
+        "map_loc": "Karur+Vysya+Bank/@10.6052791,78.4178275,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 11,
+        "address": "Near Cattle Market,Trichy to Dindugal Highway road, Manapparai",
+        "name": "Karur Vysya Bank ATM 2",
+        "map_loc": "10�36'48.4\"N+78�25'23.6\"E/@10.6134404,78.4226303,230m",
+        "category":"ATM"
+    },
+    {
+        "_id": 12,
+        "address": "Near Andavar Malligai store, Manapparai to Pudukottai Road, Manapparai",
+        "name": "Karur Vysya Bank ATM 3",
+        "map_loc": "KVB+ATM/@10.6067189,78.4254383,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 13,
+        "address": "Opposite to Kasim Hospital, Madurai Road, Manapparai.",
+        "name": "State Bank ATM 1",
+        "map_loc": "poorvegam+siddha+hospital/@10.6048153,78.4172791,218m",
+        "category":"ATM"
+    },
+    {
+        "_id": 14,
+        "address": "Near Railway station, Manapparai.",
+        "name": "State Bank ATM 2",
+        "map_loc": "Park+Rd,+Boys+Town,+Manapparai,+Tamil+Nadu+621306/@10.6073947,78.4177503,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 15,
+        "address": "Pudhutheru, Opposite to Jyothi Store, Manapparai.",
+        "name": "State Bank ATM 3",
+        "map_loc": "10�36'26.6\"N+78�25'13.9\"E/@10.6073804,78.4199649,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 16,
+        "address": "Near to Mahalakhsmi Thirumana Mahal, Manaparai to Pudukottai Road, Manapparai",
+        "name": "State Bank ATM 4",
+        "map_loc": "10�36'23.9\"N+78�25'39.8\"E/@10.6066414,78.4271515,230m",
+        "category":"ATM"
+    },
+    {
+        "_id": 17,
+        "address": "Near Post Office, Dindigul road, Manapparai.",
+        "name": "State Bank of India ATM",
+        "map_loc": "State+Bank+of+India/@10.60507,78.4155325,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 18,
+        "address": "Opposite to Kalai Arasan Hospital, Madurai Road, Manapparai.",
+        "name": "TMB Bank ATM 1",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.603947,78.417602,218m",
+        "category":"ATM"
+    },
+    {
+        "_id": 19,
+        "address": "Kovilpatti road, Manapparai",
+        "name": "TMB Bank ATM 2",
+        "map_loc": "10�36'21.8\"N+78�25'34.4\"E/@10.6062721,78.4259562,229m",
+        "category":"ATM"
+    },
+    {
+        "_id": 20,
+        "address": "166 DINDUGAL ROAD, DISTT. TIRUCHIRAPALLI, TAMIL NADU 621306",
+        "name": "State Bank of India",
+        "bank_type": "GOVERMENT",
+        "ifsc": "SBIN0000995",
+        "map_loc": "State+Bank+of+India/@10.6051345,78.4156757,229m",
+        "micr": "620002022",
+        "phone_no": "4332260327",
+        "category":"Bank"
+    },
+    {
+        "_id": 21,
+        "address": "NO.269,DINDIGUL ROAD, MANAPPARAI 621306",
+        "name": "AXIS BANK",
+        "bank_type": "PRIVATE",
+        "ifsc": "UTIB0001563",
+        "map_loc": "Axis+Bank+Ltd/@10.606164,78.4181462,229m",
+        "micr": "620216",
+        "phone_no": "4332260060",
+        "category":"Bank"
+    },
+    {
+        "_id": 22,
+        "address": "SH 71A, Vadagupatti, Tamil Nadu 621306",
+        "name": "City Union Bank",
+        "bank_type": "PRIVATE",
+        "ifsc": "CIUB0000026 ",
+        "map_loc": "City+Union+Bank/@10.606164,78.4181462,229m",
+        "micr": "620054006",
+        "phone_no": "4428297208",
+        "category":"Bank"
+    },
+    {
+        "_id": 23,
+        "address": "Maickma Towers 227 Dindigul Road Manapparai 621306",
+        "name": "Indian Bank",
+        "bank_type": "GOVERMENT",
+        "ifsc": "IDIB000M131",
+        "map_loc": "Indian+Bank+and+ATM/@10.606164,78.4181462,229m",
+        "micr": "621019096",
+        "phone_no": "4332260546",
+        "category":"Bank"
+    },
+    {
+        "_id": 24,
+        "address": "49-a, Trichy Road, Manaparai Pin 621306",
+        "name": "Indian Overseas Bank",
+        "bank_type": "GOVERNMENT",
+        "ifsc": "IOBA0000053",
+        "map_loc": "Indian+Overseas+Bank+ATM/@10.6062134,78.4180654,229m",
+        "micr": "620020025",
+        "phone_no": "4428519488",
+        "category":"Bank"
+    },
+    {
+        "_id": 25,
+        "address": "77-g, Madurai Road, Kankaniar Pettai, Manapparai 621306",
+        "name": "Karur Vysia Bank",
+        "bank_type": "PRIVATE",
+        "ifsc": "KVBL0001647 ",
+        "map_loc": "Karur+Vysya+Bank/@10.6048311,78.417775,231m",
+        "micr": "620053011",
+        "phone_no": "18602001916",
+        "category":"Bank"
+    },
+    {
+        "_id": 26,
+        "address": "D.NO. 60-B, KOVILPATTI ROAD, MANAPPARAI - 621306",
+        "name": "Tamilnad Mecantile Bank ltd",
+        "bank_type": "PRIVATE",
+        "ifsc": "TMBL0000254",
+        "map_loc": "10�36'21.7\"N+78�25'34.2\"E/@10.6061713,78.4257484,229m",
+        "micr": "620060004",
+        "phone_no": "9095122888",
+        "category":"Bank"
+    },
+    {
+        "_id": 27,
+        "address": "Aathavan Nagar, Dindigul Road, Alathur, Manapparai Taluk. Pin:621306",
+        "name": "Aadhavan College of Arts & Science",
+        "college_type": "Arts & Science",
+        "map_loc": "Aadhavan+College+of+Arts+%26+Science/@10.5086096,78.6282241,812m",
+        "phone_no": "4332262680",
+        "category":"College"
+    },
+    {
+        "_id": 28,
+        "address": "National High way Trichy main Road, Vinmathee Nagar, Muthapudaiyanpatti (post), Manapparai. Pin:621306",
+        "name": "Jeevan College of Education",
+        "college_type": "B.Ed/M.Ed",
+        "map_loc": "Jeevan+College+of+Education/@10.6073703,78.4208833,214m",
+        "phone_no": "4332267394",
+        "category":"College"
+    },
+    {
+        "_id": 29,
+        "address": "National High way Trichy main Road, Vinmathi Nagar, Muthapudaiyanpatti post Manaparai. Pin:621306",
+        "name": "Jeevan Teacher Training Institute",
+        "college_type": "Teacher Training",
+        "map_loc": "Jeevan+College+of+Education/@10.6073703,78.4208833,214m",
+        "phone_no": "4332267394",
+        "category":"College"
+    },
+    {
+        "_id": 30,
+        "address": "Kulithalai road, Kannudaiyanpatty Village, Manapparai. Pin:621306",
+        "name": "KARTHIKEYA POLYTECHNIC COLLEGE",
+        "college_type": "Polytechnic",
+        "map_loc": "Karthikeya+Polytechnic+College/@10.6288488,78.4282422,811m",
+        "phone_no": "4332267055",
+        "category":"College"
+    },
+    {
+        "_id": 31,
+        "address": "Dindigul Road, Malaiyadipatty, Manapparai. Pin:621307",
+        "name": "Kurinji College of Engineering and Technology",
+        "college_type": "Engineering",
+        "map_loc": "Kurinji+College+of+Engineering+and+Technology/@10.5877834,78.3723937,482m",
+        "phone_no": "4332260488",
+        "category":"College"
+    },
+    {
+        "_id": 32,
+        "address": "Dindigul Road, Manjampatty, Manaparai. Pin:621307",
+        "name": "St.John's I.T.I",
+        "college_type": "ITI Courses",
+        "map_loc": "St.+John's+Industrial+Training+Institute/@10.6025701,78.3996169,486m",
+        "phone_no": "4332260354",
+        "category":"College"
+    },
+    {
+        "_id": 33,
+        "address": "1/191.1 vairampatty south vaiyampatty manapparai Taluk",
+        "name": "Surya Nursing College",
+        "college_type": "Nursing",
+        "map_loc": "Vaiampatti,+Tamil+Nadu+621315/@10.5512295,78.2982945,16z",
+        "phone_no": "9443494415",
+        "category":"College"
+    },
+    {
+        "_id": 34,
+        "address": "No 1205/1, Puthanatham, Karupur Road, Trichy. Pin : 621310",
+        "name": "Adaiyaalam Publishing",
+        "company_type": "PRIVATE",
+        "map_loc": "10�27'56.5\"N+78�22'09.7\"E/@10.4657034,78.3687936,229m",
+        "phone_no": "9443768004",
+        "category":"Company"
+    },
+    {
+        "_id": 35,
+        "address": "No. 77/9,Second Floor, Sivan Complex, Near  IOC Petrol Bunk, Madurai Road. Manapparai",
+        "name": "I Smart Technologies",
+        "company_type": "PRIVATE",
+        "map_loc": "10�36'17.3\"N+78�25'04.2\"E/@10.6048156,78.4171708,260m",
+        "phone_no": "4332262266",
+        "category":"Company"
+    },
+    {
+        "_id": 36,
+        "address": "Manapparai. Pin:621306",
+        "name": "TNPL",
+        "company_type": "GOVERMENT",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.605734,78.4236194,3478m",
+        "phone_no": "",
+        "category":"Company"
+    },
+    {
+        "_id": 37,
+        "address": "Manapparai. Pin:621306",
+        "name": "Aanjieyar Koyil",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129037,78.4118538,6491m",
+        "category":"Devotion"
+    },
+    {
+        "_id": 38,
+        "address": "Trichy Road,Manapparai. Pin:621306",
+        "name": "Agastheswarar Munnishwera Koyil",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129037,78.4118538,6491m",
+        "category":"Devotion"
+    },
+    {
+        "_id": 39,
+        "address": "Manapparai Patti,Manapparai. Pin:621306",
+        "name": "Ayyar Koyil",
+        "map_loc": "10�35'10.5\"N+78�25'20.8\"E/@10.58626,78.421523,337m",
+        "category":"Devotion"
+    },
+    {
+        "_id": 40,
+        "address": "Near Kaaliyamman koyil,Trichy Road,Manapparai. Pin:621306",
+        "name": "Eswaran Temple",
+        "map_loc": "Easwaran+Temple,+Kulithalai+-+Manapparai+Rd,+Tamil+Nadu+621306/@10.6270432,78.4319119,16.75z",
+        "category":"Devotion"
+    },
+    {
+        "_id": 41,
+        "address": "Near Manapparai Police Station, Manapparai. Pin:621306",
+        "name": "Holy Church",
+        "map_loc": "10�36'28.4\"N+78�25'18.1\"E/@10.607891,78.4211141,214m",
+        "category":"Devotion"
+    },
+    {
+        "_id": 42,
+        "address": "Trichy Road, Manapparai. Pin:621306",
+        "name": "Jumma Periya Pallivaasal(Jumma Masjid)",
+        "map_loc": "10�36'31.3\"N+78�25'20.2\"E/@10.608684,78.4216896,214m",
+        "category":"Devotion"
+    },
+    {
+        "_id": 43,
+        "address": "Ramasamy Street,Manapparai. Pin:621306",
+        "name": "Kabasthaan Palli (Mosque)",
+        "map_loc": "10�36'32.2\"N+78�25'30.5\"E/@10.608955,78.424565,214m",
+        "category":"Devotion"
+    },
+    {
+        "_id": 44,
+        "address": "Trichy Road,Manapparai. Pin:621306",
+        "name": "Kaliyamman Koyil",
+        "map_loc": "Kaali+Kovil/@10.6098458,78.4236741,19.75z",
+        "category":"Devotion"
+    },
+    {
+        "_id": 45,
+        "address": "Veerappur,Manapparai. Pin:621306",
+        "name": "Maha Muni Koyil",
+        "map_loc": "Veerapur+Ponnar+Shankar+Temple/@10.6748099,78.39553,811m",
+        "category":"Devotion"
+    },
+    {
+        "_id": 46,
+        "address": "Trichy Road,Manapparai. Pin:621306",
+        "name": "Mariyamman koyil",
+        "map_loc": "Mariamman+Koil/@10.6087476,78.4228579,19.25z",
+        "category":"Devotion"
+    },
+    {
+        "_id": 47,
+        "address": "Near Bus stand,Manapparai. Pin:621306",
+        "name": "Masthan Street Pallivasal(Mosque)",
+        "map_loc": "10�36'19.6\"N+78�25'15.0\"E/@10.605459,78.4202638,214m",
+        "category":"Devotion"
+    },
+    {
+        "_id": 48,
+        "address": "Trichy Road,Manapparai. Pin:621306",
+        "name": "Nallandavar Koyil",
+        "map_loc": "Sri+Nallandavar+Temple/@10.6246831,78.4339298,19z",
+        "category":"Devotion"
+    },
+    {
+        "_id": 49,
+        "address": "Malayadipatty",
+        "name": "Portuguese Church",
+        "map_loc": "st+thomas+mount/@10.5874994,78.3840239,2855m",
+        "category":"Devotion"
+    },
+    {
+        "_id": 50,
+        "address": "Besto Nagar,Manapparai. Pin:621306",
+        "name": "Sai Bhabha Koyil",
+        "map_loc": "Kassim+Hospital/@10.6043652,78.4177524,19.5z",
+        "category":"Devotion"
+    },
+    {
+        "_id": 51,
+        "address": "Trichy Road,Manapparai. Pin:621306",
+        "name": "Shivan Koyil",
+        "map_loc": "Kassim+Hospital/@10.6043652,78.4177524,19.5z",
+        "category":"Devotion"
+    },
+    {
+        "_id": 52,
+        "address": "Near Mariyamman Koyil, Trichy Road,Manapparai. Pin:621306",
+        "name": "Sri Varadaraja Perumal Koyil",
+        "map_loc": "Sri+Varadaraja+Perumal+Temple,+Boys+Town,+Manapparai,+Tamil+Nadu+621306/@10.6086955,78.4225776,18.5z",
+        "category":"Devotion"
+    },
+    {
+        "_id": 53,
+        "address": "Kattupatti Government School, Manapparai. Pin:621306",
+        "name": "AEO Office Kathupatti",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129459,78.4118538,6951m",
+        "phone_no": "4332294111",
+        "category":"Government"
+    },
+    {
+        "_id": 54,
+        "address": "Taluk Office Opposite, Trichy Road, Manapparai. Pin:621306",
+        "name": "Agriculture Office",
+        "map_loc": "10�36'31.1\"N+78�25'18.1\"E/@10.6086444,78.4211292,229m",
+        "phone_no": "4332260541",
+        "category":"Government"
+    },
+    {
+        "_id": 55,
+        "address": "Taluk Office Opposite, Trichy Road, Manapparai. Pin:621306",
+        "name": "Animal Husbandary / Veternary Despensary",
+        "map_loc": "10�36'31.1\"N+78�25'18.1\"E/@10.6086444,78.4211292,229m",
+        "phone_no": "",
+        "category":"Government"
+    },
+    {
+        "_id": 56,
+        "address": "Madurai Road, Manapparai. Pin:621306",
+        "name": "Assitant Engineer TWAD Board",
+        "map_loc": "10�36'11.4\"N+78�24'59.4\"E/@10.6031603,78.4155337,385m",
+        "phone_no": "4332263096",
+        "category":"Government"
+    },
+    {
+        "_id": 57,
+        "address": "Manapparaipatti Road, Telephone Exchange, Manapparai. Pin:621306",
+        "name": "BSNL Office",
+        "map_loc": "10�36'14.3\"N+78�25'22.0\"E/@10.6042,78.4222322,229m",
+        "phone_no": "4332260198",
+        "category":"Government"
+    },
+    {
+        "_id": 58,
+        "address": "Kovilpatti Road, Manapparai. Pin:621306",
+        "name": "Central Milk Production Society",
+        "map_loc": "10�36'19.4\"N+78�25'36.2\"E/@10.6053934,78.4261351,229m",
+        "phone_no": "4332260530",
+        "category":"Government"
+    },
+    {
+        "_id": 59,
+        "address": "Madurai Road, Manapparai. Pin:621306",
+        "name": "Commercial Tax Office",
+        "map_loc": "Manapparai+Municipality+Office,+SH+71A,+Manapparai,+Tamil+Nadu+621306/@10.6044513,78.4165122,229m",
+        "phone_no": "4332260552",
+        "category":"Government"
+    },
+    {
+        "_id": 60,
+        "address": "Fathima Malai, Madurai Road, Manapparai. Pin:621306",
+        "name": "Deputy Superintent of Police",
+        "map_loc": "10�35'45.4\"N+78�24'56.1\"E/@10.5959334,78.4150104,230m",
+        "phone_no": "4332260532",
+        "category":"Government"
+    },
+    {
+        "_id": 61,
+        "address": "Madurai Road, Manapparai. Pin:621306",
+        "name": "Fire and Rescue Operations Department",
+        "map_loc": "10�35'49.8\"N+78�24'39.8\"E/@10.5971748,78.4099139,457m",
+        "phone_no": "4332260501",
+        "category":"Government"
+    },
+    {
+        "_id": 62,
+        "address": "Vadugapatti, Manapparai",
+        "name": "Forest Department",
+        "map_loc": "Vadagupatti,+Tamil+Nadu/@10.6044164,78.4041213,3476m",
+        "phone_no": "",
+        "category":"Government"
+    },
+    {
+        "_id": 63,
+        "address": "Bharathiyar Nagar, Manapparai. Pin:621306",
+        "name": "Government Hospital",
+        "map_loc": "Manaparai+Government+Hospital/@10.604329,78.4371961,273m",
+        "phone_no": "4332260518",
+        "category":"Government"
+    },
+    {
+        "_id": 64,
+        "address": "Dindugal Road, Manapparai. Pin:621306",
+        "name": "Life Insurance Corporation f India",
+        "map_loc": "10�36'22.3\"N+78�25'05.5\"E/@10.6062034,78.4176042,230m",
+        "phone_no": "4332262424",
+        "category":"Government"
+    },
+    {
+        "_id": 65,
+        "address": "Taluk Office Compond, Manapparai. Pin:621306",
+        "name": "Manapparai Model Police Station",
+        "map_loc": "Manaparai+Police+Station/@10.6080918,78.4213042,229m",
+        "phone_no": "4332260500",
+        "category":"Government"
+    },
+    {
+        "_id": 66,
+        "address": "Madurai Road, Manapparai. Pin:621306",
+        "name": "Municipal Administrate",
+        "map_loc": "Manapparai+Municipality+Office,+SH+71A,+Manapparai,+Tamil+Nadu+621306/@10.6044513,78.4165122,229m",
+        "phone_no": "4332260242",
+        "category":"Government"
+    },
+    {
+        "_id": 67,
+        "address": "Taluk Office Opposite, Trichy Road, Manapparai. Pin:621306",
+        "name": "Panchayat Union",
+        "map_loc": "10�36'31.1\"N+78�25'18.1\"E/@10.6086444,78.4211292,229m",
+        "phone_no": "4332260389",
+        "category":"Government"
+    },
+    {
+        "_id": 68,
+        "address": "Dindugal Road, Manapparai. Pin:621306",
+        "name": "Post Office",
+        "map_loc": "Post+Office/@10.6053127,78.4156981,19.5z",
+        "phone_no": "",
+        "category":"Government"
+    },
+    {
+        "_id": 69,
+        "address": "Bus stand Opposite, Manapparai. Pin:621306",
+        "name": "Public Works Department (Construction)",
+        "map_loc": "10�36'24.4\"N+78�25'08.7\"E/@10.6067854,78.4185012,229m",
+        "phone_no": "",
+        "category":"Government"
+    },
+    {
+        "_id": 70,
+        "address": "Bus stand Opposite, Manapparai. Pin:621306",
+        "name": "Public Works Department (Highway)",
+        "map_loc": "10�36'24.4\"N+78�25'08.7\"E/@10.6067854,78.4185012,229m",
+        "phone_no": "4332260035",
+        "category":"Government"
+    },
+    {
+        "_id": 71,
+        "address": "Near Muniappan Kulam, Idatheru, Manapparai. Pin:621306",
+        "name": "Public Works Department (Irrigation)",
+        "map_loc": "10�36'24.4\"N+78�25'09.2\"E/@10.6067893,78.4170423,869m",
+        "phone_no": "4332263096",
+        "category":"Government"
+    },
+    {
+        "_id": 72,
+        "address": "Bharathiyar Nagar, Manapparai. Pin:621306",
+        "name": "Sidha Medince Dept, Government Hospital",
+        "map_loc": "Manaparai+Government+Hospital/@10.604329,78.4371961,273m",
+        "phone_no": "4332260518",
+        "category":"Government"
+    },
+    {
+        "_id": 73,
+        "address": "Muthupudaiyanpatti, Kulithalai Road, Manapparai. Pin:621306",
+        "name": "Sub Regional Transport Office",
+        "map_loc": "10�38'53.4\"N+78�25'39.7\"E/@10.6481769,78.4269161,310m",
+        "phone_no": "9443349696",
+        "category":"Government"
+    },
+    {
+        "_id": 74,
+        "address": "Near Mariyamman kovil, Trichy Road, Manapparai. Pin:621306",
+        "name": "Sub Registrar Office",
+        "map_loc": "Taluk+Office/@10.6080602,78.4219713,229m",
+        "phone_no": "4332262696",
+        "category":"Government"
+    },
+    {
+        "_id": 75,
+        "address": "Near Mariyamman kovil, Trichy Road, Manapparai. Pin:621306",
+        "name": "Taluk Supply Office",
+        "map_loc": "Taluk+Office/@10.6080602,78.4219713,229m",
+        "phone_no": "4332260576",
+        "category":"Government"
+    },
+    {
+        "_id": 76,
+        "address": "Manapparaipatti Road, Telephone Exchange, Manapparai. Pin:621306",
+        "name": "Tamilnadu Electricity Board (TNEB)",
+        "map_loc": "10�36'16.9\"N+78�25'23.2\"E/@10.6047004,78.4225341,229m",
+        "phone_no": "4332260556",
+        "category":"Government"
+    },
+    {
+        "_id": 77,
+        "address": "Near Trichy Road Bridge, Manapparai. Pin:621306",
+        "name": "Tamilnadu State Transport Corporation (TNSTC)",
+        "map_loc": "10�36'43.4\"N+78�25'30.9\"E/@10.6120536,78.4245926,258m",
+        "phone_no": "4332267051",
+        "category":"Government"
+    },
+    {
+        "_id": 78,
+        "address": "Near Mariyamman kovil, Trichy Road, Manapparai. Pin:621306",
+        "name": "Thahsildar cum Taluk Executive Magistrate",
+        "map_loc": "Taluk+Office/@10.6080602,78.4219713,229m",
+        "phone_no": "4332260576",
+        "category":"Government"
+    },
+    {
+        "_id": 79,
+        "address": "Kovilpatti Road, Manapparai. Pin:621306",
+        "name": "The Judicial Magistrate (Civil)",
+        "map_loc": "10�36'21.8\"N+78�25'33.2\"E/@10.6060723,78.4237033,869m",
+        "phone_no": "4332261119",
+        "category":"Government"
+    },
+    {
+        "_id": 80,
+        "address": "Near Cattle Market, Trichy Road, Manapparai. Pin:621306",
+        "name": "The Judicial Magistrate (Crime)",
+        "map_loc": "10�36'42.9\"N+78�25'27.1\"E/@10.6119181,78.4228883,519m",
+        "phone_no": "4332260091",
+        "category":"Government"
+    },
+    {
+        "_id": 81,
+        "address": "Vandipettai Street (Police line), Manapparai Pin:621306",
+        "owner_name": "Dr.Arivazhahan",
+        "name": "AG Hospital",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "9842472470",
+        "category":"Hospital"
+    },
+    {
+        "_id": 82,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Nasrudeen",
+        "name": "Anbu Clinic",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "4332260030",
+        "category":"Hospital"
+    },
+    {
+        "_id": 83,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Manjula",
+        "name": "Annai Clinic",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "4332262277",
+        "category":"Hospital"
+    },
+    {
+        "_id": 84,
+        "address": "Trichy Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Balaji",
+        "name": "Balaji Nursing home",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "4332260517",
+        "category":"Hospital"
+    },
+    {
+        "_id": 85,
+        "address": "Govindharajapuram, Kovil patti road, Manapparai Pin:621306",
+        "owner_name": "Dr.Sekar",
+        "name": "Chithra Clinic",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "4332260370",
+        "category":"Hospital"
+    },
+    {
+        "_id": 86,
+        "address": "Ramasamy Street, Manapparai Pin:621306",
+        "owner_name": "Dr.Ragunadhan",
+        "name": "Dayal Narasimam",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "9443160041",
+        "category":"Hospital"
+    },
+    {
+        "_id": 87,
+        "address": "Trichy Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Murugasen",
+        "name": "G.K.M Hospital",
+        "map_loc": "GKM+Hospital/@10.6124948,78.4252728,229m",
+        "phone_no": "4332267056",
+        "category":"Hospital"
+    },
+    {
+        "_id": 88,
+        "address": "Bharathiyar Nagar, Manapparai. Pin:621306",
+        "owner_name": "Helpline",
+        "name": "Government Hospital",
+        "map_loc": "Manaparai+Government+Hospital/@10.604329,78.4371961,273m",
+        "phone_no": "4332260518",
+        "category":"Hospital"
+    },
+    {
+        "_id": 89,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Selvam",
+        "name": "Guru Dev Medical Centre",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "4332262626",
+        "category":"Hospital"
+    },
+    {
+        "_id": 90,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Jayalakshmi",
+        "name": "Jayalakshmi Clinic",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "9750589766",
+        "category":"Hospital"
+    },
+    {
+        "_id": 91,
+        "address": "Dindugal Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Paalvannan",
+        "name": "Jeyaram Hospital",
+        "map_loc": "10�36'20.3\"N+78�25'04.5\"E/@10.6056424,78.4173429,229m",
+        "phone_no": "8940999897",
+        "category":"Hospital"
+    },
+    {
+        "_id": 92,
+        "address": "Trichy Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Muthu Karthikeyan",
+        "name": "K.R.Ortho Clinic",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "8754538511",
+        "category":"Hospital"
+    },
+    {
+        "_id": 93,
+        "address": "Kovilpatti Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Brindha",
+        "name": "Kavi Hospital",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "",
+        "category":"Hospital"
+    },
+    {
+        "_id": 94,
+        "address": "Near Super Biryani, Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Manohar",
+        "name": "Manohar Hospital",
+        "map_loc": "10�36'19.5\"N+78�25'08.3\"E/@10.60543,78.4181441,325m",
+        "phone_no": "4332260087",
+        "category":"Hospital"
+    },
+    {
+        "_id": 95,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.M.M.Kasim",
+        "name": "MMK Hospital",
+        "map_loc": "Kassim+Hospital/@10.6043842,78.4173647,231m",
+        "phone_no": "4332260044",
+        "category":"Hospital"
+    },
+    {
+        "_id": 96,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.SK Renganathan",
+        "name": "Mohan Das Hospital",
+        "map_loc": "10�36'12.3\"N+78�25'01.4\"E/@10.6034264,78.4164643,231m",
+        "phone_no": "4332262616",
+        "category":"Hospital"
+    },
+    {
+        "_id": 97,
+        "address": "Viralimalai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Raja Mohamed",
+        "name": "Noor Ayurvedhic Hospital",
+        "map_loc": "10�36'23.5\"N+78�25'38.6\"E/@10.6065224,78.4268222,229m",
+        "phone_no": "9994280657",
+        "category":"Hospital"
+    },
+    {
+        "_id": 98,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Das",
+        "name": "Ratna Das Hospital",
+        "map_loc": "10�36'20.9\"N+78�25'09.2\"E/@10.6059179,78.4187388,229m",
+        "phone_no": "4332260491",
+        "category":"Hospital"
+    },
+    {
+        "_id": 99,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Ratnavel",
+        "name": "Ratna Physiotherapy",
+        "map_loc": "10�36'19.1\"N+78�25'08.2\"E/@10.6053154,78.4183565,229m",
+        "phone_no": "9842331164",
+        "category":"Hospital"
+    },
+    {
+        "_id": 100,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Kalai Arasan",
+        "name": "Sindhuja Hospital",
+        "map_loc": "Sinduja+Hospital,+SH+71A,+Manapparai,+Tamil+Nadu+621306/@10.6040532,78.4162084,231m",
+        "phone_no": "4332263101",
+        "category":"Hospital"
+    },
+    {
+        "_id": 101,
+        "address": "Manapparai Patti Road, Manapparai Pin:621306",
+        "owner_name": "Dr.William Andrews",
+        "name": "SRM Hospital",
+        "map_loc": "10�36'18.0\"N+78�25'23.6\"E/@10.6049904,78.4226393,230m",
+        "phone_no": "4332263626",
+        "category":"Hospital"
+    },
+    {
+        "_id": 102,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Suresh",
+        "name": "Sugam Clinic",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "4332260055",
+        "category":"Hospital"
+    },
+    {
+        "_id": 103,
+        "address": "Dindugal Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Sumitra Gunnalahan",
+        "name": "Sumithra Clinic",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "9442092668",
+        "category":"Hospital"
+    },
+    {
+        "_id": 104,
+        "address": "Pookadai Street, Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.Loganathan",
+        "name": "Thangam Hospital",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "4332267278",
+        "category":"Hospital"
+    },
+    {
+        "_id": 105,
+        "address": "Madurai Road, Manapparai Pin:621306",
+        "owner_name": "Dr.SivaKumar/Dr.Alim/Dr.Ezhil Babu",
+        "name": "Udhayam Hospital",
+        "map_loc": "10�36'21.3\"N+78�25'08.4\"E/@10.605926,78.4181924,325m",
+        "phone_no": "4332261506",
+        "category":"Hospital"
+    },
+    {
+        "_id": 106,
+        "address": "168/4, Dinduigul Road,Manapparai. Pin:621306",
+        "name": "Kurinji Hotel",
+        "map_loc": "kurungi+restaurant/@10.6063577,78.4192985,214m",
+        "phone_no": "4332263400",
+        "services_offered": "Non veg Food",
+        "category":"Restaurant"
+    },
+    {
+        "_id": 107,
+        "address": "27 Madurai Road,Manapparai. Pin:621306",
+        "name": "Amma Saiva Unavagam",
+        "map_loc": "10�36'19.4\"N+78�25'08.3\"E/@10.605388,78.4183872,214m",
+        "phone_no": "43322604640",
+        "services_offered": "Veg Food",
+        "category":"Restaurant"
+    },
+    {
+        "_id": 108,
+        "address": "22/1, Siva Complex, Kovilpatti Road,Manapparai. Pin:621306",
+        "name": "Babu Mittai Kadai",
+        "map_loc": "10�36'27.8\"N+78�25'26.0\"E/@10.607711,78.4233173,214m",
+        "phone_no": "9842878532",
+        "services_offered": "Homemade Snacks",
+        "category":"Restaurant"
+    },
+    {
+        "_id": 109,
+        "address": "Bus stand Opposite, Manapparai. Pin:621306",
+        "name": "Banaras Hotel",
+        "map_loc": "10�36'23.6\"N+78�25'10.7\"E/@10.606544,78.4190612,214m",
+        "phone_no": "9786760875",
+        "services_offered": "Non Veg",
+        "category":"Restaurant"
+    },
+    {
+        "_id": 110,
+        "address": "Gangaaniyaar complex,Madurai Road,Manapparai. Pin:621306",
+        "name": "Kokkarakko Restaurant",
+        "map_loc": "10�36'19.0\"N+78�25'05.5\"E/@10.605273,78.4176083,214m",
+        "phone_no": "9791560411",
+        "services_offered": "Veg/Non Veg",
+        "category":"Restaurant"
+    },
+    {
+        "_id": 111,
+        "address": "Bus stand Opposite, Manapparai. Pin:621306",
+        "name": "Kumara vilas Hotel",
+        "map_loc": "10�36'23.8\"N+78�25'11.0\"E/@10.606605,78.4191432,214m",
+        "phone_no": "4332260285",
+        "services_offered": "Veg",
+        "category":"Restaurant"
+    },
+    {
+        "_id": 112,
+        "address": "Church Complex,Manapparai. Pin:621306",
+        "name": "Master Bakery & Sweets",
+        "map_loc": "10�36'27.7\"N+78�25'16.5\"E/@10.607705,78.4206625,214m",
+        "phone_no": "4332262870",
+        "services_offered": "Cakes & Snacks",
+        "category":"Restaurant"
+    },
+    {
+        "_id": 113,
+        "address": "Kovilpatti Road, Manapparai. Pin:621306",
+        "name": "Nalam Hotel",
+        "map_loc": "Nalam+Unavagam/@10.606392,78.4256529,214m/",
+        "phone_no": "",
+        "services_offered": "Veg and Non Veg",
+        "category":"Restaurant"
+    },
+    {
+        "_id": 114,
+        "address": "RR Complex, Green Super Market first floor, Trichy - Dindigul Byepass, Opp Vegetable Market, Manapparai. Pin:621306",
+        "name": "RR Lodge",
+        "map_loc": "Green+Super+Market/@10.6107535,78.4175941,361m",
+        "phone_no": "9750256029",
+        "services_offered": "Lodge",
+        "category":"Hotel"
+    },
+    {
+        "_id": 115,
+        "address": "Near maariyamman Kovil, Trichy Road, Manapparai. Pin:621306",
+        "name": "Somu Mess",
+        "map_loc": "10�36'32.2\"N+78�25'22.3\"E/@10.608957,78.4222944,214m",
+        "phone_no": "",
+        "services_offered": "Veg Hotel",
+        "category":"Restaurant"
+    },
+    {
+        "_id": 116,
+        "address": "Pudhu Theru, Manapparai. Pin:621306",
+        "name": "Sri Renuka Hotel",
+        "map_loc": "10�36'26.5\"N+78�25'13.6\"E/@10.607363,78.4198752,214m",
+        "phone_no": "4332262022",
+        "services_offered": "Veg and Non Veg",
+        "category":"Restaurant"
+    },
+    {
+        "_id": 117,
+        "address": "Manapparai. Pin:621306",
+        "name": "Arangar Thirumana Mandabam",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129037,78.4118538,6491m",
+        "owner_name": "Periyasamy",
+        "phone_no": "9443556058",
+        "category":"Mahal"
+    },
+    {
+        "_id": 118,
+        "address": "Manapparai. Pin:621306",
+        "name": "Balaji Mandabam",
+        "map_loc": "10�36'18.1\"N+78�25'25.6\"E/@10.605037,78.4232009,214m",
+        "owner_name": "Chokkalingam",
+        "phone_no": "8925333149",
+        "category":"Mahal"
+    },
+    {
+        "_id": 119,
+        "address": "Vinmathi School Opposite,Manapparai. Pin:621306",
+        "name": "Kaamaraajar Thirumana Mandabam",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129037,78.4118538,14z",
+        "owner_name": "Vellaiammal",
+        "phone_no": "9750175351",
+        "category":"Mahal"
+    },
+    {
+        "_id": 120,
+        "address": "Kabasthan Palli vasal Opposite",
+        "name": "Kaiyal Nayahi",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129037,78.4118538,14z",
+        "owner_name": "Shiva",
+        "phone_no": "9442661035",
+        "category":"Mahal"
+    },
+    {
+        "_id": 121,
+        "address": "Gandhi Nagar, Manapparai. Pin:621306",
+        "name": "Lena Mahal",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129037,78.4118538,14z",
+        "owner_name": "Ponnan",
+        "phone_no": "9976481144",
+        "category":"Mahal"
+    },
+    {
+        "_id": 122,
+        "address": "Near Balakrishna Theater,Viralimalai Road,Manapparai. Pin:621306",
+        "name": "M.S Nadar Mandabam",
+        "map_loc": "10�36'23.7\"N+78�25'39.1\"E/@10.606572,78.4264407,18z",
+        "owner_name": "Nadar",
+        "phone_no": "9443301265",
+        "category":"Mahal"
+    },
+    {
+        "_id": 123,
+        "address": "Near Trichy Road Bridge,Pothamettupatti,Manapparai. Pin:621306",
+        "name": "M.S.B Thirumana Mandabam",
+        "map_loc": "10�36'33.7\"N+78�25'24.7\"E/@10.609372,78.4228883,18z",
+        "owner_name": "M.S.B",
+        "phone_no": "9952135477",
+        "category":"Mahal"
+    },
+    {
+        "_id": 124,
+        "address": "Near Balakrishna Theater,Viralimalai Road,Manapparai. Pin:621306",
+        "name": "Maariyamman Thirumana Mandabam",
+        "map_loc": "10�36'23.7\"N+78�25'39.1\"E/@10.606572,78.4264407,18z",
+        "owner_name": "R.V.S Mani",
+        "phone_no": "9842460534",
+        "category":"Mahal"
+    },
+    {
+        "_id": 125,
+        "address": "Near Balakrishna Theater,Viralimalai Road,Manapparai. Pin:621306",
+        "name": "Mahalakshmi Thirumana Mandabam",
+        "map_loc": "Mahalakshmi+Thirumana+Mahal/@10.6069257,78.4270576,214m",
+        "owner_name": "P.Subhaiah",
+        "phone_no": "9443484043",
+        "category":"Mahal"
+    },
+    {
+        "_id": 126,
+        "address": "Near Telephone Exchange,Manapparai Patti Road,Manapparai. Pin:621306",
+        "name": "RV Mahal",
+        "map_loc": "R.V+Thirmana+Mahal/@10.6046389,78.4228094,214m",
+        "owner_name": "Venkateshan",
+        "phone_no": "9442851422",
+        "category":"Mahal"
+    },
+    {
+        "_id": 127,
+        "address": "Opposite to Kalai Arasan Hospital,Manapparai. Pin:621306",
+        "name": "Udhayam A/C Mahal",
+        "map_loc": "10�36'13.7\"N+78�25'03.1\"E/@10.603818,78.416941,214m",
+        "owner_name": "Elangoven",
+        "phone_no": "9842713308",
+        "category":"Mahal"
+    },
+    {
+        "_id": 128,
+        "address": "Chinnakadai Street, Manapparai. Pin:621306",
+        "name": "AKS",
+        "map_loc": "AKS+Marriage+hall/@10.6062981,78.4218044,18.5z",
+        "owner_name": "Abdul Malik",
+        "phone_no": "9443301265",
+        "category":"Mahal"
+    },
+    {
+        "_id": 129,
+        "address": "Opposite to Lakshmi School, Kovilpatti Road,Manapparai,Trichy. Pin : 621306",
+        "map_loc": "10�36'13.7\"N+78�25'38.4\"E/@10.6038064,78.426767,229m",
+        "owner_name": "for Men",
+        "name": "Natural Beauty Care",
+        "phone_no": "9894895107",
+        "category":"Parlour"
+    },
+    {
+        "_id": 130,
+        "address": "Madurai Road, Manapparai,Trichy. Pin : 621306",
+        "map_loc": "10�36'14.9\"N+78�25'01.9\"E/@10.6041825,78.4169251,229m",
+        "owner_name": "for Men",
+        "name": "Hi-Cut Saloon",
+        "phone_no": "9786449249",
+        "category":"Parlour"
+    },
+    {
+        "_id": 131,
+        "address": "Madurai Road, Manapparai,Trichy. Pin : 621306",
+        "map_loc": "10�36'14.3\"N+78�25'03.8\"E/@10.6039784,78.4171311,229m",
+        "owner_name": "for Women",
+        "name": "Chithra Beauty Parlour",
+        "phone_no": "9787418488",
+        "category":"Parlour"
+    },
+    {
+        "_id": 132,
+        "address": "Near Telephone Exchange, Manapparaipatti Road, Manapparai. Pin:621306",
+        "map_loc": "10�36'13.2\"N+78�25'22.1\"E/@10.6036763,78.4222608,217m",
+        "owner_name": "for Women",
+        "name": "New Famous Beauty Parlour",
+        "phone_no": "9965231909",
+        "category":"Parlour"
+    },
+    {
+        "_id": 133,
+        "address": "Madurai Road,Manapparai Pin:621306",
+        "map_loc": "10�35'59.5\"N+78�24'48.2\"E/@10.599849,78.4128015,214m",
+        "name": "Indian Oil Madurai Road",
+        "category":"Petrol"
+    },
+    {
+        "_id": 134,
+        "address": "Dindugal to Trichy Highway road, Manapparai Pin:621306",
+        "map_loc": "Petrol+Bunk/@10.6121565,78.4196442,214m",
+        "name": "Indian Oil Dindugal Road",
+        "category":"Petrol"
+    },
+    {
+        "_id": 135,
+        "address": "Opposite to kasim Hospital, Madurai Road, Manapparai. Pin: 621306",
+        "map_loc": "IOC+Petrol+Pump/@10.6049606,78.4175446,214m",
+        "name": "Indian Oil Thuvarankuruchy Road",
+        "category":"Petrol"
+    },
+    {
+        "_id": 136,
+        "address": "Karthika Complex, Kovilpatty Road, Manapparai. Pin:621306",
+        "phone_no": "9994047532",
+        "name": "Aadhavan Fitness Point (Ladies & Gents)",
+        "service_type": "Gym and Fitness",
+        "category":"Private Services"
+    },
+    {
+        "_id": 137,
+        "address": "Above Indian bank building, Manapparai. Pin:621306",
+        "phone_no": "9840250077",
+        "name": "Bonsai Academy",
+        "service_type": "Special Coaching classes",
+        "category":"Private Services"
+    },
+    {
+        "_id": 138,
+        "address": "Chinnakadai Street,Manapparai. Pin:621306",
+        "phone_no": "4332264265",
+        "name": "CADD Centre",
+        "service_type": "CAD and Software Training Service",
+        "category":"Private Services"
+    },
+    {
+        "_id": 139,
+        "address": "Dindugal Road, Manapparai. Pin:621306",
+        "phone_no": "4332260648",
+        "name": "CSC Computer Education",
+        "service_type": "Computer Course Coaching centre",
+        "category":"Private Services"
+    },
+    {
+        "_id": 140,
+        "address": "65/1 Dindugal Road, Manapparai. Pin:621306",
+        "phone_no": "9965075408",
+        "name": "Everest IAS Academy",
+        "service_type": "IAS Coaching classes",
+        "category":"Private Services"
+    },
+    {
+        "_id": 141,
+        "address": "Pommalaipatty Road, Manapparai. Pin:621306",
+        "phone_no": "9965897649",
+        "name": "Manavai Kutralam",
+        "service_type": "Swimming classes and entertainment",
+        "category":"Private Services"
+    },
+    {
+        "_id": 142,
+        "address": "1/2 Dindugal road, Manapparai. Pin:621306",
+        "phone_no": "9789412222",
+        "name": "Nallaiah Driving School",
+        "service_type": "Driving classes and License consulting",
+        "category":"Private Services"
+    },
+    {
+        "_id": 143,
+        "address": "131, Dindugal Road, Manapparai. Pin:621306",
+        "phone_no": "9443411828",
+        "name": "Sekar Driving School",
+        "service_type": "Driving classes and License consulting",
+        "category":"Private Services"
+    },
+    {
+        "_id": 144,
+        "address": "155 Masthan Street, Manapparai. Pin:621306",
+        "phone_no": "9942824800",
+        "name": "Thamarai Internet and Browsing Centre",
+        "service_type": "Color Printing Scanning Browsing etc Service",
+        "category":"Private Services"
+    },
+    {
+        "_id": 145,
+        "address": "RMR Complex, Railway Gate, Manapparai. Pin:621306",
+        "phone_no": "4332262230",
+        "name": "The Professional Courier",
+        "service_type": "Courier Service",
+        "category":"Private Services"
+    },
+    {
+        "_id": 146,
+        "address": "Dindugal Main Road, Manapparai. Pin:621306",
+        "phone_no": "9443501915",
+        "name": "Vignesh Driving School",
+        "service_type": "Driving classes and License consulting",
+        "category":"Private Services"
+    },
+    {
+        "_id": 147,
+        "address": "Madurai Road, Manaparai Pin:621306",
+        "map_loc": "Kassim+school/@10.6043652,78.4177524,19.5z",
+        "phone_no": "4332262932",
+        "name": "Govt. Hr. Sec. School",
+        "service_type": "Government",
+        "category":"School"
+    },
+    {
+        "_id": 148,
+        "address": "Poun Nagar, Pannankombu, Manapparai Pin:621306",
+        "map_loc": "Cauvery+International+School,+SH+71A,+Pannapatti+East,+Tamil+Nadu+621306/@10.5431053,78.3982289,17z",
+        "phone_no": "9443410115",
+        "name": "Cauvery International School",
+        "service_type": "Private",
+        "category":"School"
+    },
+    {
+        "_id": 149,
+        "address": "Kovilpatty Road, Manaparai Pin:621306",
+        "map_loc": "Lakshmi+Matriculation+Higher+Secondary+School/@10.6049199,78.426761,252m",
+        "phone_no": "4332260279",
+        "name": "Lakshmi Matric. Hr. Sec. School",
+        "service_type": "Private",
+        "category":"School"
+    },
+    {
+        "_id": 150,
+        "address": "Dindigul Road, Manaparai Pin:621306",
+        "map_loc": "Little+Flower+Girls+Higher+Secondary+School/@10.6050522,78.4169595,254m",
+        "phone_no": "4332260370",
+        "name": "Little Flower Girls Hr. Sec. School",
+        "service_type": "Government",
+        "category":"School"
+    },
+    {
+        "_id": 151,
+        "address": "Dindigul road, Manjampatty. Pin:621306",
+        "map_loc": "10�36'09.4\"N+78�24'06.7\"E/@10.602619,78.4010374,300m",
+        "phone_no": "4332260991",
+        "name": "Montfort Matriculation Higher Secondary School",
+        "service_type": "Private",
+        "category":"School"
+    },
+    {
+        "_id": 152,
+        "address": "Near Mariamman koil Pin:621306",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129037,78.4118538,6491m",
+        "phone_no": "",
+        "name": "Municipal Middle School",
+        "service_type": "Government",
+        "category":"School"
+    },
+    {
+        "_id": 153,
+        "address": "Bharathi Nagar,Viramalai Road,Manapparai. Pin:621306",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129037,78.4118538,6491m",
+        "phone_no": "9894695450",
+        "name": "Sowma Public School",
+        "service_type": "Private",
+        "category":"School"
+    },
+    {
+        "_id": 154,
+        "address": "Dindigul Road, Manaparai Pin:621306",
+        "map_loc": "St.+Andrew's+Higher+Secondary+School/@10.6045527,78.4121382,811m",
+        "phone_no": "4332260067",
+        "name": "St. Andrew's Hr. Sec. School",
+        "service_type": "Private",
+        "category":"School"
+    },
+    {
+        "_id": 155,
+        "address": "Dindigul Road, Manjampatty, Manaparai Pin:621306",
+        "map_loc": "10�35'54.4\"N+78�23'53.8\"E/@10.598441,78.3964409,683m",
+        "phone_no": "4332262372",
+        "name": "St. Antony's Hr. Sec. School",
+        "service_type": "Private",
+        "category":"School"
+    },
+    {
+        "_id": 156,
+        "address": "Kovilpatty Road, Usilampatty Village, Manaparai Pin:621312",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129037,78.4118538,6491m",
+        "phone_no": "4332260995",
+        "name": "Thiagesar Alai Hr. Sec. School",
+        "service_type": "Private",
+        "category":"School"
+    },
+    {
+        "_id": 157,
+        "address": "Madurai Road, Valandu Kaikatty, Manapparai Pin:621306 ",
+        "map_loc": "Vidiyal+Matriculation+Higher+Secondary+School/@10.4816967,78.4603225,1368m/",
+        "phone_no": "9363372701",
+        "name": "Vidiyal Matriculation Hr. Sec. School",
+        "service_type": "Private",
+        "category":"School"
+    },
+    {
+        "_id": 158,
+        "address": "Viralimali Road, Manaparai Pin:621306",
+        "map_loc": "Manapparai,+Tamil+Nadu+621306/@10.6129037,78.4118538,6491m",
+        "phone_no": "",
+        "name": "Vinmathee Hr.Sec. School",
+        "service_type": "Private",
+        "category":"School"
+    },
+    {
+        "_id": 159,
+        "address": "Manapparai patti road, Manapparai. Pin : 621306",
+        "map_loc": "Sri+Guru+Matric+Higher+Secondary+School/@10.5955421,78.4214091,17z",
+        "phone_no": "",
+        "name": "Sri Guru Higher Sec School",
+        "service_type": "Private",
+        "category":"School"
+    },
+    {
+        "_id": 160,
+        "address": "AK Tower,No 3, Madurai Road, Manapparai. Pin:621306",
+        "map_loc": "10�36'20.9\"N+78�25'09.0\"E/@10.605813,78.4185923,214m",
+        "phone_no": "4332262301",
+        "name": "AK Thanga Maaligai",
+        "shop_type": "Jewellary",
+        "category":"Shop"
+    },
+    {
+        "_id": 161,
+        "address": "No 7, Trichy Road, Manapparai. Pin:621306",
+        "map_loc": "C+C+Tower,+Kulithalai+-+Manapparai+Rd,+Boys+Town,+Manapparai,+Tamil+Nadu+621306/@10.6083965,78.4225638,214m",
+        "phone_no": "4332260542",
+        "name": "Ali Dressland",
+        "shop_type": "Mens & Womens Night wear and inners",
+        "category":"Shop"
+    },
+    {
+        "_id": 162,
+        "address": "Kovilpatti Road, Manapparai. Pin:621306",
+        "map_loc": "10�36'25.7\"N+78�25'22.9\"E/@10.607148,78.4224448,214m",
+        "phone_no": "9688888338",
+        "name": "Amsam Mobiles",
+        "shop_type": "Mobiles & Accessories & Services",
+        "category":"Shop"
+    },
+    {
+        "_id": 163,
+        "address": "63, Church Complex,Manapparai. Pin:621306",
+        "map_loc": "Church+Complex/@10.6077225,78.4211792,214m",
+        "phone_no": "4332260189",
+        "name": "Anitha Fancy Shopping",
+        "shop_type": "Gifts and Toys",
+        "category":"Shop"
+    },
+    {
+        "_id": 164,
+        "address": "Kovil Patti Road, Opposit to Lakshmi School, Manapparai. Pin:621306",
+        "map_loc": "10�36'16.6\"N+78�25'36.9\"E/@10.604604,78.4259349,360m",
+        "phone_no": "4332260603",
+        "name": "ARM Traders",
+        "shop_type": "Building Materials",
+        "category":"Shop"
+    },
+    {
+        "_id": 165,
+        "address": "Church Complex, Manapparai. Pin:621306",
+        "map_loc": "Church+Complex/@10.607564,78.4204487,214m",
+        "phone_no": "9865653640",
+        "name": "Bharath Shoppe",
+        "shop_type": "Mobiles & Electronics",
+        "category":"Shop"
+    },
+    {
+        "_id": 166,
+        "address": "Manickiam Towers, Dindugal Road, Manapparai. Pin:621306",
+        "map_loc": "bluesea+aquarium/@10.6062731,78.4177943,214m",
+        "phone_no": "4332261888",
+        "name": "Frontline Systems",
+        "shop_type": "Computer Sales and Services",
+        "category":"Shop"
+    },
+    {
+        "_id": 167,
+        "address": "179/A Chinnakadai Street,Manapparai. Pin:621306",
+        "map_loc": "10�36'25.6\"N+78�25'22.4\"E/@10.607121,78.4222991,214m",
+        "phone_no": "9952739991",
+        "name": "Green Mobiles",
+        "shop_type": "Mobiles Sales and Service",
+        "category":"Shop"
+    },
+    {
+        "_id": 168,
+        "address": "1/42 RR Complex, Trichy - Dindigul Byepass, Opp Vegetable Market, Manapparai. Pin:621306",
+        "map_loc": "Green+Super+Market/@10.6107535,78.4175941,361m",
+        "phone_no": "9578096380",
+        "name": "Green Super Market",
+        "shop_type": "Super Market",
+        "category":"Shop"
+    },
+    {
+        "_id": 169,
+        "address": "Pudhutheru,Moorkulathu Sandhu,Manapparai. Pin:621306",
+        "map_loc": "10�36'27.1\"N+78�25'13.8\"E/@10.607531,78.4199237,214m",
+        "phone_no": "4332260264",
+        "name": "GreenLand Agencies",
+        "shop_type": "Agricultural Related Products Sales",
+        "category":"Shop"
+    },
+    {
+        "_id": 170,
+        "address": "19-H Chinnakadai Street, Manapparai. Pin:621306",
+        "map_loc": "Jayam+Electronics/@10.607694,78.422695,203m",
+        "phone_no": "4332262155",
+        "name": "Jayam Electronics",
+        "shop_type": "All Electronics items available",
+        "category":"Shop"
+    },
+    {
+        "_id": 171,
+        "address": "No.7 Nagarachi vanika valaham, Kovilpatti Road, Manapparai. Pin:621306",
+        "map_loc": "10�36'27.1\"N+78�25'25.7\"E/@10.607537,78.4232313,214m",
+        "phone_no": "9788765023",
+        "name": "Jeyam Electricals and Services",
+        "shop_type": "Electricals sales & Services",
+        "category":"Shop"
+    },
+    {
+        "_id": 172,
+        "address": "Manickiam Towers, Dindugal Road, Manapparai. Pin:621306",
+        "map_loc": "bluesea+aquarium/@10.6060222,78.4176659,215m",
+        "phone_no": "9042406190",
+        "name": "Joshua Aquarium",
+        "shop_type": "Aquarium and Batteries",
+        "category":"Shop"
+    },
+    {
+        "_id": 173,
+        "address": "Railway station road, Manapparai. Pin : 621306",
+        "map_loc": "Jothi+Printers/@10.6073966,78.4200831,20z",
+        "phone_no": "4332262406",
+        "name": "Jyothi Printers",
+        "shop_type": "General Store",
+        "category":"Shop"
+    },
+    {
+        "_id": 174,
+        "address": "PudhuTheru, Manapparai. Pin:621306",
+        "map_loc": "10�36'25.7\"N+78�25'14.2\"E/@10.607128,78.4200288,214m",
+        "phone_no": "9443425303",
+        "name": "Jyothi Store",
+        "shop_type": "General Store",
+        "category":"Shop"
+    },
+    {
+        "_id": 175,
+        "address": "Kovilpatti road, Manapparai. Pin:621306",
+        "map_loc": "10�36'28.1\"N+78�25'24.9\"E/@10.607812,78.4229967,214m",
+        "phone_no": "9865649917",
+        "name": "Kurinji Mobiles",
+        "shop_type": "Mobiles Sales and Services",
+        "category":"Shop"
+    },
+    {
+        "_id": 176,
+        "address": "Opposite to taluk office, Amman towers, Manapparai. Pin:621306",
+        "map_loc": "Mariamman+Koil/@10.6086101,78.4230742,19.25z",
+        "phone_no": "9597718008",
+        "name": "Lollipop Kids World",
+        "shop_type": "Toys for kids",
+        "category":"Shop"
+    },
+    {
+        "_id": 177,
+        "address": "63/1, Puthanatham Road,Manapparai. Pin:621306",
+        "map_loc": "Iyappan+Cottage/@10.6030438,78.4157284,428m",
+        "phone_no": "4332263593",
+        "name": "Mala Super Market(MSM)",
+        "shop_type": "Super Market",
+        "category":"Shop"
+    },
+    {
+        "_id": 178,
+        "address": "Chinnakadai Street, Manapparai. Pin:621306",
+        "map_loc": "10�36'24.8\"N+78�25'21.7\"E/@10.606896,78.4221121,214m",
+        "phone_no": "9442708010",
+        "name": "Max cool",
+        "shop_type": "Men's and Boys Wear",
+        "category":"Shop"
+    },
+    {
+        "_id": 179,
+        "address": "348A, Kovilpatti road, Manapparai. Pin:621306",
+        "map_loc": "Church+Complex/@10.6075858,78.4207493,215m",
+        "phone_no": "4332260608",
+        "name": "New Fancy",
+        "shop_type": "Plywood,Glass & Hardwares",
+        "category":"Shop"
+    },
+    {
+        "_id": 180,
+        "address": "Manickiam Towers, Dindugal Road, Manapparai. Pin:621306",
+        "map_loc": "10�36'22.7\"N+78�25'07.0\"E/@10.606318,78.4180436,214m",
+        "phone_no": "9965988064",
+        "name": "Nokio Care",
+        "shop_type": "Mobiles Sales and Service",
+        "category":"Shop"
+    },
+    {
+        "_id": 181,
+        "address": "109,Chinnakkadai Street, Manapparai. Pin:621306",
+        "map_loc": "10�36'26.4\"N+78�25'23.2\"E/@10.607321,78.4225309,214m",
+        "phone_no": "9994011123",
+        "name": "Orange Mobiles",
+        "shop_type": "Mobiles & Accessories",
+        "category":"Shop"
+    },
+    {
+        "_id": 182,
+        "address": "47, Pudhutheru, Manapparai. Pin:621306",
+        "map_loc": "10�36'27.2\"N+78�25'15.7\"E/@10.607564,78.4204487,214m",
+        "phone_no": "4332260257",
+        "name": "Palaniyappa Cycle Stores",
+        "shop_type": "Cycle Sales",
+        "category":"Shop"
+    },
+    {
+        "_id": 183,
+        "address": "Kovilpatti Road, Manapparai. Pin:621306",
+        "map_loc": "10�36'28.1\"N+78�25'24.8\"E/@10.607811,78.4229716,214m",
+        "phone_no": "9894015396",
+        "name": "Parrys Mobiles",
+        "shop_type": "Mobiles & Accessories",
+        "category":"Shop"
+    },
+    {
+        "_id": 184,
+        "address": "Trichy Road, Newar Maariyamman Kovil, Manapparai. Pin:621306",
+        "map_loc": "10�36'31.0\"N+78�25'23.4\"E/@10.60862,78.4225794,214m",
+        "phone_no": "9976367989",
+        "name": "Priya Covering",
+        "shop_type": "Covering Jewellery",
+        "category":"Shop"
+    },
+    {
+        "_id": 185,
+        "address": "64/1 Josuva Complex, Dindugal Road, Near State Bank, Manapparai. Pin:621306",
+        "map_loc": "10�36'18.7\"N+78�24'58.1\"E/@10.605204,78.4156043,204m",
+        "phone_no": "9698059305",
+        "name": "Rain Aqua",
+        "shop_type": "Packaged Drinking Waters",
+        "category":"Shop"
+    },
+    {
+        "_id": 186,
+        "address": "197, Kovipatti Road, Opposite to Paal Society, Manapparai. Pin:621306",
+        "map_loc": "10�36'18.5\"N+78�25'35.5\"E/@10.605129,78.4259434,215m",
+        "phone_no": "9003459707",
+        "name": "Raja Traders",
+        "shop_type": "Buidling Materials",
+        "category":"Shop"
+    },
+    {
+        "_id": 187,
+        "address": "16, Dindugal road, Manapparai",
+        "map_loc": "10�36'21.7\"N+78�25'02.7\"E/@10.6060274,78.4168374,229m",
+        "phone_no": "9500514514",
+        "name": "Sarani jewellers",
+        "shop_type": "Silver ornaments & Gold ornaments under orders",
+        "category":"Shop"
+    },
+    {
+        "_id": 188,
+        "address": "Dinduigal Road, Manapparai. Pin:621306",
+        "map_loc": "10�36'20.4\"N+78�25'04.2\"E/@10.605667,78.417242,214m",
+        "phone_no": "9444833895",
+        "name": "Sidharth Super Market (SSM)",
+        "shop_type": "Super Market",
+        "category":"Shop"
+    },
+    {
+        "_id": 189,
+        "address": "Near Kurunji Hotel,Manapparai. Pin:621306",
+        "map_loc": "10�36'22.4\"N+78�25'07.0\"E/@10.60622,78.4180415,214m",
+        "phone_no": "4332263259",
+        "name": "Sony Readymades & Sarees",
+        "shop_type": "Readymades and Sarees",
+        "category":"Shop"
+    },
+    {
+        "_id": 190,
+        "address": "Masthan Street, Manapparai. Pin:621306",
+        "map_loc": "10�36'24.7\"N+78�25'17.5\"E/@10.606852,78.420943,214m",
+        "phone_no": "9865480872",
+        "name": "South India",
+        "shop_type": "Glass,Plywood,Paints & Hardwares",
+        "category":"Shop"
+    },
+    {
+        "_id": 191,
+        "address": "No.136, MP Complex, KovilPatty Road, Manapparai. Pin:621306",
+        "map_loc": "10�36'24.4\"N+78�25'30.1\"E/@10.606772,78.4244645,214m",
+        "phone_no": "4332261125",
+        "name": "Sri Amman Digital Studio and Video",
+        "shop_type": "Digital Studio and Video",
+        "category":"Shop"
+    },
+    {
+        "_id": 192,
+        "address": "ChinnaiKadaveedhi, Manapparai. Pin:621306",
+        "map_loc": "Kattiam+Building/@10.6074158,78.4224469,214m",
+        "phone_no": "8144426053",
+        "name": "Sri Angaalamman Stores",
+        "shop_type": "Household Electricals",
+        "category":"Shop"
+    },
+    {
+        "_id": 193,
+        "address": "Near Kovilpatti Road, Manapparai. Pin:621306",
+        "map_loc": "Sri+Kumaran+Cycle+Mart/@10.6070573,78.4227996,214m",
+        "phone_no": "9788465275",
+        "name": "Sri Kumaran Cycle Showroom",
+        "shop_type": "Cycle Sales",
+        "category":"Shop"
+    },
+    {
+        "_id": 194,
+        "address": "Kovilpatti Road, Manapparai. Pin:621306",
+        "map_loc": "Sri+Kumarappa+Textiles/@10.6077545,78.4231783,214m",
+        "phone_no": "4332262119",
+        "name": "Sri Kumarappa",
+        "shop_type": "Pattu Centre, Silks and Readymades",
+        "category":"Shop"
+    },
+    {
+        "_id": 195,
+        "address": "278/G-2, VLS Complex, Dindigul Road,Near Kurunji Hotel, Manapparai. Pin:621306",
+        "map_loc": "10�36'22.6\"N+78�25'07.5\"E/@10.60627,78.4181836,214m",
+        "phone_no": "9585149249",
+        "name": "Star Line Mens & Womens",
+        "shop_type": "Readymades",
+        "category":"Shop"
+    },
+    {
+        "_id": 196,
+        "address": "Manickiam Towers, Dindugal Road, Manapparai. Pin:621306",
+        "map_loc": "10�36'22.7\"N+78�25'07.0\"E/@10.606318,78.4180436,214m",
+        "phone_no": "9791996414",
+        "name": "Style walk",
+        "shop_type": "FootWear",
+        "category":"Shop"
+    },
+    {
+        "_id": 197,
+        "address": "No 208, Trichy Road, Manapparai. Pin : 621306",
+        "map_loc": "Sumangali+Silks/@10.608448,78.4225413,214m",
+        "phone_no": "4332261101",
+        "name": "Sumangali",
+        "shop_type": "Textiles, Sarees, Apperels & Jewellers",
+        "category":"Shop"
+    },
+    {
+        "_id": 198,
+        "address": "Chinnakadai Street,Manapparai. Pin:621306",
+        "map_loc": "10�36'25.6\"N+78�25'22.4\"E/@10.607121,78.4222991,214m",
+        "phone_no": "9688883681",
+        "name": "Sun Mobiles",
+        "shop_type": "Mobiles Sales and Service",
+        "category":"Shop"
+    },
+    {
+        "_id": 199,
+        "address": "No 28, Kattiyam Building, Chinna Kadai Veedhi, Manapparai. Pin:621306",
+        "map_loc": "10�36'30.4\"N+78�25'23.2\"E/@10.608448,78.4225413,214m",
+        "phone_no": "8925718071",
+        "name": "Surya Covering",
+        "shop_type": "Covering Jewellery",
+        "category":"Shop"
+    },
+    {
+        "_id": 200,
+        "address": "ChinnaKadai Street, Manapparai. Pin:621306",
+        "map_loc": "10�36'26.9\"N+78�25'23.0\"E/@10.607484,78.4224974,203m",
+        "phone_no": "4332263525",
+        "name": "VV Cards",
+        "shop_type": "Gift and Wedding cards",
+        "category":"Shop"
+    },
+    {
+        "_id": 201,
+        "address": "No 115,New Street, Manapparai. Pin:621306",
+        "map_loc": "Jam+Jam+Readymades/@10.6073287,78.4196953,215m",
+        "phone_no": "4332261170",
+        "name": "Zam Zam Readymades & Sarees",
+        "shop_type": "Readymades & Sarees",
+        "category":"Shop"
+    },
+    {
+        "_id": 202,
+        "address": "Manapparaipatty Road, Manapparai. Pin:621306",
+        "map_loc": "Uthayam+AC+Theater,+Manapparai,+Tamil+Nadu+621306/@10.6011416,78.4214894,359m",
+        "name": "Udhayam Theatre",
+        "category":"Theatre"
+    },
+    {
+        "_id": 203,
+        "address": "Trichy Road, Manapparai. Pin:621306",
+        "map_loc": "Indira+Theater/@10.6098524,78.4231543,215m",
+        "name": "Indhira Theatre",
+        "category":"Theatre"
+    },
+    {
+        "_id": 204,
+        "address": "Madurai Road, Manapparai. Pin:621306",
+        "map_loc": "Karpagam+Theatre/@10.6046725,78.4180889,214m",
+        "name": "Karpagam Theatre",
+        "category":"Theatre"
+    },
+    {
+        "_id": 205,
+        "arrival_time": "05:08AM",
+        "depart_time": "05:10AM",
+        "map_loc": "Manaparai+Railway+Station/@10.607553,78.4176602,214m",
+        "train_from": "Madurai",
+        "name": "Madurai - Villupuram Passenger",
+        "train_no": "56706",
+        "train_to": "Viluppuram",
+        "category":"Train"
+    },
+    {
+        "_id": 206,
+        "arrival_time": "07:28AM",
+        "depart_time": "07:30AM",
+        "map_loc": "Manaparai+Railway+Station/@10.607553,78.4176602,214m",
+        "train_from": "Dindigul",
+        "name": "Dindigul -Tiruchirappalli Passenger",
+        "train_no": "56704",
+        "train_to": "Tiruchirapalli",
+        "category":"Train"
+    },
+    {
+        "_id": 207,
+        "arrival_time": "12:34PM",
+        "depart_time": "12:35PM",
+        "map_loc": "Manaparai+Railway+Station/@10.607553,78.4176602,214m",
+        "train_from": "Tirunelveli",
+        "name": "Tirunelveli - Mayiladuturai Passenger",
+        "train_no": "56822",
+        "train_to": "Mayiladuthurai",
+        "category":"Train"
+    },
+    {
+        "_id": 208,
+        "arrival_time": "NA",
+        "depart_time": "13:05PM",
+        "map_loc": "Manaparai+Railway+Station/@10.607553,78.4176602,214m",
+        "train_from": "Guruvayur",
+        "name": "Guruvayur Chennai Express",
+        "train_no": "16128",
+        "train_to": "Chennai",
+        "category":"Train"
+    },
+    {
+        "_id": 209,
+        "arrival_time": "NA",
+        "depart_time": "22:25PM",
+        "map_loc": "Manaparai+Railway+Station/@10.607553,78.4176602,214m",
+        "train_from": "Madurai",
+        "name": "Pandian Express",
+        "train_no": "12638",
+        "train_to": "Chennai",
+        "category":"Train"
+    },
+    {
+        "_id": 210,
+        "arrival_time": "14:29PM",
+        "depart_time": "14:30PM",
+        "map_loc": "Manaparai+Railway+Station/@10.607553,78.4176602,214m",
+        "train_from": "Mayiladuthurai",
+        "name": "Mayiladuturai - Tirunelveli Passenger",
+        "train_no": "56821",
+        "train_to": "Tirunelveli",
+        "category":"Train"
+    },
+    {
+        "_id": 211,
+        "arrival_time": "NA",
+        "depart_time": "13:45PM",
+        "map_loc": "Manaparai+Railway+Station/@10.607553,78.4176602,214m",
+        "train_from": "Chennai",
+        "name": "Chennai Egmore Guruvayur Express",
+        "train_no": "16127",
+        "train_to": "Guruvayur",
+        "category":"Train"
+    },
+    {
+        "_id": 212,
+        "arrival_time": "19:00PM",
+        "depart_time": "19:02PM",
+        "map_loc": "Manaparai+Railway+Station/@10.607553,78.4176602,214m",
+        "train_from": "Tiruchirappalli",
+        "name": "Tiruchirappalli Dindigul Passenger",
+        "train_no": "56703",
+        "train_to": "Dindigul",
+        "category":"Train"
+    },
+    {
+        "_id": 213,
+        "arrival_time": "21:03PM",
+        "depart_time": "21:05PM",
+        "map_loc": "Manaparai+Railway+Station/@10.607553,78.4176602,214m",
+        "train_from": "Viluppuram",
+        "name": "Villupuram - Madurai Passenger",
+        "train_no": "56705",
+        "train_to": "Madurai",
+        "category":"Train"
+    },
+    {
+        "_id": 214,
+        "arrival_time": "NA",
+        "depart_time": "03:45PM",
+        "map_loc": "Manaparai+Railway+Station/@10.607553,78.4176602,214m",
+        "train_from": "Chennai",
+        "name": "Pandian Express",
+        "train_no": "12637",
+        "train_to": "Madurai",
+        "category":"Train"
+    },
+    {
+        "_id": 215,
+        "bus_timings": "24 Hours",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Trichy",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 216,
+        "bus_timings": "24 Hours",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Dindigul",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 217,
+        "bus_timings": "24 Hours",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Pazhani",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 218,
+        "bus_timings": "7:00AM / 1:45PM / 8:00PM",
+        "bus_type": "PRIVATE",
+        "destination_name": "Piranmazhai",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 219,
+        "bus_timings": "7:00AM / 1:45PM / 8:00PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Singamani",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 220,
+        "bus_timings": "5:00AM to 11:30PM Every 30mins",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Thuvarankuruchi",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 221,
+        "bus_timings": "7:00AM / 9:50AM / 12:10PM / 5:10PM / 7:15PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Madurai",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 222,
+        "bus_timings": "5:30AM to 11:30PM Every 45mins",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Pudukkottai",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 223,
+        "bus_timings": "5:00AM / 6:20AM / 7:00AM / 8:00AM / 9:00AM / 10:15AM / 11:00AM / 12:20PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Palakkurichy",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 224,
+        "bus_timings": "9:00AM / 7:00PM / 8:25PM / 9:00PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Chennai",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 225,
+        "bus_timings": "4:30AM to 10:15PM Every 45mins",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Kulithalai",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 226,
+        "bus_timings": "4:30AM / 11:00AM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Thuraiyur",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 227,
+        "bus_timings": "5:30AM to 10PM Every One Hour",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Karur",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 228,
+        "bus_timings": "7:00AM / 1:00PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Erode",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 229,
+        "bus_timings": "9:00AM / 11:15AM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Kodaikanal",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 230,
+        "bus_timings": "7:00AM / 11:30AM / 5:20PM / 6:00PM / 8:30PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Theni",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 231,
+        "bus_timings": "8:45AM / 10:00AM / 12:30PM / 1:20PM / 3:20PM / 5:00PM / 7:00PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Kambam",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 232,
+        "bus_timings": "9:00AM / 9:40AM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Poodi",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 233,
+        "bus_timings": "9:15AM / 11:20AM / 1:00PM / 4:00PM / 4:45PM / 6:30PM / 8:00PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Kumuli",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 234,
+        "bus_timings": "12:40PM / 1:05PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Dhevaram",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 235,
+        "bus_timings": "4:30AM / 4:30PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Ponnamaravathy",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 236,
+        "bus_timings": "9:45PM / 2:15PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Pollachi",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    },
+    {
+        "_id": 237,
+        "bus_timings": "12:15PM",
+        "bus_type": "GOVERNMENT",
+        "destination_name": "Salem",
+        "map_loc": "Manapparai+Bus+Station/@10.6063587,78.4196938,20.33z",
+        "category":"Bus"
+    }
+]
