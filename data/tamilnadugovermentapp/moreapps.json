@@ -1,6 +1,6 @@
 {
-    "newversion":"1.0.6",
-    "version_no":10006,
+    "newversion":"1.0.7",
+    "version_no":10007,
     "news_api_url": "https://newsapi.org/v2/everything?q=tamilnadu%20government&apiKey=",
     "news_live_feed": false,
     "moreapps":[
