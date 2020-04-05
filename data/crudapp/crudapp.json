@@ -1,12 +1,12 @@
 {
     "users":[
         {
-            "username":"rehanhanar7",
+            "username":"rehanhanar",
             "password":"test",
             "userid": 1
         },
         {
-            "username":"femina786",
+            "username":"femina",
             "password":"test",
             "userid": 2
         }
