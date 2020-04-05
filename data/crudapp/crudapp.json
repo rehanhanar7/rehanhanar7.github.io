@@ -1,0 +1,28 @@
+{
+    "users":[
+        {
+            "username":"rehanhanar7",
+            "password":"test",
+            "userid": 1
+        },
+        {
+            "username":"femina786",
+            "password":"test",
+            "userid": 2
+        }
+    ],
+    "sheets":[
+        {
+            "sheetappname":"Manapparai Info",
+            "sheeturl":"",
+            "sheetname":"",
+            "accessedby":[1]
+        },
+        {
+            "sheetappname":"Vegetable App",
+            "sheeturl":"",
+            "sheetname":"",
+            "accessedby":[1, 2]
+        }
+    ]
+}
