@@ -1135,7 +1135,7 @@
             "address": "Karthika Complex, Kovilpatty Road, Manapparai. Pin:621306",
             "phone_no": "9994047532",
             "name": "Aadhavan Fitness Point (Ladies & Gents)",
-            "service_type": "Gym and Fitness",
+            "services_offered": "Gym and Fitness",
             "category": "Private Services"
         },
         {
@@ -1143,7 +1143,7 @@
             "address": "Above Indian bank building, Manapparai. Pin:621306",
             "phone_no": "9840250077",
             "name": "Bonsai Academy",
-            "service_type": "Special Coaching classes",
+            "services_offered": "Special Coaching classes",
             "category": "Private Services"
         },
         {
@@ -1151,7 +1151,7 @@
             "address": "Chinnakadai Street,Manapparai. Pin:621306",
             "phone_no": "4332264265",
             "name": "CADD Centre",
-            "service_type": "CAD and Software Training Service",
+            "services_offered": "CAD and Software Training Service",
             "category": "Private Services"
         },
         {
@@ -1159,7 +1159,7 @@
             "address": "Dindugal Road, Manapparai. Pin:621306",
             "phone_no": "4332260648",
             "name": "CSC Computer Education",
-            "service_type": "Computer Course Coaching centre",
+            "services_offered": "Computer Course Coaching centre",
             "category": "Private Services"
         },
         {
@@ -1167,7 +1167,7 @@
             "address": "65/1 Dindugal Road, Manapparai. Pin:621306",
             "phone_no": "9965075408",
             "name": "Everest IAS Academy",
-            "service_type": "IAS Coaching classes",
+            "services_offered": "IAS Coaching classes",
             "category": "Private Services"
         },
         {
@@ -1175,7 +1175,7 @@
             "address": "Pommalaipatty Road, Manapparai. Pin:621306",
             "phone_no": "9965897649",
             "name": "Manavai Kutralam",
-            "service_type": "Swimming classes and entertainment",
+            "services_offered": "Swimming classes and entertainment",
             "category": "Private Services"
         },
         {
@@ -1183,7 +1183,7 @@
             "address": "1/2 Dindugal road, Manapparai. Pin:621306",
             "phone_no": "9789412222",
             "name": "Nallaiah Driving School",
-            "service_type": "Driving classes and License consulting",
+            "services_offered": "Driving classes and License consulting",
             "category": "Private Services"
         },
         {
@@ -1191,7 +1191,7 @@
             "address": "131, Dindugal Road, Manapparai. Pin:621306",
             "phone_no": "9443411828",
             "name": "Sekar Driving School",
-            "service_type": "Driving classes and License consulting",
+            "services_offered": "Driving classes and License consulting",
             "category": "Private Services"
         },
         {
@@ -1199,7 +1199,7 @@
             "address": "155 Masthan Street, Manapparai. Pin:621306",
             "phone_no": "9942824800",
             "name": "Thamarai Internet and Browsing Centre",
-            "service_type": "Color Printing Scanning Browsing etc Service",
+            "services_offered": "Color Printing Scanning Browsing etc Service",
             "category": "Private Services"
         },
         {
@@ -1207,7 +1207,7 @@
             "address": "RMR Complex, Railway Gate, Manapparai. Pin:621306",
             "phone_no": "4332262230",
             "name": "The Professional Courier",
-            "service_type": "Courier Service",
+            "services_offered": "Courier Service",
             "category": "Private Services"
         },
         {
@@ -1215,7 +1215,7 @@
             "address": "Dindugal Main Road, Manapparai. Pin:621306",
             "phone_no": "9443501915",
             "name": "Vignesh Driving School",
-            "service_type": "Driving classes and License consulting",
+            "services_offered": "Driving classes and License consulting",
             "category": "Private Services"
         },
         {
