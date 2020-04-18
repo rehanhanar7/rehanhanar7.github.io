@@ -1,14 +1,21 @@
 [
 	{
 		"serial_no": 1,
-		"prayer_name": "Fajir",
+		"prayer_name": "Salat at-  Fajr",
 		"prayer_time": "Before Sunrise and After Thajath",
 		"rakath_number": "2",
 		"when_to_pray": "Everyday",
 		"benefits": [
-			"early morning awake",
-			"self control",
-			"face brightness"
+			"First call from Allah.",
+			"Cleansing of soul.",
+			"Protection  from shaitaan.",
+			"Whoever offers morning prayer, he is under the protection  of Allah, mighty and sublime.",
+			"Rescuing from the hell.",
+			"Start your day with fajr prayer,it will add blessing to the entire day.",
+			"It defines belief from disbelief.",
+			"It is the essential part of the faith and also sunnah.",
+			"It provides light and guidance, strength and support to the human soul and heart.",
+			"Beginning the day with energy and positivity."
 		],
 		"specific_prayer_rules": [
 			{
@@ -45,28 +52,24 @@
 	},
 	{
 		"serial_no": 2,
-		"prayer_name": "Luhar",
-		"prayer_time": "After Sun Goes from Middle Sky and Before the Sun Reaches 45% of the Sun set",
-		"rakath_number": "2",
-		"when_to_pray": "Every Friday",
+		"prayer_name": "Salat at- Zuhr",
+		"prayer_time": "Mid-day, after the sun passes its highest.",
+		"rakath_number": "4",
+		"when_to_pray": "Everyday",
 		"benefits": [
-			"pray togather with muslim brothers",
-			"self control",
-			"face brightness"
+			"It is the important  to do good deeds at this time and offering salah.",
+			"Gates of heaven are opened for the Muslims.",
+			"Who offers zuhr prayers allah almighty showers his blessings.",
+			"Allah almighty will shield from hell fire."
 		],
 		"specific_prayer_rules": [
 			{
 				"gender": "male",
-				"rules": [
-					"Reach Mosque and pray",
-					"If you miss prayer in mosque, you have to pray 4 Rakath @ home or mosque"
-				]
+				"rules": []
 			},
 			{
 				"gender": "female",
 				"rules": [
-					"should be prayed before sun rise",
-					"should do proper wudu",
 					"Not needed during periods timing"
 				]
 			}
@@ -79,37 +82,414 @@
 					"Should pray before farl",
 					"Should pray 5 minutes before farl"
 				],
-				"sub_prayer_benefits": [
-					"early morning awake",
-					"self control",
-					"face brightness"
-				]
+				"sub_prayer_benefits": []
 			},
 			{
 				"sub_prayer_name": "pin sunnath",
 				"sub_rakath_number": "2",
 				"sub_prayer_rules": [
-					"Should pray before farl",
-					"Should pray 5 minutes before farl"
+					"Should pray after farl"
 				],
-				"sub_prayer_benefits": [
-					"early morning awake",
-					"self control",
-					"face brightness"
-				]
+				"sub_prayer_benefits": []
 			},
 			{
 				"sub_prayer_name": "Nafil",
 				"sub_rakath_number": "2",
 				"sub_prayer_rules": [
-					"Should pray before farl",
-					"Should pray 5 minutes before farl"
+					"Should pray after farl"
 				],
-				"sub_prayer_benefits": [
-					"early morning awake",
-					"self control",
-					"face brightness"
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 3,
+		"prayer_name": "Salat at-  Ashr",
+		"prayer_time": "The last part of the afternoon",
+		"rakath_number": "4",
+		"when_to_pray": "Everyday",
+		"benefits": [
+			"This is the third obligatory prayer.",
+			"There is so much importance on offering Asr prayer in hadith.",
+			"One of the greatest  blessings  for every muslims is enter into paradise.",
+			"Whoever offers Fajr & Asr prayer enters the jannah.",
+			"Asr prayer saves from the hell and opens the door of jannah.",
+			" Whoever offers the Asr prayer will give you success in life as well as hereafter."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
 				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "mun sunnath",
+				"sub_rakath_number": "2",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 4,
+		"prayer_name": "Salat at-  Maharib",
+		"prayer_time": "Just after sunset",
+		"rakath_number": "3",
+		"when_to_pray": "Everyday",
+		"benefits": [
+			"This is the 4th obligatory prayer after sunset.",
+			"Allah  almighty showers all his blessings and rewards on those who offers Maghrib prayers.",
+			"Allah will fullfill all yours wishes  and duas.",
+			"If one does not offer the maghrib salah purposely, is supposed to be punished by Allah almighty.",
+			"Allah almighty will give you success in wealth and family."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
+				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "",
+				"sub_rakath_number": "",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 5,
+		"prayer_name": "Salat at-  Isha",
+		"prayer_time": "Between sunset and mid-night.",
+		"rakath_number": "4",
+		"when_to_pray": "",
+		"benefits": [
+			"This is the last prayer of the day.",
+			"The prayer timing starts when the time of Maghrib prayers ends and remins until mid-night.",
+			"It's hard to execute so it also follows with vast rewards from the Almighty Allah.",
+			"It is the great blessing for you. So make sure to never miss the Isha prayer.",
+			"Try to make more dua's after the Isha prayer,Allah listen dua's and will shower his blessings on you.",
+			"Offer the prayer before going to sleep.You have a more peaceful night."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
+				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "",
+				"sub_rakath_number": "",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 6,
+		"prayer_name": "Salat at-Thahajjud",
+		"prayer_time": "Wake up 15 mins  before fajr prayer.",
+		"rakath_number": "from a minimum of 2 rakath upto 12 rakath.",
+		"when_to_pray": "Everyday",
+		"benefits": [
+			"Allah loves hearing our duas during thahajjud prayer.",
+			"If you are heavy sleeper,you should trying to wake up atleast 20 mins before fajr, and offer Thahajjud.",
+			"The dua made at thahajjud is like an arrow that does not  miss its target.",
+			"If there is something you want in life,and you are not praying thahajjud for it,you don't really want it.",
+			"Get up to pray in the dark,when all are asleep and see how your path of your life begins to shine.",
+			"Many people talks about Allah,but few very talk to Allah.",
+			"Bring Thahajjud and dua's into your life and talk to him.",
+			"The best prayer after the obligatory prayers is the night prayers.",
+			"A way of getting your dua's accepted.",
+			"A way of getting your sins forgiven.",
+			"By performing it will bring light to your face and soul.",
+			"It helps you fight your desires.",
+			"It makes you closer to Allah.",
+			"It builds the love of the here after in your heart.",
+			"It softens the heart and humbles you in front of Allah.",
+			"It strengthens the Quran that  you memorised."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
+				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "",
+				"sub_rakath_number": "",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 7,
+		"prayer_name": "Salat at-  Ishraq",
+		"prayer_time": "20 minutes  after sunrise",
+		"rakath_number": "Rakath from a minimum of 2 Rakats up to preferably 8 Rakats.",
+		"when_to_pray": "Any day or Everyday",
+		"benefits": [
+			"It is important to know that the  Ishraq would not start straight away after the rising of the Sun.",
+			"The best way to perform Ishraq prayer is to sit in place after Fajr prayer, do dhikr and then leave after performing Ishraq prayer when the sun has risen.",
+			"Ishraq prayer helps you to accomplish all responsibilities for that day.",
+			"A castle of gold is built in Paradise for the person.",
+			"One’s sins are forgiven even though they are as much as the foam of the sea.",
+			"One obtains the reward of one Hajj and one Umra – if one prays Fajr in congregation, then remains seated in the same place while engaging in remembrance until after sunrise, and then performs two cycles of prayer.",
+			"The intention to be developed while offering Salat-ul-Ishraq, or other optional prayers, there is no hard and fast rule to follow.",
+			"Since it is an optional Prayer, it is enough to say in one’s mind that one is praying Nafil or Ishraq prayer.",
+			"One may perform any number of Rakats from a minimum of 2 Rakats up to preferably 8 Rakats.",
+			"May Almighty Allah give us the strength to offer the obligatory prayers regularly."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
+				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "",
+				"sub_rakath_number": "",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 8,
+		"prayer_name": "Salat at-  Safar (journey prayer)",
+		"prayer_time": "anytime",
+		"rakath_number": "2",
+		"when_to_pray": "Before departing on a journey. ",
+		"benefits": [
+			"The Messenger of Allah said, anything better than two rakats offered at home when wanting travel.",
+			"Whoever desires to travel should offer two rakats of prayer in his home prior to traveling.",
+			"when he returns from his journey he should seek the mosque and offer two rakats there."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
+				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "",
+				"sub_rakath_number": "",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 9,
+		"prayer_name": "Salat at-  Istikhara",
+		"prayer_time": "anytime",
+		"rakath_number": "2",
+		"when_to_pray": "Prayer for asking Allah for  guidance and advice.",
+		"benefits": [
+			"If one of you is concerned about some practical undertaking, or about making plans for a journey",
+			"They  should perform two cycles of ritual prayer not as an obligatory observance but voluntarily.",
+			"It helps you fight your desires.",
+			"It's hard to execute so it also follows with vast rewards from the Almighty Allah.",
+			"It provides light and guidance, strength and support to the human soul and heart.",
+			"It makes you closer to Allah."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
+				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "",
+				"sub_rakath_number": "",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 10,
+		"prayer_name": "Salat at-Hajat",
+		"prayer_time": "Anytime",
+		"rakath_number": "Rakath  from a minimum of  4 rakath upto 12 rakath.",
+		"when_to_pray": "Prayer for the fulfilment of a need.",
+		"benefits": [
+			"Allah Almighty to fulfill his particular purpose or need or want.",
+			"It consists of a fresh ablution done carefully, followed by a calm prayer.",
+			"A sincere supplication that states what one wishes to be accomplished and requesting Allah.",
+			"Whoever performs ablutions well and offers two voluntary rakahs and completes them to perfection will be granted by Allah whatever he prays for, either immediately or in God’s good time.",
+			"Whoever has a need with Allah, or with any human being, then let them perform ritual ablutions well and then pray two rakats."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
+				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "",
+				"sub_rakath_number": "",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 11,
+		"prayer_name": "Salat at- Tauba",
+		"prayer_time": "Anytime",
+		"rakath_number": "offer 2 rakath",
+		"when_to_pray": "Prayer for minor or major ablution, and ask for His forgiveness.",
+		"benefits": [
+			"One’s sins are forgiven even though they are as much as the foam of the sea.",
+			"There is no one who commits a sin, goes and performs ritual ablutions.",
+			"And those who, when they do an evil thing or wrong themselves, remember Allah and implore forgiveness for their sins.",
+			"A way of getting your sins forgiven."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
+				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "",
+				"sub_rakath_number": "",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 12,
+		"prayer_name": "Salat at-Tahiyatul Wudu",
+		"prayer_time": "anytime",
+		"rakath_number": "offer 2 rakath",
+		"when_to_pray": "Prayer of the Oft-Repentant",
+		"benefits": [
+			"There is no Muslim who performs wudu and performs it well and then stands and offers this prayer with devotion of heart and mind in the two of them, except that Paradise becomes guaranteed for him.",
+			"It provides light and guidance, strength and support to the human soul and heart.",
+			"It makes you closer to Allah.",
+			"Several hadith have mentioned the blessings and benefit of doing Salat at-Tahiyatul Wudu."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
+				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "",
+				"sub_rakath_number": "",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
+			}
+		]
+	},
+	{
+		"serial_no": 13,
+		"prayer_name": "Salat al-Khawf",
+		"prayer_time": "anytime",
+		"rakath_number": "offers 2 rakath",
+		"when_to_pray": "Prayer of Fear/ Danger",
+		"benefits": [
+			"When fear is severe, the Imam divides the people into two groups: one group facing the enemy, and one group behind him. The imam leads them in one rak'ah withtwo sajdah, and then performs tashahud and taslim. The followers do not perform taslim, but rather go to face the enemy. The first group comes back, and pray one rak'ah on their own, with two sajdah, without recitation, and then perform tashahhud and taslim, and then go back to face the enemy.",
+			"When you are among the believers ,who are on an expedition and fear that the unbelievers might harm them.",
+			"while letting the other party take their positions against the enemy.",
+			"When the first party has prostrated and finished the rak‘at, let them go behind you to take their positions against the enemy.",
+			"Which has not prayed, come forward and pray with you, being fully prepared against danger and retaining their arms.",
+			"It helps you fight your desires.",
+			"It provides light and guidance, strength and support to the human soul and heart."
+		],
+		"specific_prayer_rules": [
+			{
+				"gender": "male",
+				"rules": []
+			},
+			{
+				"gender": "female",
+				"rules": [
+					"Not needed during periods timing"
+				]
+			}
+		],
+		"other_prayers": [
+			{
+				"sub_prayer_name": "",
+				"sub_rakath_number": "",
+				"sub_prayer_rules": [],
+				"sub_prayer_benefits": []
 			}
 		]
 	}
