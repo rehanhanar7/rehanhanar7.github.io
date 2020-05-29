@@ -99,6 +99,17 @@
                 "website_link": "http://covid19india.org",
                 "safetype": "resourceUrl"
             }
+        },
+        {
+            "id": 10,
+            "title": "COVID-19 E-PASS",
+            "methodid": 5,
+            "componentid": 6,
+            "icon": "plane",
+            "data": {
+                "website_link": "https://tnepass.tnega.org/#/user/pass",
+                "safetype": "resourceUrl"
+            }
         }
     ]
 }
