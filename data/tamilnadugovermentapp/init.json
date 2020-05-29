@@ -44,7 +44,7 @@
             "componentid": 6,
             "icon": "cog",
             "data": {
-                "website_link": "https://covid19india.org",
+                "website_link": "https://www.covid19india.org",
                 "safetype": "resourceUrl"
             },
             "hot": true
