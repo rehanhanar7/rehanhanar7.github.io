@@ -10,7 +10,8 @@
             "data": {
                 "website_link": "",
                 "safetype": ""
-            }
+            },
+            "hot": false
         },
         {
             "id": 2,
@@ -21,7 +22,8 @@
             "data": {
                 "website_link": "",
                 "safetype": ""
-            }
+            },
+            "hot": false
         },
         {
             "id": 3,
@@ -32,7 +34,8 @@
             "data": {
                 "website_link": "",
                 "safetype": ""
-            }
+            },
+            "hot": false
         },
         {
             "id": 4,
@@ -43,7 +46,8 @@
             "data": {
                 "website_link": "",
                 "safetype": ""
-            }
+            },
+            "hot": false
         },
         {
             "id": 5,
@@ -54,7 +58,8 @@
             "data": {
                 "website_link": "",
                 "safetype": ""
-            }
+            },
+            "hot": false
         },
         {
             "id": 6,
@@ -65,7 +70,8 @@
             "data": {
                 "website_link": "",
                 "safetype": ""
-            }
+            },
+            "hot": false
         },
         {
             "id": 7,
@@ -76,7 +82,8 @@
             "data": {
                 "website_link": "",
                 "safetype": ""
-            }
+            },
+            "hot": false
         },
         {
             "id": 8,
@@ -87,7 +94,8 @@
             "data": {
                 "website_link": "",
                 "safetype": ""
-            }
+            },
+            "hot": false
         },
         {
             "id": 9,
@@ -98,7 +106,8 @@
             "data": {
                 "website_link": "http://covid19india.org",
                 "safetype": "resourceUrl"
-            }
+            },
+            "hot": true
         },
         {
             "id": 10,
@@ -109,7 +118,8 @@
             "data": {
                 "website_link": "https://tnepass.tnega.org/#/user/pass",
                 "safetype": "resourceUrl"
-            }
+            },
+            "hot": true
         }
     ]
 }
