@@ -88,6 +88,17 @@
                 "website_link": "",
                 "safetype": ""
             }
+        },
+        {
+            "id": 9,
+            "title": "TN COVID-19",
+            "methodid": 5,
+            "componentid": 6,
+            "icon": "bar-chart-outline",
+            "data": {
+                "website_link": "",
+                "safetype": ""
+            }
         }
     ]
 }
