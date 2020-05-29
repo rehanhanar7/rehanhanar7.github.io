@@ -94,7 +94,7 @@
             "title": "E-PASS COVID-19",
             "methodid": 5,
             "componentid": 6,
-            "icon": "bar-chart-outline",
+            "icon": "plane",
             "data": {
                 "website_link": "https://www.mygov.in/covid-19",
                 "safetype": "resourceUrl"
