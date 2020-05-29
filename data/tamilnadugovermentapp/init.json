@@ -1,0 +1,93 @@
+{
+    "name":"Tamilnadu Government App",
+    "menu":[
+        {
+            "id": 1,
+            "title": "lang_Department",
+            "methodid": 1,
+            "componentid": 1,
+            "icon": "home",
+            "data": {
+                "website_link": "",
+                "safetype": ""
+            }
+        },
+        {
+            "id": 2,
+            "title": "lang_Tamilnadu",
+            "methodid": 1,
+            "componentid": 2,
+            "icon": "globe",
+            "data": {
+                "website_link": "",
+                "safetype": ""
+            }
+        },
+        {
+            "id": 3,
+            "title": "lang_Grievances",
+            "methodid": 1,
+            "componentid": 3,
+            "icon": "megaphone",
+            "data": {
+                "website_link": "",
+                "safetype": ""
+            }
+        },
+        {
+            "id": 4,
+            "title": "lang_About",
+            "methodid": 1,
+            "componentid": 4,
+            "icon": "contact",
+            "data": {
+                "website_link": "",
+                "safetype": ""
+            }
+        },
+        {
+            "id": 5,
+            "title": "lang_Release",
+            "methodid": 1,
+            "componentid": 5,
+            "icon": "stats",
+            "data": {
+                "website_link": "",
+                "safetype": ""
+            }
+        },
+        {
+            "id": 6,
+            "title": "lang_share",
+            "methodid": 2,
+            "componentid": "",
+            "icon": "share",
+            "data": {
+                "website_link": "",
+                "safetype": ""
+            }
+        },
+        {
+            "id": 7,
+            "title": "lang_rateApp",
+            "methodid": 3,
+            "componentid": "",
+            "icon": "star",
+            "data": {
+                "website_link": "",
+                "safetype": ""
+            }
+        },
+        {
+            "id": 8,
+            "title": "lang_MoreApps",
+            "methodid": 4,
+            "componentid": "",
+            "icon": "appstore",
+            "data": {
+                "website_link": "",
+                "safetype": ""
+            }
+        }
+    ]
+}
