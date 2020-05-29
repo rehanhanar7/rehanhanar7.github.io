@@ -91,13 +91,13 @@
         },
         {
             "id": 9,
-            "title": "TN COVID-19",
+            "title": "E-PASS COVID-19",
             "methodid": 5,
             "componentid": 6,
             "icon": "bar-chart-outline",
             "data": {
-                "website_link": "",
-                "safetype": ""
+                "website_link": "https://www.mygov.in/covid-19",
+                "safetype": "resourceUrl"
             }
         }
     ]
