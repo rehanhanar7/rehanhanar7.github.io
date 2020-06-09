@@ -1,5 +1,7 @@
 {
     "name":"Tamilnadu Government App",
+    "signal_app_id": "d4a0a73e-2b00-4d8b-b9c5-1c9787ec4108",
+    "firebase_app_id": "831303353592",
     "menu":[
         {
             "id": 1,
