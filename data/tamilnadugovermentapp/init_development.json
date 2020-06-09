@@ -63,13 +63,12 @@
         },
         {
             "id": 11,
-            "title": "Gov Announcements",
-            "methodid": 5,
-            "componentid": 6,
-            "icon": "megaphone",
+            "title": "Enable Notifications",
+            "methodid": 6,
+            "componentid": null,
+            "icon": "notifications",
             "data": {
-                "website_link": "https://www.tn.gov.in/announcements",
-                "safetype": "resourceUrl"
+                "settingsid": "accessibility"
             },
             "hot": true
         },
