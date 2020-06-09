@@ -68,7 +68,7 @@
             "componentid": null,
             "icon": "notifications",
             "data": {
-                "settingsid": "accessibility"
+                "settingsid": "application_details"
             },
             "hot": true
         },
