@@ -13,7 +13,8 @@
                 "website_link": "",
                 "safetype": ""
             },
-            "hot": false
+            "hot": false,
+            "min": false
         },
         {
             "id": 2,
@@ -25,7 +26,8 @@
                 "website_link": "",
                 "safetype": ""
             },
-            "hot": false
+            "hot": false,
+            "min": false
         },
         {
             "id": 3,
@@ -37,7 +39,8 @@
                 "website_link": "",
                 "safetype": ""
             },
-            "hot": false
+            "hot": false,
+            "min": false
         },
         {
             "id": 9,
@@ -49,7 +52,8 @@
                 "website_link": "https://www.covid19india.org",
                 "safetype": "resourceUrl"
             },
-            "hot": true
+            "hot": true,
+            "min": false
         },
         {
             "id": 10,
@@ -61,7 +65,8 @@
                 "website_link": "https://tnepass.tnega.org/#/user/pass",
                 "safetype": "resourceUrl"
             },
-            "hot": true
+            "hot": true,
+            "min": false
         },
         {
             "id": 11,
@@ -72,7 +77,8 @@
             "data": {
                 "settingsid": "application_details"
             },
-            "hot": true
+            "hot": true,
+            "min": false
         },
         {
             "id": 4,
@@ -84,7 +90,8 @@
                 "website_link": "",
                 "safetype": ""
             },
-            "hot": false
+            "hot": false,
+            "min": true
         },
         {
             "id": 5,
@@ -96,7 +103,8 @@
                 "website_link": "",
                 "safetype": ""
             },
-            "hot": false
+            "hot": false,
+            "min": true
         },
         {
             "id": 6,
@@ -108,7 +116,8 @@
                 "website_link": "",
                 "safetype": ""
             },
-            "hot": false
+            "hot": false,
+            "min": true
         },
         {
             "id": 7,
@@ -120,7 +129,8 @@
                 "website_link": "",
                 "safetype": ""
             },
-            "hot": false
+            "hot": false,
+            "min": true
         },
         {
             "id": 8,
@@ -132,7 +142,8 @@
                 "website_link": "",
                 "safetype": ""
             },
-            "hot": false
+            "hot": false,
+            "min": true
         }
     ]
 }
