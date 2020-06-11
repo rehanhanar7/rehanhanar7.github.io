@@ -81,6 +81,15 @@
             "min": true
         },
         {
+            "id": 12,
+            "title": "FAQ / Help",
+            "methodid": 7,
+            "componentid": 7,
+            "icon": "help",
+            "hot": false,
+            "min": false
+        },
+        {
             "id": 4,
             "title": "lang_About",
             "methodid": 1,
