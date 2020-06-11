@@ -78,7 +78,7 @@
                 "settingsid": "application_details"
             },
             "hot": true,
-            "min": false
+            "min": true
         },
         {
             "id": 4,
