@@ -83,7 +83,7 @@
         {
             "id": 12,
             "title": "FAQ / Help",
-            "methodid": 7,
+            "methodid": 1,
             "componentid": 7,
             "icon": "help",
             "hot": false,
