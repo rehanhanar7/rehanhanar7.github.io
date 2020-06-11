@@ -82,7 +82,7 @@
         },
         {
             "id": 12,
-            "title": "FAQ / Help",
+            "title": "lang_faq",
             "methodid": 1,
             "componentid": 7,
             "icon": "help",
