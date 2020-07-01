@@ -69,19 +69,6 @@
             "min": false
         },
         {
-            "id": 14,
-            "title": "Indian E-PASS",
-            "methodid": 5,
-            "componentid": 6,
-            "icon": "plane",
-            "data": {
-                "website_link": "https://serviceonline.gov.in/epass/",
-                "safetype": "resourceUrl"
-            },
-            "hot": true,
-            "min": false
-        },
-        {
             "id": 11,
             "title": "Enable Notifications",
             "methodid": 6,
@@ -92,15 +79,6 @@
             },
             "hot": true,
             "min": true
-        },
-        {
-            "id": 12,
-            "title": "lang_eservices",
-            "methodid": 1,
-            "componentid": 8,
-            "icon": "help",
-            "hot": false,
-            "min": false
         },
         {
             "id": 13,
