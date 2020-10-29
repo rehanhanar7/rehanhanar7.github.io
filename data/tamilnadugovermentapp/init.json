@@ -62,7 +62,7 @@
             "componentid": 6,
             "icon": "plane",
             "data": {
-                "website_link": "https://parivahan.gov.in/rcdlstatus/"
+                "website_link": "https://parivahan.gov.in/rcdlstatus/",
                 "safetype": "resourceUrl"
             },
             "hot": true,
