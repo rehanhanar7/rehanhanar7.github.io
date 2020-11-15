@@ -63,7 +63,7 @@
             "icon": "plane",
             "data": {
                 "website_link": "https://tnepass.tnega.org/#/user/pass",
-                "safetype": "resourceUrl"
+                "safetype": "url"
             },
             "hot": true,
             "min": false
@@ -79,15 +79,6 @@
             },
             "hot": true,
             "min": true
-        },
-        {
-            "id": 13,
-            "title": "lang_faq",
-            "methodid": 1,
-            "componentid": 7,
-            "icon": "help",
-            "hot": false,
-            "min": false
         },
         {
             "id": 4,
