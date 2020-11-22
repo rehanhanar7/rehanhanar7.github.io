@@ -63,7 +63,7 @@
             "icon": "plane",
             "data": {
                 "website_link": "https://parivahan.gov.in/rcdlstatus/",
-                "safetype": "url"
+                "safetype": "resourceUrl"
             },
             "hot": true,
             "min": false
