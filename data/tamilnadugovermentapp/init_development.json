@@ -57,12 +57,12 @@
         },
         {
             "id": 10,
-            "title": "E-PASS COVID-19",
+            "title": "Vehicle Details",
             "methodid": 5,
             "componentid": 6,
             "icon": "plane",
             "data": {
-                "website_link": "https://tnepass.tnega.org/#/user/pass",
+                "website_link": "https://parivahan.gov.in/rcdlstatus/",
                 "safetype": "url"
             },
             "hot": true,
