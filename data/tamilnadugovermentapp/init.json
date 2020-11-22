@@ -56,19 +56,6 @@
             "min": false
         },
         {
-            "id": 10,
-            "title": "Vehicle Details",
-            "methodid": 5,
-            "componentid": 6,
-            "icon": "plane",
-            "data": {
-                "website_link": "https://parivahan.gov.in/rcdlstatus/",
-                "safetype": "resourceUrl"
-            },
-            "hot": true,
-            "min": false
-        },
-        {
             "id": 11,
             "title": "Enable Notifications",
             "methodid": 6,
