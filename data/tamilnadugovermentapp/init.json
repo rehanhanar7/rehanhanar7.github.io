@@ -69,19 +69,6 @@
             "min": false
         },
         {
-            "id": 12,
-            "title": "UPDATE !!",
-            "methodid": 5,
-            "componentid": 6,
-            "icon": "cog",
-            "data": {
-                "website_link": "https://rehanhanar.com/data/tamilnadugovermentapp/tnnews.html",
-                "safetype": "resourceUrl"
-            },
-            "hot": true,
-            "min": false
-        },
-        {
             "id": 11,
             "title": "Enable Notifications",
             "methodid": 6,
