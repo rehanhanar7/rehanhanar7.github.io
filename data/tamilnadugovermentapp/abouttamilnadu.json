@@ -14,7 +14,7 @@
                 },
                 {
                     "name": "Chief Minister",
-                    "information": "Honorable Chief Minister of Tamil Nadu Thiru Edappadi K. Palaniswami, who is the Head of the elected Government and heads the Council of Ministers.",
+                    "information": "Honorable Chief Minister of Tamil Nadu Thiru M.K.Stalin, who is the Head of the elected Government and heads the Council of Ministers.",
                     "email":"cmcell@tn.gov.in",
                     "phone":"25671555",
                     "website":"http://cmcell.tn.gov.in/"
@@ -28,9 +28,9 @@
                 },
                 {
                     "name": "Chief Secretary",
-                    "information": "K. Shanmugam, IAS, who is the Chief Secretary to the Goverment",
+                    "information": "Dr. V. Irai Anbu, IAS, who is the Chief Secretary to the Goverment",
                     "email":"",
-                    "phone":"",
+                    "phone":"25671555",
                     "website":""
                 }
             ]
@@ -75,17 +75,17 @@
                 },
                 {
                     "name": "Taluks",
-                    "information": "301",
+                    "information": "310",
                     "link":"http://www.tn.gov.in/government/taluk"
                 },
                 {
                     "name": "Firkas",
-                    "information": "1,189",
+                    "information": "1,349",
                     "link":""
                 },
                 {
                     "name": "Revenue Villages",
-                    "information": "16,682",
+                    "information": "17,680",
                     "link":""
                 },
                 {
@@ -124,23 +124,23 @@
                     "link":"http://www.tn.gov.in/government/rajyasaba"
                 },
                 {
-                    "name":"MLAs",
+                    "name":"Assembly Constituencies / MLAs",
                     "information":"235",
                     "link":"http://www.assembly.tn.gov.in/15thassembly/members/001_050.html"
                 },
                 {
                     "name":"Ministers",
-                    "information":"33",
+                    "information":"34",
                     "link":"http://www.tn.gov.in/ministerslist"
                 },
                 {
                     "name":"District Collectors",
-                    "information":"32",
+                    "information":"36",
                     "link":"http://www.tn.gov.in/collectors"
                 },
                 {
                     "name":"Secretaries of Department",
-                    "information":"36",
+                    "information":"38",
                     "link":"http://www.tn.gov.in/section"
                 }
                 
