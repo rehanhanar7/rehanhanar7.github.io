@@ -1,6 +1,6 @@
 Website About Rehan Hanar
 
-Link : https://rehanhanar.github.io
+Link : https://rehanhanar7.github.io/
 
         or
 
