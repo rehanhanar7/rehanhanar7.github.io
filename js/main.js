@@ -15,6 +15,19 @@ jQuery(document).ready(function( $ ) {
     return false;
   });
 
+// Add the "menu-active" class to the navigation item when the corresponding section is scrolled into view
+$(window).scroll(function() {
+  var scrollDistance = $(window).scrollTop();
+
+  // Assign "menu-active" class to the corresponding navigation item
+  $('section').each(function(i) {
+      if ($(this).position().top <= scrollDistance + 300) {
+          $('nav .menu-active').removeClass('menu-active');
+          $('nav li').eq(i).addClass('menu-active');
+      }
+  });
+}).scroll();
+
   // Initiate the wowjs
   new WOW().init();
 
@@ -134,6 +147,7 @@ jQuery(document).ready(function( $ ) {
       map: map
     });
   }
+  
   google.maps.event.addDomListener(window, 'load', initialize_google_map);
 
 // custom code
