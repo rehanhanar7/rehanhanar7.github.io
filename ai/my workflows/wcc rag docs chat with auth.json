@@ -1,0 +1,336 @@
+{
+  "name": "wcc rag docs chat with auth",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Get component code from the vector database tool with below description {{ $json.body.chatInput }}. Dont use html for formatting the code. ",
+        "options": {}
+      },
+      "id": "55482880-d88d-487e-90ad-00bd5249d2cc",
+      "name": "AI Agent",
+      "position": [
+        736,
+        80
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Webhook').item.json.headers['true-client-ip'] }}"
+      },
+      "id": "87c46b78-ab53-457e-afbe-aedbbcef343f",
+      "name": "Simple Memory",
+      "position": [
+        784,
+        624
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "description": "Component code, example Code Implementations of dropdown, text field, tabs and checkbox components"
+      },
+      "id": "0f097532-a64b-43a8-b883-5e87e8664ba2",
+      "name": "Answer questions with a vector store",
+      "position": [
+        1216,
+        272
+      ],
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "cachedResultName": "wcc-codebase",
+          "mode": "list",
+          "value": "wcc-codebase"
+        },
+        "options": {}
+      },
+      "id": "d7817ecb-79bc-457b-ba5b-2aa48c3126de",
+      "name": "Pinecone Vector Store",
+      "position": [
+        1216,
+        448
+      ],
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "credentials": {
+        "pineconeApi": {
+          "id": "fS2nyXCYF61OJ05s",
+          "name": "PineconeApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "dimensions": 512
+        }
+      },
+      "id": "caded3cd-6196-429a-a800-d7cb90af1440",
+      "name": "Embeddings OpenAI",
+      "position": [
+        960,
+        624
+      ],
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "credentials": {
+        "openAiApi": {
+          "id": "VugDkxkzz5s8YTrg",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "c80e41cd-53b9-4aa8-88c1-fc9da2db0b57",
+      "name": "Azure OpenAI Chat Model",
+      "position": [
+        432,
+        576
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+      "typeVersion": 1,
+      "credentials": {
+        "azureOpenAiApi": {
+          "id": "mlWxQmVFT4FCARmk",
+          "name": "Azure Open AI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "wcc-docs-with-auth",
+        "responseMode": "responseNode",
+        "options": {
+          "binaryPropertyName": "chatInput"
+        }
+      },
+      "id": "08ef786a-58da-4756-8b77-48ee38038a91",
+      "name": "Webhook",
+      "position": [
+        176,
+        80
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "7222db21-4f18-4353-a8f1-4dbf73df9bce"
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.output }}",
+        "options": {}
+      },
+      "id": "92288171-1ce6-4dfa-93ab-41f6dc4a08c1",
+      "name": "Respond to Webhook",
+      "position": [
+        1584,
+        80
+      ],
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "auth-condition",
+              "leftValue": "={{ $json.body.password }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "sorry-brothers-and-sisters-api-key-is-costly"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "password-check",
+      "name": "Password Check",
+      "position": [
+        368,
+        80
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\"error\": \"Access denied. This workflow is inaccessible.\", \"status\": 401}",
+        "options": {
+          "responseCode": 401
+        }
+      },
+      "id": "auth-error",
+      "name": "Authentication Error",
+      "position": [
+        528,
+        208
+      ],
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Respond to Webhook",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Answer questions with a vector store": {
+      "ai_tool": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_tool"
+          }
+        ]
+      ],
+      "main": [
+        []
+      ]
+    },
+    "Authentication Error": {
+      "main": [
+        []
+      ]
+    },
+    "Azure OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Answer questions with a vector store",
+            "type": "ai_languageModel"
+          },
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_languageModel"
+          }
+        ]
+      ],
+      "main": [
+        []
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "index": 0,
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding"
+          }
+        ]
+      ],
+      "main": [
+        []
+      ]
+    },
+    "Password Check": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Authentication Error",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store": {
+      "ai_vectorStore": [
+        [
+          {
+            "index": 0,
+            "node": "Answer questions with a vector store",
+            "type": "ai_vectorStore"
+          }
+        ]
+      ],
+      "main": [
+        []
+      ]
+    },
+    "Respond to Webhook": {
+      "main": [
+        []
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_memory"
+          }
+        ]
+      ],
+      "main": [
+        []
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Password Check",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "eb651e45-bf4e-4c48-ab0c-10079904fd55",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d083fbd3d20f8881eb4d5ec10030d2c71f4ad182acb594f79e165de3b105ef9e"
+  },
+  "id": "8MPCuIUUXrE7JHF7",
+  "tags": []
+}
