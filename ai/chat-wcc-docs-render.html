@@ -151,11 +151,28 @@
     @keyframes typing { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-10px); } }
 
     .chat-input-container {
-      padding: 20px; background: white; border-top: 1px solid #e9ecef; display: flex; gap: 10px; align-items: center;
+      padding: 20px; background: white; border-top: 1px solid #e9ecef; display: flex; flex-direction: column; gap: 15px;
+    }
+    .password-container {
+      display: flex; gap: 10px; align-items: center;
+    }
+    .main-input-container {
+      display: flex; gap: 10px; align-items: center;
     }
     .chat-input { flex: 1; padding: 12px 16px; border: 2px solid #e9ecef; border-radius: 25px; outline: none; font-size: 1em; transition: border-color 0.3s ease; }
     .chat-input:focus { border-color: #667eea; }
     .chat-input:disabled { background: #f8f9fa; cursor: not-allowed; }
+    .password-input { 
+      flex: 1; padding: 8px 12px; border: 2px solid #e9ecef; border-radius: 20px; outline: none; font-size: 0.9em; 
+      transition: border-color 0.3s ease; background: #f8f9fa;
+    }
+    .password-input:focus { border-color: #667eea; }
+    .password-label { font-size: 0.85em; color: #666; font-weight: 500; min-width: 60px; }
+    .password-toggle { 
+      background: none; border: none; color: #666; cursor: pointer; font-size: 0.85em; 
+      padding: 4px 8px; border-radius: 12px; transition: background 0.2s ease;
+    }
+    .password-toggle:hover { background: #f0f0f0; }
 
     .send-button {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -206,10 +223,20 @@
     <div class="chat-messages" id="chatMessages"></div>
 
     <div class="chat-input-container">
-      <button class="cloud-indicator" title="Connected to Render cloud">☁️</button>
-      <button class="clear-chat" onclick="clearChat()" title="Clear chat history">🗑️</button>
-      <input type="text" class="chat-input" id="chatInput" placeholder="Ask about components, inputs/outputs, usage, or stories..." maxlength="500" />
-      <button class="send-button" id="sendButton" onclick="sendMessage()">➤</button>
+      <!-- Password input -->
+      <div class="password-container">
+        <span class="password-label">🔐 Key:</span>
+        <input type="password" class="password-input" id="passwordInput" placeholder="Enter access password..." />
+        <button class="password-toggle" onclick="togglePasswordVisibility()" title="Show/Hide password">👁️</button>
+      </div>
+      
+      <!-- Main input controls -->
+      <div class="main-input-container">
+        <button class="cloud-indicator" title="Connected to Render cloud">☁️</button>
+        <button class="clear-chat" onclick="clearChat()" title="Clear chat history">🗑️</button>
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask about components, inputs/outputs, usage, or stories..." maxlength="500" />
+        <button class="send-button" id="sendButton" onclick="sendMessage()">➤</button>
+      </div>
     </div>
 
     <div class="status-bar" id="statusBar">Connected to Render cloud • Ready to chat</div>
@@ -217,8 +244,9 @@
 
   <script>
     // Configuration - Using Render webhook URL
-    const WEBHOOK_URL = 'https://n8n-jmlp.onrender.com/webhook/wcc-docs';
+    // const WEBHOOK_URL = 'https://n8n-jmlp.onrender.com/webhook/wcc-docs';
     // const WEBHOOK_URL = 'https://n8n-jmlp.onrender.com/webhook-test/wcc-docs';
+    const WEBHOOK_URL = 'https://n8n-jmlp.onrender.com/webhook/wcc-docs-with-auth';
     const STORAGE_KEY = 'wcc_docs_chat_history';
 
     // DOM elements
@@ -227,6 +255,7 @@
     const talkToDocsBtn = document.getElementById('talkToDocsBtn');
     const chatMessages = document.getElementById('chatMessages');
     const chatInput = document.getElementById('chatInput');
+    const passwordInput = document.getElementById('passwordInput');
     const sendButton = document.getElementById('sendButton');
     const statusBar = document.getElementById('statusBar');
 
@@ -274,15 +303,34 @@
 
     // Keyboard events
     document.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter' && isChatOpen && !isLoading && document.activeElement === chatInput) sendMessage();
+      if (e.key === 'Enter' && isChatOpen && !isLoading && 
+          (document.activeElement === chatInput || document.activeElement === passwordInput)) {
+        sendMessage();
+      }
     });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && isChatOpen) closeChat(); });
+
+    // Password toggle functionality
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById('passwordInput');
+      const toggleButton = document.querySelector('.password-toggle');
+      
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleButton.textContent = '🙈';
+        toggleButton.title = 'Hide password';
+      } else {
+        passwordInput.type = 'password';
+        toggleButton.textContent = '👁️';
+        toggleButton.title = 'Show password';
+      }
+    }
 
     // Welcome message
     function addWelcomeMessage() {
       const welcomeMessage = {
         type: 'ai',
-        content: `👋 Welcome to the WCC Storybook Docs Assistant!\n\nI can help you explore UPS Angular components documented in Storybook:\n\n**Components:** Names, purpose, and availability\n**Inputs/Outputs:** Properties, types, defaults, and events\n**Usage Examples:** Recommended patterns and code snippets\n**Stories:** Variants, controls, and behavior\n\nAsk about any component by name to get started.`,
+        content: `👋 Welcome to the WCC Storybook Docs Assistant!\n\n🔐 **Authentication Required:** Please enter the access password in the key field above.\n\nI can help you explore UPS Angular components documented in Storybook:\n\n**Components:** Names, purpose, and availability\n**Inputs/Outputs:** Properties, types, defaults, and events\n**Usage Examples:** Recommended patterns and code snippets\n**Stories:** Variants, controls, and behavior\n\nAsk about any component by name to get started.`,
         timestamp: new Date().toISOString(),
       };
       displayMessage(welcomeMessage);
@@ -292,7 +340,15 @@
     // Send message
     async function sendMessage() {
       const message = chatInput.value.trim();
+      const password = passwordInput.value.trim();
+      
       if (!message || isLoading) return;
+      
+      if (!password) {
+        updateStatus('error', '🔐 Please enter the access password');
+        passwordInput.focus();
+        return;
+      }
 
       setLoading(true);
       const userMessage = { type: 'user', content: message, timestamp: new Date().toISOString() };
@@ -307,14 +363,23 @@
         const response = await fetch(WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ query: message, chatInput: message }),
+          body: JSON.stringify({ 
+            password: password,
+            query: message, 
+            chatInput: message 
+          }),
           signal: controller.signal,
         });
 
         clearTimeout(timeoutId);
         hideTypingIndicator();
 
-        if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        if (!response.ok) {
+          if (response.status === 401) {
+            throw new Error('Invalid password. Access denied to this workflow.');
+          }
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
 
         const data = await response.text();
         let aiResponse;
@@ -343,7 +408,7 @@
           : `❌ Sorry, I encountered an error: ${error.message}`;
         const errorMessage = {
           type: 'ai',
-          content: `${errorContent}\n\n🔧 Troubleshooting tips:\n• Check your internet connection\n• Verify the Render service is running: n8n-jmlp.onrender.com\n• Cloud services may take longer to respond\n• Try again in a few moments\n• The n8n workflow might need to be activated`,
+          content: `${errorContent}\n\n🔧 Troubleshooting tips:\n• Check your internet connection\n• Verify the password is correct\n• Verify the Render service is running: n8n-jmlp.onrender.com\n• Cloud services may take longer to respond\n• Try again in a few moments\n• The n8n workflow might need to be activated`,
           timestamp: new Date().toISOString(),
         };
         displayMessage(errorMessage);
@@ -432,6 +497,7 @@
     function setLoading(loading) {
       isLoading = loading;
       chatInput.disabled = loading;
+      passwordInput.disabled = loading;
       sendButton.disabled = loading;
       if (loading) { updateStatus('loading', '☁️ Connecting to Render cloud...'); sendButton.innerHTML = '⏳'; }
       else { sendButton.innerHTML = '➤'; if (isChatOpen) chatInput.focus(); }
