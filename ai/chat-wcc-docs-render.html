@@ -122,16 +122,44 @@
     .message .timestamp { font-size: 0.75em; opacity: 0.7; margin-top: 5px; }
 
     /* Markdown/code styling */
+    .code-block-container {
+      position: relative;
+      margin: 8px 0;
+    }
     .message pre {
       background: #0f172a; /* dark blue-gray */
       color: #e2e8f0;
-      padding: 12px 14px;
+      padding: 12px 14px 12px 14px;
       border-radius: 10px;
       overflow: auto;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 0.9em;
       line-height: 1.45;
       border: 1px solid #0b1220;
+      margin: 0;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #e2e8f0;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.75em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    .copy-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    .copy-btn.copied {
+      background: #10b981;
+      border-color: #10b981;
+      color: white;
     }
     .message code {
       background: #f1f5f9; /* slate-100 */
@@ -455,7 +483,12 @@
       // Extract fenced code blocks and replace with placeholders
       working = working.replace(/```([\w-]+)?\n([\s\S]*?)```/g, (m, lang, code) => {
         const id = `__CODEBLOCK_${idx++}__`;
-        const html = `<pre><code${lang ? ` class="language-${lang}"` : ''}>${escapeHtml(code)}</code></pre>`;
+        const copyId = `copy-${Date.now()}-${idx}`;
+        const codeContent = escapeHtml(code);
+        const html = `<div class="code-block-container">
+          <button class="copy-btn" onclick="copyCodeToClipboard('${copyId}', this)" title="Copy code">Copy</button>
+          <pre><code id="${copyId}"${lang ? ` class="language-${lang}"` : ''}>${codeContent}</code></pre>
+        </div>`;
         blocks.push({ id, html });
         return id;
       });
@@ -515,6 +548,64 @@
 
     // Scroll to bottom
     function scrollToBottom() { chatMessages.scrollTop = chatMessages.scrollHeight; }
+
+    // Copy code to clipboard
+    async function copyCodeToClipboard(codeId, buttonElement) {
+      const codeElement = document.getElementById(codeId);
+      if (!codeElement) return;
+      
+      const codeText = codeElement.textContent || codeElement.innerText;
+      
+      try {
+        await navigator.clipboard.writeText(codeText);
+        
+        // Visual feedback
+        const originalText = buttonElement.textContent;
+        buttonElement.textContent = 'Copied!';
+        buttonElement.classList.add('copied');
+        
+        setTimeout(() => {
+          buttonElement.textContent = originalText;
+          buttonElement.classList.remove('copied');
+        }, 2000);
+        
+      } catch (err) {
+        console.error('Failed to copy code:', err);
+        
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = codeText;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+          document.execCommand('copy');
+          
+          // Visual feedback
+          const originalText = buttonElement.textContent;
+          buttonElement.textContent = 'Copied!';
+          buttonElement.classList.add('copied');
+          
+          setTimeout(() => {
+            buttonElement.textContent = originalText;
+            buttonElement.classList.remove('copied');
+          }, 2000);
+          
+        } catch (fallbackErr) {
+          console.error('Fallback copy failed:', fallbackErr);
+          buttonElement.textContent = 'Copy failed';
+          setTimeout(() => {
+            buttonElement.textContent = 'Copy';
+          }, 2000);
+        }
+        
+        document.body.removeChild(textArea);
+      }
+    }
 
     // Persist chat in session storage
     function saveChatHistory() {
