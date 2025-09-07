@@ -1,0 +1,85 @@
+{
+  "name": "userdata",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "userdata",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        16
+      ],
+      "id": "8335b599-3e86-407e-a5c6-f96375b90d3a",
+      "name": "Webhook",
+      "webhookId": "16aa378d-6a26-41ce-9f74-f922d512395d"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        544,
+        16
+      ],
+      "id": "39dbb1bd-4aee-4f64-bb26-d4b2962cba75",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"name\": \"REHAN\",\n  \"website\": \"n8n\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        288,
+        16
+      ],
+      "id": "93677470-e7d5-473a-a78b-d54cd0b1fe11",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "da8555ea-3373-4abc-a659-7f9e50e23421",
+  "meta": {
+    "instanceId": "d083fbd3d20f8881eb4d5ec10030d2c71f4ad182acb594f79e165de3b105ef9e"
+  },
+  "id": "uD42S2dtz3XOI0Yu",
+  "tags": []
+}

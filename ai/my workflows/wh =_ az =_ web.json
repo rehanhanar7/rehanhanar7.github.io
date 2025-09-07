@@ -1,0 +1,175 @@
+{
+  "name": "wh => az => web",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "rehanhanar7.github.io",
+        "responseMode": "responseNode",
+        "options": {
+          "binaryPropertyName": "query"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -32,
+        -16
+      ],
+      "id": "684770de-0933-4b7f-8404-7d5ff4bd6e20",
+      "name": "Webhook",
+      "webhookId": "04736502-b86f-4f8d-8af9-6a474007c9b4"
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+      "typeVersion": 1,
+      "position": [
+        272,
+        304
+      ],
+      "id": "a208e231-937d-4a3f-b93b-836d10ce5e95",
+      "name": "Azure OpenAI Chat Model",
+      "credentials": {
+        "azureOpenAiApi": {
+          "id": "xdYucyVXATycLcQR",
+          "name": "Azure Open AI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        816,
+        0
+      ],
+      "id": "3d41a242-0ed6-496f-a042-8323fdc20194",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a helpful AI assistant with access to information about Rehan Hanar's portfolio website. I have access to content from https://rehanhanar7.github.io/ and can answer questions about rehan. I'll use the http request tool to provide accurate information on the Query : {{ $json.body.query }}\n\nBe friendly, helpful, and detailed in your responses.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        336,
+        0
+      ],
+      "id": "1702a993-2af0-4609-9ae6-f223f690015e",
+      "name": "AI Agent",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "nodehttprequests"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        464,
+        304
+      ],
+      "id": "907eaa10-9325-43ac-a5fe-bd72ee273d94",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "url": "https://rehanhanar7.github.io/",
+        "options": {},
+        "optimizeResponse": true,
+        "responseType": "html",
+        "onlyContent": true
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        688,
+        288
+      ],
+      "id": "d5a463ad-bf67-4e14-bf80-13189b53dd00",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Azure OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8f7c17b8-9b94-4bad-b22b-1a1d5060fa25",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "492b41815a4016fd7ed4d04a86ce73541a088e91a0d78a78160c56042cd1c4d9"
+  },
+  "id": "hitnb6hxEUYv6GP1",
+  "tags": []
+}

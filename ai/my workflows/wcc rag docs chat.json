@@ -1,0 +1,463 @@
+{
+  "name": "wcc rag docs chat",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Get component code from the vector database tool with below description {{ $json.body.chatInput }}. Dont use html for formatting the code. ",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        736,
+        80
+      ],
+      "id": "5abd39e4-8c81-4ac8-94bf-46a3ad681e43",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Webhook').item.json.headers['true-client-ip'] }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        784,
+        624
+      ],
+      "id": "06e80faa-7b7c-4193-a4ce-bf40c6f55bd7",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "description": "Component code, example Code Implementations of dropdown, text field, tabs and checkbox components"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1.1,
+      "position": [
+        1216,
+        272
+      ],
+      "id": "4d252d98-fe2c-4477-aa73-805d4fe9be14",
+      "name": "Answer questions with a vector store"
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "wcc-codebase",
+          "mode": "list",
+          "cachedResultName": "wcc-codebase"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        1216,
+        448
+      ],
+      "id": "c521d077-d5aa-4add-8ff1-58b58c8751d7",
+      "name": "Pinecone Vector Store",
+      "credentials": {
+        "pineconeApi": {
+          "id": "fS2nyXCYF61OJ05s",
+          "name": "PineconeApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "dimensions": 512
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        960,
+        624
+      ],
+      "id": "7005e298-f8de-4c2a-b1db-895303e169a9",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "VugDkxkzz5s8YTrg",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+      "typeVersion": 1,
+      "position": [
+        432,
+        576
+      ],
+      "id": "a4e43226-d630-491d-a484-61e5990c06b7",
+      "name": "Azure OpenAI Chat Model",
+      "credentials": {
+        "azureOpenAiApi": {
+          "id": "mlWxQmVFT4FCARmk",
+          "name": "Azure Open AI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a code generator. Input is a JSON layout with rows, columns, and UPS component names. Use the vector database to fetch the correct Angular code snippets for each component. Then generate a complete Angular component.\\n\\n### Rules:\\n1. Use the JSON structure directly for Bootstrap grid (rows, columns, component order).\\n2. For each component name, fetch details from the vector DB and place the correct Angular snippet.\\n3. Output valid Angular component code with two files:\\n   - component.html → Bootstrap grid with UPS components\\n   - component.ts → Angular class with selector, templateUrl, and standard setup\\n4. Do not explain. Output only code.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        64,
+        1040
+      ],
+      "id": "3db05653-742e-4539-8cc9-73ebd05fb9a0",
+      "name": "AI Agent2"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        176,
+        1584
+      ],
+      "id": "85db6563-0f85-4f83-b7bb-f94cb66e4255",
+      "name": "Simple Memory1"
+    },
+    {
+      "parameters": {
+        "description": "Component code, example Code Implementations of dropdown, text field, tabs and checkbox components"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1.1,
+      "position": [
+        608,
+        1232
+      ],
+      "id": "25b7c91a-77f0-4660-afc0-47331280e36c",
+      "name": "Answer questions with a vector store1"
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "wcc-codebase",
+          "mode": "list",
+          "cachedResultName": "wcc-codebase"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        608,
+        1408
+      ],
+      "id": "f67fb29a-564a-425c-a104-980997733f26",
+      "name": "Pinecone Vector Store1",
+      "credentials": {
+        "pineconeApi": {
+          "id": "fS2nyXCYF61OJ05s",
+          "name": "PineconeApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "dimensions": 512
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        352,
+        1584
+      ],
+      "id": "985e042d-b4ab-4eeb-816d-62f84fa884db",
+      "name": "Embeddings OpenAI1",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "endpointUrl": "http://host.docker.internal:3845/sse",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.1,
+      "position": [
+        -560,
+        1568
+      ],
+      "id": "c6e5f451-5cef-4db6-84a5-bf895d8ea406",
+      "name": "MCP Client1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are connected to the Figma MCP client. From the raw MCP data of the selected node(s), extract the layout structure (rows, columns, alignment) and map UI elements to UPS component names.\\n\\nUse only these components:\\n- ups-text-fields\\n- ups-checkbox-group\\n- ups-checkbox\\n- ups-ac-dropdown with ups-ac-option\\n- ups-ac-tabset with ups-ac-tab\\n- generic (if unknown)\\n\\nOutput only clean JSON reflecting the exact structure and alignment from the MCP data.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -672,
+        1040
+      ],
+      "id": "f905a9b7-964d-44b7-9c8d-06fa8ee85956",
+      "name": "AI Agent3",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -240,
+        1616
+      ],
+      "id": "0ea25458-d720-4c80-bab4-faec99eaad68",
+      "name": "OpenAI Chat Model",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "wcc-docs",
+        "responseMode": "responseNode",
+        "options": {
+          "binaryPropertyName": "chatInput"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        176,
+        80
+      ],
+      "id": "a6a894c8-8139-44df-9eca-4e1bce6b0f45",
+      "name": "Webhook",
+      "webhookId": "3476eccb-16de-4444-ad38-26684443ad98"
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        1584,
+        80
+      ],
+      "id": "77196121-a25d-4584-b5fd-37531e789f95",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Answer questions with a vector store": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Answer questions with a vector store",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Azure OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Answer questions with a vector store",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "AI Agent3",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Answer questions with a vector store1": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store1": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Answer questions with a vector store1",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MCP Client1": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent3": {
+      "main": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Answer questions with a vector store1",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "AI Agent2",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "AI Agent3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "48e435ff-a45d-4854-b1f2-87784418d711",
+  "meta": {
+    "instanceId": "d083fbd3d20f8881eb4d5ec10030d2c71f4ad182acb594f79e165de3b105ef9e"
+  },
+  "id": "Zf90m3547sK48YY3",
+  "tags": []
+}

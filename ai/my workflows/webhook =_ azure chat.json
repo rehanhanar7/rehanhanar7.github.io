@@ -1,0 +1,121 @@
+{
+  "name": "webhook => azure chat",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "azurechat",
+        "responseMode": "responseNode",
+        "options": {
+          "binaryPropertyName": "query"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -32,
+        -16
+      ],
+      "id": "a6a0ca02-00cd-45f7-894e-06467b52f2b9",
+      "name": "Webhook",
+      "webhookId": "75bafe59-6e58-44d9-b80c-e79af9dec6a2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.query }}",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        288,
+        -16
+      ],
+      "id": "19354d19-08f2-420b-a3b9-c6cb8c7f03c5",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+      "typeVersion": 1,
+      "position": [
+        192,
+        192
+      ],
+      "id": "4927e149-d5c6-42b0-b1c9-1d54bfa4b06e",
+      "name": "Azure OpenAI Chat Model",
+      "credentials": {
+        "azureOpenAiApi": {
+          "id": "xdYucyVXATycLcQR",
+          "name": "Azure Open AI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.text }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        736,
+        -16
+      ],
+      "id": "e9c4d82f-89e7-40fb-bca2-b317c52b87fa",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Azure OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "11e340e3-73d5-4165-b806-548bccd80964",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "492b41815a4016fd7ed4d04a86ce73541a088e91a0d78a78160c56042cd1c4d9"
+  },
+  "id": "xr2aBqxdvwKUhnnv",
+  "tags": []
+}
