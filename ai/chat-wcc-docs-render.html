@@ -397,6 +397,9 @@
           aiResponse = data;
         }
 
+        // Convert escaped newlines to actual newlines for proper markdown processing
+        aiResponse = aiResponse.replace(/\\n/g, '\n');
+
         const aiMessage = { type: 'ai', content: aiResponse, timestamp: new Date().toISOString() };
         displayMessage(aiMessage);
         updateStatus('online', '✅ Response from Render cloud');
