@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehan Hanar Portfolio - AI Chat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            position: relative;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Background text content */
+        .background-text {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            text-align: justify;
+            columns: 2;
+            column-gap: 40px;
+            column-rule: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .background-text {
+                columns: 1;
+                font-size: 1em;
+                padding: 20px;
+            }
+        }
+
+        .background-text h2 {
+            color: #333;
+            margin: 30px 0 15px 0;
+            column-span: all;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .background-text p {
+            margin-bottom: 20px;
+            text-indent: 20px;
+        }
+
+        /* Talk to Docs Button */
+        .talk-to-docs-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .talk-to-docs-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .talk-to-docs-btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Chat Widget Container */
+        .chat-widget {
+            position: fixed;
+            z-index: 1001;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive positioning */
+        @media (min-width: 1200px) {
+            /* Big screen - bottom right */
+            .chat-widget {
+                bottom: 30px;
+                right: 30px;
+                width: 400px;
+                height: 600px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            /* Medium screen - bottom half */
+            .chat-widget {
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 50vh;
+                border-radius: 20px 20px 0 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            /* Small screen - full screen */
+            .chat-widget {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+            
+            .talk-to-docs-btn {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 0.9em;
+            }
+        }
+
+        .chat-widget.show {
+            display: flex;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .chat-header-content {
+            flex: 1;
+        }
+
+        .chat-header-title {
+            font-size: 1.1em;
+            margin-bottom: 2px;
+        }
+
+        .chat-header-subtitle {
+            font-size: 0.75em;
+            opacity: 0.9;
+        }
+
+        .close-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            transition: background 0.2s ease;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: #f8f9fa;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            word-wrap: break-word;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .message.user {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+
+        .message.ai {
+            background: white;
+            color: #333;
+            align-self: flex-start;
+            border: 1px solid #e9ecef;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .message .timestamp {
+            font-size: 0.75em;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+
+        .typing-indicator {
+            align-self: flex-start;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 18px;
+            border-bottom-left-radius: 5px;
+            padding: 12px 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .typing-dots span {
+            width: 8px;
+            height: 8px;
+            background: #667eea;
+            border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .chat-input-container {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e9ecef;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            outline: none;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .chat-input:focus {
+            border-color: #667eea;
+        }
+
+        .chat-input:disabled {
+            background: #f8f9fa;
+            cursor: not-allowed;
+        }
+
+        .send-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, opacity 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        .send-button:hover:not(:disabled) {
+            transform: scale(1.05);
+        }
+
+        .send-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .status-bar {
+            padding: 8px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            font-size: 0.8em;
+            color: #666;
+            text-align: center;
+        }
+
+        .status-bar.online {
+            color: #28a745;
+        }
+
+        .status-bar.error {
+            color: #dc3545;
+        }
+
+        .status-bar.loading {
+            color: #007bff;
+        }
+
+        .clear-chat {
+            background: none;
+            border: 1px solid #dc3545;
+            color: #dc3545;
+            padding: 6px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.8em;
+            transition: all 0.3s ease;
+        }
+
+        .clear-chat:hover {
+            background: #dc3545;
+            color: white;
+        }
+
+        .cloud-indicator {
+            background: none;
+            border: 1px solid #28a745;
+            color: #28a745;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            cursor: default;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Scrollbar styling */
+        .chat-messages::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chat-messages::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 10px;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        /* Overlay for mobile */
+        .chat-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .chat-overlay.show {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background content -->
+    <div class="background-text">
+        <h2>The Future of Artificial Intelligence</h2>
+        
+        <p>Artificial Intelligence has become one of the most transformative technologies of our time. From machine learning algorithms that can predict market trends to neural networks capable of understanding human language, AI is reshaping every industry imaginable. The convergence of big data, computational power, and sophisticated algorithms has created unprecedented opportunities for innovation.</p>
+
+        <p>In the realm of software development, AI-powered tools are revolutionizing how we write, test, and deploy code. Intelligent code completion, automated bug detection, and predictive analytics are becoming standard features in modern development environments. These advancements not only increase productivity but also improve code quality and reduce time-to-market for new applications.</p>
+
+        <p>Natural Language Processing has made remarkable strides, enabling computers to understand, interpret, and generate human language with increasing accuracy. Chatbots and virtual assistants powered by advanced NLP models can now handle complex queries, provide personalized recommendations, and even engage in meaningful conversations that feel natural and contextually appropriate.</p>
+
+        <p>The integration of AI into web development has opened new possibilities for creating intelligent, responsive applications. From personalized user experiences to automated content generation, AI is helping developers build more engaging and efficient digital solutions. Machine learning models can analyze user behavior patterns, optimize website performance, and even predict user needs before they arise.</p>
+
+        <p>Cloud computing platforms have democratized access to AI capabilities, allowing developers of all skill levels to integrate sophisticated machine learning models into their applications. Services like automated speech recognition, computer vision, and sentiment analysis are now available through simple API calls, making advanced AI functionality accessible to everyone.</p>
+
+        <p>The ethical implications of AI development continue to be a crucial consideration as these technologies become more prevalent. Ensuring fairness, transparency, and accountability in AI systems is essential for building trust and maintaining the beneficial impact of these powerful tools on society.</p>
+
+        <p>Looking ahead, the future of AI promises even more exciting developments. Quantum computing could exponentially increase the computational capabilities available for AI processing, while edge computing brings AI capabilities directly to IoT devices and mobile applications. The potential for AI to solve complex global challenges in healthcare, climate change, and education remains one of the most compelling aspects of this technological revolution.</p>
+
+        <p>As we continue to explore the boundaries of what's possible with artificial intelligence, the importance of human-AI collaboration becomes increasingly clear. The most successful AI implementations are those that augment human capabilities rather than replace them, creating symbiotic relationships that leverage the unique strengths of both human intelligence and artificial intelligence.</p>
+    </div>
+
+    <!-- Talk to Docs Button -->
+    <button class="talk-to-docs-btn" id="talkToDocsBtn" onclick="openChat()">
+        💬 Talk to Docs
+    </button>
+
+    <!-- Chat Overlay (for mobile) -->
+    <div class="chat-overlay" id="chatOverlay" onclick="closeChat()"></div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-header-content">
+                <div class="chat-header-title">🚀 Rehan AI Assistant</div>
+                <div class="chat-header-subtitle">Powered by n8n on Render</div>
+            </div>
+            <button class="close-btn" onclick="closeChat()" title="Close chat">
+                ✕
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        
+        <div class="chat-input-container">
+            <button class="cloud-indicator" title="Connected to Render cloud">
+                ☁️
+            </button>
+            <button class="clear-chat" onclick="clearChat()" title="Clear chat history">
+                🗑️
+            </button>
+            <input 
+                type="text" 
+                class="chat-input" 
+                id="chatInput" 
+                placeholder="Ask about Rehan's experience, projects, or his unique last name story..."
+                maxlength="500"
+            >
+            <button class="send-button" id="sendButton" onclick="sendMessage()">
+                ➤
+            </button>
+        </div>
+        
+        <div class="status-bar" id="statusBar">
+            Connected to Render cloud • Ready to chat
+        </div>
+    </div>
+</head>
+<body>
+
+    <script>
+        // Configuration - Using Render webhook URL
+        const WEBHOOK_URL = 'https://n8n-jmlp.onrender.com/webhook/rehanhanar7.github.io';
+        const STORAGE_KEY = 'rehan_render_chat_history';
+        
+        // DOM elements
+        const chatWidget = document.getElementById('chatWidget');
+        const chatOverlay = document.getElementById('chatOverlay');
+        const talkToDocsBtn = document.getElementById('talkToDocsBtn');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const sendButton = document.getElementById('sendButton');
+        const statusBar = document.getElementById('statusBar');
+        
+        // State
+        let isLoading = false;
+        let isChatOpen = false;
+        
+        // Initialize
+        window.addEventListener('load', () => {
+            // Don't load chat history automatically - wait for user to open chat
+        });
+        
+        // Open chat widget
+        function openChat() {
+            isChatOpen = true;
+            talkToDocsBtn.style.display = 'none';
+            chatWidget.classList.add('show');
+            
+            // Show overlay on mobile
+            if (window.innerWidth <= 767) {
+                chatOverlay.classList.add('show');
+            }
+            
+            // Load chat history and initialize if first time
+            loadChatHistory();
+            if (chatMessages.children.length === 0) {
+                addWelcomeMessage();
+            }
+            
+            // Focus input after animation
+            setTimeout(() => {
+                chatInput.focus();
+            }, 300);
+        }
+        
+        // Close chat widget
+        function closeChat() {
+            isChatOpen = false;
+            chatWidget.classList.remove('show');
+            chatOverlay.classList.remove('show');
+            
+            // Clear chat session and show button again
+            clearChatSession();
+            
+            setTimeout(() => {
+                talkToDocsBtn.style.display = 'flex';
+            }, 300);
+        }
+        
+        // Clear chat session (called when closing)
+        function clearChatSession() {
+            chatMessages.innerHTML = '';
+            sessionStorage.removeItem(STORAGE_KEY);
+            isLoading = false;
+            chatInput.disabled = false;
+            sendButton.disabled = false;
+            sendButton.innerHTML = '➤';
+            statusBar.className = 'status-bar';
+            statusBar.textContent = 'Connected to Render cloud • Ready to chat';
+        }
+        
+        // Event listeners
+        document.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && isChatOpen && !isLoading && document.activeElement === chatInput) {
+                sendMessage();
+            }
+        });
+        
+        // Close chat with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isChatOpen) {
+                closeChat();
+            }
+        });
+        
+        // Add welcome message
+        function addWelcomeMessage() {
+            const welcomeMessage = {
+                type: 'ai',
+                content: `🚀 Welcome to Rehan Hanar's AI Assistant!
+
+I'm connected to the cloud-hosted n8n AI agent on Render and have access to comprehensive information about Rehan. I can help you discover:
+
+**🔍 Professional Experience:**
+• His roles at CGI, GE Digital, and GE Aerospace
+• Technical Project Management experience
+• Mobile app development and cyber security work
+
+**💼 Key Projects:**
+• Pratigya, MTO, VIA RAIL (Canada Railway Booking)
+• Flight Phase Analyzer for engine data
+• BEASSTT & RM cyber security tools
+• International projects (Egypt Post, USLBM, etc.)
+
+**👨‍👩‍👧‍👦 Personal Story:**
+• The fascinating story behind his last name "HANAR"
+• Family background and origins
+• Location and personal details
+
+**⚡ Live Data:**
+This chat is powered by real-time website content fetching with HTML optimization for efficient responses.
+
+What would you like to know about Rehan?`,
+                timestamp: new Date().toISOString()
+            };
+            
+            displayMessage(welcomeMessage);
+            saveChatHistory();
+        }
+        
+        // Send message function
+        async function sendMessage() {
+            const message = chatInput.value.trim();
+            if (!message || isLoading) return;
+            
+            // Disable input
+            setLoading(true);
+            
+            // Add user message
+            const userMessage = {
+                type: 'user',
+                content: message,
+                timestamp: new Date().toISOString()
+            };
+            
+            displayMessage(userMessage);
+            chatInput.value = '';
+            
+            // Show typing indicator
+            showTypingIndicator();
+            
+            try {
+                // Make API request with longer timeout for cloud service
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 45000); // 45 second timeout
+                
+                const response = await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: message,
+                        chatInput: message
+                    }),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                // Remove typing indicator
+                hideTypingIndicator();
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const data = await response.text();
+                let aiResponse;
+                
+                try {
+                    // Try to parse JSON response
+                    const jsonData = JSON.parse(data);
+                    aiResponse = jsonData.output || jsonData.response || jsonData.message || JSON.stringify(jsonData, null, 2);
+                } catch (e) {
+                    // Use raw text if not JSON
+                    aiResponse = data;
+                }
+                
+                // Add AI response
+                const aiMessage = {
+                    type: 'ai',
+                    content: aiResponse,
+                    timestamp: new Date().toISOString()
+                };
+                
+                displayMessage(aiMessage);
+                updateStatus('online', '✅ Response from Render cloud');
+                
+            } catch (error) {
+                console.error('Error:', error);
+                hideTypingIndicator();
+                
+                let errorContent = `❌ Sorry, I encountered an error: ${error.message}`;
+                
+                if (error.name === 'AbortError') {
+                    errorContent = `⏰ Request timed out after 45 seconds. The cloud service may be experiencing delays.`;
+                }
+                
+                const errorMessage = {
+                    type: 'ai',
+                    content: `${errorContent}
+
+🔧 **Troubleshooting tips:**
+• Check your internet connection
+• Verify the Render service is running: n8n-jmlp.onrender.com
+• Cloud services may take longer to respond
+• Try again in a few moments
+• The n8n workflow might need to be activated`,
+                    timestamp: new Date().toISOString()
+                };
+                
+                displayMessage(errorMessage);
+                updateStatus('error', `❌ Error: ${error.message}`);
+            }
+            
+            // Re-enable input
+            setLoading(false);
+            saveChatHistory();
+        }
+        
+        // Display message in chat
+        function displayMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${message.type}`;
+            
+            const timestamp = new Date(message.timestamp).toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            // Format content with basic markdown support
+            let formattedContent = message.content
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')  // Bold
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')               // Italic
+                .replace(/^• (.*$)/gim, '&bull; $1')               // Bullet points
+                .replace(/\n/g, '<br>');                           // Line breaks
+            
+            messageDiv.innerHTML = `
+                <div>${formattedContent}</div>
+                <div class="timestamp">${timestamp}</div>
+            `;
+            
+            chatMessages.appendChild(messageDiv);
+            scrollToBottom();
+        }
+        
+        // Show typing indicator
+        function showTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'typing-indicator';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = `
+                <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            `;
+            
+            chatMessages.appendChild(typingDiv);
+            scrollToBottom();
+        }
+        
+        // Hide typing indicator
+        function hideTypingIndicator() {
+            const typingIndicator = document.getElementById('typingIndicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+        
+        // Set loading state
+        function setLoading(loading) {
+            isLoading = loading;
+            chatInput.disabled = loading;
+            sendButton.disabled = loading;
+            
+            if (loading) {
+                updateStatus('loading', '☁️ Connecting to Render cloud...');
+                sendButton.innerHTML = '⏳';
+            } else {
+                sendButton.innerHTML = '➤';
+                if (isChatOpen) {
+                    chatInput.focus();
+                }
+            }
+        }
+        
+        // Update status bar
+        function updateStatus(type, message) {
+            statusBar.className = `status-bar ${type}`;
+            statusBar.textContent = message;
+            
+            // Reset to default after 5 seconds
+            if (type !== 'loading') {
+                setTimeout(() => {
+                    statusBar.className = 'status-bar';
+                    statusBar.textContent = 'Connected to Render cloud • Ready to chat';
+                }, 5000);
+            }
+        }
+        
+        // Scroll to bottom
+        function scrollToBottom() {
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        // Save chat history to session storage
+        function saveChatHistory() {
+            const messages = Array.from(chatMessages.children)
+                .filter(msg => !msg.id || msg.id !== 'typingIndicator')
+                .map(msg => {
+                    const isUser = msg.classList.contains('user');
+                    const content = msg.querySelector('div:first-child').innerHTML
+                        .replace(/<br>/g, '\n')
+                        .replace(/<strong>(.*?)<\/strong>/g, '**$1**')
+                        .replace(/<em>(.*?)<\/em>/g, '*$1*')
+                        .replace(/&bull;/g, '•');
+                    
+                    return {
+                        type: isUser ? 'user' : 'ai',
+                        content: content,
+                        timestamp: new Date().toISOString()
+                    };
+                });
+            
+            sessionStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
+        }
+        
+        // Load chat history from session storage
+        function loadChatHistory() {
+            const savedHistory = sessionStorage.getItem(STORAGE_KEY);
+            if (savedHistory) {
+                try {
+                    const messages = JSON.parse(savedHistory);
+                    messages.forEach(message => displayMessage(message));
+                } catch (e) {
+                    console.error('Error loading chat history:', e);
+                }
+            }
+        }
+        
+        // Clear chat history (called by clear button)
+        function clearChat() {
+            if (confirm('Are you sure you want to clear the chat history?')) {
+                chatMessages.innerHTML = '';
+                sessionStorage.removeItem(STORAGE_KEY);
+                addWelcomeMessage();
+                saveChatHistory();
+                updateStatus('online', '🗑️ Chat history cleared');
+            }
+        }
+        
+        // Handle window resize for responsive behavior
+        window.addEventListener('resize', () => {
+            if (isChatOpen) {
+                if (window.innerWidth <= 767) {
+                    chatOverlay.classList.add('show');
+                } else {
+                    chatOverlay.classList.remove('show');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
