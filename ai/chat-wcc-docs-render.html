@@ -99,7 +99,7 @@
     .expand-btn {
       position: absolute;
       top: 50%;
-      right: 60px;
+      right: 100px;
       transform: translateY(-50%);
       background: rgba(255, 255, 255, 0.2);
       border: none;
@@ -120,6 +120,36 @@
     }
 
     .expand-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: white;
+      transition: transform 0.3s ease;
+    }
+
+    .minimize-btn {
+      position: absolute;
+      top: 50%;
+      right: 60px;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 8px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .minimize-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .minimize-btn svg {
       width: 16px;
       height: 16px;
       fill: white;
@@ -313,6 +343,11 @@
           <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
         </svg>
       </button>
+      <button class="minimize-btn" id="minimizeBtn" onclick="minimizeChat()" title="Minimize chat">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 13H5v-2h14v2z"/>
+        </svg>
+      </button>
       <button class="close-btn" onclick="closeChat()" title="Close chat">✕</button>
     </div>
 
@@ -382,8 +417,11 @@
       chatWidget.classList.add('show');
       if (window.innerWidth <= 767) chatOverlay.classList.add('show');
 
-      loadChatHistory();
-      if (chatMessages.children.length === 0) addWelcomeMessage();
+      // Only load chat history if messages container is empty
+      if (chatMessages.children.length === 0) {
+        loadChatHistory();
+        if (chatMessages.children.length === 0) addWelcomeMessage();
+      }
       setTimeout(() => chatInput.focus(), 300);
     }
 
@@ -445,6 +483,26 @@
         chatWidget.classList.add('fullscreen');
         expandBtn.title = 'Exit fullscreen';
       }
+    }
+
+    // Minimize chat functionality
+    function minimizeChat() {
+      const chatWidget = document.getElementById('chatWidget');
+      const chatOverlay = document.getElementById('chatOverlay');
+      const talkToDocsBtn = document.getElementById('talkToDocsBtn');
+      
+      // Hide the chat widget and overlay
+      chatWidget.classList.remove('show');
+      chatOverlay.classList.remove('show');
+      
+      // Make sure the Talk to Docs button is visible
+      talkToDocsBtn.style.display = 'block';
+      
+      // Update the global state but keep chat history
+      isChatOpen = false;
+      
+      // Don't clear chat history - it will be preserved in sessionStorage
+      // Chat history will be restored when the user opens chat again
     }
 
     // Welcome message
