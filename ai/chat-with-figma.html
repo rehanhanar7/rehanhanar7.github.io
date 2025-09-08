@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figma Assistant - Chat</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      min-height: 100vh;
+      position: relative;
+      padding: 40px 20px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Simple background */
+    .background-simple {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      color: #333;
+    }
+    .background-simple h2 { font-size: 2.2em; margin-bottom: 10px; }
+    .background-simple p { color: #666; }
+
+    /* Talk to Figma Button */
+    .talk-to-figma-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 25px;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .talk-to-figma-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4); }
+    .talk-to-figma-btn:active { transform: translateY(-1px); }
+
+    /* Chat Widget Container */
+    .chat-widget {
+      position: fixed;
+      z-index: 1001;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    /* Responsive positioning */
+    @media (min-width: 1200px) {
+      /* Big screen - bottom right */
+      .chat-widget { bottom: 30px; right: 30px; width: 400px; height: 600px; }
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      /* Medium screen - bottom half */
+      .chat-widget { bottom: 0; left: 0; right: 0; width: 100%; height: 50vh; border-radius: 20px 20px 0 0; }
+    }
+    @media (max-width: 767px) {
+      /* Small screen - full screen */
+      .chat-widget { top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; border-radius: 0; }
+      .talk-to-figma-btn { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.9em; }
+    }
+
+    .chat-widget.show { display: flex; animation: slideUp 0.3s ease-out; }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    .chat-header {
+      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.1em;
+      font-weight: 600;
+      position: relative;
+    }
+    .chat-header-content { flex: 1; }
+    .chat-header-title { font-size: 1.1em; margin-bottom: 2px; }
+    .chat-header-subtitle { font-size: 0.75em; opacity: 0.9; }
+
+    .expand-btn {
+      position: absolute;
+      top: 50%;
+      right: 100px;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 8px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .expand-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .expand-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: white;
+      transition: transform 0.3s ease;
+    }
+
+    .minimize-btn {
+      position: absolute;
+      top: 50%;
+      right: 60px;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 8px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .minimize-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .minimize-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: white;
+      transition: transform 0.3s ease;
+    }
+
+    .close-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2em; transition: background 0.2s ease;
+    }
+    .close-btn:hover { background: rgba(255, 255, 255, 0.3); }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background: #f8f9fa;
+    }
+    .message { max-width: 80%; padding: 12px 16px; border-radius: 18px; word-wrap: break-word; animation: fadeIn 0.3s ease-in; }
+    .message.user { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); color: white; align-self: flex-end; border-bottom-right-radius: 5px; }
+    .message.ai { background: white; color: #333; align-self: flex-start; border: 1px solid #e9ecef; border-bottom-left-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .message .timestamp { font-size: 0.75em; opacity: 0.7; margin-top: 5px; }
+
+    /* Figma data display */
+    .figma-data-container {
+      margin: 10px 0;
+      padding: 15px;
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.9em;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .figma-preview {
+      margin: 10px 0;
+      padding: 15px;
+      background: #fff;
+      border: 2px solid #ff6b6b;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .figma-preview img {
+      max-width: 100%;
+      max-height: 200px;
+      border-radius: 4px;
+    }
+
+    /* Markdown/code styling */
+    .code-block-container {
+      position: relative;
+      margin: 8px 0;
+    }
+    .message pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 12px 14px 12px 14px;
+      border-radius: 10px;
+      overflow: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.9em;
+      line-height: 1.45;
+      border: 1px solid #0b1220;
+      margin: 0;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #e2e8f0;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.75em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    .copy-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    .copy-btn.copied {
+      background: #10b981;
+      border-color: #10b981;
+      color: white;
+    }
+    .message code {
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.95em;
+    }
+    .message pre code { background: transparent; color: inherit; padding: 0; }
+
+    .typing-indicator { align-self: flex-start; background: white; border: 1px solid #e9ecef; border-radius: 18px; border-bottom-left-radius: 5px; padding: 12px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .typing-dots { display: flex; gap: 4px; }
+    .typing-dots span { width: 8px; height: 8px; background: #ff6b6b; border-radius: 50%; animation: typing 1.4s infinite ease-in-out; }
+    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typing { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-10px); } }
+
+    .chat-input-container {
+      padding: 20px; background: white; border-top: 1px solid #e9ecef; display: flex; flex-direction: column; gap: 15px;
+    }
+    .figma-config-container {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .config-row {
+      display: flex; gap: 10px; align-items: center;
+    }
+    .main-input-container {
+      display: flex; gap: 10px; align-items: center;
+    }
+    .chat-input { flex: 1; padding: 12px 16px; border: 2px solid #e9ecef; border-radius: 25px; outline: none; font-size: 1em; transition: border-color 0.3s ease; }
+    .chat-input:focus { border-color: #ff6b6b; }
+    .chat-input:disabled { background: #f8f9fa; cursor: not-allowed; }
+    .config-input { 
+      flex: 1; padding: 8px 12px; border: 2px solid #e9ecef; border-radius: 20px; outline: none; font-size: 0.9em; 
+      transition: border-color 0.3s ease; background: #f8f9fa;
+    }
+    .config-input:focus { border-color: #ff6b6b; }
+    .config-label { font-size: 0.85em; color: #666; font-weight: 500; min-width: 80px; }
+    .toggle-btn { 
+      background: none; border: none; color: #666; cursor: pointer; font-size: 0.85em; 
+      padding: 4px 8px; border-radius: 12px; transition: background 0.2s ease;
+    }
+    .toggle-btn:hover { background: #f0f0f0; }
+
+    .send-button {
+      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+      color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, opacity 0.3s ease; font-size: 1.1em;
+    }
+    .send-button:hover:not(:disabled) { transform: scale(1.05); }
+    .send-button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .status-bar { padding: 8px 20px; background: #f8f9fa; border-top: 1px solid #e9ecef; font-size: 0.8em; color: #666; text-align: center; }
+    .status-bar.online { color: #28a745; }
+    .status-bar.error { color: #dc3545; }
+    .status-bar.loading { color: #007bff; }
+
+    .clear-chat { background: none; border: 1px solid #dc3545; color: #dc3545; padding: 6px 12px; border-radius: 15px; cursor: pointer; font-size: 0.8em; transition: all 0.3s ease; }
+    .clear-chat:hover { background: #dc3545; color: white; }
+
+    .figma-indicator { background: none; border: 1px solid #ff6b6b; color: #ff6b6b; padding: 6px 12px; border-radius: 15px; font-size: 0.8em; cursor: default; }
+
+    /* Fullscreen styles */
+    .chat-widget.fullscreen {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: none !important;
+      max-height: none !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      z-index: 9999 !important;
+      box-shadow: none !important;
+    }
+
+    .chat-widget.fullscreen .chat-messages {
+      height: calc(100vh - 250px) !important;
+    }
+
+    .chat-widget.fullscreen .expand-btn svg {
+      transform: rotate(180deg);
+    }
+
+    /* Overlay for mobile */
+    .chat-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; display: none; }
+    @media (max-width: 767px) { .chat-overlay.show { display: block; } }
+  </style>
+</head>
+<body>
+  <!-- Background content -->
+  <div class="background-simple">
+    <h2>Welcome to Figma Assistant</h2>
+    <p>Use the button below to chat with the Figma API and fetch component details, images, and more.</p>
+  </div>
+
+  <!-- Talk to Figma Button -->
+  <button class="talk-to-figma-btn" id="talkToFigmaBtn" onclick="openChat()">🎨 Talk to Figma</button>
+
+  <!-- Chat Overlay (for mobile) -->
+  <div class="chat-overlay" id="chatOverlay" onclick="closeChat()"></div>
+
+  <!-- Chat Widget -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <div class="chat-header-content">
+        <div class="chat-header-title">Figma Assistant</div>
+        <div class="chat-header-subtitle">Design system • Components • Assets</div>
+      </div>
+      <button class="expand-btn" id="expandBtn" onclick="toggleFullscreen()" title="Expand to fullscreen">
+        <svg viewBox="0 0 24 24">
+          <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+        </svg>
+      </button>
+      <button class="minimize-btn" id="minimizeBtn" onclick="minimizeChat()" title="Minimize chat">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 13H5v-2h14v2z"/>
+        </svg>
+      </button>
+      <button class="close-btn" onclick="closeChat()" title="Close chat">✕</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages"></div>
+
+    <div class="chat-input-container">
+      <!-- Figma configuration -->
+      <div class="figma-config-container">
+        <div class="config-row">
+          <span class="config-label">🔑 Token:</span>
+          <input type="password" class="config-input" id="accessTokenInput" placeholder="Enter Figma access token..." />
+          <button class="toggle-btn" onclick="toggleTokenVisibility()" title="Show/Hide token">👁️</button>
+          <button class="toggle-btn" onclick="clearSavedToken()" title="Clear saved token">🗑️</button>
+        </div>
+        
+        <div class="config-row">
+          <span class="config-label">📁 File ID:</span>
+          <input type="text" class="config-input" id="fileIdInput" placeholder="Figma file ID (e.g., TWu2WwFOgD1SsQkSipwFqF)" />
+        </div>
+        
+        <div class="config-row">
+          <span class="config-label">🎯 Node ID:</span>
+          <input type="text" class="config-input" id="nodeIdInput" placeholder="Node ID (e.g., 2645-382)" />
+        </div>
+      </div>
+      
+      <!-- Main input controls -->
+      <div class="main-input-container">
+        <button class="figma-indicator" title="Figma API Integration">🎨</button>
+        <button class="clear-chat" onclick="clearChat()" title="Clear chat history">🗑️</button>
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask to fetch component details, get images, or analyze designs..." maxlength="500" />
+        <button class="send-button" id="sendButton" onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+
+    <div class="status-bar" id="statusBar">Ready to connect to Figma API</div>
+  </div>
+
+  <script>
+    // Figma API Configuration
+    const FIGMA_API_BASE = 'https://api.figma.com/v1';
+    const STORAGE_KEY = 'figma_chat_history';
+
+    // DOM elements
+    const chatWidget = document.getElementById('chatWidget');
+    const chatOverlay = document.getElementById('chatOverlay');
+    const talkToFigmaBtn = document.getElementById('talkToFigmaBtn');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const accessTokenInput = document.getElementById('accessTokenInput');
+    const fileIdInput = document.getElementById('fileIdInput');
+    const nodeIdInput = document.getElementById('nodeIdInput');
+    const sendButton = document.getElementById('sendButton');
+    const statusBar = document.getElementById('statusBar');
+
+    // State
+    let isLoading = false;
+    let isChatOpen = false;
+
+    // Initialize with default values and load saved token
+    window.addEventListener('load', () => {
+      fileIdInput.value = 'TWu2WwFOgD1SsQkSipwFqF';
+      nodeIdInput.value = '2645-382';
+      
+      // Load saved access token from session storage
+      const savedToken = sessionStorage.getItem('figma_access_token');
+      if (savedToken) {
+        accessTokenInput.value = savedToken;
+      }
+      
+      // Save access token when user types in the field
+      accessTokenInput.addEventListener('input', (e) => {
+        const token = e.target.value.trim();
+        if (token) {
+          saveAccessToken(token);
+        }
+      });
+    });
+
+    // Open chat widget
+    function openChat() {
+      isChatOpen = true;
+      talkToFigmaBtn.style.display = 'none';
+      chatWidget.classList.add('show');
+      if (window.innerWidth <= 767) chatOverlay.classList.add('show');
+
+      // Only load chat history if messages container is empty
+      if (chatMessages.children.length === 0) {
+        loadChatHistory();
+        if (chatMessages.children.length === 0) addWelcomeMessage();
+      }
+      setTimeout(() => chatInput.focus(), 300);
+    }
+
+    // Close chat widget
+    function closeChat() {
+      isChatOpen = false;
+      chatWidget.classList.remove('show');
+      chatOverlay.classList.remove('show');
+      clearChatSession();
+      setTimeout(() => (talkToFigmaBtn.style.display = 'flex'), 300);
+    }
+
+    // Clear chat session
+    function clearChatSession() {
+      chatMessages.innerHTML = '';
+      sessionStorage.removeItem(STORAGE_KEY);
+      // Don't clear the access token when just closing chat
+      // sessionStorage.removeItem('figma_access_token');
+      isLoading = false;
+      chatInput.disabled = false;
+      sendButton.disabled = false;
+      sendButton.innerHTML = '➤';
+      statusBar.className = 'status-bar';
+      statusBar.textContent = 'Ready to connect to Figma API';
+    }
+
+    // Keyboard events
+    document.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && isChatOpen && !isLoading && 
+          (document.activeElement === chatInput || 
+           document.activeElement === accessTokenInput || 
+           document.activeElement === fileIdInput || 
+           document.activeElement === nodeIdInput)) {
+        sendMessage();
+      }
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && isChatOpen) closeChat(); });
+
+    // Token toggle functionality
+    function toggleTokenVisibility() {
+      const tokenInput = document.getElementById('accessTokenInput');
+      const toggleButton = document.querySelector('.toggle-btn');
+      
+      if (tokenInput.type === 'password') {
+        tokenInput.type = 'text';
+        toggleButton.textContent = '🙈';
+        toggleButton.title = 'Hide token';
+      } else {
+        tokenInput.type = 'password';
+        toggleButton.textContent = '👁️';
+        toggleButton.title = 'Show token';
+      }
+    }
+
+    // Fullscreen toggle functionality
+    function toggleFullscreen() {
+      const chatWidget = document.getElementById('chatWidget');
+      const expandBtn = document.getElementById('expandBtn');
+      
+      if (chatWidget.classList.contains('fullscreen')) {
+        chatWidget.classList.remove('fullscreen');
+        expandBtn.title = 'Expand to fullscreen';
+      } else {
+        chatWidget.classList.add('fullscreen');
+        expandBtn.title = 'Exit fullscreen';
+      }
+    }
+
+    // Minimize chat functionality
+    function minimizeChat() {
+      const chatWidget = document.getElementById('chatWidget');
+      const chatOverlay = document.getElementById('chatOverlay');
+      const talkToFigmaBtn = document.getElementById('talkToFigmaBtn');
+      
+      chatWidget.classList.remove('show');
+      chatOverlay.classList.remove('show');
+      talkToFigmaBtn.style.display = 'block';
+      isChatOpen = false;
+    }
+
+    // Welcome message
+    function addWelcomeMessage() {
+      const welcomeMessage = {
+        type: 'ai',
+        content: `🎨 **Welcome to Figma Assistant!**
+
+I can help you fetch and analyze Figma designs. Here's what I can do:
+
+• **Fetch component details** - Get information about Figma components
+• **Generate images** - Export design assets from Figma
+• **Analyze designs** - Parse component properties and structure
+• **Auto-extract from URLs** - Paste a Figma URL and I'll auto-fill the file/node IDs!
+
+**Configuration needed:**
+• Access Token: Your Figma personal access token
+• File ID: The ID of your Figma file
+• Node ID: Specific component/frame to analyze
+
+**Example commands:**
+• "Fetch details for this component"
+• "Get the image for this node"
+• "Show me the component properties"
+• "Analyze the design structure"
+
+**🔗 URL Auto-extraction:**
+Just paste a Figma URL like:
+\`https://www.figma.com/design/OleBqQB5DqvfhMhmxW1MEL/Design-Name?node-id=26123-264456\`
+
+I'll automatically extract:
+• **File ID:** OleBqQB5DqvfhMhmxW1MEL
+• **Node ID:** 26123-264456
+
+Make sure to configure your Figma access token above, then ask me anything!`,
+        timestamp: new Date().toISOString(),
+      };
+      displayMessage(welcomeMessage);
+      saveChatHistory();
+    }
+
+    // Save access token to session storage
+    function saveAccessToken(token) {
+      if (token && token.trim()) {
+        sessionStorage.setItem('figma_access_token', token.trim());
+      }
+    }
+
+    // Send message and process Figma requests
+    async function sendMessage() {
+      const message = chatInput.value.trim();
+      const accessToken = accessTokenInput.value.trim();
+      let fileId = fileIdInput.value.trim();
+      let nodeId = nodeIdInput.value.trim();
+      
+      if (!message || isLoading) return;
+      
+      // Save access token to session storage if it's provided
+      if (accessToken) {
+        saveAccessToken(accessToken);
+      }
+      
+      // Check if the message contains a Figma URL and extract file ID and node ID
+      const figmaUrlPattern = /https:\/\/(?:www\.)?figma\.com\/(?:file|design)\/([a-zA-Z0-9]+)\/[^?\s]*(?:\?[^#\s]*)?(?:#[^\s]*)?(?:.*[?&]node-id=([0-9-:]+))?/;
+      const figmaUrlMatch = message.match(figmaUrlPattern);
+      
+      if (figmaUrlMatch) {
+        const extractedFileId = figmaUrlMatch[1];
+        let extractedNodeId = figmaUrlMatch[2];
+        
+        // Also check for node-id in different URL formats
+        if (!extractedNodeId) {
+          const nodeIdMatch = message.match(/node-id=([0-9-:]+)/);
+          if (nodeIdMatch) {
+            extractedNodeId = nodeIdMatch[1];
+          }
+        }
+        
+        if (extractedFileId) {
+          fileId = extractedFileId;
+          fileIdInput.value = extractedFileId;
+        }
+        
+        if (extractedNodeId) {
+          nodeId = extractedNodeId;
+          nodeIdInput.value = extractedNodeId;
+        }
+        
+        // Show notification about auto-extraction
+        updateStatus('online', `🔗 URL detected! Auto-filled - File: ${extractedFileId}${extractedNodeId ? `, Node: ${extractedNodeId}` : ''}`);
+      }
+      
+      setLoading(true);
+      const userMessage = { type: 'user', content: message, timestamp: new Date().toISOString() };
+      displayMessage(userMessage);
+      chatInput.value = '';
+      showTypingIndicator();
+
+      try {
+        // Process the message and determine what Figma API call to make
+        const response = await processFigmaRequest(message, accessToken, fileId, nodeId);
+        
+        hideTypingIndicator();
+        const aiMessage = { type: 'ai', content: response, timestamp: new Date().toISOString() };
+        displayMessage(aiMessage);
+        updateStatus('online', '✅ Figma API response received');
+      } catch (error) {
+        console.error('Error:', error);
+        hideTypingIndicator();
+        const errorContent = `❌ **Error:** ${error.message}
+
+Please check your configuration:
+• Valid Figma access token
+• Correct file ID
+• Valid node ID (if specified)`;
+        const errorMessage = { type: 'ai', content: errorContent, timestamp: new Date().toISOString() };
+        displayMessage(errorMessage);
+        updateStatus('error', `❌ Error: ${error.message}`);
+      }
+
+      setLoading(false);
+      saveChatHistory();
+    }
+
+    // Process Figma requests based on user message
+    async function processFigmaRequest(message, accessToken, fileId, nodeId) {
+      if (!accessToken) {
+        throw new Error('Figma access token is required');
+      }
+      
+      if (!fileId) {
+        throw new Error('Figma file ID is required');
+      }
+
+      const lowerMessage = message.toLowerCase();
+      
+      // Determine the type of request
+      if (lowerMessage.includes('image') || lowerMessage.includes('export') || lowerMessage.includes('render')) {
+        return await getFigmaImage(accessToken, fileId, nodeId);
+      } else if (lowerMessage.includes('detail') || lowerMessage.includes('component') || lowerMessage.includes('fetch')) {
+        return await getFigmaDetails(accessToken, fileId, nodeId);
+      } else if (lowerMessage.includes('file') || lowerMessage.includes('overview')) {
+        return await getFigmaFileInfo(accessToken, fileId);
+      } else {
+        // Default to fetching details
+        return await getFigmaDetails(accessToken, fileId, nodeId);
+      }
+    }
+
+    // Fetch Figma component details
+    async function getFigmaDetails(accessToken, fileId, nodeId) {
+      // Convert nodeId format from "2645-382" to "2645:382" if needed
+      const normalizedNodeId = nodeId ? nodeId.replace(/-/g, ':') : nodeId;
+      
+      const url = normalizedNodeId 
+        ? `${FIGMA_API_BASE}/files/${fileId}/nodes?ids=${normalizedNodeId}`
+        : `${FIGMA_API_BASE}/files/${fileId}`;
+      
+      const response = await fetch(url, {
+        headers: {
+          'X-Figma-Token': accessToken
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Figma API error: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      
+      let content = `🎯 **Figma Component Details**\n\n`;
+      
+      if (normalizedNodeId && data.nodes) {
+        const node = data.nodes[normalizedNodeId];
+        if (node && node.document) {
+          content += `**Node:** ${node.document.name}\n`;
+          content += `**Type:** ${node.document.type}\n`;
+          
+          if (node.document.absoluteBoundingBox) {
+            const bbox = node.document.absoluteBoundingBox;
+            content += `**Size:** ${bbox.width} × ${bbox.height}px\n`;
+          }
+          
+          content += `\n**Raw Data:**\n`;
+          content += `\`\`\`json\n${JSON.stringify(node, null, 2)}\`\`\``;
+        } else {
+          content += `❌ Node "${normalizedNodeId}" not found in the file.`;
+        }
+      } else {
+        content += `**File:** ${data.name}\n`;
+        content += `**Last Modified:** ${new Date(data.lastModified).toLocaleString()}\n`;
+        content += `**Version:** ${data.version}\n\n`;
+        content += `**Document Structure:**\n`;
+        
+        if (data.document && data.document.children) {
+          data.document.children.forEach(page => {
+            content += `• **${page.name}** (${page.type})\n`;
+          });
+        }
+      }
+      
+      return content;
+    }
+
+    // Fetch Figma image
+    async function getFigmaImage(accessToken, fileId, nodeId) {
+      if (!nodeId) {
+        throw new Error('Node ID is required to export images');
+      }
+
+      // Convert nodeId format from "2645-382" to "2645:382" if needed
+      const normalizedNodeId = nodeId.replace(/-/g, ':');
+
+      // First get the image URL
+      const imageResponse = await fetch(`${FIGMA_API_BASE}/images/${fileId}?ids=${normalizedNodeId}&format=png&scale=2`, {
+        headers: {
+          'X-Figma-Token': accessToken
+        }
+      });
+
+      if (!imageResponse.ok) {
+        throw new Error(`Figma Images API error: ${imageResponse.status} ${imageResponse.statusText}`);
+      }
+
+      const imageData = await imageResponse.json();
+      
+      if (imageData.images && imageData.images[normalizedNodeId]) {
+        const imageUrl = imageData.images[normalizedNodeId];
+        
+        return `🖼️ **Figma Component Image**
+
+**Node ID:** ${normalizedNodeId}
+**Format:** PNG (2x scale)
+
+<div class="figma-preview">
+  <img src="${imageUrl}" alt="Figma Component" />
+</div>
+
+**Image URL:** [${imageUrl}](${imageUrl})
+
+*Note: This image URL is temporary and will expire.*`;
+      } else {
+        throw new Error('Could not generate image for the specified node');
+      }
+    }
+
+    // Fetch Figma file info
+    async function getFigmaFileInfo(accessToken, fileId) {
+      const response = await fetch(`${FIGMA_API_BASE}/files/${fileId}`, {
+        headers: {
+          'X-Figma-Token': accessToken
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Figma API error: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      
+      let content = `📁 **Figma File Overview**\n\n`;
+      content += `**Name:** ${data.name}\n`;
+      content += `**Last Modified:** ${new Date(data.lastModified).toLocaleString()}\n`;
+      content += `**Version:** ${data.version}\n`;
+      content += `**Editor Type:** ${data.editorType}\n\n`;
+      
+      content += `**Pages:**\n`;
+      if (data.document && data.document.children) {
+        data.document.children.forEach(page => {
+          content += `• **${page.name}** (${page.type})\n`;
+          if (page.children && page.children.length > 0) {
+            content += `  - ${page.children.length} child elements\n`;
+          }
+        });
+      }
+      
+      return content;
+    }
+
+    // Display message with Figma-specific content handling
+    function displayMessage(message) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${message.type}`;
+      messageDiv.dataset.raw = message.content || '';
+      messageDiv.dataset.ts = message.timestamp || new Date().toISOString();
+      const timestamp = new Date(message.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const html = renderMarkdownToHtml(message.content || '');
+      messageDiv.innerHTML = `<div>${html}</div><div class="timestamp">${timestamp}</div>`;
+      chatMessages.appendChild(messageDiv);
+      scrollToBottom();
+    }
+
+    function escapeHtml(str) {
+      return (str || '').replace(/[&<>"']/g, (ch) => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[ch]));
+    }
+
+    // Enhanced Markdown renderer with Figma preview support
+    function renderMarkdownToHtml(text) {
+      if (!text) return '';
+      let idx = 0;
+      const blocks = [];
+      let working = text.replace(/\r\n/g, '\n');
+
+      // Handle Figma preview divs (don't escape these)
+      working = working.replace(/<div class="figma-preview">([\s\S]*?)<\/div>/g, (m, content) => {
+        const id = `__FIGMAPREVIEW_${idx++}__`;
+        blocks.push({ id, html: `<div class="figma-preview">${content}</div>` });
+        return id;
+      });
+
+      // Extract fenced code blocks and replace with placeholders
+      working = working.replace(/```([\w-]+)?\n([\s\S]*?)```/g, (m, lang, code) => {
+        const id = `__CODEBLOCK_${idx++}__`;
+        const copyId = `copy-${Date.now()}-${idx}`;
+        const codeContent = escapeHtml(code);
+        const html = `<div class="code-block-container">
+          <button class="copy-btn" onclick="copyCodeToClipboard('${copyId}', this)">Copy</button>
+          <pre><code id="${copyId}">${codeContent}</code></pre>
+        </div>`;
+        blocks.push({ id, html });
+        return id;
+      });
+
+      // Escape remaining text to avoid HTML injection
+      working = escapeHtml(working);
+
+      // Inline code
+      working = working.replace(/`([^`]+)`/g, (m, code) => `<code>${code}</code>`);
+
+      // Bold/italic
+      working = working
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+      // Links
+      working = working.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+      // Bullets
+      working = working.replace(/^• (.*)$/gim, '&bull; $1');
+
+      // Newlines
+      working = working.replace(/\n/g, '<br>');
+
+      // Restore blocks
+      for (const ph of blocks) {
+        working = working.replace(ph.id, ph.html);
+      }
+
+      return working;
+    }
+
+    // Typing indicator
+    function showTypingIndicator() {
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'typing-indicator';
+      typingDiv.id = 'typingIndicator';
+      typingDiv.innerHTML = `<div class="typing-dots"><span></span><span></span><span></span></div>`;
+      chatMessages.appendChild(typingDiv);
+      scrollToBottom();
+    }
+    function hideTypingIndicator() { const el = document.getElementById('typingIndicator'); if (el) el.remove(); }
+
+    // Loading state
+    function setLoading(loading) {
+      isLoading = loading;
+      chatInput.disabled = loading;
+      accessTokenInput.disabled = loading;
+      fileIdInput.disabled = loading;
+      nodeIdInput.disabled = loading;
+      sendButton.disabled = loading;
+      if (loading) { 
+        updateStatus('loading', '🎨 Connecting to Figma API...'); 
+        sendButton.innerHTML = '⏳'; 
+      } else { 
+        sendButton.innerHTML = '➤'; 
+        if (isChatOpen) chatInput.focus(); 
+      }
+    }
+
+    // Status bar
+    function updateStatus(type, message) {
+      statusBar.className = `status-bar ${type}`;
+      statusBar.textContent = message;
+      if (type !== 'loading') {
+        setTimeout(() => {
+          statusBar.className = 'status-bar';
+          statusBar.textContent = 'Ready to connect to Figma API';
+        }, 5000);
+      }
+    }
+
+    // Scroll to bottom
+    function scrollToBottom() { chatMessages.scrollTop = chatMessages.scrollHeight; }
+
+    // Copy code to clipboard
+    async function copyCodeToClipboard(codeId, buttonElement) {
+      const codeElement = document.getElementById(codeId);
+      if (!codeElement) return;
+      
+      const codeText = codeElement.textContent || codeElement.innerText;
+      
+      try {
+        await navigator.clipboard.writeText(codeText);
+        
+        buttonElement.textContent = 'Copied!';
+        buttonElement.classList.add('copied');
+        
+        setTimeout(() => {
+          buttonElement.textContent = 'Copy';
+          buttonElement.classList.remove('copied');
+        }, 2000);
+        
+      } catch (err) {
+        console.error('Failed to copy code:', err);
+      }
+    }
+
+    // Persist chat in session storage
+    function saveChatHistory() {
+      const messages = Array.from(chatMessages.children)
+        .filter(el => !el.id || el.id !== 'typingIndicator')
+        .map(el => ({
+          type: el.className.includes('user') ? 'user' : 'ai',
+          content: el.dataset.raw,
+          timestamp: el.dataset.ts
+        }));
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
+    }
+
+    function loadChatHistory() {
+      const saved = sessionStorage.getItem(STORAGE_KEY);
+      if (!saved) return;
+      try { 
+        JSON.parse(saved).forEach((m) => displayMessage(m)); 
+      } catch (e) { 
+        console.error('History load error', e); 
+      }
+    }
+
+    // Clear chat (button)
+    function clearChat() {
+      if (!confirm('Clear the chat history?')) return;
+      chatMessages.innerHTML = '';
+      sessionStorage.removeItem(STORAGE_KEY);
+      addWelcomeMessage();
+      saveChatHistory();
+      updateStatus('online', '🗑️ Chat history cleared');
+    }
+
+    // Clear saved access token
+    function clearSavedToken() {
+      if (!confirm('Clear the saved access token?')) return;
+      sessionStorage.removeItem('figma_access_token');
+      accessTokenInput.value = '';
+      updateStatus('online', '🔑 Saved access token cleared');
+    }
+
+    // Resize handler for overlay
+    window.addEventListener('resize', () => {
+      if (!isChatOpen) return;
+      if (window.innerWidth <= 767) chatOverlay.classList.add('show'); else chatOverlay.classList.remove('show');
+    });
+  </script>
+</body>
+</html>
