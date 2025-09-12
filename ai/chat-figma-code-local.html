@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figma Code Generator - Local</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .chat-container { width: 92%; max-width: 900px; background: white; border-radius: 16px; box-shadow: 0 14px 40px rgba(0,0,0,0.12); overflow: hidden; display: flex; flex-direction: column; }
+    .chat-header { background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%); color: white; padding: 18px 22px; }
+    .chat-header h1 { font-size: 1.1rem; }
+    .chat-messages { padding: 18px; height: 60vh; overflow: auto; background: #fafafa; display: flex; flex-direction: column; gap: 12px; }
+    .message { max-width: 85%; padding: 12px 14px; border-radius: 16px; }
+    .message.user { align-self: flex-end; background: #0ea5e9; color: #fff; border-bottom-right-radius: 6px; }
+    .message.ai { align-self: flex-start; background: #fff; color: #222; border: 1px solid #e5e7eb; border-bottom-left-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+    .message .timestamp { font-size: 0.75em; opacity: 0.65; margin-top: 6px; }
+  /* Loading indicator */
+  .typing { align-self: flex-start; background: #fff; color: #222; border: 1px solid #e5e7eb; border-bottom-left-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+  .typing-bubble { display: inline-flex; gap: 6px; align-items: center; }
+  .typing-dot { width: 8px; height: 8px; background: #0ea5e9; border-radius: 50%; animation: typing 1.2s infinite ease-in-out; }
+  .typing-dot:nth-child(2) { animation-delay: 0.15s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes typing { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-8px); } }
+  .inputs { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 14px; background: #fff; border-top: 1px solid #e5e7eb; }
+  .text-input { padding: 10px 12px; border: 2px solid #e5e7eb; border-radius: 14px; font-size: 0.95rem; outline: none; }
+  .text-input:focus { border-color: #0ea5e9; }
+    .send { background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%); color: white; border: none; padding: 0 18px; border-radius: 14px; cursor: pointer; font-weight: 600; }
+    .send:disabled { opacity: 0.6; cursor: not-allowed; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 12px 14px; border-radius: 10px; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 0.9em; line-height: 1.45; border: 1px solid #0b1220; }
+    code { background: #eef2f7; padding: 2px 6px; border-radius: 6px; }
+    pre code { background: transparent; padding: 0; }
+    @media (max-width: 840px) { .inputs { grid-template-columns: 1fr; } }
+  </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h1>Figma Code Generator (Local)</h1>
+  <div style="opacity:0.85;font-size:0.9rem;margin-top:4px;">Posts to http://localhost:5678/webhook-test/figma-code</div>
+  <div style="opacity:0.75;font-size:0.9rem;margin-top:6px;">Example: Generate a table for orders https://www.figma.com/design/FILE/NAME?node-id=26123-264462</div>
+      </div>
+      <div id="messages" class="chat-messages"></div>
+      <div class="inputs">
+  <input id="chatInput" class="text-input" placeholder="Paste a Figma URL and/or add instructions. Example: Generate a table for orders https://www.figma.com/design/...?...node-id=26123-264462" maxlength="600" />
+        <button id="send" class="send" onclick="send()">Send</button>
+      </div>
+    </div>
+
+    <script>
+  const URL_ENDPOINT = 'http://localhost:5678/webhook-test/figma-code';
+  // Increase or disable timeout: set to 0 to disable client timeout entirely
+  const TIMEOUT_MS = 120000; // 2 minutes
+      const messages = document.getElementById('messages');
+      const chatInput = document.getElementById('chatInput');
+      const sendBtn = document.getElementById('send');
+
+      window.addEventListener('load', () => chatInput.focus());
+      document.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && document.activeElement === chatInput && !sendBtn.disabled) send();
+      });
+
+  // Optionally react to paste/input (informational only)
+  chatInput.addEventListener('paste', () => {/* URL extraction happens at send time */});
+  chatInput.addEventListener('input', () => {/* URL extraction happens at send time */});
+
+      function addMessage(type, content) {
+        const div = document.createElement('div');
+        div.className = 'message ' + type;
+        const ts = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        div.innerHTML = `<div>${render(content)}</div><div class="timestamp">${ts}</div>`;
+        messages.appendChild(div);
+        messages.scrollTop = messages.scrollHeight;
+      }
+
+      function showTyping() {
+        if (document.getElementById('typingIndicator')) return;
+        const div = document.createElement('div');
+        div.className = 'message typing';
+        div.id = 'typingIndicator';
+        div.innerHTML = `<div class="typing-bubble"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></div>`;
+        messages.appendChild(div);
+        messages.scrollTop = messages.scrollHeight;
+      }
+
+      function hideTyping() {
+        const el = document.getElementById('typingIndicator');
+        if (el) el.remove();
+      }
+
+      function render(text) {
+        if (!text) return '';
+        // fenced code blocks
+        let idx = 0, blocks = []; let t = ('' + text).replace(/\r\n/g, '\n');
+        t = t.replace(/```([\w-]+)?\n([\s\S]*?)```/g, (m, lang, code) => {
+          const id = `__CB_${idx++}__`;
+          blocks.push({ id, html: `<pre><code${lang?` class=\"language-${lang}\"`:''}>${escapeHtml(code)}</code></pre>` });
+          return id;
+        });
+        t = escapeHtml(t);
+        t = t.replace(/`([^`]+)`/g, (m, c) => `<code>${c}</code>`)
+             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+             .replace(/\*(.+?)\*/g, '<em>$1</em>')
+             .replace(/^• (.*)$/gim, '&bull; $1')
+             .replace(/\n/g, '<br>');
+        for (const b of blocks) t = t.replace(b.id, b.html);
+        return t;
+      }
+
+      function escapeHtml(s){
+        return (s||'').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[ch]));
+      }
+
+      async function send() {
+        const raw = chatInput.value.trim();
+        const parsed = parseChatAndNode(raw);
+        // If no URL and empty text, do nothing
+        if (!parsed.text) return;
+        sendBtn.disabled = true;
+        addMessage('user', parsed.nodeId ? parsed.text + `\n(figma_node_id: ${parsed.nodeId})` : parsed.text);
+        try {
+          showTyping();
+          const controller = new AbortController();
+          let abortedByTimeout = false;
+          let timeoutId = null;
+          if (TIMEOUT_MS > 0) {
+            timeoutId = setTimeout(() => { abortedByTimeout = true; controller.abort(); }, TIMEOUT_MS);
+          }
+          const payload = { chatInput: parsed.text };
+          if (parsed.nodeId) payload.figma_node_id = parsed.nodeId;
+          const res = await fetch(URL_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+            signal: controller.signal,
+          });
+          hideTyping();
+          if (!res.ok) {
+            let errText = '';
+            try { errText = (await res.text()).slice(0, 300); } catch {}
+            throw new Error(`HTTP ${res.status} ${res.statusText}${errText ? ` - ${errText}` : ''}`);
+          }
+          const rawText = await res.text();
+          let out = rawText;
+          try {
+            const j = JSON.parse(rawText);
+            out = j.output || j.response || j.message || JSON.stringify(j, null, 2);
+          } catch {}
+          addMessage('ai', out);
+          // success: clear input
+          chatInput.value = '';
+        } catch (e) {
+          hideTyping();
+          let msg = String(e && e.message || e);
+          // Timeout / Abort handling
+          if (e && e.name === 'AbortError' && abortedByTimeout) {
+            const secs = Math.round((TIMEOUT_MS || 0) / 1000);
+            msg = `⏰ Client timed out after ${secs}s. The server may still be processing.`;
+          } else if (/failed to fetch|networkerror|load failed/i.test(msg)) {
+            msg = '🌐 Network error. Unable to reach http://localhost:5678. Ensure n8n is running and check CORS.';
+          }
+          addMessage('ai', `❌ ${msg}\n\nTips:\n• Start n8n and activate the workflow\n• Verify URL: http://localhost:5678/webhook-test/figma-code\n• Keep this page served over http:// (not file://) to avoid CORS issues\n• Increase TIMEOUT_MS (currently ${TIMEOUT_MS}ms) or set 0 to disable\n• Try again after a few seconds`);
+        } finally {
+          sendBtn.disabled = false;
+          chatInput.focus();
+          try { if (timeoutId) clearTimeout(timeoutId); } catch {}
+        }
+      }
+
+      function parseChatAndNode(value) {
+        const valueStr = value || '';
+        const url = findFirstFigmaUrl(valueStr);
+        const nodeId = url ? extractFigmaNodeIdFromText(url) : null;
+        // Remove the found URL from the text to get the prompt
+        let text = valueStr;
+        if (url) {
+          text = text.replace(url, '').trim();
+          if (!text) text = 'Generate code';
+        }
+        return { text, nodeId };
+      }
+
+      function findFirstFigmaUrl(text) {
+        if (!text) return null;
+        const m = text.match(/https?:\/\/(?:www\.)?figma\.com\/[\w\-/.?=#%:&]+/i);
+        return m ? m[0] : null;
+      }
+
+      function extractFigmaNodeIdFromText(text) {
+        if (!text) return null;
+        try {
+          // Find first figma URL in the text
+          const match = text.match(/https?:\/\/(?:www\.)?figma\.com\/[\w\-/.?=#%:&]+/i);
+          const urlStr = match ? match[0] : (text.startsWith('http') ? text : null);
+          if (!urlStr) return null;
+          const url = new URL(urlStr);
+          // Helper to read node-id from a query-like string
+          const getNodeFrom = (q) => {
+            if (!q) return null;
+            const s = q.startsWith('?') || q.startsWith('#') ? q.slice(1) : q;
+            const params = new URLSearchParams(s);
+            let id = params.get('node-id') || params.get('node_id');
+            if (!id) return null;
+            id = decodeURIComponent(id);
+            if (!id.includes(':')) {
+              // Convert first hyphen to colon if needed (e.g., 26123-264462 -> 26123:264462)
+              const hy = id.indexOf('-');
+              if (hy > 0) id = id.slice(0, hy) + ':' + id.slice(hy + 1);
+            }
+            return id;
+          };
+          return getNodeFrom(url.search) || getNodeFrom(url.hash);
+        } catch { return null; }
+      }
+    </script>
+  </body>
+  </html>
