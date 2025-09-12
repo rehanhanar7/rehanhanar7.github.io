@@ -27,9 +27,13 @@
   .text-input:focus { border-color: #0ea5e9; }
     .send { background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%); color: white; border: none; padding: 0 18px; border-radius: 14px; cursor: pointer; font-weight: 600; }
     .send:disabled { opacity: 0.6; cursor: not-allowed; }
-    pre { background: #0f172a; color: #e2e8f0; padding: 12px 14px; border-radius: 10px; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 0.9em; line-height: 1.45; border: 1px solid #0b1220; }
-    code { background: #eef2f7; padding: 2px 6px; border-radius: 6px; }
-    pre code { background: transparent; padding: 0; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 12px 14px; border-radius: 10px; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 0.9em; line-height: 1.45; border: 1px solid #0b1220; margin: 8px 0; position: relative; }
+    code { background: #f1f5f9; color: #0f172a; padding: 2px 6px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 0.95em; }
+    pre code { background: transparent; padding: 0; color: #e2e8f0; }
+    .code-block-container { position: relative; margin: 8px 0; }
+    .copy-btn { position: absolute; top: 8px; right: 8px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #e2e8f0; border-radius: 6px; padding: 6px 10px; font-size: 0.75em; cursor: pointer; transition: all 0.2s ease; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; }
+    .copy-btn:hover { background: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.3); }
+    .copy-btn.copied { background: #10b981; border-color: #10b981; color: white; }
     @media (max-width: 840px) { .inputs { grid-template-columns: 1fr; } }
   </style>
   </head>
@@ -48,7 +52,8 @@
     </div>
 
     <script>
-  const URL_ENDPOINT = 'http://localhost:5678/webhook-test/figma-code';
+  // const URL_ENDPOINT = 'http://localhost:5678/webhook-test/figma-code';
+  const URL_ENDPOINT = 'http://localhost:5678/webhook/figma-code';
   // Increase or disable timeout: set to 0 to disable client timeout entirely
   const TIMEOUT_MS = 120000; // 2 minutes
       const messages = document.getElementById('messages');
@@ -90,25 +95,82 @@
 
       function render(text) {
         if (!text) return '';
-        // fenced code blocks
-        let idx = 0, blocks = []; let t = ('' + text).replace(/\r\n/g, '\n');
-        t = t.replace(/```([\w-]+)?\n([\s\S]*?)```/g, (m, lang, code) => {
-          const id = `__CB_${idx++}__`;
-          blocks.push({ id, html: `<pre><code${lang?` class=\"language-${lang}\"`:''}>${escapeHtml(code)}</code></pre>` });
-          return id;
+        
+        // Convert text to string and normalize line endings
+        let t = ('' + text).replace(/\r\n/g, '\n');
+        
+        // Handle fenced code blocks with copy buttons
+        let codeBlockId = 0;
+        let codeBlocks = [];
+        
+        t = t.replace(/```([\w-]+)?\n?([\s\S]*?)```/g, (match, lang, code) => {
+          const id = `code-block-${codeBlockId++}`;
+          const cleanCode = code.trim();
+          const langClass = lang ? ` class="language-${lang}"` : '';
+          const placeholder = `__CODE_BLOCK_${id}__`;
+          
+          codeBlocks.push({
+            placeholder,
+            html: `<div class="code-block-container">
+              <pre><code${langClass}>${escapeHtml(cleanCode)}</code></pre>
+              <button class="copy-btn" onclick="copyCodeToClipboard('${id}', this)" data-code="${escapeHtml(cleanCode).replace(/"/g, '&quot;')}">Copy</button>
+            </div>`
+          });
+          
+          return placeholder;
         });
+        
+        // Escape HTML for the rest of the content
         t = escapeHtml(t);
-        t = t.replace(/`([^`]+)`/g, (m, c) => `<code>${c}</code>`)
-             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-             .replace(/\*(.+?)\*/g, '<em>$1</em>')
-             .replace(/^• (.*)$/gim, '&bull; $1')
-             .replace(/\n/g, '<br>');
-        for (const b of blocks) t = t.replace(b.id, b.html);
+        
+        // Handle inline code
+        t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
+        
+        // Handle bold and italic
+        t = t.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        t = t.replace(/\*(.+?)\*/g, '<em>$1</em>');
+        
+        // Handle bullets
+        t = t.replace(/^• (.*)$/gim, '&bull; $1');
+        
+        // Handle line breaks
+        t = t.replace(/\n/g, '<br>');
+        
+        // Restore code blocks
+        codeBlocks.forEach(block => {
+          t = t.replace(block.placeholder, block.html);
+        });
+        
         return t;
       }
 
       function escapeHtml(s){
         return (s||'').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[ch]));
+      }
+
+      // Copy code to clipboard
+      async function copyCodeToClipboard(codeId, buttonElement) {
+        try {
+          const code = buttonElement.getAttribute('data-code');
+          const decodedCode = code.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+          
+          await navigator.clipboard.writeText(decodedCode);
+          
+          const originalText = buttonElement.textContent;
+          buttonElement.textContent = 'Copied!';
+          buttonElement.classList.add('copied');
+          
+          setTimeout(() => {
+            buttonElement.textContent = originalText;
+            buttonElement.classList.remove('copied');
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy code:', err);
+          buttonElement.textContent = 'Failed';
+          setTimeout(() => {
+            buttonElement.textContent = 'Copy';
+          }, 2000);
+        }
       }
 
       async function send() {
@@ -144,7 +206,12 @@
           let out = rawText;
           try {
             const j = JSON.parse(rawText);
-            out = j.output || j.response || j.message || JSON.stringify(j, null, 2);
+            // Handle array response format
+            if (Array.isArray(j) && j.length > 0 && j[0].output) {
+              out = j[0].output;
+            } else {
+              out = j.output || j.response || j.message || JSON.stringify(j, null, 2);
+            }
           } catch {}
           addMessage('ai', out);
           // success: clear input
