@@ -375,6 +375,11 @@
           <option value="htmlcssjavascript">HTML / CSS</option>
         </select>
       </div>
+        <!-- Figma Node ID input -->
+        <div class="figma-nodeid-container" style="display: flex; gap: 10px; align-items: center; margin-top: 8px;">
+          <span class="framework-label">🎨 Figma Node ID:</span>
+          <input type="text" class="figma-nodeid-input" id="figmaNodeIdInput" placeholder="e.g. 26123:264456" maxlength="30" style="flex:1; padding:8px 12px; border:2px solid #e9ecef; border-radius:20px; outline:none; font-size:0.9em; background:#f8f9fa;" />
+        </div>
       
       <!-- Main input controls -->
       <div class="main-input-container">
@@ -523,90 +528,97 @@
 
     // Send message
     async function sendMessage() {
-      const message = chatInput.value.trim();
-      const password = passwordInput.value.trim();
-      const framework = frameworkSelect.value;
-      
-      if (!message || isLoading) return;
-      
-      if (!password) {
-        updateStatus('error', '🔐 Please enter the access password');
-        passwordInput.focus();
-        return;
-      }
+        const message = chatInput.value.trim();
+        const password = passwordInput.value.trim();
+        const framework = frameworkSelect.value;
+        const figmaNodeId = document.getElementById('figmaNodeIdInput').value.trim();
 
-      setLoading(true);
-      const userMessage = { type: 'user', content: message, timestamp: new Date().toISOString() };
-      displayMessage(userMessage);
-      chatInput.value = '';
-      showTypingIndicator();
+        if (!message || isLoading) return;
 
-      try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 45000);
+        if (!password) {
+          updateStatus('error', '🔐 Please enter the access password');
+          passwordInput.focus();
+          return;
+        }
 
-        const response = await fetch(WEBHOOK_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
+        setLoading(true);
+        const userMessage = { type: 'user', content: message, timestamp: new Date().toISOString() };
+        displayMessage(userMessage);
+        chatInput.value = '';
+        showTypingIndicator();
+
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 45000);
+
+          // Build request body
+          const requestBody = {
             password: password,
-            query: message, 
+            query: message,
             chatInput: message,
             framework: framework
-          }),
-          signal: controller.signal,
-        });
-
-        clearTimeout(timeoutId);
-        hideTypingIndicator();
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            throw new Error('Invalid password. Access denied to this workflow.');
+          };
+          if (figmaNodeId) {
+            requestBody.figma_id = figmaNodeId;
           }
-          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+
+          const response = await fetch(WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(requestBody),
+            signal: controller.signal,
+          });
+
+          clearTimeout(timeoutId);
+          hideTypingIndicator();
+
+          if (!response.ok) {
+            if (response.status === 401) {
+              throw new Error('Invalid password. Access denied to this workflow.');
+            }
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+
+          const data = await response.text();
+          let aiResponse;
+          try {
+            const jsonData = JSON.parse(data);
+            if (Array.isArray(jsonData)) {
+              const first = jsonData[0] || {};
+              aiResponse = first.output || first.response || first.message || JSON.stringify(jsonData, null, 2);
+            } else if (typeof jsonData === 'object' && jsonData !== null) {
+              aiResponse = jsonData.output || jsonData.response || jsonData.message || JSON.stringify(jsonData, null, 2);
+            } else {
+              aiResponse = String(jsonData);
+            }
+          } catch {
+            aiResponse = data;
+          }
+
+          // Convert escaped newlines to actual newlines for proper markdown processing
+          aiResponse = aiResponse.replace(/\\n/g, '\n');
+
+          const aiMessage = { type: 'ai', content: aiResponse, timestamp: new Date().toISOString() };
+          displayMessage(aiMessage);
+          updateStatus('online', '✅ Response from Render cloud');
+        } catch (error) {
+          console.error('Error:', error);
+          hideTypingIndicator();
+          const errorContent = error.name === 'AbortError'
+            ? '⏰ Request timed out after 45 seconds. The cloud service may be experiencing delays.'
+            : `❌ Sorry, I encountered an error: ${error.message}`;
+          const errorMessage = {
+            type: 'ai',
+            content: `${errorContent}\n\n🔧 Troubleshooting tips:\n• Check your internet connection\n• Verify the password is correct\n• Verify the Render service is running: n8n-jmlp.onrender.com\n• Cloud services may take longer to respond\n• Try again in a few moments\n• The n8n workflow might need to be activated`,
+            timestamp: new Date().toISOString(),
+          };
+          displayMessage(errorMessage);
+          updateStatus('error', `❌ Error: ${error.message}`);
         }
 
-        const data = await response.text();
-        let aiResponse;
-        try {
-          const jsonData = JSON.parse(data);
-          if (Array.isArray(jsonData)) {
-            const first = jsonData[0] || {};
-            aiResponse = first.output || first.response || first.message || JSON.stringify(jsonData, null, 2);
-          } else if (typeof jsonData === 'object' && jsonData !== null) {
-            aiResponse = jsonData.output || jsonData.response || jsonData.message || JSON.stringify(jsonData, null, 2);
-          } else {
-            aiResponse = String(jsonData);
-          }
-        } catch {
-          aiResponse = data;
-        }
-
-        // Convert escaped newlines to actual newlines for proper markdown processing
-        aiResponse = aiResponse.replace(/\\n/g, '\n');
-
-        const aiMessage = { type: 'ai', content: aiResponse, timestamp: new Date().toISOString() };
-        displayMessage(aiMessage);
-        updateStatus('online', '✅ Response from Render cloud');
-      } catch (error) {
-        console.error('Error:', error);
-        hideTypingIndicator();
-        const errorContent = error.name === 'AbortError'
-          ? '⏰ Request timed out after 45 seconds. The cloud service may be experiencing delays.'
-          : `❌ Sorry, I encountered an error: ${error.message}`;
-        const errorMessage = {
-          type: 'ai',
-          content: `${errorContent}\n\n🔧 Troubleshooting tips:\n• Check your internet connection\n• Verify the password is correct\n• Verify the Render service is running: n8n-jmlp.onrender.com\n• Cloud services may take longer to respond\n• Try again in a few moments\n• The n8n workflow might need to be activated`,
-          timestamp: new Date().toISOString(),
-        };
-        displayMessage(errorMessage);
-        updateStatus('error', `❌ Error: ${error.message}`);
+        setLoading(false);
+        saveChatHistory();
       }
-
-      setLoading(false);
-      saveChatHistory();
-    }
 
     // Display message
     function displayMessage(message) {
