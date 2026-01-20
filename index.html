@@ -434,10 +434,67 @@
             font-size: 0.9rem;
         }
 
+        /* Personal Projects Section */
+        .personal-projects {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .personal-projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .personal-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .personal-project-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 4px solid var(--primary);
+        }
+
+        .personal-project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-left-color: var(--secondary);
+        }
+
+        .personal-project-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .personal-project-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.8rem;
+        }
+
         /* Certifications */
         .certifications {
             padding: 5rem 2rem;
-            background: white;
+            background: var(--light);
         }
 
         .cert-container {
@@ -928,6 +985,51 @@
                         <p>Cross-platform mobile solution</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Projects -->
+    <section class="personal-projects">
+        <div class="personal-projects-container">
+            <h2 class="section-title">Personal Projects</h2>
+            <div class="personal-projects-grid">
+
+                <a href="https://chromewebstore.google.com/detail/hfhagjebiknkekdhncpckchnajjpbgpl/" target="_blank" style="text-decoration: none;">
+                    <div class="personal-project-card">
+                        <img src="img/portfolio/chrome.png" alt="Rehan Job Helper Chrome Extension" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1rem;">
+                        <h4>Rehan Job Helper</h4>
+                        <p>Smart form autofill assistant with job application tracking. One-click save and autofill for forms, track applications with status monitoring, and manage data locally with full privacy control. Perfect for job seekers and frequent form fillers.</p>
+                        <span class="project-tag">Chrome Extension</span>
+                    </div>
+                </a>
+
+                <a href="https://play.google.com/store/apps/details?id=com.rehanhanar.manapparaiinfo" target="_blank" style="text-decoration: none;">
+                    <div class="personal-project-card">
+                        <img src="https://rehanhanar7.github.io/images/portfolio/manapparai.png" alt="Manapparai Info App" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1rem;">
+                        <h4>Manapparai Info App</h4>
+                        <p>Comprehensive local information app providing details about ATMs, banks, hospitals, schools, temples, and other essential services in Manapparai region.</p>
+                        <span class="project-tag">Mobile App</span>
+                    </div>
+                </a>
+
+                <a href="https://play.google.com/store/apps/details?id=com.rehanhanar.tamilnadugovernmentapp" target="_blank" style="text-decoration: none;">
+                    <div class="personal-project-card">
+                        <img src="https://rehanhanar7.github.io/images/portfolio/tamilnadu.png" alt="Tamil Nadu Government App" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1rem;">
+                        <h4>Tamil Nadu Government App</h4>
+                        <p>Citizen-centric application providing access to government services, schemes, news, and official information for Tamil Nadu residents.</p>
+                        <span class="project-tag">Mobile App</span>
+                    </div>
+                </a>
+
+                <a href="https://play.google.com/store/apps/details?id=com.rehanhanar.wordstopagesconverterandroid" target="_blank" style="text-decoration: none;">
+                    <div class="personal-project-card">
+                        <img src="https://rehanhanar7.github.io/images/portfolio/words.png" alt="Words to Pages Converter" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1rem;">
+                        <h4>Words to Page Converter</h4>
+                        <p>Utility tool to convert word count to page count estimates, helping writers and students plan their documents and meet page requirements.</p>
+                        <span class="project-tag">Mobile App</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
