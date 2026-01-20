@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rehan - Technical Project Manager</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Rehan - Technical Project Manager & Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,468 +12,815 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f5f7fa;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1000px;
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        header {
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 100px 2rem 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            top: -250px;
+            right: -250px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
             color: white;
-            padding: 60px 40px;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.4s ease;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            background: white;
+            padding: 3rem 2rem;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
             text-align: center;
         }
 
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
             font-weight: 700;
         }
 
-        header h2 {
-            font-size: 1.3em;
-            font-weight: 400;
-            opacity: 0.95;
-            margin-bottom: 20px;
+        .stat-item p {
+            color: var(--gray);
+            font-weight: 500;
         }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            font-size: 0.9em;
-            margin-top: 20px;
+        /* Timeline Progress Bar */
+        .timeline {
+            padding: 5rem 2rem;
+            background: var(--light);
         }
 
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .contact-info a:hover {
-            text-decoration: underline;
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .content {
-            padding: 40px;
+        .timeline-item {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 3rem;
         }
 
-        section {
-            margin-bottom: 40px;
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: -3rem;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
         }
 
-        h3 {
-            color: #667eea;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
+        .timeline-item:last-child::before {
+            display: none;
         }
 
-        .summary {
-            font-size: 1.05em;
-            line-height: 1.8;
-            color: #555;
+        .timeline-dot {
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 0 4px white, 0 0 0 8px var(--primary);
         }
 
-        .experience-item, .project-item {
-            margin-bottom: 30px;
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
         }
 
-        .experience-item h4, .project-item h4 {
-            color: #333;
-            font-size: 1.2em;
-            margin-bottom: 5px;
+        .timeline-content:hover {
+            transform: translateY(-5px);
         }
 
-        .company {
-            color: #667eea;
-            font-weight: 600;
+        .timeline-content h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
         }
 
-        .date {
-            color: #888;
-            font-size: 0.9em;
-            margin-bottom: 10px;
+        .timeline-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
         }
 
-        .experience-item ul, .project-item ul {
-            margin-left: 20px;
-            margin-top: 10px;
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: white;
         }
 
-        .experience-item li, .project-item li {
-            margin-bottom: 8px;
-            color: #555;
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .skills-grid {
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .skill-category h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1em;
+        .service-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 20px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
         }
 
-        .skill-category p {
-            color: #555;
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .service-card p {
+            color: var(--gray);
             line-height: 1.8;
         }
 
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+        /* Portfolio Section */
+        .portfolio {
+            padding: 5rem 2rem;
+            background: var(--light);
         }
 
-        .cert-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-
-        .education {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .education h4 {
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .education p {
-            color: #555;
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
         .portfolio-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
         }
 
         .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
 
         .portfolio-item img {
-            max-width: 100%;
-            height: 60px;
+            width: 100%;
+            height: 150px;
             object-fit: contain;
-            margin-bottom: 10px;
+            padding: 2rem;
+            background: var(--light);
         }
 
-        .portfolio-item h4 {
-            font-size: 0.95em;
-            color: #333;
-            margin-bottom: 5px;
+        .portfolio-info {
+            padding: 1.5rem;
         }
 
-        .portfolio-item p {
-            font-size: 0.85em;
-            color: #666;
+        .portfolio-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
         }
 
-        footer {
-            background: #333;
+        .portfolio-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Certifications */
+        .certifications {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .cert-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .cert-badge {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .cert-badge:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
-            padding: 30px;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contact-link:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .social-links a {
             color: white;
-            font-size: 1.5em;
-            transition: color 0.3s;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            text-decoration: none;
         }
 
         .social-links a:hover {
-            color: #667eea;
+            transform: scale(1.2);
+            color: var(--primary);
         }
 
-        @media print {
-            body {
-                background: white;
-            }
-            .container {
-                box-shadow: none;
-            }
-            .portfolio-item:hover {
-                transform: none;
-            }
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
-            header {
-                padding: 40px 20px;
+            nav ul {
+                display: none;
             }
 
-            header h1 {
-                font-size: 1.8em;
+            .mobile-menu {
+                display: block;
             }
 
-            header h2 {
-                font-size: 1.1em;
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
-            .content {
-                padding: 20px;
+            .hero .subtitle {
+                font-size: 1.2rem;
             }
 
-            .contact-info {
-                font-size: 0.8em;
+            .cta-buttons {
                 flex-direction: column;
-                align-items: center;
             }
 
-            .portfolio-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .portfolio-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1>REHAN</h1>
-            <h2>Technical Project Manager - Enterprise UI & Digital Platforms</h2>
-            <div class="contact-info">
-                <a href="mailto:rehanhanar.com@gmail.com">✉️ rehanhanar.com@gmail.com</a>
-                <a href="https://www.linkedin.com/in/rehanfeb29/" target="_blank">🔗 LinkedIn</a>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">REHAN</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Technical Project Manager</h1>
+            <div class="subtitle">Enterprise UI & Digital Platforms Specialist</div>
+            <p>Transforming ideas into scalable digital solutions with 12.5+ years of expertise in delivering enterprise applications for global clients</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Hire Me</a>
+                <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <!-- Main Content -->
-        <div class="content">
-            <!-- Career Summary -->
-            <section>
-                <h3>Career Summary</h3>
-                <div class="summary">
-                    <p>Technical Project Manager with <strong>12.5+ years</strong> of experience delivering large-scale enterprise web and mobile applications across Government, Logistics, E-commerce, Travel, Finance, Aviation, Healthcare, Insurance, and Cybersecurity domains.</p>
-                    <br>
-                    <p>Proven track record of leading cross-functional global teams and delivering complex projects on time and within budget for clients across the US, Canada, Europe, Egypt, and Saudi Arabia. Contributed to <strong>$10+ million USD</strong> in annual revenue by leading delivery solutioning and execution planning for large-scale, long-term enterprise proposals.</p>
-                    <br>
-                    <p>Delivered and modernized <strong>100+ enterprise applications</strong> while working with global organizations including WIPRO, GE, CGI, and UPS. Strong expertise in Traditional/Hybrid/Adaptive (Scrum, SAFe) Project Management, legacy apps modernization, enterprise mobile & web frameworks, and AI-driven automation.</p>
-                </div>
-            </section>
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>12.5+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>Projects Delivered</p>
+            </div>
+            <div class="stat-item">
+                <h3>$50M+</h3>
+                <p>Revenue Generated</p>
+            </div>
+            <div class="stat-item">
+                <h3>75+</h3>
+                <p>UPS.com Apps</p>
+            </div>
+        </div>
+    </section>
 
-            <!-- Experience -->
-            <section>
-                <h3>Professional Experience</h3>
-                
-                <div class="experience-item">
-                    <h4><span class="company">United Parcel Service (UPS)</span> | Technical Project Manager</h4>
-                    <p class="date">March 2024 - Present</p>
-                    <ul>
-                        <li>Leading UI engineering delivery for <strong>75+ UPS.com applications</strong>, managing a <strong>16-member team</strong> and significantly reducing delivery cost and timelines through reusable component framework</li>
-                        <li>Built and scaled an enterprise Angular UI component library (<strong>40+ components</strong>), improving developer productivity by ~95% and ensuring consistent, accessible UI across platforms</li>
-                        <li>Delivered an <strong>AI-powered Figma-to-Code automation tool</strong>, reducing manual UI dependency by ~90% and accelerating feature development</li>
+    <!-- Timeline Experience -->
+    <section id="experience" class="timeline">
+        <div class="timeline-container">
+            <h2 class="section-title">Professional Journey</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>United Parcel Service (UPS)</h3>
+                    <div class="timeline-date">Mar 2024 - Present | Technical Project Manager</div>
+                    <p style="color: #8b5cf6; font-size: 0.85rem; margin-bottom: 1rem;"><strong>Skills:</strong> Technical Project Management, Enterprise UI framework, Angular, UX & UI Design Systems, AI Automation, Figma-to-Code, CI/CD, Azure DevOps, n8n, Stakeholder Management</p>
+                    <ul style="margin-left: 1.2rem; color: #64748b;">
+                        <li>Leading UI engineering delivery for <strong>75+ UPS.com applications</strong>, managing a 16-member team and significantly reducing delivery cost and timelines through reusable component framework</li>
+                        <li>Built and scaled an enterprise Angular UI component library (<strong>40+ components</strong>), improving developer productivity by <strong>~95%</strong> and ensuring consistent, accessible UI across platforms</li>
+                        <li>Delivered an <strong>AI-powered Figma-to-Code automation tool</strong>, reducing manual UI dependency by <strong>~90%</strong> and accelerating feature development</li>
                         <li>Established delivery governance (DoD/DoR, PR standards, architecture processes), resulting in a <strong>~90% reduction in UI defects</strong></li>
-                        <li>Automated development and support workflows, improving deployment reliability using CI/CD pipelines and saving 2–3 developer days per sprint</li>
+                        <li>Automated development and support workflows, improving deployment reliability using CI/CD pipelines and saving <strong>2–3 developer days per sprint</strong></li>
+                        <li>Mentored engineers through architecture reviews and 1:1s, building a high-performance, collaborative delivery culture</li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="experience-item">
-                    <h4><span class="company">CGI Inc.</span> | Technical Project Manager</h4>
-                    <p class="date">December 2021 - March 2024</p>
-                    <ul>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Consultants to Government & Industry (CGI)</h3>
+                    <div class="timeline-date">Dec 2021 - Mar 2024 | Technical Project Manager</div>
+                    <p style="color: #8b5cf6; font-size: 0.85rem; margin-bottom: 1rem;"><strong>Skills:</strong> SAFe, Scrum, Agile Delivery, Solutioning & Estimation, Angular Architecture, Oracle BI, Stakeholder Management, Full Stack</p>
+                    <ul style="margin-left: 1.2rem; color: #64748b;">
                         <li>Led SAFe delivery for a <strong>Finland-based HRM project</strong>, improving execution predictability and stakeholder confidence through disciplined PI planning and governance</li>
-                        <li>Turned around a red-status <strong>MAPFRE insurance project</strong>, improving delivery speed by 40–50%, reducing rework by ~30%, and enabling contract renewal</li>
+                        <li>Turned around a red-status <strong>MAPFRE insurance project</strong>, improving delivery speed by <strong>40–50%</strong>, reducing rework by <strong>~30%</strong>, and enabling contract renewal</li>
+                        <li>Improved delivery predictability for <strong>Oracle BI (Intellx)</strong> by enforcing Agile practices</li>
                         <li>Owned end-to-end delivery of the <strong>Pratigya CSR initiative</strong>, establishing governance for a stable, production-grade release</li>
-                        <li>Led delivery estimation and solutioning for the <strong>MTO Canada bid</strong>, producing ~95% accurate plans and reducing estimation variance by 30%+</li>
+                        <li>Led delivery estimation and solutioning for the <strong>MTO Canada bid</strong>, producing <strong>~95% accurate plans</strong> and reducing estimation variance by <strong>30%+</strong> while mitigating contractual risk</li>
                         <li>Led offshore delivery for <strong>VIA Rail Canada</strong>, delivering high-priority epics ahead of schedule with measurable cost and timeline savings</li>
                         <li>Supported <strong>Amadeus (India & Europe)</strong> modernization strategy with migration assessments that enabled a multi-million-dollar project win</li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="experience-item">
-                    <h4><span class="company">General Electric (GE)</span> | Technical Scrum Master</h4>
-                    <p class="date">January 2018 - December 2021</p>
-                    <ul>
-                        <li>Led full-stack delivery for <strong>GE Cybersecurity global platforms</strong> (BEASSTT & RM), building secure, scalable systems used across enterprise environments</li>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>General Electric (GE)</h3>
+                    <div class="timeline-date">Jan 2018 - Dec 2021 | Technical Scrum Master</div>
+                    <p style="color: #8b5cf6; font-size: 0.85rem; margin-bottom: 1rem;"><strong>Skills:</strong> Technical Scrum Master, Full-Stack Engineering, Angular, Ionic, Node.js, PostgreSQL, AWS, Agile Execution, Stakeholder Collaboration</p>
+                    <ul style="margin-left: 1.2rem; color: #64748b;">
+                        <li>Led full-stack delivery for <strong>GE Cybersecurity global platforms</strong>, building secure, scalable systems used across enterprise environments</li>
                         <li>Partnered closely with Product Owners to drive backlog execution, improving delivery predictability and cross-team collaboration</li>
                         <li>Delivered a high-performance <strong>Flight Phase Analyzer for GE Aviation</strong>, improving usability and operational efficiency</li>
                         <li>Enabled scalable cross-platform/hybrid mobile delivery for <strong>GE Power, Healthcare, and Transport</strong>, accelerating feature rollout across business units</li>
+                        <li>Earned repeated stakeholder recognition for technical ownership, reliability, and delivery leadership</li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="experience-item">
-                    <h4><span class="company">Wipro Technologies</span> | Technical Lead / Senior Software Engineer</h4>
-                    <p class="date">June 2013 - January 2018</p>
-                    <ul>
-                        <li>Led delivery of a complex <strong>Egypt Post Government application</strong>, launching successfully within 1 month and providing on-ground support at the Cairo ICT event, Egypt</li>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Wipro Technologies</h3>
+                    <div class="timeline-date">Jun 2013 - Jan 2018 | Technical Lead / Senior Software Engineer</div>
+                    <p style="color: #8b5cf6; font-size: 0.85rem; margin-bottom: 1rem;"><strong>Skills:</strong> Government Systems, Mobile Frameworks, AngularJS, Cordova, Ionic, Liferay 7, Hybrid Mobile Development, Onsite Delivery</p>
+                    <ul style="margin-left: 1.2rem; color: #64748b;">
+                        <li>Led delivery of a complex <strong>Egypt Post Government application</strong>, launching successfully within <strong>1 month</strong> and providing on-ground support at the <strong>Cairo ICT event, Egypt</strong></li>
                         <li>Designed and delivered an <strong>Ionic-based mobile framework</strong> for internal R&D, enabling faster, standardized mobile development across projects</li>
+                        <li>Independently designed and developed a lightweight hybrid mobile & web application for <strong>Tas Helat Organization</strong> as a personal initiative, supporting internal operational workflows</li>
                         <li>Delivered cross-platform mobile applications for <strong>US enterprise client (USLBM)</strong>, earning consistent recognition for quality and reliability</li>
                         <li>Contributed to development of <strong>Tamil Nadu Government Finance (Karuvoolam)</strong> portal</li>
                         <li>Began career in enterprise infrastructure support (Honeywell), resolving complex global incidents and consistently exceeding SLA expectations</li>
                     </ul>
                 </div>
-            </section>
-
-            <!-- Skills -->
-            <section>
-                <h3>Technical Skills & Capabilities</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>🎯 Project Management</h4>
-                        <p>SAFe, Scrum, Agile, Stakeholder Management, Risk Management, Delivery Governance</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>🏗️ Architecture & Platforms</h4>
-                        <p>Enterprise UI Platforms, Design Systems, Micro-Frontend Strategy, Web, Mobile & Electron Platforms</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>💻 Full-Stack Development</h4>
-                        <p>Angular (4/7/12/13/15/18), Node.js, JavaScript, TypeScript, HTML, CSS, Bootstrap, Material Design, Ionic</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>☁️ Cloud & DevOps</h4>
-                        <p>Azure, AWS, CI/CD Pipelines, Azure DevOps, Jenkins, Docker, Git, JFrog, PostgreSQL</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>🤖 AI & Automation</h4>
-                        <p>AI Automation, LLMs, n8n, Figma MCP, Figma-to-Code Tools</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>🎨 Design & Tools</h4>
-                        <p>Figma, UX/UI Design Systems, JIRA, MS Office, Ubuntu, SSL</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Certifications -->
-            <section>
-                <h3>Certifications</h3>
-                <div class="certifications-grid">
-                    <div class="cert-item">
-                        <strong>Certified SAFe® 6 Advanced Scrum Master</strong>
-                    </div>
-                    <div class="cert-item">
-                        <strong>Certified SAFe® 6 Practitioner</strong>
-                    </div>
-                    <div class="cert-item">
-                        <strong>Certified Scrum Master® (CSM®)</strong>
-                    </div>
-                    <div class="cert-item">
-                        <strong>Certified Scrum Product Owner® (CSPO®)</strong>
-                    </div>
-                    <div class="cert-item">
-                        <strong>SHRM's Certified First Time Manager</strong>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Portfolio -->
-            <section>
-                <h3>Key Projects Portfolio</h3>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="img/portfolio/ups.png" alt="UPS">
-                        <h4>UPS.com</h4>
-                        <p>Enterprise UI Platform</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/portfolio/cgi_pratigya.jpg" alt="Pratigya">
-                        <h4>Pratigya CSR</h4>
-                        <p>CGI Initiative</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/portfolio/cgi_mto.png" alt="MTO">
-                        <h4>MTO Canada</h4>
-                        <p>Government Project</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/portfolio/cg_via_rail.png" alt="VIA Rail">
-                        <h4>VIA Rail</h4>
-                        <p>Railway Booking System</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/portfolio/amadeus_logo.jpeg" alt="Amadeus">
-                        <h4>Amadeus</h4>
-                        <p>Migration & Modernization</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/portfolio/ge_digital.png" alt="GE Cybersecurity">
-                        <h4>BEASSTT & RM</h4>
-                        <p>Cybersecurity Tools</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/portfolio/ge_aviation_only_logo.png" alt="GE Aviation">
-                        <h4>Flight Phase Analyzer</h4>
-                        <p>Aviation Analytics</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://rehanhanar7.github.io/images/portfolio/egypt.png" alt="Egypt Post">
-                        <h4>Egypt Post</h4>
-                        <p>Government Application</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://rehanhanar7.github.io/images/portfolio/hines.png" alt="USLBM">
-                        <h4>USLBM</h4>
-                        <p>Enterprise Mobile App</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Education -->
-            <section>
-                <h3>Education</h3>
-                <div class="education">
-                    <h4>B.Tech - Electronics & Communication Engineering (ECE)</h4>
-                    <p><strong>BSAU Crescent University</strong></p>
-                    <p>CGPA: <strong>8.47/10</strong></p>
-                </div>
-            </section>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/rehanfeb29/" target="_blank" title="LinkedIn">🔗</a>
-                <a href="https://www.youtube.com/user/rehanhanar7" target="_blank" title="YouTube">📺</a>
-                <a href="https://www.facebook.com/rehanhanar7" target="_blank" title="Facebook">📘</a>
-                <a href="https://www.instagram.com/rehanhanar" target="_blank" title="Instagram">📷</a>
-                <a href="https://rehanhanar.blogspot.com" target="_blank" title="Blog">📝</a>
             </div>
-            <p>&copy; 2026 Rehan. All Rights Reserved.</p>
-        </footer>
-    </div>
+        </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section id="services" class="services">
+        <div class="services-container">
+            <h2 class="section-title">Services Offered</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Project Management</h3>
+                    <p>Expert in SAFe, Scrum, and Agile methodologies. Delivering complex projects on time and within budget with proven stakeholder management and risk mitigation strategies.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Enterprise Architecture</h3>
+                    <p>Designing scalable enterprise UI platforms, design systems, and micro-frontend strategies for web, mobile, and Electron applications.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Full-Stack Development</h3>
+                    <p>Building modern applications with Angular, React, Node.js, TypeScript, and cutting-edge frameworks. Expertise in creating reusable component libraries.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Setting up CI/CD pipelines, Azure/AWS infrastructure, Docker containerization, and automated deployment workflows for reliable delivery.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI Automation</h3>
+                    <p>Implementing AI-driven tools for development automation including Figma-to-Code conversion, reducing manual dependency by ~90%.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>UX/UI Design Systems</h3>
+                    <p>Creating consistent, accessible design systems and UI frameworks that improve developer productivity and user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="img/portfolio/ups.png" alt="UPS">
+                    <div class="portfolio-info">
+                        <h4>UPS.com Enterprise Platform</h4>
+                        <p>75+ applications with Angular UI library</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/cgi_pratigya.jpg" alt="Pratigya">
+                    <div class="portfolio-info">
+                        <h4>Pratigya CSR Initiative</h4>
+                        <p>CGI social responsibility platform</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/cgi_mto.png" alt="MTO">
+                    <div class="portfolio-info">
+                        <h4>MTO Canada</h4>
+                        <p>Government transportation system</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/cg_via_rail.png" alt="VIA Rail">
+                    <div class="portfolio-info">
+                        <h4>VIA Rail Canada</h4>
+                        <p>Railway booking and management</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/ge_digital.png" alt="GE">
+                    <div class="portfolio-info">
+                        <h4>GE Cybersecurity Tools</h4>
+                        <p>BEASSTT & RM platforms</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/ge_aviation_only_logo.png" alt="GE Aviation">
+                    <div class="portfolio-info">
+                        <h4>Flight Phase Analyzer</h4>
+                        <p>GE Aviation analytics platform</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="https://rehanhanar7.github.io/images/portfolio/egypt.png" alt="Egypt">
+                    <div class="portfolio-info">
+                        <h4>Egypt Post</h4>
+                        <p>Government postal application</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="https://rehanhanar7.github.io/images/portfolio/hines.png" alt="USLBM">
+                    <div class="portfolio-info">
+                        <h4>USLBM Enterprise App</h4>
+                        <p>Cross-platform mobile solution</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications">
+        <div class="cert-container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-badge">SAFe® 6 Advanced Scrum Master</div>
+                <div class="cert-badge">SAFe® 6 Practitioner</div>
+                <div class="cert-badge">Certified Scrum Master® (CSM®)</div>
+                <div class="cert-badge">Certified Scrum Product Owner® (CSPO®)</div>
+                <div class="cert-badge">SHRM Certified First Time Manager</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Ready to Work Together?</h2>
+            <p>Let's build something amazing. Available for freelance projects and consulting.</p>
+            <div class="contact-links">
+                <a href="mailto:rehanhanar.com@gmail.com" class="contact-link">
+                    📧 Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/rehanfeb29/" target="_blank" class="contact-link">
+                    💼 LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/rehanfeb29/" target="_blank">🔗</a>
+            <a href="https://www.youtube.com/user/rehanhanar7" target="_blank">📺</a>
+            <a href="https://www.facebook.com/rehanhanar7" target="_blank">📘</a>
+            <a href="https://www.instagram.com/rehan_feb_29/" target="_blank">📷</a>
+            <a href="https://rehanhanar.blogspot.com" target="_blank">📝</a>
+        </div>
+        <p>&copy; 2026 Rehan. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
