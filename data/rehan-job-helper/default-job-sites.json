@@ -1,6 +1,21 @@
 {
   "version": "1.0",
   "lastUpdated": "2026-01-20",
+  "globalSites": [
+    {
+      "name": "LinkedIn Jobs",
+      "url": "https://www.linkedin.com/jobs/"
+    },
+
+    {
+      "name": "Glassdoor",
+      "url": "https://www.glassdoor.com/Job/"
+    },
+    {
+      "name": "Remote.co",
+      "url": "https://remote.co/remote-jobs/"
+    }
+  ],
   "jobSites": {
     "India": [
       {
