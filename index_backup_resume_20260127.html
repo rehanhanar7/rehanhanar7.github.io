@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehan - Technical Project Manager & Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Progress Bar Navigation */
+        .progress-nav {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem 1.2rem 2rem 2rem;
+            border-radius: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 1rem 0;
+            z-index: 2;
+        }
+
+        .nav-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid rgba(99, 102, 241, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            flex-shrink: 0;
+            z-index: 3;
+        }
+
+        .nav-item.active .nav-dot {
+            background: var(--primary);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+            transform: scale(1.3);
+        }
+
+        .nav-item:hover .nav-dot {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: scale(1.2);
+        }
+
+        .nav-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            color: var(--gray);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .nav-item:hover .nav-label {
+            color: var(--primary);
+        }
+
+        .nav-item.active .nav-label {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Progress Line - Aligned inside nav panel */
+        .progress-line {
+            position: absolute;
+            right: 1.2rem;
+            top: 2rem;
+            width: 4px;
+            height: calc(100% - 4rem);
+            background: rgba(99, 102, 241, 0.2);
+            border-radius: 10px;
+            z-index: 1;
+            transform: translateX(-5px);
+        }
+
+        .progress-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+            transition: height 0.3s ease;
+            border-radius: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            top: -250px;
+            right: -250px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.4s ease;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            background: white;
+            padding: 3rem 2rem;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        /* Timeline Progress Bar */
+        .timeline {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: -3rem;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 0 4px white, 0 0 0 8px var(--primary);
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 20px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            padding: 2rem;
+            background: var(--light);
+        }
+
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+
+        .portfolio-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .portfolio-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Personal Projects Section */
+        .personal-projects {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .personal-projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .personal-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .personal-project-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 4px solid var(--primary);
+        }
+
+        .personal-project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-left-color: var(--secondary);
+        }
+
+        .personal-project-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .personal-project-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.8rem;
+        }
+
+        /* Certifications */
+        .certifications {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+
+        .cert-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .cert-badge {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .cert-badge:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contact-link:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: var(--primary);
+        }
+
+        /* Mobile Bottom Navigation */
+        .mobile-nav {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            /* Hide right side progress nav on tablets and mobile */
+            .progress-nav,
+            .progress-line {
+                display: none;
+            }
+
+            /* Hide top simple nav on medium viewports */
+            .simple-nav {
+                display: none;
+            }
+
+            /* Remove top padding since simple nav is hidden */
+            body {
+                padding-top: 0;
+                padding-bottom: 80px; /* Add bottom padding for mobile nav */
+            }
+
+            /* Show mobile bottom nav */
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                padding: 1rem;
+                justify-content: space-around;
+                box-shadow: 0 -2px 20px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+
+            .mobile-nav-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.3rem;
+                text-decoration: none;
+                color: var(--gray);
+                font-size: 0.75rem;
+                font-weight: 600;
+                transition: all 0.3s;
+            }
+
+            .mobile-nav-item.active {
+                color: var(--primary);
+            }
+
+            .mobile-nav-icon {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Already handled in 1024px breakpoint */
+
+            .mobile-nav-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.3rem;
+                text-decoration: none;
+                color: var(--gray);
+                font-size: 0.75rem;
+                font-weight: 600;
+                transition: all 0.3s;
+            }
+
+            .mobile-nav-item.active {
+                color: var(--primary);
+            }
+
+            .mobile-nav-icon {
+                font-size: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .portfolio-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <nav class="progress-nav">
+      <!-- Progress Bar Navigation -->
+        <div class="progress-line">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="nav-item" data-section="home">
+            <span class="nav-label">Home</span>
+            <div class="nav-dot"></div>
+        </div>
+        <div class="nav-item" data-section="experience">
+            <span class="nav-label">Experience</span>
+            <div class="nav-dot"></div>
+        </div>
+        <div class="nav-item" data-section="services">
+            <span class="nav-label">Services</span>
+            <div class="nav-dot"></div>
+        </div>
+        <div class="nav-item" data-section="portfolio">
+            <span class="nav-label">Portfolio</span>
+            <div class="nav-dot"></div>
+        </div>
+        <div class="nav-item" data-section="contact">
+            <span class="nav-label">Contact</span>
+            <div class="nav-dot"></div>
+        </div>
+    </nav>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav">
+        <a href="#home" class="mobile-nav-item" data-section="home">
+            <span class="mobile-nav-icon">🏠</span>
+            <span>Home</span>
+        </a>
+        <a href="#experience" class="mobile-nav-item" data-section="experience">
+            <span class="mobile-nav-icon">💼</span>
+            <span>Experience</span>
+        </a>
+        <a href="#services" class="mobile-nav-item" data-section="services">
+            <span class="mobile-nav-icon">⚡</span>
+            <span>Services</span>
+        </a>
+        <a href="#portfolio" class="mobile-nav-item" data-section="portfolio">
+            <span class="mobile-nav-icon">📁</span>
+            <span>Portfolio</span>
+        </a>
+        <a href="#contact" class="mobile-nav-item" data-section="contact">
+            <span class="mobile-nav-icon">📧</span>
+            <span>Contact</span>
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Technical Project Manager</h1>
+            <div class="subtitle">Enterprise UI & Digital Platforms Specialist</div>
+            <p>Transforming ideas into scalable digital solutions with 12.5+ years of expertise in delivering enterprise applications for global clients</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Hire Me</a>
+                <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>12.5+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>Projects Delivered</p>
+            </div>
+            <div class="stat-item">
+                <h3>$50M+</h3>
+                <p>Revenue Generated</p>
+            </div>
+            <div class="stat-item">
+                <h3>75+</h3>
+                <p>UPS.com Apps</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Experience -->
+    <section id="experience" class="timeline">
+        <div class="timeline-container">
+            <h2 class="section-title">Professional Journey</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>United Parcel Service (UPS)</h3>
+                    <div class="timeline-date">Mar 2024 - Present | Technical Project Manager</div>
+                    <p style="color: #8b5cf6; font-size: 0.85rem; margin-bottom: 1rem;"><strong>Skills:</strong> Technical Project Management, Enterprise UI framework, Angular, UX & UI Design Systems, AI Automation, Figma-to-Code, CI/CD, Azure DevOps, n8n, Stakeholder Management</p>
+                    <ul style="margin-left: 1.2rem; color: #64748b;">
+                        <li>Leading UI engineering delivery for <strong>75+ UPS.com applications</strong>, managing a 16-member team and significantly reducing delivery cost and timelines through reusable component framework</li>
+                        <li>Built and scaled an enterprise Angular UI component library (<strong>40+ components</strong>), improving developer productivity by <strong>~95%</strong> and ensuring consistent, accessible UI across platforms</li>
+                        <li>Delivered an <strong>AI-powered Figma-to-Code automation tool</strong>, reducing manual UI dependency by <strong>~90%</strong> and accelerating feature development</li>
+                        <li>Established delivery governance (DoD/DoR, PR standards, architecture processes), resulting in a <strong>~90% reduction in UI defects</strong></li>
+                        <li>Automated development and support workflows, improving deployment reliability using CI/CD pipelines and saving <strong>2–3 developer days per sprint</strong></li>
+                        <li>Mentored engineers through architecture reviews and 1:1s, building a high-performance, collaborative delivery culture</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Consultants to Government & Industry (CGI)</h3>
+                    <div class="timeline-date">Dec 2021 - Mar 2024 | Technical Project Manager</div>
+                    <p style="color: #8b5cf6; font-size: 0.85rem; margin-bottom: 1rem;"><strong>Skills:</strong> SAFe, Scrum, Agile Delivery, Solutioning & Estimation, Angular Architecture, Oracle BI, Stakeholder Management, Full Stack</p>
+                    <ul style="margin-left: 1.2rem; color: #64748b;">
+                        <li>Led SAFe delivery for a <strong>Finland-based HRM project</strong>, improving execution predictability and stakeholder confidence through disciplined PI planning and governance</li>
+                        <li>Turned around a red-status <strong>MAPFRE insurance project</strong>, improving delivery speed by <strong>40–50%</strong>, reducing rework by <strong>~30%</strong>, and enabling contract renewal</li>
+                        <li>Improved delivery predictability for <strong>Oracle BI (Intellx)</strong> by enforcing Agile practices</li>
+                        <li>Owned end-to-end delivery of the <strong>Pratigya CSR initiative</strong>, establishing governance for a stable, production-grade release</li>
+                        <li>Led delivery estimation and solutioning for the <strong>MTO Canada bid</strong>, producing <strong>~95% accurate plans</strong> and reducing estimation variance by <strong>30%+</strong> while mitigating contractual risk</li>
+                        <li>Led offshore delivery for <strong>VIA Rail Canada</strong>, delivering high-priority epics ahead of schedule with measurable cost and timeline savings</li>
+                        <li>Supported <strong>Amadeus (India & Europe)</strong> modernization strategy with migration assessments that enabled a multi-million-dollar project win</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>General Electric (GE)</h3>
+                    <div class="timeline-date">Jan 2018 - Dec 2021 | Technical Scrum Master</div>
+                    <p style="color: #8b5cf6; font-size: 0.85rem; margin-bottom: 1rem;"><strong>Skills:</strong> Technical Scrum Master, Full-Stack Engineering, Angular, Ionic, Node.js, PostgreSQL, AWS, Agile Execution, Stakeholder Collaboration</p>
+                    <ul style="margin-left: 1.2rem; color: #64748b;">
+                        <li>Led full-stack delivery for <strong>GE Cybersecurity global platforms</strong>, building secure, scalable systems used across enterprise environments</li>
+                        <li>Partnered closely with Product Owners to drive backlog execution, improving delivery predictability and cross-team collaboration</li>
+                        <li>Delivered a high-performance <strong>Flight Phase Analyzer for GE Aviation</strong>, improving usability and operational efficiency</li>
+                        <li>Enabled scalable cross-platform/hybrid mobile delivery for <strong>GE Power, Healthcare, and Transport</strong>, accelerating feature rollout across business units</li>
+                        <li>Earned repeated stakeholder recognition for technical ownership, reliability, and delivery leadership</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Wipro Technologies</h3>
+                    <div class="timeline-date">Jun 2013 - Jan 2018 | Technical Lead / Senior Software Engineer</div>
+                    <p style="color: #8b5cf6; font-size: 0.85rem; margin-bottom: 1rem;"><strong>Skills:</strong> Government Systems, Mobile Frameworks, AngularJS, Cordova, Ionic, Liferay 7, Hybrid Mobile Development, Onsite Delivery</p>
+                    <ul style="margin-left: 1.2rem; color: #64748b;">
+                        <li>Led delivery of a complex <strong>Egypt Post Government application</strong>, launching successfully within <strong>1 month</strong> and providing on-ground support at the <strong>Cairo ICT event, Egypt</strong></li>
+                        <li>Designed and delivered an <strong>Ionic-based mobile framework</strong> for internal R&D, enabling faster, standardized mobile development across projects</li>
+                        <li>Independently designed and developed a lightweight hybrid mobile & web application for <strong>Tas Helat Organization</strong> as a personal initiative, supporting internal operational workflows</li>
+                        <li>Delivered cross-platform mobile applications for <strong>US enterprise client (USLBM)</strong>, earning consistent recognition for quality and reliability</li>
+                        <li>Contributed to development of <strong>Tamil Nadu Government Finance (Karuvoolam)</strong> portal</li>
+                        <li>Began career in enterprise infrastructure support (Honeywell), resolving complex global incidents and consistently exceeding SLA expectations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section id="services" class="services">
+        <div class="services-container">
+            <h2 class="section-title">Services Offered</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Project Management</h3>
+                    <p>Expert in SAFe, Scrum, and Agile methodologies. Delivering complex projects on time and within budget with proven stakeholder management and risk mitigation strategies.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Enterprise Architecture</h3>
+                    <p>Designing scalable enterprise UI platforms, design systems, and micro-frontend strategies for web, mobile, and Electron applications.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Full-Stack Development</h3>
+                    <p>Building modern applications with Angular, React, Node.js, TypeScript, and cutting-edge frameworks. Expertise in creating reusable component libraries.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Setting up CI/CD pipelines, Azure/AWS infrastructure, Docker containerization, and automated deployment workflows for reliable delivery.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI Automation</h3>
+                    <p>Implementing AI-driven tools for development automation including Figma-to-Code conversion, reducing manual dependency by ~90%.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>UX/UI Design Systems</h3>
+                    <p>Creating consistent, accessible design systems and UI frameworks that improve developer productivity and user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="img/portfolio/ups.png" alt="UPS">
+                    <div class="portfolio-info">
+                        <h4>UPS.com Enterprise Platform</h4>
+                        <p>75+ applications with Angular UI library</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/cgi_pratigya.jpg" alt="Pratigya">
+                    <div class="portfolio-info">
+                        <h4>Pratigya CSR Initiative</h4>
+                        <p>CGI social responsibility platform</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/cgi_mto.png" alt="MTO">
+                    <div class="portfolio-info">
+                        <h4>MTO Canada</h4>
+                        <p>Government transportation system</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/cg_via_rail.png" alt="VIA Rail">
+                    <div class="portfolio-info">
+                        <h4>VIA Rail Canada</h4>
+                        <p>Railway booking and management</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/ge_digital.png" alt="GE">
+                    <div class="portfolio-info">
+                        <h4>GE Cybersecurity Tools</h4>
+                        <p>BEASSTT & RM platforms</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="images/portfolio/ge_aviation_only_logo.png" alt="GE Aviation">
+                    <div class="portfolio-info">
+                        <h4>Flight Phase Analyzer</h4>
+                        <p>GE Aviation analytics platform</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="https://rehanhanar7.github.io/images/portfolio/egypt.png" alt="Egypt">
+                    <div class="portfolio-info">
+                        <h4>Egypt Post</h4>
+                        <p>Government postal application</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="https://rehanhanar7.github.io/images/portfolio/hines.png" alt="USLBM">
+                    <div class="portfolio-info">
+                        <h4>USLBM Enterprise App</h4>
+                        <p>Cross-platform mobile solution</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Projects -->
+    <section class="personal-projects">
+        <div class="personal-projects-container">
+            <h2 class="section-title">Personal Projects</h2>
+            <div class="personal-projects-grid">
+
+                <a href="https://chromewebstore.google.com/detail/hfhagjebiknkekdhncpckchnajjpbgpl/" target="_blank" style="text-decoration: none;">
+                    <div class="personal-project-card">
+                        <img src="img/portfolio/chrome.png" alt="Rehan Job Helper Chrome Extension" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1rem;">
+                        <h4>Rehan Job Helper</h4>
+                        <p>Smart form autofill assistant with job application tracking. One-click save and autofill for forms, track applications with status monitoring, and manage data locally with full privacy control. Perfect for job seekers and frequent form fillers.</p>
+                        <span class="project-tag">Chrome Extension</span>
+                    </div>
+                </a>
+
+                <a href="https://play.google.com/store/apps/details?id=com.rehanhanar.manapparaiinfo" target="_blank" style="text-decoration: none;">
+                    <div class="personal-project-card">
+                        <img src="https://rehanhanar7.github.io/images/portfolio/manapparai.png" alt="Manapparai Info App" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1rem;">
+                        <h4>Manapparai Info App</h4>
+                        <p>Comprehensive local information app providing details about ATMs, banks, hospitals, schools, temples, and other essential services in Manapparai region.</p>
+                        <span class="project-tag">Mobile App</span>
+                    </div>
+                </a>
+
+                <a href="https://play.google.com/store/apps/details?id=com.rehanhanar.tamilnadugovernmentapp" target="_blank" style="text-decoration: none;">
+                    <div class="personal-project-card">
+                        <img src="https://rehanhanar7.github.io/images/portfolio/tamilnadu.png" alt="Tamil Nadu Government App" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1rem;">
+                        <h4>Tamil Nadu Government App</h4>
+                        <p>Citizen-centric application providing access to government services, schemes, news, and official information for Tamil Nadu residents.</p>
+                        <span class="project-tag">Mobile App</span>
+                    </div>
+                </a>
+
+                <a href="https://play.google.com/store/apps/details?id=com.rehanhanar.wordstopagesconverterandroid" target="_blank" style="text-decoration: none;">
+                    <div class="personal-project-card">
+                        <img src="https://rehanhanar7.github.io/images/portfolio/words.png" alt="Words to Pages Converter" style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1rem;">
+                        <h4>Words to Page Converter</h4>
+                        <p>Utility tool to convert word count to page count estimates, helping writers and students plan their documents and meet page requirements.</p>
+                        <span class="project-tag">Mobile App</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications">
+        <div class="cert-container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <a href="https://www.credly.com/badges/a53f3f74-98d8-4bdd-b65f-ef9024e01c" target="_blank" style="text-decoration: none;">
+                    <div class="cert-badge">SAFe® 6 Advanced Scrum Master</div>
+                </a>
+                <a href="https://www.credly.com/badges/056b6f15-ec31-43e1-9f26-9124b3c31aac/public_url" target="_blank" style="text-decoration: none;">
+                    <div class="cert-badge">SAFe® 6 Practitioner</div>
+                </a>
+                <a href="https://bcert.me/bc/html/show-badge.html?b=qeknfcyw" target="_blank" style="text-decoration: none;">
+                    <div class="cert-badge">Certified Scrum Master® (CSM®)</div>
+                </a>
+                <a href="https://bcert.me/bc/html/show-badge.html?b=vmeyvtcj" target="_blank" style="text-decoration: none;">
+                    <div class="cert-badge">Certified Scrum Product Owner® (CSPO®)</div>
+                </a>
+                <a href="https://www.shrm.org" target="_blank" style="text-decoration: none;">
+                    <div class="cert-badge">SHRM Certified First Time Manager</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Ready to Work Together?</h2>
+            <p>Let's build something amazing. Available for freelance projects and consulting.</p>
+            <div class="contact-links">
+                <a href="mailto:rehanhanar.com@gmail.com" class="contact-link">
+                    📧 Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/rehanfeb29/" target="_blank" class="contact-link">
+                    💼 LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/rehanfeb29/" target="_blank">🔗</a>
+            <a href="https://www.youtube.com/user/rehanhanar7" target="_blank">📺</a>
+            <a href="https://www.facebook.com/rehanhanar7" target="_blank">📘</a>
+            <a href="https://www.instagram.com/rehan_feb_29/" target="_blank">📷</a>
+            <a href="https://rehanhanar.blogspot.com" target="_blank">📝</a>
+        </div>
+        <p>&copy; 2026 Rehan. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="https://rehanhanar7.github.io/policies/android/privacy_policy.html" target="_blank" style="color: var(--gray); text-decoration: none; font-size: 0.9rem;">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script>
+        // Progress Navigation
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-item');
+        const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+        const progressFill = document.getElementById('progressFill');
+
+        // Update active navigation based on scroll
+        function updateNavigation() {
+            let current = '';
+            const scrollPosition = window.scrollY + 200;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            // Update desktop nav
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-section') === current) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Update mobile nav
+            mobileNavItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-section') === current) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Update progress fill
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            if (progressFill) {
+                progressFill.style.height = scrollPercent + '%';
+            }
+        }
+
+        // Smooth scroll to section
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                const sectionId = item.getAttribute('data-section');
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Listen for scroll events
+        window.addEventListener('scroll', updateNavigation);
+        window.addEventListener('load', updateNavigation);
+    </script>
+</body>
+</html>
