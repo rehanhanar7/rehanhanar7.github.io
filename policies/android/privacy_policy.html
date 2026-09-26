@@ -181,13 +181,18 @@
             <p><strong>Data Stored Locally:</strong> The following data is stored locally in your browser and is never sent to our servers:</p>
             <ul>
                 <li><strong>Profile (saved form fields):</strong> Personal information you save, which may include your name, email address, phone number, mailing address, LinkedIn/GitHub/portfolio URLs, salary information, notice period, work authorisation answers, date of birth, passport number, educational history, employment history, headline, any other answers you choose to save, and optional alternative wordings you add to a field</li>
+                <li><strong>Work history, education and skills:</strong> Jobs (company, title, location, dates, description), education entries (school, degree, field, dates, grade) and a list of your skills</li>
+                <li><strong>Saved answers:</strong> Reusable answers you write or save for open questions (for example "Why do you want to work here?"), with alternative wordings and how often each was used</li>
+                <li><strong>Profiles:</strong> If you create more than one profile, a copy of each profile's details, work history, education, skills and resume, with the profile name</li>
+                <li><strong>Assistant conversation:</strong> Your recent messages to the assistant and its replies (up to the last 40), and which data you chose to share with it</li>
                 <li><strong>Resume file:</strong> A PDF or Word file (up to 5 MB) you add so it can be attached to resume upload fields</li>
                 <li><strong>Remembered answers:</strong> For each website, answers you type or correct on application forms: the website name, the question's label, and either the answer or the name of the saved field it matches, so the same form fills automatically next time</li>
-                <li><strong>Job Application Tracker Data:</strong> Company name, role name, role URL, location, application status, date added, and last updated timestamp for jobs you track or save from a job ad</li>
+                <li><strong>Job Application Tracker Data:</strong> Company name, role name, role URL, location, application status and its history, date added, date applied, follow-up date, your notes, whether the job was added automatically, and last updated timestamp for jobs you track, save from a job ad, or that are logged when you submit an application</li>
                 <li><strong>Job Site Bookmarks:</strong> A list of job portal websites organized by country, including both default sites and any custom sites you add</li>
                 <li><strong>AI Settings:</strong> Your OpenAI and/or Anthropic API key (kept on this device, or only until Chrome closes if you choose that option), chosen models, effort and output limits, which AI providers you have allowed, token usage counts, prompt templates, and resume text you enter for the Fit check</li>
-                <li><strong>Extension Preferences:</strong> Enabled/disabled toggle, autofill options, input/output visibility toggle</li>
-                <li><strong>Keyword Highlight Settings:</strong> Include/exclude keyword lists for job listing filtering (developer feature)</li>
+                <li><strong>Extension Preferences:</strong> Page buttons toggle, autofill options, automatic tracking on/off, skills badge on/off, weekly application goal, follow-up delay, input/output visibility toggle</li>
+                <li><strong>Usage counts:</strong> Counts kept on this device only (for example how many forms you have filled, cover letters written and assistant chats) to show your setup checklist and weekly progress. They are never sent anywhere.</li>
+                <li><strong>Skills to avoid and Naukri highlight settings:</strong> Skills you want flagged on job ads, and the Naukri.com highlight options</li>
             </ul>
 
             <p><strong>Where the extension runs:</strong> By default only on major job portals (for example Greenhouse, Lever, Workday, Ashby, iCIMS, SmartRecruiters, LinkedIn, Indeed, Naukri and SEEK). It runs on other websites only if you turn on "Use on all websites" in Settings, or when you press the fill shortcut on a page.</p>
@@ -199,12 +204,15 @@
                 <li>While a form it has filled is open, answers you type into those fields, to remember them for that website (stored locally only)</li>
                 <li>Job ad details (title, company, location, description) when you save a job, check your fit, or draft AI answers on a page that contains a job posting</li>
                 <li>Field values when you click the "Save" button on a field</li>
+                <li><strong>Application confirmation (automatic tracking):</strong> After you fill a form with the extension, on that tab only and for up to 3 hours, it checks the page's headings and main text for an "application received" message and notes whether you clicked the form's Submit button. When both happen, the job is added to your tracker as Applied. You can undo it, or turn automatic tracking off in Settings. Only the job title, company and page address are stored, on your device.</li>
+                <li><strong>Skills match badge:</strong> On pages that include structured job-posting data, it reads the job title and description to count how many of your saved skills are mentioned. This is worked out on your device; you can turn the badge off in Settings.</li>
             </ul>
-            <p>Passwords, search boxes and hidden fields are never read or filled, and consent or terms checkboxes are never ticked for you.</p>
+            <p><strong>Keep filling (optional):</strong> If you turn on "Keep filling when the form moves to the next step", the extension also reads and fills the next pages of the same application website in that tab, including forms inside embedded frames, for up to 45 minutes after the last page it filled. It never clicks Next, Save or Submit. Turn the option off at any time.</p>
+            <p>Passwords, account login fields, search boxes and hidden fields are never read or filled, and consent or terms checkboxes are never ticked for you.</p>
 
             <p><strong>No Chrome Sync:</strong> This extension uses only <code>chrome.storage.local</code> (and <code>chrome.storage.session</code> for an API key you choose to keep only until Chrome closes). Your data does not sync across devices via your Google account.</p>
 
-            <p><strong>Data Sent to Third Parties:</strong> When you use the optional AI features (AI answers and Fit check), certain data is sent to the AI provider you choose, OpenAI or Anthropic, after you allow it. See Section 3.2 for full details.</p>
+            <p><strong>Data Sent to Third Parties:</strong> When you use the optional AI features (AI answers, Fit check, cover letters, the assistant and resume import), certain data is sent to the AI provider you choose, OpenAI or Anthropic, after you allow it. See Section 3.2 for full details.</p>
         </div>
 
         <h2>2. How We Use Information</h2>
@@ -223,11 +231,18 @@
             <ul>
                 <li><strong>Form Autofill:</strong> To fill job application forms from your saved profile when you click "Fill this page" or press the fill shortcut. This works entirely in your browser, without AI.</li>
                 <li><strong>Remembered answers:</strong> To fill the same form on the same website automatically next time, using answers you typed or corrected</li>
-                <li><strong>Job Application Tracking:</strong> To help you track and manage job applications locally on your device</li>
+                <li><strong>Job Application Tracking:</strong> To help you track and manage job applications locally on your device, including logging an application automatically when you submit a form you filled with the extension</li>
+                <li><strong>Follow-up reminders:</strong> To show the number of applications due for a follow-up on the extension icon. The count is worked out on your device a few times a day.</li>
+                <li><strong>Skills match:</strong> To show how many of your skills a job ad mentions, on your device</li>
                 <li><strong>Job Site Management:</strong> To provide a curated list of job portal websites and allow you to manage custom bookmarks</li>
                 <li><strong>AI answers (Optional):</strong> When you add your own OpenAI or Anthropic API key and click "Draft answers with AI", the questions your profile couldn't answer, your saved profile values (up to 500 characters each), the resume text you selected in Fit check (if any) and the job ad (when the page has one) are sent to your chosen provider to draft answers</li>
                 <li><strong>Fit check (Optional):</strong> Your resume text, your resume file if you tick "Send my resume file", the job description and the scoring prompt are sent to your chosen provider to generate a fit score and analysis</li>
+                <li><strong>Cover letters (Optional):</strong> The job description (from the page or pasted), your name, summary, experience, skills, recent jobs, education and city/country are sent to your chosen provider to write a cover letter you can edit</li>
+                <li><strong>Assistant (Optional):</strong> Your message, the recent conversation and only the data you choose with the "Using" chips (profile details, work history and education, your job tracker entries, the job ad on the current page, saved answers) are sent to your chosen provider to answer you</li>
+                <li><strong>Resume import (Optional):</strong> Your resume file or pasted resume text is sent to your chosen provider to extract your details, work history, education and skills. You review everything before it is saved. Without an AI key, contact details and links are picked up from pasted text on your device only.</li>
                 <li><strong>Clipboard Operations:</strong> To copy saved field values or AI-generated reports to your clipboard when you click a copy button</li>
+                <li><strong>Profile spreadsheet:</strong> To let you download your profile as a CSV template, fill it in yourself (or with a service you choose, such as ChatGPT) and upload it back. The file is created and read on your device; the extension never sends it anywhere.</li>
+                <li><strong>Send feedback (Optional):</strong> Opens an email to the developer (rehanmobileapps@gmail.com) in your own email app. It contains what you write and, if you leave the box ticked, the current form's questions and how each was matched - never your answers or profile details. The extension does not send it; you review it and send it yourself from your email account.</li>
                 <li><strong>Data Import/Export:</strong> To export your data as a JSON backup file (including remembered answers and your resume file) or import a previous backup. API keys are included only if you confirm when exporting.</li>
             </ul>
         </div>
@@ -263,6 +278,9 @@
                         <li>The prompt template used for analysis</li>
                     </ul>
                 </li>
+                <li><strong>Cover letters — data sent:</strong> the job description, your name, professional summary, years of experience, skills, up to four recent jobs, up to two education entries, city and country, and any highlight you type</li>
+                <li><strong>Assistant — data sent:</strong> your messages and the recent conversation, plus only what you switch on with the "Using" chips: profile details (not diversity answers), work history and education, job tracker entries (role, company, status, dates, notes), the job ad on the current page, and saved answers</li>
+                <li><strong>Resume import — data sent:</strong> your resume file (PDF) or the resume text you paste</li>
                 <li><strong>Test key:</strong> Checking your API key requests only the provider's list of available models. No profile data is sent.</li>
             </ul>
             <p>Requests to OpenAI are made with response storage turned off. Each provider processes data under its own terms: OpenAI's <a href="https://openai.com/policies/privacy-policy" target="_blank">Privacy Policy</a> and <a href="https://openai.com/policies/terms-of-use" target="_blank">Terms of Use</a>, and Anthropic's <a href="https://www.anthropic.com/legal/privacy" target="_blank">Privacy Policy</a> and <a href="https://www.anthropic.com/legal/commercial-terms" target="_blank">Commercial Terms</a>. We do not control how these providers handle data sent via their APIs. You use these features at your own discretion, with your own API key, and usage is billed to your provider account.</p>
@@ -314,18 +332,26 @@
             <p><strong>Data Scope:</strong> Interface only, no additional data access beyond what is stored locally.</p>
 
             <h3>5.4 Scripting Permission</h3>
-            <p><strong>Purpose:</strong> To add the autofill tools to a page (including embedded application forms) when you click "Fill this page" or press the shortcut, and to show the save/fill buttons on form fields.</p>
+            <p><strong>Purpose:</strong> To add the autofill tools to a page (including embedded application forms) when you click "Fill this page" or press the shortcut, and to show the save/fill buttons, the skills match badge and the application-confirmation check on websites you have allowed.</p>
             <p><strong>Data Scope:</strong> The tools only read and fill form fields and job ad details on that page, as described in Section 1.2.</p>
 
-            <h3>5.5 Clipboard Write Permission</h3>
+            <h3>5.5 Unlimited Storage Permission</h3>
+            <p><strong>Purpose:</strong> Your resume file is kept in the browser so it can be attached to upload fields, and each profile you create can keep its own resume. Chrome's standard local storage limit is too small for more than one resume.</p>
+            <p><strong>Data Scope:</strong> Only data you save in the extension. It stays on your device.</p>
+
+            <h3>5.6 Alarms Permission</h3>
+            <p><strong>Purpose:</strong> To refresh the follow-up reminder count on the extension icon a few times a day.</p>
+            <p><strong>Data Scope:</strong> Reads only your locally stored job tracker. No data is sent anywhere.</p>
+
+            <h3>5.7 Clipboard Write Permission</h3>
             <p><strong>Purpose:</strong> To copy saved field values or evaluation reports to your clipboard when you click a copy button, including when a page won't accept autofill.</p>
             <p><strong>Data Scope:</strong> Only the specific value you choose to copy is written to the clipboard. No data is read from the clipboard.</p>
 
-            <h3>5.6 Host Permissions (job portals, AI providers, job-site data)</h3>
+            <h3>5.8 Host Permissions (job portals, AI providers, job-site data)</h3>
             <p><strong>Purpose:</strong> Access to major job portals (Greenhouse, Lever, Workday, Ashby, iCIMS, SmartRecruiters, Jobvite, Workable, BambooHR, Recruitee, Teamtailor, Breezy, Taleo, SuccessFactors, LinkedIn, Naukri, Indeed, SEEK and Bayt) so autofill and the field buttons work there; access to <code>api.openai.com</code> and <code>api.anthropic.com</code> for the optional AI features you use; and access to <code>rehanhanar7.github.io</code> to download the job-site list.</p>
             <p><strong>Data Scope:</strong> The field buttons appear on those portals, and forms are only read or filled when you ask. The AI addresses receive data only when you use an AI feature you have allowed.</p>
 
-            <h3>5.7 Optional Access to All Websites</h3>
+            <h3>5.9 Optional Access to All Websites</h3>
             <p><strong>Purpose:</strong> Job applications are hosted on thousands of company websites. If you turn on "Use on all websites" in Settings, the extension can fill forms and show its field buttons on any website. It is off by default, Chrome asks you to confirm it, and you can turn it off at any time.</p>
             <p><strong>Data Scope:</strong> Same as the job portals: forms are only read or filled when you ask. No background data collection occurs.</p>
         </div>
@@ -337,7 +363,7 @@
             <p>Our apps do not use cookies explicitly. However, third-party services (AdMob, Google Play Services) may use cookies to collect information and improve their services.</p>
 
             <h3>6.2 Chrome Extension</h3>
-            <p><strong>No cookies or tracking:</strong> The Rehan Job Helper extension does not use cookies, does not track your browsing activity, and does not collect any analytics or telemetry data. No advertising SDKs or tracking pixels are included.</p>
+            <p><strong>No cookies or tracking:</strong> The Rehan Job Helper extension does not use cookies, does not track your browsing activity (the "job tracker" and automatic tracking only record job applications you submit, on your device), and does not collect any analytics or telemetry data. No advertising SDKs or tracking pixels are included.</p>
         </div>
 
         <h2>7. Data Sharing and Disclosure</h2>
