@@ -143,7 +143,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: February 20, 2026</p>
+        <p class="last-updated">Last Updated: September 26, 2026</p>
 
         <div class="section">
             <p>This Privacy Policy describes how Rehan ("we", "us", or "our") collects, uses, stores, and shares information when you use our services, including:</p>
@@ -175,31 +175,36 @@
 
             <h3>1.2 Chrome Extension (Rehan Job Helper)</h3>
             <div class="highlight-box">
-                <p><strong>Privacy-First Design:</strong> The Rehan Job Helper extension stores all user data locally on your device using Chrome's local storage API (<code>chrome.storage.local</code>). No data is automatically collected or transmitted without your explicit action.</p>
+                <p><strong>Privacy-First Design:</strong> The Rehan Job Helper extension stores all user data locally on your device using Chrome's local storage (<code>chrome.storage.local</code>). We have no server. Nothing is collected or transmitted unless you use a feature that needs it, and AI features ask for your permission before any data is sent.</p>
             </div>
 
             <p><strong>Data Stored Locally:</strong> The following data is stored locally in your browser and is never sent to our servers:</p>
             <ul>
-                <li><strong>Form Field Data:</strong> Personal information you manually save from web forms, which may include your name, email address, phone number, mailing address, LinkedIn profile URL, website URL, salary information, date of birth, passport number, educational history (college, degree, field of study, dates), employment history (company names, job titles, start/end dates), headline, and any other text you choose to save from form fields</li>
-                <li><strong>Job Application Tracker Data:</strong> Company name, role name, role URL, location, application status, date added, and last updated timestamp for jobs you manually track</li>
+                <li><strong>Profile (saved form fields):</strong> Personal information you save, which may include your name, email address, phone number, mailing address, LinkedIn/GitHub/portfolio URLs, salary information, notice period, work authorisation answers, date of birth, passport number, educational history, employment history, headline, any other answers you choose to save, and optional alternative wordings you add to a field</li>
+                <li><strong>Resume file:</strong> A PDF or Word file (up to 5 MB) you add so it can be attached to resume upload fields</li>
+                <li><strong>Remembered answers:</strong> For each website, answers you type or correct on application forms: the website name, the question's label, and either the answer or the name of the saved field it matches, so the same form fills automatically next time</li>
+                <li><strong>Job Application Tracker Data:</strong> Company name, role name, role URL, location, application status, date added, and last updated timestamp for jobs you track or save from a job ad</li>
                 <li><strong>Job Site Bookmarks:</strong> A list of job portal websites organized by country, including both default sites and any custom sites you add</li>
-                <li><strong>AI Configuration Settings:</strong> Your OpenAI API key (if you choose to use AI features), selected AI model name, maximum token setting, custom prompt templates, and resume text you enter for the AI evaluator</li>
-                <li><strong>Extension Preferences:</strong> Enabled/disabled toggle, LLM input/output visibility toggle, and token usage counters</li>
+                <li><strong>AI Settings:</strong> Your OpenAI and/or Anthropic API key (kept on this device, or only until Chrome closes if you choose that option), chosen models, effort and output limits, which AI providers you have allowed, token usage counts, prompt templates, and resume text you enter for the Fit check</li>
+                <li><strong>Extension Preferences:</strong> Enabled/disabled toggle, autofill options, input/output visibility toggle</li>
                 <li><strong>Keyword Highlight Settings:</strong> Include/exclude keyword lists for job listing filtering (developer feature)</li>
             </ul>
 
-            <p><strong>Data Accessed from Web Pages:</strong> When the extension's content scripts run on a webpage, they access:</p>
+            <p><strong>Where the extension runs:</strong> By default only on major job portals (for example Greenhouse, Lever, Workday, Ashby, iCIMS, SmartRecruiters, LinkedIn, Indeed, Naukri and SEEK). It runs on other websites only if you turn on "Use on all websites" in Settings, or when you press the fill shortcut on a page.</p>
+
+            <p><strong>Data Accessed from Web Pages:</strong> When you click "Fill this page" or press the fill shortcut, the extension reads the form on that page:</p>
             <ul>
-                <li>Form field attributes (name, id, placeholder, labels, aria-labels, type, required status)</li>
-                <li>Form field values (only when you click the "Save" button)</li>
-                <li>Surrounding context text near form fields (up to 200 characters of parent/sibling elements)</li>
-                <li>Select/dropdown option values</li>
-                <li>Page title, URL, headings, and button text (for AI form analysis only)</li>
+                <li>Form field labels and attributes (name, id, placeholder, aria-label, type, required status) and nearby section headings</li>
+                <li>Dropdown and radio-button options, and values already in the fields (so it doesn't overwrite your answers)</li>
+                <li>While a form it has filled is open, answers you type into those fields, to remember them for that website (stored locally only)</li>
+                <li>Job ad details (title, company, location, description) when you save a job, check your fit, or draft AI answers on a page that contains a job posting</li>
+                <li>Field values when you click the "Save" button on a field</li>
             </ul>
+            <p>Passwords, search boxes and hidden fields are never read or filled, and consent or terms checkboxes are never ticked for you.</p>
 
-            <p><strong>No Chrome Sync:</strong> This extension uses only <code>chrome.storage.local</code>. Your data does not sync across devices via your Google account.</p>
+            <p><strong>No Chrome Sync:</strong> This extension uses only <code>chrome.storage.local</code> (and <code>chrome.storage.session</code> for an API key you choose to keep only until Chrome closes). Your data does not sync across devices via your Google account.</p>
 
-            <p><strong>Data Sent to Third Parties:</strong> When you use the optional AI-powered features (AI Autofill and Job Suitability Evaluator), certain data is transmitted to OpenAI's servers. See Section 3.2 for full details on what data is shared and with whom.</p>
+            <p><strong>Data Sent to Third Parties:</strong> When you use the optional AI features (AI answers and Fit check), certain data is sent to the AI provider you choose, OpenAI or Anthropic, after you allow it. See Section 3.2 for full details.</p>
         </div>
 
         <h2>2. How We Use Information</h2>
@@ -216,13 +221,14 @@
 
             <h3>2.2 Chrome Extension</h3>
             <ul>
-                <li><strong>Form Autofill:</strong> To save and auto-fill form field values on job application websites when you explicitly trigger it by clicking the Save or Auto Fill buttons</li>
+                <li><strong>Form Autofill:</strong> To fill job application forms from your saved profile when you click "Fill this page" or press the fill shortcut. This works entirely in your browser, without AI.</li>
+                <li><strong>Remembered answers:</strong> To fill the same form on the same website automatically next time, using answers you typed or corrected</li>
                 <li><strong>Job Application Tracking:</strong> To help you track and manage job applications locally on your device</li>
                 <li><strong>Job Site Management:</strong> To provide a curated list of job portal websites and allow you to manage custom bookmarks</li>
-                <li><strong>AI-Powered Autofill (Optional):</strong> When you provide your own OpenAI API key and use the AI Autofill feature, your saved form field data (truncated to 120 characters per value) and the current page's form field metadata are sent to OpenAI's API to intelligently match and fill form fields</li>
-                <li><strong>Job Suitability Evaluation (Optional):</strong> When you use the AI Evaluator feature, your resume text and the job description text you paste are sent to OpenAI's API to generate a suitability score and analysis</li>
+                <li><strong>AI answers (Optional):</strong> When you add your own OpenAI or Anthropic API key and click "Draft answers with AI", the questions your profile couldn't answer, your saved profile values (up to 500 characters each), the resume text you selected in Fit check (if any) and the job ad (when the page has one) are sent to your chosen provider to draft answers</li>
+                <li><strong>Fit check (Optional):</strong> Your resume text, your resume file if you tick "Send my resume file", the job description and the scoring prompt are sent to your chosen provider to generate a fit score and analysis</li>
                 <li><strong>Clipboard Operations:</strong> To copy saved field values or AI-generated reports to your clipboard when you click a copy button</li>
-                <li><strong>Data Import/Export:</strong> To allow you to export your saved data as a JSON file for backup, or import previously exported data. Exported files may optionally include your OpenAI API key (you are asked to confirm before inclusion)</li>
+                <li><strong>Data Import/Export:</strong> To export your data as a JSON backup file (including remembered answers and your resume file) or import a previous backup. API keys are included only if you confirm when exporting.</li>
             </ul>
         </div>
 
@@ -237,30 +243,32 @@
             </ul>
 
             <h3>3.2 Chrome Extension</h3>
-            <p>The Rehan Job Helper extension communicates with the following third-party services only when you explicitly trigger specific features:</p>
+            <p>The Rehan Job Helper extension communicates with the following third-party services only when you use specific features:</p>
 
-            <p><strong>a) OpenAI API (Optional — requires user-provided API key)</strong></p>
-            <p>If you choose to use the AI-powered features, the extension sends data to <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI</a> via their API:</p>
+            <p><strong>a) OpenAI API or Anthropic API (Optional — requires your own API key)</strong></p>
+            <p>If you use the AI features, the extension sends data directly from your browser to the provider you choose in Settings: <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI</a> or <a href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic</a>. The first time you use an AI feature with a provider, the extension asks for your permission and sends nothing until you allow it. You can stop sharing at any time in Settings.</p>
             <ul>
-                <li><strong>AI Autofill Feature — Data sent to OpenAI:</strong>
+                <li><strong>AI answers — data sent:</strong>
                     <ul>
-                        <li>Your saved form field data (field labels and values, each truncated to 120 characters). This may include personal information such as your name, email, phone number, address, salary, employment history, and other data you have saved.</li>
-                        <li>Form field metadata extracted from the current webpage (field IDs, names, labels, placeholders, types, required status, surrounding context text, dropdown options)</li>
-                        <li>Page title, URL, headings, and button text of the current webpage</li>
+                        <li>The questions on the current form that your profile couldn't answer (labels, types, required status, section headings and options)</li>
+                        <li>Your saved profile values (labels and values, each up to 500 characters). This may include personal information such as your name, email, phone number, address, salary, employment history and other data you have saved.</li>
+                        <li>The resume text you selected in Fit check, if any</li>
+                        <li>The job ad on the page (title, company, description), when the page contains a job posting or you captured it</li>
                     </ul>
                 </li>
-                <li><strong>Job Suitability Evaluator — Data sent to OpenAI:</strong>
+                <li><strong>Fit check — data sent:</strong>
                     <ul>
-                        <li>The resume text you enter or paste</li>
-                        <li>The job description text you paste</li>
+                        <li>The resume text you enter or select, and your resume file if you tick "Send my resume file"</li>
+                        <li>The job description text</li>
                         <li>The prompt template used for analysis</li>
                     </ul>
                 </li>
+                <li><strong>Test key:</strong> Checking your API key requests only the provider's list of available models. No profile data is sent.</li>
             </ul>
-            <p>OpenAI processes this data according to their <a href="https://openai.com/policies/privacy-policy" target="_blank">Privacy Policy</a> and <a href="https://openai.com/policies/terms-of-use" target="_blank">Terms of Use</a>. We do not control how OpenAI handles data sent via their API. You use this feature at your own discretion using your own OpenAI API key.</p>
+            <p>Requests to OpenAI are made with response storage turned off. Each provider processes data under its own terms: OpenAI's <a href="https://openai.com/policies/privacy-policy" target="_blank">Privacy Policy</a> and <a href="https://openai.com/policies/terms-of-use" target="_blank">Terms of Use</a>, and Anthropic's <a href="https://www.anthropic.com/legal/privacy" target="_blank">Privacy Policy</a> and <a href="https://www.anthropic.com/legal/commercial-terms" target="_blank">Commercial Terms</a>. We do not control how these providers handle data sent via their APIs. You use these features at your own discretion, with your own API key, and usage is billed to your provider account.</p>
 
             <p><strong>b) GitHub Pages (Static Data Fetch)</strong></p>
-            <p>The extension may fetch a default list of job portal websites from <a href="https://rehanhanar7.github.io" target="_blank">https://rehanhanar7.github.io</a> (hosted on GitHub Pages). This is a read-only GET request — no user data is sent to this server.</p>
+            <p>The extension may fetch the default list of job portal websites and default AI prompts from <a href="https://rehanhanar7.github.io" target="_blank">https://rehanhanar7.github.io</a> (hosted on GitHub Pages). This is a read-only download of data — no user data is sent to this server.</p>
 
             <p><strong>No other third-party services:</strong> The extension does not use any analytics, advertising, tracking, or telemetry services.</p>
         </div>
@@ -279,7 +287,8 @@
                 <li><strong>No remote backups:</strong> We do not create or maintain any copies of your data on external servers</li>
                 <li><strong>Import/export for portability:</strong> You can export your data as a JSON file and import it on another device</li>
                 <li><strong>Full user control:</strong> You can view, edit, and delete all stored data at any time through the extension's interface</li>
-                <li><strong>API key storage:</strong> If you use AI features, your OpenAI API key is stored in plain text in Chrome's local storage on your device. We recommend keeping your API key confidential and not sharing exported files that contain it.</li>
+                <li><strong>API key storage:</strong> If you use AI features, your OpenAI or Anthropic API key is stored in plain text in Chrome's local storage on your device, or in Chrome's session storage (cleared when Chrome closes) if you untick "Keep the key on this device". We recommend keeping your API key confidential and not sharing exported files that contain it.</li>
+                <li><strong>Resume file:</strong> Your resume file is stored locally and is only attached to upload fields on forms you fill, or sent to your AI provider if you choose that in Fit check.</li>
             </ul>
 
             <h3>4.3 Data Retention</h3>
@@ -297,24 +306,28 @@
             <p><strong>Data Scope:</strong> Only data you explicitly save or configure is stored. No data is collected automatically.</p>
 
             <h3>5.2 Active Tab Permission</h3>
-            <p><strong>Purpose:</strong> To interact with the current webpage only when you explicitly click "Save", "Auto Fill", or AI-related action buttons.</p>
-            <p><strong>Data Scope:</strong> Access is limited to the active tab and only when triggered by user action.</p>
+            <p><strong>Purpose:</strong> Lets the fill keyboard shortcut (Alt+Shift+F) fill the page you are on, one time, even on websites the extension doesn't otherwise have access to.</p>
+            <p><strong>Data Scope:</strong> Access is limited to the active tab and only when you press the shortcut.</p>
 
             <h3>5.3 Side Panel Permission</h3>
-            <p><strong>Purpose:</strong> To display the extension's management interface for viewing and organizing saved fields, job applications, job sites, and AI features.</p>
+            <p><strong>Purpose:</strong> To display the extension's interface for autofill, your profile, job applications, job sites, Fit check and settings.</p>
             <p><strong>Data Scope:</strong> Interface only, no additional data access beyond what is stored locally.</p>
 
             <h3>5.4 Scripting Permission</h3>
-            <p><strong>Purpose:</strong> To inject content scripts into web pages for form field detection, saving, and autofilling. Used as a fallback mechanism when content scripts need to be dynamically injected.</p>
-            <p><strong>Data Scope:</strong> Scripts only access form field elements on the page and only operate when triggered by your actions.</p>
+            <p><strong>Purpose:</strong> To add the autofill tools to a page (including embedded application forms) when you click "Fill this page" or press the shortcut, and to show the save/fill buttons on form fields.</p>
+            <p><strong>Data Scope:</strong> The tools only read and fill form fields and job ad details on that page, as described in Section 1.2.</p>
 
             <h3>5.5 Clipboard Write Permission</h3>
-            <p><strong>Purpose:</strong> To copy saved field values, AI autofill results, or evaluation reports to your clipboard when you click a copy button.</p>
+            <p><strong>Purpose:</strong> To copy saved field values or evaluation reports to your clipboard when you click a copy button, including when a page won't accept autofill.</p>
             <p><strong>Data Scope:</strong> Only the specific value you choose to copy is written to the clipboard. No data is read from the clipboard.</p>
 
-            <h3>5.6 Host Permissions (all_urls)</h3>
-            <p><strong>Purpose:</strong> To allow the extension's content scripts to run on any job portal or application website where you may want to save or autofill form data. This broad permission is necessary because job application forms exist on thousands of different websites.</p>
-            <p><strong>Data Scope:</strong> Content scripts are injected on all pages but only actively operate when you interact with the extension's buttons (Save, Auto Fill). The scripts do not collect, transmit, or modify any data without your explicit action. No background data collection occurs.</p>
+            <h3>5.6 Host Permissions (job portals, AI providers, job-site data)</h3>
+            <p><strong>Purpose:</strong> Access to major job portals (Greenhouse, Lever, Workday, Ashby, iCIMS, SmartRecruiters, Jobvite, Workable, BambooHR, Recruitee, Teamtailor, Breezy, Taleo, SuccessFactors, LinkedIn, Naukri, Indeed, SEEK and Bayt) so autofill and the field buttons work there; access to <code>api.openai.com</code> and <code>api.anthropic.com</code> for the optional AI features you use; and access to <code>rehanhanar7.github.io</code> to download the job-site list.</p>
+            <p><strong>Data Scope:</strong> The field buttons appear on those portals, and forms are only read or filled when you ask. The AI addresses receive data only when you use an AI feature you have allowed.</p>
+
+            <h3>5.7 Optional Access to All Websites</h3>
+            <p><strong>Purpose:</strong> Job applications are hosted on thousands of company websites. If you turn on "Use on all websites" in Settings, the extension can fill forms and show its field buttons on any website. It is off by default, Chrome asks you to confirm it, and you can turn it off at any time.</p>
+            <p><strong>Data Scope:</strong> Same as the job portals: forms are only read or filled when you ask. No background data collection occurs.</p>
         </div>
 
         <h2>6. Cookies and Tracking</h2>
@@ -342,8 +355,8 @@
             <h3>7.2 Chrome Extension</h3>
             <p>Data sharing from the Chrome extension is limited to the following scenarios, all initiated by your explicit action:</p>
             <ul>
-                <li><strong>OpenAI (only when you use AI features):</strong> Your saved form field data (truncated to 120 characters per value), form field metadata from the current page, resume text, and job description text may be sent to OpenAI's API when you use the AI Autofill or Job Suitability Evaluator features. This requires you to provide your own OpenAI API key. See Section 3.2 for complete details.</li>
-                <li><strong>GitHub Pages (read-only):</strong> A GET request to <code>rehanhanar7.github.io</code> to fetch default job site lists. No user data is included in this request.</li>
+                <li><strong>OpenAI or Anthropic (only when you use AI features and have allowed that provider):</strong> Your saved profile values, the unanswered questions on the current form, resume text or file, and job description text may be sent to the provider you choose. This requires your own API key. See Section 3.2 for complete details.</li>
+                <li><strong>GitHub Pages (read-only):</strong> A download from <code>rehanhanar7.github.io</code> of default job site lists and prompts. No user data is included in this request.</li>
                 <li><strong>No other sharing:</strong> No data is shared with us (the developer), advertisers, data brokers, or any other third parties. We do not have access to your locally stored data.</li>
             </ul>
         </div>
@@ -372,12 +385,14 @@
 
             <h3>10.2 Chrome Extension</h3>
             <ul>
-                <li><strong>Access:</strong> View all your saved data at any time in the extension's side panel (Fields, Jobs, Job Sites, and Settings tabs)</li>
+                <li><strong>Access:</strong> View all your saved data at any time in the extension's side panel (Autofill, Profile, Jobs, Job sites and Settings tabs)</li>
                 <li><strong>Edit:</strong> Modify any saved field values, job entries, or settings directly in the extension</li>
-                <li><strong>Export:</strong> Download all your data as a JSON backup file from the Settings tab. You choose whether to include your OpenAI API key in the export.</li>
+                <li><strong>Export:</strong> Download all your data as a JSON backup file from the Settings tab. You choose whether to include your API keys in the export.</li>
                 <li><strong>Import:</strong> Import previously exported data with the option to merge with or replace existing data</li>
                 <li><strong>Delete:</strong> Clear all saved data (form fields, jobs, and bookmarks) from the Settings tab at any time</li>
-                <li><strong>Revoke AI Access:</strong> Remove your OpenAI API key from the Settings tab to stop all external data transmission</li>
+                <li><strong>Revoke AI Access:</strong> Use "Stop sharing" for a provider in Settings, or remove your API key, to stop all transmission to that provider</li>
+                <li><strong>Remembered answers and resume file:</strong> Use "Forget answers for this site" or "Remove" (resume file) in the Autofill tab</li>
+                <li><strong>Website access:</strong> Turn "Use on all websites" off in Settings at any time</li>
                 <li><strong>Disable:</strong> Turn off the extension at any time from Chrome's extension settings — this stops all content script activity</li>
                 <li><strong>Uninstall:</strong> Remove the extension completely to permanently delete all locally stored data</li>
             </ul>
