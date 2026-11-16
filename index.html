@@ -1,1508 +1,895 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rehan Hussain Imam - Lead Full Stack AI Applications Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #8b5cf6;
-            --dark: #0f172a;
-            --gray-900: #0f172a;
-            --gray-800: #1e293b;
-            --gray-700: #334155;
-            --gray-600: #475569;
-            --gray-500: #64748b;
-            --gray-400: #94a3b8;
-            --gray-300: #cbd5e1;
-            --gray-200: #e2e8f0;
-            --gray-100: #f1f5f9;
-            --light: #f8fafc;
-            --white: #ffffff;
-            --success: #10b981;
-            --accent: #f59e0b;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--gray-700);
-            background: var(--white);
-            overflow-x: hidden;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Navigation */
-        .desktop-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--gray-200);
-            z-index: 1000;
-            padding: 1rem 2rem;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--gray-900);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--gray-600);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 6rem 2rem 4rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            top: -250px;
-            right: -250px;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--success);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 1rem;
-            line-height: 1.1;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: white;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-            opacity: 0.95;
-        }
-
-        .hero-description {
-            font-size: 1.125rem;
-            color: white;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
-            margin: 2rem auto;
-            max-width: 800px;
-        }
-
-        .tech-tag {
-            padding: 0.5rem 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border-radius: 6px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            backdrop-filter: blur(10px);
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary);
-        }
-
-        .btn-primary:hover {
-            background: var(--gray-100);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary);
-        }
-
-        /* Stats Section */
-        .stats {
-            padding: 3rem 2rem;
-            background: white;
-            margin-top: -50px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-item p {
-            color: var(--gray-500);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.875rem;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            margin-bottom: 3rem;
-        }
-
-        .section-label {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--gray-900);
-            margin-bottom: 1rem;
-        }
-
-        .section-description {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-            max-width: 700px;
-        }
-
-        /* Experience Section */
-        .experience {
-            background: var(--light);
-        }
-
-        .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .experience-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            border: 1px solid var(--gray-200);
-            transition: all 0.3s;
-        }
-
-        .experience-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .experience-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .company-logo {
-            width: 60px;
-            height: 60px;
-            background: var(--gray-100);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            flex-shrink: 0;
-        }
-
-        .experience-info {
-            flex: 1;
-        }
-
-        .experience-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--gray-900);
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-company {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-date {
-            font-size: 0.875rem;
-            color: var(--gray-500);
-            font-weight: 500;
-        }
-
-        .experience-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .skill-badge {
-            padding: 0.25rem 0.75rem;
-            background: var(--gray-100);
-            color: var(--gray-700);
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .experience-description {
-            color: var(--gray-600);
-            line-height: 1.8;
-        }
-
-        .experience-description ul {
-            margin-top: 1rem;
-            padding-left: 1.5rem;
-        }
-
-        .experience-description li {
-            margin-bottom: 0.75rem;
-            color: var(--gray-600);
-        }
-
-        .experience-description strong {
-            color: var(--gray-900);
-        }
-
-        .show-more-btn {
-            background: none;
-            border: none;
-            color: var(--primary);
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 0.875rem;
-            margin-top: 1rem;
-            padding: 0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .show-more-btn:hover {
-            text-decoration: underline;
-        }
-
-        /* Skills Section */
-        .skills {
-            background: white;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: var(--light);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--gray-200);
-        }
-
-        .skill-category h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--gray-900);
-            margin-bottom: 1rem;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-item {
-            padding: 0.5rem 0.75rem;
-            background: white;
-            color: var(--gray-700);
-            border-radius: 6px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid var(--gray-200);
-        }
-
-        /* Projects Section */
-        .projects {
-            background: var(--light);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--gray-200);
-            transition: all 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background: var(--gray-100);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            padding: 2rem;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--gray-900);
-            margin-bottom: 0.75rem;
-        }
-
-        .project-description {
-            color: var(--gray-600);
-            font-size: 0.9375rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .project-tag {
-            padding: 0.25rem 0.75rem;
-            background: var(--gray-100);
-            color: var(--primary);
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        /* Certifications Section */
-        .certifications {
-            background: white;
-        }
-
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .cert-card {
-            background: var(--light);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--gray-200);
-            text-align: center;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: block;
-        }
-
-        .cert-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .cert-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cert-name {
-            font-weight: 600;
-            color: var(--gray-900);
-            font-size: 1rem;
-            line-height: 1.4;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .contact .section-label {
-            color: var(--primary);
-        }
-
-        .contact .section-title {
-            color: white;
-        }
-
-        .contact .section-description {
-            color: var(--gray-400);
-            margin: 0 auto;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin: 2rem auto;
-            max-width: 600px;
-        }
-
-        .contact-item {
-            font-size: 1.125rem;
-            color: var(--gray-300);
-        }
-
-        .contact-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .contact-btn {
-            padding: 1rem 2rem;
-            background: white;
-            color: var(--gray-900);
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--gray-400);
-            padding: 3rem 2rem 2rem;
-            text-align: center;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--gray-800);
-            border-radius: 50%;
-            color: var(--gray-400);
-            font-size: 1.5rem;
-            transition: all 0.3s;
-            text-decoration: none;
-        }
-
-        .social-links a:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
-        }
-
-        footer p {
-            font-size: 0.875rem;
-            margin-bottom: 0.5rem;
-        }
-
-        footer a {
-            color: var(--gray-400);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        /* Mobile Bottom Navigation */
-        .mobile-nav {
-            display: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .desktop-nav {
-                display: none !important;
-            }
-
-            body {
-                padding-top: 0 !important;
-                padding-bottom: 70px;
-            }
-
-            .mobile-nav {
-                display: flex !important;
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: white;
-                padding: 0.75rem 0.5rem;
-                justify-content: space-around;
-                box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
-                z-index: 1000;
-                border-top: 1px solid var(--gray-200);
-            }
-
-            .mobile-nav-item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 0.25rem;
-                text-decoration: none;
-                color: var(--gray-600);
-                font-size: 0.7rem;
-                font-weight: 600;
-                transition: all 0.3s;
-                flex: 1;
-                padding: 0.25rem;
-            }
-
-            .mobile-nav-item.active {
-                color: var(--primary);
-            }
-
-            .mobile-nav-item:active {
-                transform: scale(0.95);
-            }
-
-            .mobile-nav-icon {
-                font-size: 1.4rem;
-            }
-
-            .hero {
-                padding-top: 2rem;
-                min-height: auto;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                min-height: auto;
-                padding: 5rem 1.5rem 5rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.25rem;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .experience-header {
-                flex-direction: column;
-            }
-
-            .stats-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            section {
-                padding: 3rem 1.5rem;
-            }
-
-            .stats {
-                padding: 2rem 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 4rem 1rem 5rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .stats-container {
-                grid-template-columns: 1fr;
-            }
-
-            .tech-tags {
-                justify-content: flex-start;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rehan Hussain Imam — Lead Full Stack AI Applications Developer</title>
+<meta name="description" content="Rehan Hussain Imam is a Lead Full Stack AI Applications Developer and Technical Program Manager with 13 years building enterprise web, mobile and AI platforms for UPS, GE, CGI and government clients.">
+<link rel="canonical" href="https://rehanhanar7.github.io/">
+<meta name="theme-color" content="#F3F2EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F0F0E" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rehan Hussain Imam">
+<meta property="og:title" content="Rehan Hussain Imam — Lead Full Stack AI Applications Developer">
+<meta property="og:description" content="13 years building enterprise web, mobile and AI platforms. RAG, LLM workflow automation, design systems and delivery leadership.">
+<meta property="og:url" content="https://rehanhanar7.github.io/">
+<meta property="og:image" content="https://rehanhanar7.github.io/img/aboutMe.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;if(localStorage.getItem('motion')==='paused')document.documentElement.classList.add('motion-paused')}catch(e){}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rehan Hussain Imam",
+  "url": "https://rehanhanar7.github.io/",
+  "image": "https://rehanhanar7.github.io/img/aboutMe.jpg",
+  "email": "mailto:rehanhussainimam@gmail.com",
+  "jobTitle": "Lead Full Stack AI Applications Developer / Technical Program Manager",
+  "sameAs": ["https://www.linkedin.com/in/rehanfeb29/", "https://www.youtube.com/user/rehanhanar7", "https://rehanhanar.blogspot.com"],
+  "knowsAbout": ["Retrieval-Augmented Generation", "LLM workflow automation", "LangChain", "Azure OpenAI", "Angular", "Node.js", "Design systems", "SAFe delivery", "Technical program management"]
+}
+</script>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="desktop-nav">
-        <div class="nav-container">
-            <a href="#" class="logo">Rehan Hussain Imam</a>
-            <ul class="nav-links">
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Courses</a></li>
-                <li><a href="#contact">Contact</a></li>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i data-progress></i></div>
+
+<!-- ============ navigation ============ -->
+<header class="nav" data-nav>
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="Rehan Hussain Imam, back to top">
+      <span class="brand-mark" aria-hidden="true">R</span>
+      <span class="brand-name">Rehan Hussain Imam</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#experience">Experience</a>
+      <a href="#side">Hobby builds</a>
+      <a href="#credentials">Credentials</a>
+    </nav>
+    <button class="nav-search" type="button" data-search-open aria-label="Search the site">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span class="nav-search-label">Search</span><span class="kbd" data-kbd>⌘K</span>
+    </button>
+    <button class="btn btn-ink nav-cta" type="button" data-enquire>Contact me</button>
+    <button class="nav-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<dialog class="menu" id="menu" aria-label="Menu">
+  <div class="menu-inner">
+    <div class="menu-top">
+      <span class="brand"><span class="brand-mark" aria-hidden="true">R</span><span class="brand-name">Rehan Hussain Imam</span></span>
+      <button class="nav-menu menu-close" type="button">Close</button>
+    </div>
+    <nav class="menu-links" aria-label="Sections">
+      <a href="#about" style="--i:0"><span>About</span><span class="mono">01</span></a>
+      <a href="#work" style="--i:1"><span>Work</span><span class="mono">02</span></a>
+      <a href="#capabilities" style="--i:2"><span>Capabilities</span><span class="mono">03</span></a>
+      <a href="#experience" style="--i:3"><span>Experience</span><span class="mono">04</span></a>
+      <a href="#side" style="--i:4"><span>Hobby builds</span><span class="mono">05</span></a>
+      <a href="#credentials" style="--i:5"><span>Credentials</span><span class="mono">06</span></a>
+      <a href="#contact" style="--i:6"><span>Contact</span><span class="mono">07</span></a>
+    </nav>
+    <div class="menu-foot">
+      <button class="btn btn-ink" type="button" data-enquire>Contact me</button>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/rehanfeb29/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+  </div>
+</dialog>
+
+<aside class="rail" aria-hidden="true">
+  <div class="rail-track"></div>
+  <div class="rail-marker" data-rail><span class="rail-label" data-rail-label>Intro</span><span class="rail-dot"></span></div>
+</aside>
+
+<main id="main">
+
+<!-- ============ hero ============ -->
+<section class="hero" id="top" data-section="Intro">
+  <div class="wrap">
+    <div class="hero-top">
+      <p class="status"><span class="pulse" aria-hidden="true"></span>Open to lead AI engineering &amp; TPM roles</p>
+      <p class="mono">India &amp; UAE · Remote worldwide</p>
+    </div>
+
+    <h1 class="hero-name">
+      <span class="w"><span style="--i:0">Rehan</span></span>
+      <span class="w"><span style="--i:1">Hussain</span></span>
+      <span class="w"><span style="--i:2">Imam<span class="accent">.</span></span></span>
+    </h1>
+
+    <div class="hero-grid">
+      <div class="hero-copy" data-reveal style="--d:.35s">
+        <p class="hero-lede"><strong>Lead Full Stack AI Applications Developer</strong> and Technical Program Manager. Thirteen years turning enterprise ambition into shipped systems: RAG platforms, UI foundations, and delivery that holds under load.</p>
+        <div class="hero-actions">
+          <a class="btn btn-ink" href="#work">See the work <span class="arr" aria-hidden="true">→</span></a>
+          <button class="btn btn-ghost" type="button" data-enquire>Contact me</button>
+        </div>
+      </div>
+
+      <div class="ask" data-ask data-reveal style="--d:.5s">
+        <div class="ask-head">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="mono">ask-rehan</span>
+          <span class="mono ask-note">Scripted demo · answers from my CV</span>
+        </div>
+        <div class="ask-body">
+          <div class="ask-q"><span class="mono ask-tag">Q</span><p class="ask-q-text" data-ask-q>What do you build with AI?</p></div>
+          <ol class="ask-steps" data-ask-steps aria-hidden="true">
+            <li class="is-done">Embed question</li>
+            <li class="is-done">Search CV · 4 roles, 13 projects</li>
+            <li class="is-done" data-ask-n>3 passages matched</li>
+          </ol>
+          <div class="ask-a">
+            <span class="mono ask-tag">A</span>
+            <div>
+              <p class="ask-a-text"><span data-ask-a>Production RAG and LLM workflow systems. A SharePoint-grounded executive chat that saves ~14 team hours a week, an AI assistant serving 1,000+ employees that halved task turnaround, and a Figma-to-Angular assistant that turned 10 days of page work into about one.</span><span class="caret" data-ask-caret hidden></span></p>
+              <a class="ask-src is-on" href="#work" data-ask-src>Source: Selected work →</a>
+            </div>
+          </div>
+          <p class="sr-only" aria-live="polite" data-ask-live></p>
+        </div>
+        <div class="ask-chips" role="group" aria-label="Ask a question">
+          <button class="chip-q" type="button" data-q="0" aria-pressed="true">What do you build with AI?</button>
+          <button class="chip-q" type="button" data-q="1" aria-pressed="false">How big was UPS?</button>
+          <button class="chip-q" type="button" data-q="2" aria-pressed="false">Can you lead delivery?</button>
+          <button class="chip-q" type="button" data-q="3" aria-pressed="false">Where have you worked?</button>
+          <button class="chip-q" type="button" data-q="4" aria-pressed="false">What do you build for fun?</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ clients ============ -->
+<section class="clients" aria-label="Clients and employers">
+  <div class="wrap clients-head">
+    <p class="mono">Built for teams at</p>
+    <button class="motion-toggle mono" type="button" data-motion-toggle aria-pressed="false">Pause motion</button>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <ul>
+        <li>UPS</li><li>General Electric</li><li>CGI</li><li>Wipro</li><li>Amadeus</li><li>VIA Rail Canada</li><li>MAPFRE</li><li>Government of Finland</li><li>Egypt Post</li><li>MTO Ontario</li><li>Tamil Nadu Government</li><li>Honeywell</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>UPS</li><li>General Electric</li><li>CGI</li><li>Wipro</li><li>Amadeus</li><li>VIA Rail Canada</li><li>MAPFRE</li><li>Government of Finland</li><li>Egypt Post</li><li>MTO Ontario</li><li>Tamil Nadu Government</li><li>Honeywell</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ stance ============ -->
+<section class="section stance" id="about" data-section="About">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal><span class="idx">01</span>About</p>
+    <h2 class="stance-text" data-words>I build the layer underneath. Component systems, retrieval pipelines and delivery cadence, so seventy applications behave like one product. Not demos: production systems with owners, budgets and audit trails.</h2>
+
+    <div class="principles">
+      <div class="principle" data-reveal>
+        <h3>Production, not demos.</h3>
+        <p>AI that passes security review: PII controls, permissioned retrieval, audit trails.</p>
+      </div>
+      <div class="principle" data-reveal style="--d:.08s">
+        <h3>Systems over screens.</h3>
+        <p>One component library, seventy apps, zero drift. Build it once, then govern it well.</p>
+      </div>
+      <div class="principle" data-reveal style="--d:.16s">
+        <h3>A lead who still codes.</h3>
+        <p>From AngularJS migrations to agentic pipelines, I stay close to the work I steer.</p>
+      </div>
+      <div class="principle" data-reveal style="--d:.24s">
+        <h3>Outcomes with numbers.</h3>
+        <p>Hours saved, turnaround halved, effort cut 30–60%. Every claim here has a figure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ about ============ -->
+<section class="about" data-section="About">
+  <div class="wrap about-grid">
+    <figure class="about-photo" data-clip>
+      <img src="/img/aboutMe-900.jpg" srcset="/img/aboutMe-900.jpg 900w, /img/aboutMe.jpg 1536w" sizes="(max-width: 880px) 92vw, 40vw" alt="Rehan Hussain Imam at his desk" width="900" height="900" loading="lazy" decoding="async">
+    </figure>
+    <div class="about-copy">
+      <p class="about-lede" data-reveal>I’m Rehan. I architect and deliver large-scale enterprise web, mobile and AI platforms, and I lead the global teams that build them.</p>
+      <div class="about-body">
+        <p data-reveal>Most of my recent work sits where <strong>applied generative AI</strong> meets real enterprise constraints: retrieval over locked-down document estates, LLM workflow automation with PII controls, and agentic pipelines that quietly remove hours from a sprint.</p>
+        <p data-reveal>Alongside it I build foundations: a centralised UI platform serving 70+ UPS applications, a cybersecurity ticketing platform for GE, a configuration-driven insurance UI that pulled a red-status programme back to renewal, and a government mobile app I supported on the ground at Cairo ICT.</p>
+        <p data-reveal>I’ve led teams of 8 to 30 for clients across the US, Canada, Europe, Singapore, Malaysia, Egypt and Saudi Arabia. The through-line is the same: shorten the distance between a decision and a shipped thing.</p>
+        <p data-reveal>Outside work I build and run my own products: a Quran study site, a bilingual guide to my home town, and a Chrome extension for job seekers. <a class="inline-link" href="#side">See the hobby builds</a>.</p>
+      </div>
+      <dl class="facts" data-reveal>
+        <div class="fact"><dt class="mono">Based in</dt><dd>India &amp; UAE, remote worldwide</dd></div>
+        <div class="fact"><dt class="mono">Focus</dt><dd>Applied GenAI, UI platforms, delivery</dd></div>
+        <div class="fact"><dt class="mono">Most recent</dt><dd>Lead Applications Developer, UPS</dd></div>
+        <div class="fact"><dt class="mono">Open to</dt><dd>Lead / principal AI &amp; TPM roles</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ numbers ============ -->
+<section class="numbers" aria-label="Career in numbers">
+  <div class="wrap numbers-grid">
+    <div class="num" data-reveal>
+      <p class="num-v"><span data-count="13">13</span><span class="u">+</span></p>
+      <p class="mono">Years shipping enterprise software</p>
+    </div>
+    <div class="num" data-reveal style="--d:.08s">
+      <p class="num-v"><span data-count="70">70</span><span class="u">+</span></p>
+      <p class="mono">UPS applications on one UI platform</p>
+    </div>
+    <div class="num" data-reveal style="--d:.16s">
+      <p class="num-v"><span data-count="15">15</span><span class="u">+</span></p>
+      <p class="mono">Enterprise platforms delivered</p>
+    </div>
+    <div class="num" data-reveal style="--d:.24s">
+      <p class="num-v"><span class="u">$</span><span data-count="10">10</span><span class="u">M+</span></p>
+      <p class="mono">A year in revenue from bids I led</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ work ============ -->
+<section class="section work" id="work" data-section="Work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-reveal><span class="idx">02</span>Selected work</p>
+        <h2 class="sec-title" data-split>Things I put into production</h2>
+      </div>
+      <p class="sec-note" data-reveal>Enterprise platforms, AI systems and government builds. Open any one for the full story.</p>
+    </div>
+
+    <div class="cases">
+
+      <article class="case" style="--k:0">
+        <div class="case-text">
+          <p class="mono">2024 — 2026 · United Parcel Service</p>
+          <h3 class="case-title">UPS Enterprise UI Platform</h3>
+          <p class="case-desc">One component library behind 70+ UPS applications, built and governed by a 12-engineer team I led.</p>
+          <ul class="tags"><li>Design system</li><li>Angular</li><li>Storybook</li><li>Figma Code Connect</li></ul>
+          <div class="case-foot">
+            <button class="btn btn-ink btn-sm" type="button" data-open="ups">Read case study <span class="arr" aria-hidden="true">↗</span></button>
+            <span class="mono">01 / 05</span>
+          </div>
+        </div>
+        <div class="case-visual" aria-hidden="true">
+          <div class="vis-top"><span class="mono">Outcome</span><span class="vis-num">70+</span><span class="vis-cap">applications on one platform · 40+ shared components</span></div>
+          <div class="art-grid" data-art="grid"></div>
+        </div>
+      </article>
+
+      <article class="case" style="--k:1">
+        <div class="case-text">
+          <p class="mono">2022 — 2026 · Applied GenAI</p>
+          <h3 class="case-title">LLM-Powered UI Assistant</h3>
+          <p class="case-desc">A vector-backed assistant with custom Copilot instructions that writes Angular pages straight from Figma, grounded in the live component library.</p>
+          <ul class="tags"><li>Vector DB</li><li>Copilot instructions</li><li>Figma</li><li>Angular</li></ul>
+          <div class="case-foot">
+            <button class="btn btn-ink btn-sm" type="button" data-open="llm">Read case study <span class="arr" aria-hidden="true">↗</span></button>
+            <span class="mono">02 / 05</span>
+          </div>
+        </div>
+        <div class="case-visual" aria-hidden="true">
+          <div class="vis-top"><span class="mono">Outcome</span><span class="vis-num">10 → 1</span><span class="vis-cap">days of page work per sprint</span></div>
+          <div class="art-bars" data-art>
+            <div class="bar"><span class="mono">Before</span><i style="--w:100%"></i><b>10 days</b></div>
+            <div class="bar"><span class="mono">With the assistant</span><i class="hot" style="--w:10%"></i><b>~1 day</b></div>
+            <div class="bar"><span class="mono">Story points</span><i style="--w:62%"></i><b>8 → 3–5</b></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" style="--k:2">
+        <div class="case-text">
+          <p class="mono">2022 — 2026 · Applied GenAI</p>
+          <h3 class="case-title">Enterprise AI Chatbot Platform</h3>
+          <p class="case-desc">A conversational front door for software requests, leave approvals, timesheets and HR queries, orchestrating the APIs the business already had.</p>
+          <ul class="tags"><li>LLM orchestration</li><li>Node.js</li><li>REST APIs</li><li>Azure OpenAI</li></ul>
+          <div class="case-foot">
+            <button class="btn btn-ink btn-sm" type="button" data-open="chatbot">Read case study <span class="arr" aria-hidden="true">↗</span></button>
+            <span class="mono">03 / 05</span>
+          </div>
+        </div>
+        <div class="case-visual" aria-hidden="true">
+          <div class="vis-top"><span class="mono">Outcome</span><span class="vis-num">1,000+</span><span class="vis-cap">employees served · task turnaround down ~50%</span></div>
+          <div class="art-chat" data-art>
+            <p class="b in">Apply leave for Friday</p>
+            <p class="b out">Done. Sent to your manager for approval.</p>
+            <p class="b in">Raise a software request for Figma</p>
+            <p class="b out typing"><i></i><i></i><i></i></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" style="--k:3">
+        <div class="case-text">
+          <p class="mono">2021 — 2024 · MAPFRE via CGI</p>
+          <h3 class="case-title">MAPFRE Insurance Turnaround</h3>
+          <p class="case-desc">A red-status programme rebuilt on a configuration-driven UI: new business flows needed JSON, not code. Delivery recovered and the contract renewed.</p>
+          <ul class="tags"><li>Angular</li><li>JSON-driven UI</li><li>Architecture</li><li>SAFe</li></ul>
+          <div class="case-foot">
+            <button class="btn btn-ink btn-sm" type="button" data-open="mapfre">Read case study <span class="arr" aria-hidden="true">↗</span></button>
+            <span class="mono">04 / 05</span>
+          </div>
+        </div>
+        <div class="case-visual" aria-hidden="true">
+          <div class="vis-top"><span class="mono">Outcome</span><span class="vis-word">Red → renewed</span><span class="vis-cap">programme recovered to contract renewal</span></div>
+          <div class="art-code" data-art>
+            <div class="status-row"><span class="st"><i class="red"></i>Red status</span><span class="st-line"></span><span class="st"><i class="green"></i>Renewed</span></div>
+<pre><code><span class="k">"flow"</span>: <span class="s">"motor-quote"</span>,
+<span class="k">"steps"</span>: [<span class="s">"driver"</span>, <span class="s">"vehicle"</span>, <span class="s">"cover"</span>],
+<span class="k">"rules"</span>: { <span class="k">"minAge"</span>: <span class="n">18</span> }</code></pre>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" style="--k:4">
+        <div class="case-text">
+          <p class="mono">2018 — 2021 · General Electric</p>
+          <h3 class="case-title">GE Cybersecurity Platform</h3>
+          <p class="case-desc">A ticketing platform bridging GE application teams and cybersecurity operations, modernised in flight and moved from manual releases to CI/CD.</p>
+          <ul class="tags"><li>Angular 9</li><li>React</li><li>Node.js</li><li>PostgreSQL</li><li>Jenkins</li></ul>
+          <div class="case-foot">
+            <button class="btn btn-ink btn-sm" type="button" data-open="ge">Read case study <span class="arr" aria-hidden="true">↗</span></button>
+            <span class="mono">05 / 05</span>
+          </div>
+        </div>
+        <div class="case-visual" aria-hidden="true">
+          <div class="vis-top"><span class="mono">Outcome</span><span class="vis-word">Manual → CI/CD</span><span class="vis-cap">modernised without stopping delivery</span></div>
+          <div class="art-pipe" data-art>
+            <div class="pipe"><span>AngularJS</span><i></i><span>Angular 9</span><i></i><span class="hot">React</span></div>
+            <div class="pipe"><span>Manual release</span><i></i><span>Jenkins</span><i></i><span class="hot">Docker</span></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="more">
+      <div class="more-head">
+        <h3>More work</h3>
+        <p class="mono">8 projects</p>
+      </div>
+      <ul class="rows">
+        <li><button class="row" type="button" data-open="rag"><span class="row-when mono">2022 — 26</span><span class="row-title">RAG-Based Executive Chat</span><span class="row-client">SharePoint retrieval for leadership</span><span class="row-type mono">RAG</span><span class="row-arr" aria-hidden="true">↗</span></button></li>
+        <li><button class="row" type="button" data-open="talent"><span class="row-when mono">2022 — 26</span><span class="row-title">AI Talent Intelligence</span><span class="row-client">Hiring and workforce automation</span><span class="row-type mono">Applied GenAI</span><span class="row-arr" aria-hidden="true">↗</span></button></li>
+        <li><button class="row" type="button" data-open="aviation"><span class="row-when mono">2018 — 21</span><span class="row-title">GE Aviation Flight Analyzer</span><span class="row-client">IoT engine telemetry</span><span class="row-type mono">Data viz</span><span class="row-arr" aria-hidden="true">↗</span></button></li>
+        <li><button class="row" type="button" data-open="amadeus"><span class="row-when mono">2021 — 24</span><span class="row-title">Amadeus India &amp; Europe Bid</span><span class="row-client">$10M+ per-year engagement</span><span class="row-type mono">Pre-sales</span><span class="row-arr" aria-hidden="true">↗</span></button></li>
+        <li><button class="row" type="button" data-open="mto"><span class="row-when mono">2021 — 24</span><span class="row-title">MTO Canada</span><span class="row-client">~95% accurate bid estimates</span><span class="row-type mono">Government</span><span class="row-arr" aria-hidden="true">↗</span></button></li>
+        <li><button class="row" type="button" data-open="via"><span class="row-when mono">2021 — 24</span><span class="row-title">VIA Rail Canada</span><span class="row-client">Offshore team of 8–11</span><span class="row-type mono">Delivery lead</span><span class="row-arr" aria-hidden="true">↗</span></button></li>
+        <li><button class="row" type="button" data-open="pratigya"><span class="row-when mono">2021 — 24</span><span class="row-title">Pratigya CSR Initiative</span><span class="row-client">End-to-end, team of 8</span><span class="row-type mono">Full stack</span><span class="row-arr" aria-hidden="true">↗</span></button></li>
+        <li><button class="row" type="button" data-open="egypt"><span class="row-when mono">2013 — 18</span><span class="row-title">Egypt Post Government App</span><span class="row-client">On-site at Cairo ICT</span><span class="row-type mono">Mobile</span><span class="row-arr" aria-hidden="true">↗</span></button></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ capabilities ============ -->
+<section class="section caps" id="capabilities" data-section="Capabilities">
+  <div class="wrap caps-grid">
+    <div class="caps-side">
+      <p class="eyebrow" data-reveal><span class="idx">03</span>Capabilities</p>
+      <h2 class="sec-title" data-split>What I actually do</h2>
+      <p class="sec-note" data-reveal>Six disciplines, one stack. Open any row for the detail.</p>
+    </div>
+
+    <ol class="caps-list">
+      <li class="cap is-open">
+        <button class="cap-btn" type="button" aria-expanded="true" aria-controls="cap-1">
+          <span class="cap-num mono">01</span><span class="cap-name">Applied GenAI &amp; LLM Engineering</span><span class="cap-metric mono">10 days → ~1</span><span class="cap-icon" aria-hidden="true"></span>
+        </button>
+        <div class="cap-panel" id="cap-1"><div><div class="cap-inner">
+          <p>RAG over enterprise document estates, agentic workflow automation, and LLM features that pass security review: vector-backed assistants, resume scoring with PII controls, and chat over SharePoint that saves 14+ team hours a week.</p>
+          <ul class="tags"><li>RAG</li><li>LangChain / LangGraph</li><li>Pinecone</li><li>Embeddings</li><li>Azure OpenAI</li><li>Claude</li><li>Ollama</li><li>Hugging Face</li><li>n8n</li><li>Make.com</li><li>Prompt engineering</li></ul>
+        </div></div></div>
+      </li>
+      <li class="cap">
+        <button class="cap-btn" type="button" aria-expanded="false" aria-controls="cap-2">
+          <span class="cap-num mono">02</span><span class="cap-name">Full-Stack Application Engineering</span><span class="cap-metric mono">AngularJS → 18</span><span class="cap-icon" aria-hidden="true"></span>
+        </button>
+        <div class="cap-panel" id="cap-2"><div><div class="cap-inner">
+          <p>Angular from AngularJS through 18, Node service layers, and the unglamorous parts that decide whether a platform survives: auth, migrations, performance and accessibility, shipped into regulated environments.</p>
+          <ul class="tags"><li>Angular</li><li>React</li><li>Node.js</li><li>TypeScript</li><li>REST &amp; microservices</li><li>OAuth / SSO / IAM</li><li>PostgreSQL</li><li>Ionic / Cordova</li><li>Java</li></ul>
+        </div></div></div>
+      </li>
+      <li class="cap">
+        <button class="cap-btn" type="button" aria-expanded="false" aria-controls="cap-3">
+          <span class="cap-num mono">03</span><span class="cap-name">Design Systems &amp; UI Platforms</span><span class="cap-metric mono">70+ apps</span><span class="cap-icon" aria-hidden="true"></span>
+        </button>
+        <div class="cap-panel" id="cap-3"><div><div class="cap-inner">
+          <p>One component library, seventy applications, zero drift. I run the design-to-code pipeline end to end, from Figma Code Connect into Storybook into Zeroheight, plus the governance that keeps teams adopting it.</p>
+          <ul class="tags"><li>Storybook</li><li>Figma Code Connect</li><li>Zeroheight</li><li>Design tokens</li><li>Component architecture</li><li>WCAG</li><li>Visual regression</li></ul>
+        </div></div></div>
+      </li>
+      <li class="cap">
+        <button class="cap-btn" type="button" aria-expanded="false" aria-controls="cap-4">
+          <span class="cap-num mono">04</span><span class="cap-name">Delivery &amp; Engineering Leadership</span><span class="cap-metric mono">Teams of 8–30</span><span class="cap-icon" aria-hidden="true"></span>
+        </button>
+        <div class="cap-panel" id="cap-4"><div><div class="cap-inner">
+          <p>Certified SAFe Advanced Scrum Master, and a developer who still writes code. I’ve led 8 to 30 people, turned a red-status programme around, produced ~95% accurate bid estimates and helped secure a $10M+ a year contract.</p>
+          <ul class="tags"><li>Technical program leadership</li><li>SAFe</li><li>PI planning</li><li>Estimation</li><li>Pre-sales</li><li>Risk &amp; dependencies</li><li>Stakeholders</li></ul>
+        </div></div></div>
+      </li>
+      <li class="cap">
+        <button class="cap-btn" type="button" aria-expanded="false" aria-controls="cap-5">
+          <span class="cap-num mono">05</span><span class="cap-name">Cloud, DevOps &amp; Automation</span><span class="cap-metric mono">Manual → CI/CD</span><span class="cap-icon" aria-hidden="true"></span>
+        </button>
+        <div class="cap-panel" id="cap-5"><div><div class="cap-inner">
+          <p>From manual releases to Jenkins pipelines and early Docker at GE, to reporting workflows that stitch Azure, repos and JFrog into something leadership can read on a Monday.</p>
+          <ul class="tags"><li>AWS (EC2, S3)</li><li>Azure DevOps</li><li>CI/CD</li><li>Jenkins</li><li>Docker</li><li>JFrog</li><li>Git</li><li>Ubuntu</li></ul>
+        </div></div></div>
+      </li>
+      <li class="cap">
+        <button class="cap-btn" type="button" aria-expanded="false" aria-controls="cap-6">
+          <span class="cap-num mono">06</span><span class="cap-name">Architecture &amp; Platform Engineering</span><span class="cap-metric mono">Legacy → modern</span><span class="cap-icon" aria-hidden="true"></span>
+        </button>
+        <div class="cap-panel" id="cap-6"><div><div class="cap-inner">
+          <p>Front-end and back-end enterprise architecture, and the governance that keeps it honest at scale: micro-frontend boundaries, accessibility standards, and moving legacy platforms forward without stopping delivery.</p>
+          <ul class="tags"><li>Enterprise architecture</li><li>Micro-frontends</li><li>Web, mobile &amp; hybrid</li><li>UI governance</li><li>Legacy modernisation</li></ul>
+        </div></div></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ experience ============ -->
+<section class="section exp" id="experience" data-section="Experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-reveal><span class="idx">04</span>Experience</p>
+        <h2 class="sec-title" data-split>The road so far</h2>
+      </div>
+      <p class="sec-note" data-reveal>Thirteen years, four companies, clients on four continents.</p>
+    </div>
+
+    <ol class="timeline" data-timeline>
+      <li class="tl-item" id="exp-ups">
+        <div class="tl-when"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2024</span><span class="mono">Mar 2024 — Jan 2026</span></div>
+        <div class="tl-body">
+          <h3>United Parcel Service</h3>
+          <p class="tl-role">Lead Applications Developer · Full-Stack AI Engineer</p>
+          <ul class="tl-points">
+            <li><b>Enterprise UI framework.</b> Led a 12-engineer centralised UI team supporting 70+ applications; 40+ reusable components adopted by 20+ teams cut development effort ~30% and sped page delivery up to ~50%.</li>
+            <li><b>LLM-powered UI assistant.</b> Figma-to-Angular generation took a sprint of page work (10 days) to about 1, and deliverables from 8 story points to 3–5.</li>
+            <li><b>Enterprise AI chatbot.</b> 1,000+ users automating software requests, leave, timesheets and HR queries; turnaround down ~50%.</li>
+          </ul>
+          <details class="tl-more">
+            <summary><span class="when-closed">Show 5 more</span><span class="when-open">Show less</span></summary>
+            <ul class="tl-points">
+              <li><b>Design-to-code integration.</b> Storybook, Zeroheight and Figma Code Connect across 70+ applications, saving ~10 team hours per sprint.</li>
+              <li><b>AI-enabled WFM portal.</b> Supporting 8+ vendors and 5+ recruiters, scoring ~100+ candidates a month and saving 2+ hours a day of screening on PII-controlled LLM workflows.</li>
+              <li><b>AI talent intelligence.</b> Replaced manual Excel tracking for 107+ employees, saving 50+ hours per review cycle.</li>
+              <li><b>RAG-based executive chat.</b> SharePoint retrieval saving ~14+ team hours a week on search and meetings.</li>
+              <li><b>Meeting &amp; agile automation.</b> Transcripts into reports and Azure DevOps work items: ~80 hours saved per sprint across 20 teams.</li>
             </ul>
+          </details>
+          <ul class="tags"><li>RAG</li><li>LangChain</li><li>Azure OpenAI</li><li>AutoGen</li><li>n8n</li><li>Angular</li><li>Node.js</li><li>Storybook</li></ul>
         </div>
+      </li>
+
+      <li class="tl-item" id="exp-cgi">
+        <div class="tl-when"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2021</span><span class="mono">Dec 2021 — Mar 2024</span></div>
+        <div class="tl-body">
+          <h3>CGI</h3>
+          <p class="tl-role">Lead Analyst · Technical Project Manager</p>
+          <ul class="tl-points">
+            <li><b>MAPFRE turnaround.</b> Revived a red-status programme as Lead UI Developer with a configuration-driven UI, ending in contract renewal.</li>
+            <li><b>Amadeus bid.</b> Analysed 200+ pages of requirements and defined the migration strategy behind a $10M+ per-year engagement; Platinum award within three months.</li>
+            <li><b>Oracle BI (Intellx).</b> SAFe Scrum Master for ~30 people, driving SAFe adoption in a senior infrastructure team.</li>
+          </ul>
+          <details class="tl-more">
+            <summary><span class="when-closed">Show 4 more</span><span class="when-open">Show less</span></summary>
+            <ul class="tl-points">
+              <li><b>Finland Government HRM.</b> Scrum Master and full-stack developer in one.</li>
+              <li><b>MTO Canada bid.</b> Estimation and solutioning: ~95% accurate plans, variance down 30%+.</li>
+              <li><b>VIA Rail Canada.</b> Directed an offshore team of 8–11 across UI/UX and Power BI.</li>
+              <li><b>Pratigya CSR.</b> Technical Project Manager for an 8-member team, hands-on in the code.</li>
+            </ul>
+          </details>
+          <ul class="tags"><li>Angular</li><li>TypeScript</li><li>SAFe</li><li>PI planning</li><li>Estimation</li><li>Pre-sales</li></ul>
+        </div>
+      </li>
+
+      <li class="tl-item" id="exp-ge">
+        <div class="tl-when"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2018</span><span class="mono">Jan 2018 — Dec 2021</span></div>
+        <div class="tl-body">
+          <h3>General Electric</h3>
+          <p class="tl-role">Senior Full-Stack Developer · Technical Lead</p>
+          <ul class="tl-points">
+            <li><b>Cybersecurity ticket platform.</b> Led full-stack delivery bridging GE app teams and cybersecurity operations.</li>
+            <li><b>Modernisation.</b> AngularJS to Angular 9 and React; manual releases to Jenkins CI/CD and early Docker.</li>
+            <li><b>GE Aviation.</b> Flight phase analyser visualising time-series fuel use from IoT engine data.</li>
+          </ul>
+          <details class="tl-more">
+            <summary><span class="when-closed">Show 2 more</span><span class="when-open">Show less</span></summary>
+            <ul class="tl-points">
+              <li><b>Vulnerability ingestion.</b> A Java utility loading global vulnerability reports into PostgreSQL.</li>
+              <li><b>Hybrid mobile.</b> Started supporting GE Healthcare, GE Power and corporate apps.</li>
+            </ul>
+          </details>
+          <ul class="tags"><li>Angular</li><li>React</li><li>Node.js</li><li>PostgreSQL</li><li>Java</li><li>AWS</li><li>Jenkins</li><li>Docker</li></ul>
+        </div>
+      </li>
+
+      <li class="tl-item" id="exp-wipro">
+        <div class="tl-when"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2013</span><span class="mono">Jun 2013 — Jan 2018</span></div>
+        <div class="tl-body">
+          <h3>Wipro Technologies</h3>
+          <p class="tl-role">Software Engineer · Technical Lead</p>
+          <ul class="tl-points">
+            <li><b>Egypt Post.</b> Led delivery of a government mobile app, supported it on site at Cairo ICT, and built a QR payment demo against the clock.</li>
+            <li><b>Ionic boilerplate.</b> A framework that sped up mobile delivery across Wipro engagements.</li>
+            <li><b>USLBM.</b> Cross-platform hybrid e-commerce apps for a US client, recognised for quality.</li>
+          </ul>
+          <details class="tl-more">
+            <summary><span class="when-closed">Show 2 more</span><span class="when-open">Show less</span></summary>
+            <ul class="tl-points">
+              <li><b>Tamil Nadu Government Finance.</b> UI theme for the Karuvoolam portal on Liferay.</li>
+              <li><b>Honeywell.</b> Began in global infrastructure support, consistently beating SLA targets.</li>
+            </ul>
+          </details>
+          <ul class="tags"><li>AngularJS</li><li>Ionic</li><li>Cordova</li><li>Liferay</li><li>On-site delivery</li></ul>
+        </div>
+      </li>
+      <span class="tl-line" aria-hidden="true"><i data-tl-fill></i></span>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ hobby builds ============ -->
+<section class="section side" id="side" data-section="Hobby builds">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-reveal><span class="idx">05</span>Hobby builds</p>
+        <h2 class="sec-title" data-split>Built on my own time</h2>
+      </div>
+      <p class="sec-note" data-reveal>Products I design, build and run myself, outside the day job. Real users, real data, no client brief.</p>
+    </div>
+
+    <div class="builds">
+
+      <article class="build" data-reveal>
+        <div class="build-visual v-quran" aria-hidden="true">
+          <div class="bubbles">
+            <span style="--s:30;--x:6;--y:10;--c:#2F7D5B;--t:7s">Judgement Day</span>
+            <span style="--s:25;--x:40;--y:4;--c:#B98B32;--t:8s">Quran</span>
+            <span style="--s:24;--x:68;--y:16;--c:#6B4C9A;--t:6.5s">Moses &amp; Pharaoh</span>
+            <span style="--s:21;--x:38;--y:41;--c:#2B6E8F;--t:7.5s">Allah’s Signs</span>
+            <span style="--s:19;--x:64;--y:54;--c:#3C8C6E;--t:9s">Paradise</span>
+            <span style="--s:17;--x:12;--y:57;--c:#9E4436;--t:6s">Hell</span>
+            <span style="--s:15;--x:44;--y:72;--c:#8C6A3B;--t:8.5s">Abraham</span>
+            <span style="--s:12;--x:84;--y:80;--c:#2F7D5B;--t:7s">Noah</span>
+            <span style="--s:11;--x:27;--y:83;--c:#B98B32;--t:6.8s">Patience</span>
+          </div>
+        </div>
+        <div class="build-text">
+          <div class="build-top">
+            <img src="https://qurantenets.github.io/favicon.svg" alt="" width="36" height="36" loading="lazy" referrerpolicy="no-referrer">
+            <p class="mono">Website</p>
+          </div>
+          <h3>Quran Tenets</h3>
+          <p class="build-desc">Read the Quran as a flow of passages. Every surah, in its own order, grouped into short named passages, with a topic map to find every passage on a subject.</p>
+          <ul class="build-facts">
+            <li><b>6,236</b> verses grouped into passages</li>
+            <li><b>197</b> topics to explore</li>
+            <li>Arabic, with English and Tamil</li>
+          </ul>
+          <a class="btn btn-ink btn-sm" href="https://qurantenets.github.io/" target="_blank" rel="noopener noreferrer">Visit the site<span class="sr-only">: Quran Tenets</span> <span class="arr" aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="build" data-reveal style="--d:.08s">
+        <div class="build-visual v-town" aria-hidden="true">
+          <div class="town-ticker"><div class="town-track">
+            <span>Weather today</span><span>Gold rate</span><span>Next trains</span><span>Bus stand</span><span>Today’s news</span><span>Jobs nearby</span>
+            <span>Weather today</span><span>Gold rate</span><span>Next trains</span><span>Bus stand</span><span>Today’s news</span><span>Jobs nearby</span>
+          </div></div>
+          <div class="town-grid">
+            <span><i></i>Hospitals</span><span><i></i>Trains</span><span><i></i>Buses</span>
+            <span><i></i>Schools</span><span><i></i>Shops</span><span><i class="sos"></i>Emergency</span>
+          </div>
+        </div>
+        <div class="build-text">
+          <div class="build-top">
+            <img src="https://manapparai.tech/favicon.svg" alt="" width="36" height="36" loading="lazy" referrerpolicy="no-referrer">
+            <p class="mono">Website</p>
+          </div>
+          <h3>Manapparai Tech</h3>
+          <p class="build-desc">Everything about my home town in one place: hospitals, offices, schools, shops, train and bus timings and today’s news, kept accurate by the people who live there.</p>
+          <ul class="build-facts">
+            <li><b>Tamil</b> and English, phone first</li>
+            <li>Weather, gold rate, trains and news daily</li>
+            <li>Community-corrected listings</li>
+          </ul>
+          <a class="btn btn-ink btn-sm" href="https://manapparai.tech/" target="_blank" rel="noopener noreferrer">Visit the site<span class="sr-only">: Manapparai Tech</span> <span class="arr" aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="build" data-reveal style="--d:.16s">
+        <div class="build-visual v-job" aria-hidden="true">
+          <div class="job-form" data-art>
+            <p class="job-row"><span>Full name</span><i style="--j:0">Rehan Imam</i></p>
+            <p class="job-row"><span>Current title</span><i style="--j:1">Lead AI Engineer</i></p>
+            <p class="job-row"><span>Experience</span><i style="--j:2">13 years</i></p>
+            <p class="job-file"><span>resume.pdf</span><b>Attached</b></p>
+            <div class="job-stages"><span class="on">Applied</span><span>Interview</span><span>Offer</span></div>
+          </div>
+        </div>
+        <div class="build-text">
+          <div class="build-top">
+            <img src="/img/portfolio/chrome.png" alt="" width="36" height="36" loading="lazy">
+            <p class="mono">Chrome extension · v2.2.1</p>
+          </div>
+          <h3>Rehan Job Helper</h3>
+          <p class="build-desc">Autofill job applications in one click from a saved profile, then track every application from applied to offer.</p>
+          <ul class="build-facts">
+            <li>Handles <b>multi-step</b> forms and tricky dropdowns</li>
+            <li>Tracker with board view, reminders and CSV export</li>
+            <li>Data stays in your browser, no account</li>
+          </ul>
+          <a class="btn btn-ink btn-sm" href="https://chromewebstore.google.com/detail/rehan-job-helper-job-appl/hfhagjebiknkekdhncpckchnajjpbgpl" target="_blank" rel="noopener noreferrer">Add to Chrome <span class="arr" aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="earlier">
+      <p class="mono earlier-head">Earlier Android apps</p>
+      <ul class="earlier-list">
+        <li data-reveal>
+          <a class="app-row" href="https://play.google.com/store/apps/details?id=com.rehanhanar.tamilnadugovernmentapp" target="_blank" rel="noopener noreferrer">
+            <img src="/images/portfolio/tamilnadu.png" alt="" width="44" height="44" loading="lazy">
+            <span><b>Tamil Nadu Government App</b><small>State services in one place · 10,000+ downloads</small></span>
+            <span class="app-arr" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li data-reveal style="--d:.06s">
+          <a class="app-row" href="https://play.google.com/store/apps/details?id=com.rehanhanar.manapparaiinfo" target="_blank" rel="noopener noreferrer">
+            <img src="/images/portfolio/manapparai.png" alt="" width="44" height="44" loading="lazy">
+            <span><b>Manapparai Info</b><small>The app that came before Manapparai Tech</small></span>
+            <span class="app-arr" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li data-reveal style="--d:.12s">
+          <a class="app-row" href="https://play.google.com/store/apps/details?id=com.rehanhanar.wordstopagesconverterandroid" target="_blank" rel="noopener noreferrer">
+            <img src="/images/portfolio/words.png" alt="" width="44" height="44" loading="lazy">
+            <span><b>Words to Pages</b><small>Word count to page estimate for writers</small></span>
+            <span class="app-arr" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ credentials ============ -->
+<section class="section creds" id="credentials" data-section="Credentials">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-reveal><span class="idx">06</span>Credentials</p>
+        <h2 class="sec-title" data-split>Education &amp; certifications</h2>
+      </div>
+    </div>
+    <div class="creds-grid">
+      <div class="edu">
+        <div class="edu-item" data-reveal>
+          <p class="mono">Degree</p>
+          <h3>B.Tech, Electronics &amp; Communication Engineering</h3>
+          <p>BSAU Crescent University · CGPA 8.47 / 10</p>
+        </div>
+        <div class="edu-item" data-reveal>
+          <p class="mono">Delivered for clients in</p>
+          <h3>7 countries, 4 continents</h3>
+          <p>US · Canada · Europe · Singapore · Malaysia · Egypt · Saudi Arabia</p>
+        </div>
+        <div class="edu-item" data-reveal>
+          <p class="mono">Delivery models</p>
+          <h3>Traditional, hybrid &amp; adaptive</h3>
+          <p>Scrum · SAFe · PI planning · teams of 8 to 30</p>
+        </div>
+      </div>
+      <ol class="certs">
+        <li data-reveal><a class="cert" href="https://www.credly.com/badges/a53f3f74-98d8-4bdd-b65f-ef9024e01c" target="_blank" rel="noopener noreferrer"><span class="mono">01</span><span class="cert-name">SAFe® 6 Advanced Scrum Master</span><span class="cert-by mono">Scaled Agile</span><span class="cert-arr" aria-hidden="true">↗</span></a></li>
+        <li data-reveal><a class="cert" href="https://www.credly.com/badges/056b6f15-ec31-43e1-9f26-9124b3c31aac/public_url" target="_blank" rel="noopener noreferrer"><span class="mono">02</span><span class="cert-name">SAFe® 6 Practitioner</span><span class="cert-by mono">Scaled Agile</span><span class="cert-arr" aria-hidden="true">↗</span></a></li>
+        <li data-reveal><a class="cert" href="https://bcert.me/bc/html/show-badge.html?b=qeknfcyw" target="_blank" rel="noopener noreferrer"><span class="mono">03</span><span class="cert-name">Certified Scrum Product Owner® (CSPO)</span><span class="cert-by mono">Scrum Alliance</span><span class="cert-arr" aria-hidden="true">↗</span></a></li>
+        <li data-reveal><a class="cert" href="https://bcert.me/bc/html/show-badge.html?b=vmeyvtcj" target="_blank" rel="noopener noreferrer"><span class="mono">04</span><span class="cert-name">Certified Scrum Master® (CSM)</span><span class="cert-by mono">Scrum Alliance</span><span class="cert-arr" aria-hidden="true">↗</span></a></li>
+        <li data-reveal><div class="cert"><span class="mono">05</span><span class="cert-name">SHRM Certified First Time Manager</span><span class="cert-by mono">SHRM</span><span></span></div></li>
+        <li data-reveal><div class="cert"><span class="mono">06</span><span class="cert-name">Practical Application of Gen AI for PMs</span><span class="cert-by mono">PMI®</span><span></span></div></li>
+        <li data-reveal><div class="cert"><span class="mono">07</span><span class="cert-name">Generative AI Overview for PMs</span><span class="cert-by mono">PMI®</span><span></span></div></li>
+        <li data-reveal><div class="cert"><span class="mono">08</span><span class="cert-name">Data Landscape of GenAI for PMs</span><span class="cert-by mono">PMI®</span><span></span></div></li>
+        <li data-reveal><div class="cert"><span class="mono">09</span><span class="cert-name">Talking to AI: Prompt Engineering for PMs</span><span class="cert-by mono">PMI®</span><span></span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ contact ============ -->
+<section class="contact" id="contact" data-section="Contact">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal><span class="idx">07</span>Contact</p>
+    <h2 class="contact-title" data-reveal-title>
+      <span class="w"><span style="--i:0">Let’s</span></span>
+      <span class="w"><span style="--i:1">build</span></span>
+      <span class="w"><span style="--i:2">something<span class="accent">.</span></span></span>
+    </h2>
+    <div class="contact-grid">
+      <p class="contact-note" data-reveal>Open to lead and principal AI engineering, full-stack and technical program roles. Remote, or on site in India and the UAE.</p>
+      <div class="contact-actions" data-reveal style="--d:.08s">
+        <button class="btn btn-paper" type="button" data-enquire>Contact me for business <span class="arr" aria-hidden="true">→</span></button>
+        <button class="btn btn-line" type="button" data-copy="rehanhussainimam@gmail.com">Copy email</button>
+        <a class="btn btn-line" href="https://www.linkedin.com/in/rehanfeb29/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+      <dl class="contact-facts" data-reveal style="--d:.16s">
+        <div><dt class="mono">Email</dt><dd><a href="mailto:rehanhussainimam@gmail.com">rehanhussainimam@gmail.com</a></dd></div>
+        <div><dt class="mono">Based in</dt><dd>India &amp; UAE</dd></div>
+        <div><dt class="mono">Résumé</dt><dd><a href="/Resume.txt" target="_blank" rel="noopener">Plain-text CV ↗</a></dd></div>
+      </dl>
+    </div>
+  </div>
+  <footer class="wrap foot">
+    <p>© <span data-year>2026</span> Rehan Hussain Imam</p>
+    <nav aria-label="Elsewhere">
+      <a href="https://www.linkedin.com/in/rehanfeb29/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.youtube.com/user/rehanhanar7" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://rehanhanar.blogspot.com" target="_blank" rel="noopener noreferrer">Blog</a>
+      <a href="/policies/android/privacy_policy.html">Privacy policy</a>
+      <button type="button" class="foot-theme" data-print>Save as PDF</button>
+      <button type="button" class="foot-theme" data-theme-cycle>Theme: Auto</button>
+      <a href="#top">Back to top ↑</a>
     </nav>
+  </footer>
+</section>
 
-    <!-- Mobile Bottom Navigation -->
-    <nav class="mobile-nav">
-        <a href="#home" class="mobile-nav-item" data-section="home">
-            <span class="mobile-nav-icon">🏠</span>
-            <span>Home</span>
-        </a>
-        <a href="#experience" class="mobile-nav-item" data-section="experience">
-            <span class="mobile-nav-icon">💼</span>
-            <span>Experience</span>
-        </a>
-        <a href="#skills" class="mobile-nav-item" data-section="skills">
-            <span class="mobile-nav-icon">⚡</span>
-            <span>Skills</span>
-        </a>
-        <a href="#projects" class="mobile-nav-item" data-section="projects">
-            <span class="mobile-nav-icon">📁</span>
-            <span>Projects</span>
-        </a>
-        <a href="#contact" class="mobile-nav-item" data-section="contact">
-            <span class="mobile-nav-icon">📧</span>
-            <span>Contact</span>
-        </a>
-    </nav>
+<!-- ============ project sheet ============ -->
+<dialog class="sheet" id="project" aria-labelledby="p-title">
+  <div class="sheet-inner">
+    <div class="sheet-top">
+      <span class="sheet-handle" aria-hidden="true"></span>
+      <p class="mono" data-p-meta></p>
+      <div class="sheet-tools">
+        <button class="sheet-close" type="button" aria-label="Copy a link to this project" data-p-share><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></button>
+        <button class="sheet-close" type="button" aria-label="Close" data-p-close>✕</button>
+      </div>
+    </div>
+    <div class="sheet-scroll">
+      <h3 id="p-title" data-p-title></h3>
+      <p class="p-desc" data-p-desc></p>
+      <dl class="p-facts">
+        <div><dt class="mono">Role</dt><dd data-p-role></dd></div>
+        <div><dt class="mono">Stack</dt><dd data-p-stack></dd></div>
+      </dl>
+      <p class="mono p-label">Outcomes</p>
+      <ul class="p-points" data-p-points></ul>
+    </div>
+    <div class="sheet-nav">
+      <button class="btn btn-ghost btn-sm" type="button" data-p-prev><span aria-hidden="true">←</span> Previous</button>
+      <span class="mono" data-p-count></span>
+      <button class="btn btn-ghost btn-sm" type="button" data-p-next>Next <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+</dialog>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
+<!-- ============ site search ============ -->
+<dialog class="search" id="search" aria-label="Search the site">
+  <div class="search-inner">
+    <div class="search-bar">
+      <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="search-input" class="search-input" type="search" placeholder="Search projects, skills, roles…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" role="combobox" aria-expanded="true" aria-controls="search-list" aria-autocomplete="list" aria-label="Search the site">
+      <button class="search-esc" type="button" data-search-close><span class="kbd">Esc</span><span class="search-cancel">Cancel</span></button>
+    </div>
+    <div class="search-filters" role="group" aria-label="Filter results">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="work" aria-pressed="false">Projects</button>
+      <button type="button" data-filter="hobby" aria-pressed="false">Hobby builds</button>
+      <button type="button" data-filter="skill" aria-pressed="false">Skills</button>
+      <button type="button" data-filter="exp" aria-pressed="false">Experience</button>
+      <button type="button" data-filter="action" aria-pressed="false">Actions</button>
+    </div>
+    <div class="search-results" id="search-list" role="listbox" aria-label="Results"></div>
+    <p class="sr-only" aria-live="polite" data-search-live></p>
+    <div class="search-foot" aria-hidden="true">
+      <span><span class="kbd">↑</span> <span class="kbd">↓</span> to move</span>
+      <span><span class="kbd">↵</span> to open</span>
+      <span><span class="kbd">Esc</span> to close</span>
+      <span class="search-count" data-search-count></span>
+    </div>
+  </div>
+</dialog>
 
-            <div class="hero-badge">
-                <span class="status-dot"></span>
-                Open to New AI & Engineering Opportunities
-            </div>
-            <h1>Rehan Hussain Imam</h1>
-            <div class="hero-subtitle">Lead Full Stack AI Applications Developer / Technical Program Manager</div>
-            <p class="hero-description">
-                Lead Full Stack AI Applications Developer with 12+ years of experience architecting and delivering large-scale enterprise web, mobile, and AI solutions across Government, Logistics, E-commerce, Travel, Finance, Aviation, Healthcare, Insurance, and Cybersecurity. Expert in RAG, LLM workflow automation, and building AI-driven platforms for global clients. Proven leader in cross-functional teams, solutioning, and technical program delivery.
-            </p>
-            <div class="tech-tags">
-                <span class="tech-tag">RAG</span>
-                <span class="tech-tag">LLM</span>
-                <span class="tech-tag">LangChain</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Angular</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">AWS</span>
-                <span class="tech-tag">Azure OpenAI</span>
-                <span class="tech-tag">n8n</span>
-                <span class="tech-tag">Make.com</span>
-                <span class="tech-tag">CI/CD</span>
-                <span class="tech-tag">AI/LLM</span>
-            </div>
-
-            <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">📧 Email Me</a>
-                <a href="https://www.linkedin.com/in/rehanfeb29/" target="_blank" class="btn btn-secondary">🔗 LinkedIn</a>
-            </div>
+<!-- ============ business enquiry ============ -->
+<dialog class="sheet enquire" id="enquire" aria-labelledby="enq-title">
+  <form class="sheet-inner" data-enquire-form novalidate>
+    <div class="sheet-top">
+      <span class="sheet-handle" aria-hidden="true"></span>
+      <div class="enq-head">
+        <img class="enq-avatar" src="/img/aboutMe-96.jpg" alt="" width="40" height="40">
+        <div>
+          <p class="enq-title" id="enq-title" tabindex="-1">Contact me for business</p>
+          <p class="mono">Roles · AI builds · consulting · delivery</p>
         </div>
-    </section>
+      </div>
+      <button class="sheet-close" type="button" aria-label="Close" data-enq-close>✕</button>
+    </div>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <h3>12.7</h3>
-                <p>Years Experience</p>
-            </div>
-            <div class="stat-item">
-                <h3>15+</h3>
-                <p>Enterprise Projects Delivered</p>
-            </div>
-            <div class="stat-item">
-                <h3>$100M+</h3>
-                <p>Revenue Impact</p>
-            </div>
-            <div class="stat-item">
-                <h3>70+</h3>
-                <p>UPS.com Apps</p>
-            </div>
+    <div class="sheet-scroll enq-body">
+      <fieldset class="enq-field">
+        <legend>What can I help with?</legend>
+        <div class="enq-chips">
+          <label class="enq-chip"><input type="radio" name="topic" value="Full-time role" checked><span>Full-time role</span></label>
+          <label class="enq-chip"><input type="radio" name="topic" value="AI build or consulting"><span>AI build or consulting</span></label>
+          <label class="enq-chip"><input type="radio" name="topic" value="Delivery or team leadership"><span>Delivery leadership</span></label>
+          <label class="enq-chip"><input type="radio" name="topic" value="Something else"><span>Something else</span></label>
         </div>
-    </section>
+      </fieldset>
+      <div class="enq-grid">
+        <label class="enq-field"><span>Your name <i aria-hidden="true">*</i></span><input name="name" type="text" autocomplete="name" required></label>
+        <label class="enq-field"><span>Email <i aria-hidden="true">*</i></span><input name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" required></label>
+        <label class="enq-field"><span>Company <em>optional</em></span><input name="company" type="text" autocomplete="organization"></label>
+        <label class="enq-field"><span>Timeline <em>optional</em></span>
+          <select name="timeline">
+            <option value="">Not sure yet</option>
+            <option>As soon as possible</option>
+            <option>Within a month</option>
+            <option>In 1–3 months</option>
+            <option>Just exploring</option>
+          </select>
+        </label>
+      </div>
+      <label class="enq-field"><span>Message <i aria-hidden="true">*</i></span>
+        <textarea name="message" rows="5" required placeholder="A line or two about the role or project, and how I can help." aria-describedby="enq-count"></textarea>
+        <small class="enq-count" id="enq-count" data-enq-count>0 / 20 characters minimum</small>
+      </label>
+      <p class="enq-error" data-enq-error role="alert" hidden></p>
+    </div>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">WORK EXPERIENCE</div>
-                <h2 class="section-title">Professional Journey</h2>
-            </div>
+    <div class="enq-done" data-enq-done>
+      <p class="enq-done-mark" aria-hidden="true">✓</p>
+      <h3>Your email is ready</h3>
+      <p>Your email app should have opened with the enquiry filled in. Press send there and I’ll reply by email.</p>
+      <p class="enq-note">Nothing opened? <button type="button" class="enq-copy" data-enq-copy>Copy the message</button> and send it to <a href="mailto:rehanhussainimam@gmail.com">rehanhussainimam@gmail.com</a>.</p>
+      <button class="btn btn-ink btn-sm" type="button" data-enq-close>Done</button>
+    </div>
 
-            <!-- AI Projects Section -->
-            <div class="experience-list">
-                <div class="experience-card" style="border: 2px solid var(--accent);">
-                    <div class="experience-header">
-                        <div class="company-logo">🤖</div>
-                        <div class="experience-info">
-                            <h3 class="experience-title">AI Projects & Solutions (Enterprise)</h3>
-                            <div class="experience-company">Lead Full Stack AI Engineer</div>
-                            <div class="experience-date">2022 - 2026</div>
-                        </div>
-                    </div>
-                    <div class="experience-skills">
-                        <span class="skill-badge">RAG</span>
-                        <span class="skill-badge">LLM Workflow Automation</span>
-                        <span class="skill-badge">LangChain</span>
-                        <span class="skill-badge">Azure OpenAI</span>
-                        <span class="skill-badge">n8n</span>
-                        <span class="skill-badge">Make.com</span>
-                        <span class="skill-badge">Vector DB</span>
-                        <span class="skill-badge">Agentic AI</span>
-                        <span class="skill-badge">Copilot</span>
-                    </div>
-                    <div class="experience-description">
-                        <ul>
-                            <li><strong>LLM-Powered UI Assistant:</strong> Built vector-backed LLM UI assistant with custom Copilot instructions to automate Figma-to-Angular code generation, reducing page development effort from 10 days to ~1 day and lowering story points by 40–60%.</li>
-                            <li><strong>AI-Enabled WFM Portal:</strong> Developed AI-powered hiring platform automating resume scoring for 100+ candidates monthly, saving 2+ hours/day and enabling secure, PII-controlled LLM workflows.</li>
-                            <li><strong>Enterprise AI Chatbot Platform:</strong> Built chatbot for 1000+ users automating software requests, leave approvals, and HR queries, cutting turnaround time by ~50% via API-driven workflow orchestration.</li>
-                            <li><strong>AI Talent Intelligence Platform:</strong> Automated workforce intelligence for 100+ employees, saving 50+ hours per review cycle and improving leadership visibility into billability and resource allocation.</li>
-                            <li><strong>RAG-Based Executive Chat:</strong> Built RAG-based chat integrated with SharePoint, saving 14+ team hours/week by reducing document search and meetings.</li>
-                            <li><strong>AI-Driven Meeting & Agile Automation:</strong> Automated meeting transcript analysis and Azure DevOps work item creation, saving 80+ hours per sprint across 20 teams and standardizing outputs.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- UPS -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="company-logo">UPS</div>
-                        <div class="experience-info">
-                            <h3 class="experience-title">Lead Applications Developer / Full-Stack AI Engineer</h3>
-                            <div class="experience-company">United Parcel Service (UPS)</div>
-                            <div class="experience-date">Mar 2024 - Jan 2026</div>
-                        </div>
-                    </div>
-                    <div class="experience-skills">
-                        <span class="skill-badge">Angular</span>
-                        <span class="skill-badge">Storybook</span>
-                        <span class="skill-badge">Figma Code Connect</span>
-                        <span class="skill-badge">Zeroheight</span>
-                        <span class="skill-badge">WCAG</span>
-                        <span class="skill-badge">CI/CD</span>
-                        <span class="skill-badge">Azure DevOps</span>
-                        <span class="skill-badge">AI/LLM</span>
-                        <span class="skill-badge">VS Code Copilot</span>
-                    </div>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Led a centralized UI team of <strong>12+ engineers</strong> delivering 40+ reusable components for 70+ UPS.com applications, reducing UI inconsistency and regression, and accelerating page delivery by up to 50%.</li>
-                            <li>Implemented Storybook, Zeroheight, and Figma Code Connect across 70+ applications, streamlining design-to-code workflows and saving 10+ team hours per sprint.</li>
-                            <li>Partnered with leadership and UX to evolve the UI platform roadmap, mentored engineers, and built a scalable, high-performing UI engineering organization.</li>
-                            <li>Built automated reporting workflows with n8n, integrating Azure, app repositories, and JFrog registries to generate UI platform adoption reports for leadership.</li>
-                        </ul>
-                    </div>
-                </div>
+    <div class="sheet-nav enq-foot">
+      <p class="enq-note">Opens your email app with this ready to send. <button type="button" class="enq-copy" data-enq-copy>Copy instead</button></p>
+      <div class="enq-actions">
+        <button class="btn btn-ghost btn-sm" type="button" data-enq-close>Cancel</button>
+        <button class="btn btn-ink btn-sm" type="submit">Send enquiry <span class="arr" aria-hidden="true">→</span></button>
+      </div>
+    </div>
+  </form>
+</dialog>
 
-                <!-- CGI -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="company-logo">CGI</div>
-                        <div class="experience-info">
-                            <h3 class="experience-title">Lead Analyst / Technical Project Manager</h3>
-                            <div class="experience-company">Consultants to Government & Industry (CGI)</div>
-                            <div class="experience-date">Dec 2021 - Mar 2024</div>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-skills">
-                        <span class="skill-badge">Angular</span>
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">SAFe</span>
-                        <span class="skill-badge">Scrum</span>
-                        <span class="skill-badge">Node.js</span>
-                        <span class="skill-badge">PI Planning</span>
-                        <span class="skill-badge">Estimation</span>
-                        <span class="skill-badge">Pre-Sales</span>
-                        <span class="skill-badge">Governance</span>
-                    </div>
+<button class="fab" type="button" data-enquire>
+  <span class="pulse" aria-hidden="true"></span>
+  <span class="fab-long">Contact me for business</span><span class="fab-short">Contact me</span>
+  <span class="arr" aria-hidden="true">→</span>
+</button>
 
-                    <div class="experience-description">
-                        <ul>
-                            <li>Worked as a <strong>Scrum Master + Angular developer</strong> (50/50 role) on a Finland-based HRM platform, contributing sprint development alongside team leadership</li>
-                            <li>Turned around a red-status <strong>MAPFRE Insurance</strong> project, designing a configuration-driven, JSON-based UI architecture to support multiple business flows</li>
-                            <li>SAFe Scrum Master for <strong>~30 team members</strong> for Oracle BI (Intellx) project, driving Agile adoption within a senior infra team</li>
-                            <li>Led team of <strong>8 members</strong> delivery for a CSR initiative (Pratigya), contributing full stack development and end-to-end leadership</li>
-                            <li>Led delivery estimation and solutioning for the <strong>MTO Canada bid</strong>, producing ~95% accurate plans and reducing estimation variance by 30%+</li>
-                            <li>Lead Analyst for offshore team of <strong>8–11 engineers</strong> for Canadian Client VIA Rail, providing technical direction and ensuring high-quality deliverables</li>
-                            <li>Played key role in pre-sales for <strong>Amadeus (India & Europe)</strong> client bid, securing a <strong>$10M+ long-term contract</strong>; earned Platinum Award within 3 months at CGI</li>
-                        </ul>
-                    </div>
-                </div>
+<div class="toast" role="status" aria-live="polite" data-toast></div>
 
-                <!-- GE -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="company-logo">GE</div>
-                        <div class="experience-info">
-                            <h3 class="experience-title">Senior Full-Stack Developer / Technical Lead</h3>
-                            <div class="experience-company">General Electric (GE)</div>
-                            <div class="experience-date">Jan 2018 - Dec 2021</div>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-skills">
-                        <span class="skill-badge">Angular (JS → 7/9)</span>
-                        <span class="skill-badge">Node.js</span>
-                        <span class="skill-badge">PostgreSQL</span>
-                        <span class="skill-badge">Java</span>
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">AWS (EC2, S3)</span>
-                        <span class="skill-badge">Jenkins</span>
-                        <span class="skill-badge">Docker</span>
-                        <span class="skill-badge">CI/CD</span>
-                        <span class="skill-badge">IoT</span>
-                    </div>
-
-                    <div class="experience-description">
-                        <ul>
-                            <li>Led full-stack development of a <strong>GE cybersecurity ticket management platform</strong>, bridging GE application teams and cybersecurity teams</li>
-                            <li>Modernized the platform by migrating from <strong>AngularJS to Angular (7/9)</strong> and evolving deployments from manual releases to Automation Scripts to Jenkins-based CI/CD and early Dockerization</li>
-                            <li>Developed a <strong>Java-based automation utility</strong> to ingest global vulnerability reports into PostgreSQL database</li>
-                            <li>Built a <strong>flight phase analyzer UI for GE Aviation</strong>, visualizing time-series fuel consumption data using IoT engine data</li>
-                            <li>Started at GE as a hybrid mobile application developer, supporting <strong>GE Healthcare</strong> and corporate applications by fixing defects, implementing enhancements, and stabilizing existing mobile solutions</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Wipro -->
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <div class="company-logo">W</div>
-                        <div class="experience-info">
-                            <h3 class="experience-title">Software Engineer / Technical Lead</h3>
-                            <div class="experience-company">Wipro Technologies</div>
-                            <div class="experience-date">Jun 2013 - Jan 2018</div>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-skills">
-                        <span class="skill-badge">AngularJS</span>
-                        <span class="skill-badge">Ionic</span>
-                        <span class="skill-badge">Cordova</span>
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">HTML/CSS</span>
-                        <span class="skill-badge">Liferay 7</span>
-                        <span class="skill-badge">Mobile Frameworks</span>
-                        <span class="skill-badge">Onsite Delivery</span>
-                    </div>
-
-                    <div class="experience-description">
-                        <ul>
-                            <li><strong>Egypt Post (Government)</strong>: Led delivery of a complex government mobile application, providing on-ground support at the Cairo ICT event in Egypt</li>
-                            <li>Designed and delivered an <strong>Ionic-based boilerplate framework</strong> for WIPRO's Mobile COE, enabling faster development across mobile projects</li>
-                            <li>Independently designed and developed a lightweight hybrid mobile & web POC application for <strong>Tas Helat, Saudi Arabia</strong></li>
-                            <li>Delivered cross-platform hybrid mobile applications for <strong>US enterprise client (USLBM)</strong>, earning consistent recognition for quality</li>
-                            <li>Contributed to UI Theme development for <strong>Tamil Nadu Government Finance (Karuvoolam)</strong> portal</li>
-                            <li>Began career in Enterprise infrastructure support (Honeywell Client), resolving complex global incidents and consistently exceeding SLA expectations</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">CORE COMPETENCIES</div>
-                <h2 class="section-title">Skills & Expertise</h2>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Applied Generative AI & LLM Engineering</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Retrieval-Augmented Generation (RAG)</span>
-                        <span class="skill-item">LLM Workflow Automation</span>
-                        <span class="skill-item">Agentic AI</span>
-                        <span class="skill-item">LangChain / LangGraph</span>
-                        <span class="skill-item">Vector Databases (Pinecone)</span>
-                        <span class="skill-item">Prompt Engineering</span>
-                        <span class="skill-item">AI API Integrations</span>
-                        <span class="skill-item">n8n / Make.com</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Application & Full-Stack Engineering</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Angular (JS/7/9/12/13/15/18)</span>
-                        <span class="skill-item">ReactJS</span>
-                        <span class="skill-item">Node.js (REST APIs, Microservices)</span>
-                        <span class="skill-item">TypeScript</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">OAuth, SSO, IAM</span>
-                        <span class="skill-item">PostgreSQL</span>
-                        <span class="skill-item">Ionic / Cordova</span>
-                        <span class="skill-item">HTML5 / CSS3</span>
-                        <span class="skill-item">Java (Automation Utilities)</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Delivery, Agile & Engineering Leadership</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Technical Program Leadership</span>
-                        <span class="skill-item">Agile & SAFe Delivery</span>
-                        <span class="skill-item">Scrum / PI Planning</span>
-                        <span class="skill-item">Stakeholder & Vendor Management</span>
-                        <span class="skill-item">Risk & Dependency Governance</span>
-                        <span class="skill-item">Pre-Sales & Solutioning</span>
-                        <span class="skill-item">Global Team Leadership</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud, DevOps & Tools</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">AWS (EC2, S3)</span>
-                        <span class="skill-item">Azure DevOps</span>
-                        <span class="skill-item">CI/CD Pipelines</span>
-                        <span class="skill-item">Jenkins</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">JFrog</span>
-                        <span class="skill-item">Ubuntu</span>
-                        <span class="skill-item">Jira</span>
-                        <span class="skill-item">VS Code Copilot (Custom Instructions)</span>
-                        <span class="skill-item">Figma (Code Connect)</span>
-                        <span class="skill-item">Storybook</span>
-                        <span class="skill-item">Zeroheight</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Projects Section -->
-    <section id="projects" class="projects">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">PROFESSIONAL PORTFOLIO</div>
-                <h2 class="section-title">Enterprise Projects</h2>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="img/portfolio/ups.png" alt="UPS">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">UPS Enterprise UI Platform</h4>
-                        <p class="project-description">Leading centralized UI platform supporting 70+ UPS.com applications with reusable Angular components.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Angular</span>
-                            <span class="project-tag">Storybook</span>
-                            <span class="project-tag">Figma</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/portfolio/cgi_pratigya.jpg" alt="Pratigya">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Pratigya CSR Initiative</h4>
-                        <p class="project-description">CGI social responsibility platform with full stack development and governance.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Angular</span>
-                            <span class="project-tag">Full Stack</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/portfolio/cgi_mto.png" alt="MTO">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">MTO Canada</h4>
-                        <p class="project-description">Government transportation system with ~95% accurate estimation and planning.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">SAFe</span>
-                            <span class="project-tag">Estimation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/portfolio/cg_via_rail.png" alt="VIA Rail">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">VIA Rail Canada</h4>
-                        <p class="project-description">Railway booking and management platform with offshore delivery leadership.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Angular</span>
-                            <span class="project-tag">Agile</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/portfolio/ge_digital.png" alt="GE">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">GE Cybersecurity Platform</h4>
-                        <p class="project-description">Full-stack ticket management platform bridging application teams and cybersecurity operations.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Angular</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/portfolio/ge_aviation_only_logo.png" alt="GE Aviation">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">GE Aviation Flight Analyzer</h4>
-                        <p class="project-description">Real-time visualization of IoT engine data for fuel consumption analysis.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Angular</span>
-                            <span class="project-tag">IoT</span>
-                            <span class="project-tag">Data Viz</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://rehanhanar7.github.io/images/portfolio/egypt.png" alt="Egypt Post">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Egypt Post Government App</h4>
-                        <p class="project-description">Complex government mobile application with on-site delivery at Cairo ICT event.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Ionic</span>
-                            <span class="project-tag">Cordova</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://rehanhanar7.github.io/images/portfolio/hines.png" alt="USLBM">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">USLBM Enterprise Mobile Apps</h4>
-                        <p class="project-description">Cross-platform hybrid mobile applications for US enterprise client.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">AngularJS</span>
-                            <span class="project-tag">Ionic</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Personal Projects Section -->
-    <section class="projects" style="background: white;">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">PERSONAL PORTFOLIO</div>
-                <h2 class="section-title">Side Projects</h2>
-            </div>
-
-            <div class="projects-grid">
-                <a href="https://chromewebstore.google.com/detail/hfhagjebiknkekdhncpckchnajjpbgpl/" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                    <div class="project-image">
-                        <img src="img/portfolio/chrome.png" alt="Chrome Extension">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Rehan Job Helper</h4>
-                        <p class="project-description">Smart form autofill assistant with job application tracking. Published on Chrome Web Store.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Personal</span>
-                            <span class="project-tag">Chrome Extension</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://play.google.com/store/apps/details?id=com.rehanhanar.manapparaiinfo" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                    <div class="project-image">
-                        <img src="https://rehanhanar7.github.io/images/portfolio/manapparai.png" alt="Manapparai Info">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Manapparai Info</h4>
-                        <p class="project-description">Comprehensive information hub about Manapparai, Tamil Nadu. Available on Google Play Store.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Personal</span>
-                            <span class="project-tag">Android</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://play.google.com/store/apps/details?id=com.rehanhanar.tamilnadugovernmentapp" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                    <div class="project-image">
-                        <img src="https://rehanhanar7.github.io/images/portfolio/tamilnadu.png" alt="Tamil Nadu Government">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Tamil Nadu Government App</h4>
-                        <p class="project-description">One-stop solution for Tamil Nadu government services. Over 10,000+ downloads.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Personal</span>
-                            <span class="project-tag">Android</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://play.google.com/store/apps/details?id=com.rehanhanar.wordstopagesconverterandroid" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                    <div class="project-image">
-                        <img src="https://rehanhanar7.github.io/images/portfolio/words.png" alt="Words to Pages">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Words to Pages Converter</h4>
-                        <p class="project-description">Utility tool to convert word count to page estimates for writers and students.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Personal</span>
-                            <span class="project-tag">Android</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">CERTIFICATIONS & COURSES</div>
-                <h2 class="section-title">Professional Certifications</h2>
-            </div>
-
-            <div class="cert-grid">
-                <a href="https://www.credly.com/badges/a53f3f74-98d8-4bdd-b65f-ef9024e01c" target="_blank" class="cert-card">
-                    <div class="cert-icon">🎖️</div>
-                    <div class="cert-name">Certified SAFe® 6 Advanced Scrum Master</div>
-                </a>
-                <a href="https://www.credly.com/badges/056b6f15-ec31-43e1-9f26-9124b3c31aac/public_url" target="_blank" class="cert-card">
-                    <div class="cert-icon">🎖️</div>
-                    <div class="cert-name">Certified SAFe® 6 Practitioner</div>
-                </a>
-                <a href="https://www.shrm.org" target="_blank" class="cert-card">
-                    <div class="cert-icon">👔</div>
-                    <div class="cert-name">SHRM's Certified First Time Manager</div>
-                </a>
-                <a href="https://bcert.me/bc/html/show-badge.html?b=qeknfcyw" target="_blank" class="cert-card">
-                    <div class="cert-icon">📜</div>
-                    <div class="cert-name">Certified Scrum Product Owner® (CSPO®)</div>
-                </a>
-                <a href="https://bcert.me/bc/html/show-badge.html?b=vmeyvtcj" target="_blank" class="cert-card">
-                    <div class="cert-icon">📜</div>
-                    <div class="cert-name">Certified Scrum Master® (CSM®)</div>
-                </a>
-                <a href="#" class="cert-card">
-                    <div class="cert-icon">🤖</div>
-                    <div class="cert-name">PMP® Practical Application of Gen AI for PMs</div>
-                </a>
-                <a href="#" class="cert-card">
-                    <div class="cert-icon">🤖</div>
-                    <div class="cert-name">PMP® Generative AI Overview for PMs</div>
-                </a>
-                <a href="#" class="cert-card">
-                    <div class="cert-icon">🤖</div>
-                    <div class="cert-name">PMP® Data Landscape of GenAI for Project Managers</div>
-                </a>
-                <a href="#" class="cert-card">
-                    <div class="cert-icon">🤖</div>
-                    <div class="cert-name">PMP® Talking to AI: Prompt Engineering for PMs</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">GET IN TOUCH</div>
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-description">
-                    Ready to discuss your next project. Available for freelance work and consulting opportunities.
-                </p>
-            </div>
-
-            <div class="contact-info">
-                <div class="contact-item">📍 Based in India & UAE</div>
-                <div class="contact-item">📧 rehanhussainimam@gmail.com</div>
-            </div>
-
-            <div class="contact-buttons">
-                <a href="mailto:rehanhussainimam@gmail.com" class="contact-btn">📧 Email Me</a>
-                <a href="https://www.linkedin.com/in/rehanfeb29/" target="_blank" class="contact-btn">🔗 LinkedIn</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/rehanfeb29/" target="_blank" title="LinkedIn">🔗</a>
-            <a href="https://www.youtube.com/user/rehanhanar7" target="_blank" title="YouTube">📺</a>
-            <a href="https://www.facebook.com/rehanhanar7" target="_blank" title="Facebook">📘</a>
-            <a href="https://www.instagram.com/rehan_feb_29/" target="_blank" title="Instagram">📷</a>
-            <a href="https://rehanhanar.blogspot.com" target="_blank" title="Blog">📝</a>
-        </div>
-        <p>&copy; 2026 Rehan Hussain Imam. All Rights Reserved.</p>
-        <p style="margin-top: 0.5rem;">
-            <a href="https://rehanhanar7.github.io/policies/android/privacy_policy.html" target="_blank">Privacy Policy</a>
-        </p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Active navigation on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section[id]');
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-
-            // Update mobile nav
-            document.querySelectorAll('.mobile-nav-item').forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('data-section') === current) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
