@@ -610,12 +610,14 @@
   const form = enq ? $('[data-enquire-form]', enq) : null;
   const DRAFT_KEY = 'enquiry-draft';
   const FIELDS = ['name', 'email', 'company', 'timeline', 'message'];
+  const MIN_MESSAGE = 10;
 
   function updateCount() {
     const n = form.elements.message.value.trim().length;
     const el = $('[data-enq-count]', enq);
-    el.textContent = n >= 20 ? `${n} characters` : `${n} / 20 characters minimum`;
-    el.classList.toggle('ok', n >= 20);
+    el.textContent = n >= MIN_MESSAGE ? `${n} characters` : `${n} / ${MIN_MESSAGE} characters minimum`;
+    el.classList.toggle('ok', n >= MIN_MESSAGE);
+    if (n >= MIN_MESSAGE) el.classList.remove('bad');
   }
   function saveDraft() {
     try {
@@ -648,11 +650,12 @@
     return { subject, body };
   }
   function validate() {
+    updateCount();
     const { name, email, message } = form.elements;
     const problems = [
       [name, !name.value.trim(), 'Please add your name.'],
       [email, !email.value.trim() || !email.checkValidity(), 'Please add a valid email so I can reply.'],
-      [message, message.value.trim().length < 20, 'Please add a little more detail (20 characters or more).'],
+      [message, message.value.trim().length < MIN_MESSAGE, `Please add a little more detail (${MIN_MESSAGE} characters or more).`],
     ];
     let first = null;
     problems.forEach(([el, bad, msg]) => {
@@ -660,7 +663,15 @@
       if (bad && !first) first = [el, msg];
     });
     const err = $('[data-enq-error]', enq);
-    if (first) { err.textContent = first[1]; err.hidden = false; first[0].focus(); return false; }
+    $('[data-enq-count]', enq).classList.toggle('bad', message.getAttribute('aria-invalid') === 'true');
+    if (first) {
+      err.textContent = first[1];
+      err.hidden = false;
+      first[0].focus({ preventScroll: true });
+      // keep the field and its hint in view inside the scrolling form
+      (first[0] === message ? $('[data-enq-count]', enq) : first[0]).scrollIntoView({ block: 'nearest' });
+      return false;
+    }
     err.hidden = true;
     return true;
   }
@@ -680,10 +691,20 @@
       e.preventDefault();
       if (!validate()) return;
       const { subject, body } = compose();
-      location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const q = (o) => Object.entries(o).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&');
+      $('[data-send="app"]', enq).href = `mailto:${EMAIL}?${q({ subject, body })}`;
+      $('[data-send="gmail"]', enq).href = `https://mail.google.com/mail/?view=cm&fs=1&${q({ to: EMAIL, su: subject, body })}`;
+      $('[data-send="outlook"]', enq).href = `https://outlook.live.com/mail/0/deeplink/compose?${q({ to: EMAIL, subject, body })}`;
       enq.classList.add('is-sent');
-      $('.sheet-scroll', enq).scrollTop = 0;
+      $('[data-enq-done-title]', enq).focus();
+    });
+    $$('[data-send]', enq).forEach((a) => a.addEventListener('click', () => {
       try { localStorage.removeItem(DRAFT_KEY); } catch { /* storage unavailable */ }
+      toast('Thanks! Press send in your email to finish.');
+    }));
+    $('[data-enq-back]', enq).addEventListener('click', () => {
+      enq.classList.remove('is-sent');
+      form.elements.message.focus();
     });
     form.addEventListener('input', (e) => {
       if (e.target.getAttribute('aria-invalid') === 'true') e.target.setAttribute('aria-invalid', 'false');

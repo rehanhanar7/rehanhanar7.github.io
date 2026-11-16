@@ -859,21 +859,30 @@
       </div>
       <label class="enq-field"><span>Message <i aria-hidden="true">*</i></span>
         <textarea name="message" rows="5" required placeholder="A line or two about the role or project, and how I can help." aria-describedby="enq-count"></textarea>
-        <small class="enq-count" id="enq-count" data-enq-count>0 / 20 characters minimum</small>
+        <small class="enq-count" id="enq-count" data-enq-count>0 / 10 characters minimum</small>
       </label>
-      <p class="enq-error" data-enq-error role="alert" hidden></p>
     </div>
 
     <div class="enq-done" data-enq-done>
       <p class="enq-done-mark" aria-hidden="true">✓</p>
-      <h3>Your email is ready</h3>
-      <p>Your email app should have opened with the enquiry filled in. Press send there and I’ll reply by email.</p>
-      <p class="enq-note">Nothing opened? <button type="button" class="enq-copy" data-enq-copy>Copy the message</button> and send it to <a href="mailto:rehanhussainimam@gmail.com">rehanhussainimam@gmail.com</a>.</p>
-      <button class="btn btn-ink btn-sm" type="button" data-enq-close>Done</button>
+      <h3 class="enq-done-title" tabindex="-1" data-enq-done-title>Your message is ready</h3>
+      <p>Choose how to send it. Everything is filled in, you just press send.</p>
+      <div class="enq-send">
+        <a class="btn btn-ink" href="#" data-send="app">Email app</a>
+        <a class="btn btn-ghost" href="#" data-send="gmail" target="_blank" rel="noopener noreferrer">Gmail</a>
+        <a class="btn btn-ghost" href="#" data-send="outlook" target="_blank" rel="noopener noreferrer">Outlook</a>
+        <button class="btn btn-ghost" type="button" data-enq-copy>Copy text</button>
+      </div>
+      <p class="enq-note">It goes to <a href="mailto:rehanhussainimam@gmail.com">rehanhussainimam@gmail.com</a>, and I reply by email.</p>
+      <div class="enq-done-actions">
+        <button class="enq-copy" type="button" data-enq-back>← Edit message</button>
+        <button class="btn btn-ghost btn-sm" type="button" data-enq-close>Done</button>
+      </div>
     </div>
 
     <div class="sheet-nav enq-foot">
-      <p class="enq-note">Opens your email app with this ready to send. <button type="button" class="enq-copy" data-enq-copy>Copy instead</button></p>
+      <p class="enq-error" data-enq-error role="alert" hidden></p>
+      <p class="enq-note">Next, send it from your email app, Gmail or Outlook.</p>
       <div class="enq-actions">
         <button class="btn btn-ghost btn-sm" type="button" data-enq-close>Cancel</button>
         <button class="btn btn-ink btn-sm" type="submit">Send enquiry <span class="arr" aria-hidden="true">→</span></button>
